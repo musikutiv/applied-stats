@@ -1,0 +1,47 @@
+.reveal #p09-advice .data-plot, .reveal #uncertainty-not-absence .data-plot { height:245px; }
+.reveal #power-factors .data-plot { height:365px; }
+.reveal #six-more-wells .data-plot { height:260px; }
+.reveal #same-biology .data-plot { height:330px; }
+.reveal .s2-chain { font-size:33px; line-height:1.25; margin:28px 0; }
+.reveal .s2-chain span { display:block; color:var(--vehicle); line-height:1.0; }
+.reveal #advice-revisited .research-paths { gap:50px; }
+.reveal #advice-revisited .research-paths p { font-size:25px; line-height:1.65; }
+/* Multiplicity block only. */
+.reveal .multi-short { height:260px; }
+.reveal .multi-table { width:90%; font-size:27px; margin:22px 0; }
+.reveal .multi-table th, .reveal .multi-table td { padding:9px 24px; }
+.reveal .multi-choices { display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px 34px; margin:38px 0; }
+.reveal .multi-choices p { font-size:29px; border-top:2px solid var(--line); padding-top:18px; line-height:1.3; }
+.reveal #introduce-fdr .takeaway { font-size:29px; }
+.reveal #selective-reporting .research-paths p { font-size:29px; line-height:1.5; }
+/* Analysis follows design block. */
+.reveal .tests-plot { height:290px; object-fit:contain; }
+.reveal .tests-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px 42px; margin:30px 0; }
+.reveal .tests-grid p { border-top:2px solid var(--line); padding-top:15px; font-size:29px; line-height:1.35; }
+.reveal .tests-chain { font-size:34px; color:var(--vehicle); line-height:1.6; margin:45px 0; }
+.reveal .tests-framework { display:grid; grid-template-columns:1fr 1fr; gap:10px 34px; margin:26px 0; }
+.reveal .tests-framework p { font-size:27px; line-height:1.35; border-bottom:1px solid var(--line); padding:9px 0; }
+.reveal .tests-orientation { font-size:23px; width:100%; margin:22px 0; }
+.reveal .tests-orientation th,.reveal .tests-orientation td { padding:10px 12px; line-height:1.25; }
+.reveal #same-columns-different-design .tests-plot { height:225px; }
+.reveal #same-columns-different-design .tests-grid p { font-size:25px; }
+.reveal #workshop-bridge .question { font-size:40px; }
+
+.reveal #design-created-pairs .uncertainty-stack { height:290px; }
+/* Final workshop: concise prompts and facilitator-led disclosure. */
+.reveal .workshop-plot { height:285px; object-fit:contain; }
+.reveal #r-lab-meeting h2 { font-size:43px; }
+.reveal #r-lab-meeting .workshop-plot { height:235px; }
+.reveal #r-lab-meeting .takeaway { margin:12px 0; }
+.reveal .workshop-hierarchy p { font-size:29px; line-height:1.3; margin:25px 0; padding-left:20px; border-left:3px solid var(--vehicle); }
+.reveal .workshop-claims { display:flex; gap:22px; margin:70px 0; align-items:center; }
+.reveal .workshop-claims p { font-size:26px; line-height:1.3; border-top:2px solid var(--line); padding-top:15px; flex:1; }
+.reveal .workshop-full { height:365px; }
+.reveal .workshop-canvas { display:grid; grid-template-columns:1fr 1fr; gap:14px 32px; margin:18px 0; }
+.reveal .workshop-canvas p { font-size:24px; line-height:1.25; border-top:1px solid var(--line); padding-top:10px; margin:0; }
+.reveal #r-what-changed .research-paths p { font-size:27px; line-height:1.6; }
+.reveal .workshop-surround { border:3px solid var(--vehicle); padding:20px 30px; margin:30px 0; }
+.reveal .workshop-surround>p { font-size:25px; color:var(--vehicle); }
+.reveal .workshop-flow { font-size:33px; line-height:1.6; margin:30px 0; }
+.reveal #course-landing h2 { font-size:55px; line-height:1.2; margin-top:55px; }
+.reveal #course-landing .question { font-size:42px; margin-top:60px; }

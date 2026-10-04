@@ -1,0 +1,382 @@
+## My p-value is 0.09. What should I do? {#p09-advice .interaction}
+
+<p class="prompt-tag">Give the researcher one piece of advice</p>
+<img class="data-plot short-plot" src="figures/generated/null-ci-zero.png" alt="The unchanged mean paired effect minus 10.4 U/mg with 95 percent interval minus 23.2 to plus 2.3, including zero." />
+<p class="takeaway"><strong>−10.4 U/mg</strong> · 95% CI <strong>−23.2 to +2.3</strong> · p = <strong>0.090</strong></p>
+<p class="small">L1 · compound Q versus vehicle · six independent preparation pairs</p>
+
+::: notes
+**Time: 00:00–00:04 (4 minutes).**
+
+**Say:** Let the audience advise a researcher who arrives after data collection wanting significance. Collect suggestions without classifying them yet: repeat, increase N, remove an outlier, another test, one-sided test, reduce variability, or conclude Q does not work. Spend two minutes collecting, one minute asking what information is missing, and one minute framing: why did this experiment not give a clear answer to the biological question? p=0.090 is not a failed experiment or a judgment on the researcher. The estimate and wide interval leave useful possibilities unresolved. These are the actual unchanged fictional Session 1 data. Keep the suggested actions visible on a board for the return later.
+
+**Conceptual point:** An inconclusive result calls for interpretation and a scientific next step, not simply a smaller p-value.
+
+**Likely misconception:** The immediate job of statistical advice is to make the current result cross 0.05.
+
+**Optional follow-up:** What information would you request before recommending that action?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## Why is the answer still unclear? {#why-unclear}
+
+<div class="synthesis-grid"><p><span>Effect</span>Zero, small, or biologically relevant?</p><p><span>Sampling</span>An imprecise experiment by chance?</p><p><span>Biology</span>Large preparation-to-preparation variation?</p><p><span>Replication</span>Few independent preparations?</p><p><span>Design</span>Avoidable sources of variation?</p><p><span>Model</span>Does the analysis match the experiment?</p></div>
+<p class="takeaway">The p-value alone cannot choose between these explanations.</p>
+
+::: notes
+**Time: 00:04–00:06 (2 minutes).**
+
+**Say:** Link suggestions from the opening to these possible explanations. More than one may apply. A truly small or zero average is one possibility, but so are variable responses, limited independent replication, avoidable noise, and a mismatch between the model and how data arose. The p-value does not diagnose which is responsible. Avoid treating uncertainty as automatically evidence for a design fault or insufficient N.
+
+**Conceptual point:** The observed p-value does not identify the underlying reason for an inconclusive result.
+
+**Likely misconception:** A p-value above 0.05 reveals that the true effect is zero or the sample was definitely too small.
+
+**Optional follow-up:** Which explanation could you investigate using the laboratory records?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+<!-- MODEL REVIEW: Power and planning numbers are conditional on independent, approximately normal differences and no treatment-by-day response variation. Real n=6 data cannot verify these assumptions. -->
+
+## Suppose the true mean effect is −14 U/mg {#specified-effect .interaction}
+
+<p class="medium">Same L1 protocol. Six new preparation pairs.<br>True mean effect fixed at <strong>−14 U/mg</strong>.</p>
+<p class="takeaway">Would every repetition give p &lt; 0.05?</p>
+<div class="fragment keyline"><p class="small">Same variability and paired t analysis.<br>Two-sided decision rule fixed in advance: p &lt; 0.05.</p></div>
+<p class="fine">A teaching assumption from the original population model—not a conclusion from our p-value.</p>
+
+::: notes
+**Time: 00:06–00:08 (2 minutes).**
+
+**Say:** Ask for a prediction before explaining. We return to the original generating model, whose mean −14 was fixed before its observed sample existed. It is not the observed estimate −10.4, not an estimate of truth derived from p, and not a validated minimum relevant effect. Each repetition creates six independent preparation changes with biological effect SD 9, vessel SD 3 and triplicate technical SD 2.5; additive shared baselines cancel. The two-sided paired t rule is fixed at 0.05 for this illustration. It is not a mandatory rule for all science.
+
+**Conceptual point:** Procedure performance can be evaluated under a specified nonzero effect, without claiming that effect is known in real data.
+
+**Likely misconception:** The simulation has discovered that the real true effect is −14.
+
+**Optional follow-up:** What varies across the repetitions if the true mean is fixed?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## Same biology, different experiments {#same-biology .interaction}
+
+<img class="data-plot" src="figures/generated/power-examples.png" alt="Two simulated experiments each show six changes, their mean, 95 percent interval and p-value; one crosses 0.05 and one does not." />
+<p class="takeaway">How can both arise from the same true mean effect?</p>
+<p class="fine">Illustrative contrast: first rejection and first non-rejection selected from the simulation. Dashed line: true mean −14; solid line: 0.</p>
+
+::: notes
+**Time: 00:08–00:11 (3 minutes).**
+
+**Say:** Let participants inspect the two experiments for one minute. Dots are the six changes; the lower diamond is their mean and the line is its 95% interval. Repeat 1 has mean −16.4, CI −28.5 to −4.3, p=0.018. Repeat 8 has mean −9.5, CI −19.2 to +0.3, p=0.054. We deliberately selected the first experiment of each decision type to contrast outcomes; this pair does not estimate their frequencies. Both came from the same −14 population. Sampling variability changes the mean and estimated SD, so the threshold result can differ. Do not name power yet. A difference between labels is not evidence of a biological difference between the generating populations.
+
+**Conceptual point:** Sampling variability can produce both rejection and non-rejection under the same nonzero average effect.
+
+**Likely misconception:** One of the experiments must be wrong because their labels differ.
+
+**Optional follow-up:** Which two ingredients of t changed between these experiments?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## What proportion would cross the threshold? {#power-as-frequency}
+
+<img class="data-plot short-plot" src="figures/generated/power-decisions.png" alt="First one hundred repetitions from a true minus 14 population, with crosses for p below 0.05 and dots otherwise." />
+<p class="takeaway fragment" data-fragment-index="0"><strong>78%</strong> crossed p &lt; 0.05 across 10,000 repetitions.</p>
+<p class="small fragment" data-fragment-index="1"><strong>Power = P(reject H<sub>0</sub> | a specified alternative is true)</strong></p>
+<p class="fine">Rust crosses reject; teal dots do not. First 100 shown in order; true mean −14 in every repetition.</p>
+
+::: notes
+**Time: 00:11–00:14 (3 minutes).**
+
+**Say:** Ask the audience to estimate the proportion of crosses, then reveal 78% across 10,000 trials. Only on the next click name statistical power. In plain language it is the long-run probability that this experiment and analysis will reject under a specified nonzero effect. It belongs to a full set of assumptions: effect, variability, independent N, design, alpha and analysis. The finite simulation gives 78%; the ideal normal paired-difference calculation gives about 76.9%, a Monte Carlo difference of about one percentage point. Do not present either as a guarantee that a particular replication succeeds. The crosses use the same decision symbols as Session 1, but the assumed truth is now nonzero; they are not Type I errors in this scenario. The first 100 are unselected; the illustrative pair from the previous slide is not the frequency denominator.
+
+**Conceptual point:** Power is a repeated-experiment probability conditional on a specified alternative and procedure.
+
+**Likely misconception:** Power is a fixed property of the named test, or the probability that an already observed result is true.
+
+**Optional follow-up:** Which assumptions would you need to report alongside “about 78%”?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## When a real effect does not cross the threshold {#type-two}
+
+<img class="data-plot short-plot" src="figures/generated/power-nonrejection.png" alt="Repeat 8 from the known minus 14 population: six changes, mean minus 9.5, interval minus 19.2 to plus 0.3, p 0.054." />
+<p class="takeaway"><strong>Type II error:</strong> not rejecting H<sub>0</sub> when the specified alternative is true</p>
+<p class="small">β ≈ 22% here · Power = 1 − β</p>
+<p class="fine">We can identify this simulated error because we know the simulated truth.</p>
+
+::: notes
+**Time: 00:14–00:16 (2 minutes).**
+
+**Say:** Return to repeat 8. We know the true mean in this simulation is −14, yet its p-value did not cross the rule. Name the Type II error and beta; in our repeated run 22% did not reject, complementing 78% power. The actual experiment is different: its population mean is unknown, so p=0.090 is not automatically known to be a Type II error. This 22% is not a probability that our observed result is a false negative. It is a probability over hypothetical repetitions under the stipulated effect.
+
+**Conceptual point:** Type II error is defined relative to the specified truth used to evaluate the procedure.
+
+**Likely misconception:** Every non-significant real result is a known Type II error.
+
+**Optional follow-up:** What information is available in a simulation that a real investigator does not have?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## Can we conclude that Q has no effect? {#uncertainty-not-absence .interaction}
+
+<img class="data-plot short-plot" src="figures/generated/null-ci-zero.png" alt="The unchanged mean paired effect minus 10.4 U/mg with 95 percent interval minus 23.2 to plus 2.3, including zero." />
+<p class="takeaway">Zero, small effects and substantial reductions remain compatible.</p>
+<p class="small">Our actual result: mean −10.4 · 95% CI −23.2 to +2.3 U/mg · p = 0.090</p>
+<p class="fine">This is uncertainty about the mean effect, not proof of absence.</p>
+
+::: notes
+**Time: 00:16–00:19 (3 minutes).**
+
+**Say:** Give a minute to discuss and two to interpret. The interval spans zero, small positive or negative changes and reductions as large as about 23 U/mg. No minimum relevant effect has yet been justified biologically. A large range of mean effects therefore remains plausible under the stated model. Do not substitute the teaching-model power for interpretation of this interval. We do not compute observed power from the measured −10.4 or p=0.090, and do not estimate the probability of a false negative after the fact. Large p by itself does not establish absence.
+
+**Conceptual point:** The actual interval describes unresolved effect sizes more usefully than a retrospective label.
+
+**Likely misconception:** Knowing the simulation’s power lets us assign a false-negative probability to this one result.
+
+**Optional follow-up:** What size of reduction would still matter enough that you want to resolve it?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## What would change that proportion? {#power-factors}
+
+<p class="prompt-tag">Predict each change before the next reveal</p>
+<div class="uncertainty-stack">
+<img data-fragment-index="0" class="data-plot fragment fade-in-then-out" src="figures/generated/power-factor-1.png" alt="Larger true effect magnitude gives higher power, other assumptions fixed." />
+<img data-fragment-index="1" class="data-plot fragment fade-in-then-out" src="figures/generated/power-factor-2.png" alt="Greater biological response SD gives lower power, other assumptions fixed." />
+<img data-fragment-index="2" class="data-plot fragment fade-in-then-out" src="figures/generated/power-factor-3.png" alt="More independent preparation pairs give higher power, other assumptions fixed." />
+<img data-fragment-index="3" class="data-plot fragment " src="figures/generated/power-factor-4.png" alt="A more stringent smaller alpha gives lower power, other assumptions fixed." />
+</div>
+<p class="fine">Vary one assumption at a time: effect, biological variability, independent N, then alpha. Other settings stay fixed.</p>
+
+::: notes
+**Time: 00:19–00:23 (4 minutes).**
+
+**Say:** Use four short predictions, one before each reveal. Larger true effect moves estimates further from zero; lower biological variability narrows their distribution; larger independent N lowers SE. A smaller alpha lowers the long-run Type I rate but also lowers power, all else fixed. Baseline is effect magnitude 14, n=6, biological-effect SD 9, vessel SD 3, technical SD 2.5 with three aliquots, and two-sided alpha 0.05. The variability curve changes only biological-effect SD and retains the measurement components. These curves use exact noncentral-t probabilities under independent normal differences, counting both tails. No derivation is needed. Do not recommend loosening alpha to rescue the observed p-value; it is a prospective decision setting.
+
+**Conceptual point:** Power changes when the assumed effect, variability or procedure changes.
+
+**Likely misconception:** One quoted power number applies regardless of effect size, design or decision rule.
+
+**Optional follow-up:** Which of these can you improve through experimental design rather than wishful thinking?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## What effect is worth detecting? {#minimum-relevant-effect .interaction}
+
+<div class="research-paths"><div><h3>What we observed</h3><p>−10.4 U/mg<br>from six preparations</p></div><div><h3>What would matter</h3><p>A minimum relevant effect<br>justified by the biology</p></div></div>
+<p class="takeaway">“How many replicates?” comes after “What question must they answer?”</p>
+
+::: notes
+**Time: 00:23–00:27 (4 minutes).**
+
+**Say:** Ask participants to describe how they would decide whether an enzyme-activity reduction matters: downstream biology, assay reliability, prior evidence or a decision to proceed. The observed effect is a noisy estimate from a small sample; it is not automatically the truth to plug into planning. The teaching mean −14 is likewise not an established relevant threshold. Specify a minimum relevant effect on the same U/mg scale and within the defined L1 conditions. Planning detects a departure from zero assuming an effect of that size; it does not prove an effect exceeds the relevance boundary. No numeric biological threshold is invented.
+
+**Conceptual point:** Prospective planning needs a scientifically motivated effect, not an uncritical reuse of a small observed estimate.
+
+**Likely misconception:** A sample-size calculation should use −10.4 simply because that is our pilot mean.
+
+**Optional follow-up:** What evidence would justify calling a given change biologically meaningful?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## How noisy is the biology? {#sources-of-noise}
+
+<div class="synthesis-grid"><p><span>Technical readings</span>How repeatable is the assay?</p><p><span>Preparation responses</span>How differently do new cultures respond?</p><p><span>Day / batch</span>What do observations share?</p><p><span>Systematic variation</span>What belongs in the design or model?</p></div>
+<p class="takeaway">Plan with the variability of the <strong>paired changes</strong>.</p>
+
+::: notes
+**Time: 00:27–00:29 (2 minutes).**
+
+**Say:** Recover the experimental unit and hierarchy from Session 1. Technical measurements are from the same lysate. Biological-effect variation is across independently initiated preparations. Vessel noise also enters the paired contrast. Shared additive preparation and day offsets cancel in our simple paired model; treatment-by-day variation would not. The total SD of paired changes, about 10.16 in the model, combines remaining components and is the input for the paired calculation. It is not just SD 9 of the latent biological effect, nor an SD calculated from all 36 readings. Some systematic sources produce bias or confounding rather than harmless random noise.
+
+**Conceptual point:** The relevant variability depends on the unit, contrast and experimental design.
+
+**Likely misconception:** Technical SD can be substituted for between-preparation response SD in planning.
+
+**Optional follow-up:** Which sources could better blocking remove, and which would remain?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## Does doubling N halve the uncertainty? {#more-independent-pairs .interaction}
+
+<img class="data-plot" src="figures/generated/power-precision.png" alt="SE of the mean change falls from about 5.86 to 4.15, 2.93 and 2.07 U/mg for 3, 6, 12 and 24 independent pairs." />
+<p class="takeaway fragment">SE ∝ 1 / √n · doubling n multiplies SE by about 0.71</p>
+<p class="fine">Independent pairs under the same model. More pairs do not repair bias, confounding or a restricted sampling frame.</p>
+
+::: notes
+**Time: 00:29–00:32 (3 minutes).**
+
+**Say:** Ask for a prediction before revealing the relationship. At n=3,6,12,24 the modeled SEs are about 5.86,4.15,2.93,2.07 U/mg. Each doubling gives the same relative reduction of about 29%, with smaller absolute gains while adding more preparations. Halving SE takes roughly four times the independent N. These are analytic precision calculations under the independent-contrast model; the n=3 illustration is not presented as an exact copy of the original two-pairs-per-day schedule. Independent N may improve power and precision but cannot fix systematic bias, a wrong experimental unit or a narrow cell-line claim.
+
+**Conceptual point:** Independent replication reduces sampling noise with diminishing returns.
+
+**Likely misconception:** Doubling N halves SE, or large N makes an experiment representative and unbiased.
+
+**Optional follow-up:** How many times as many independent pairs would roughly halve the SE?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## Can a better comparison remove irrelevant variation? {#pairing-design}
+
+<img class="data-plot" src="figures/generated/power-design.png" alt="Sampling distributions for six compound and six vehicle cultures from unrelated preparations versus six matched split preparations, both with twelve assigned culture vessels." />
+<p class="takeaway">Shared preparation variation cancels in a meaningful paired contrast.</p>
+<p class="fine">Same 12 culture vessels, true mean −14 and balanced conditions across days. Pairing must reflect a real shared source.</p>
+
+::: notes
+**Time: 00:32–00:35 (3 minutes).**
+
+**Say:** Compare twelve unrelated preparations, six per condition, with six independent preparations split into twelve vessels. Both layouts balance conditions across days, so this comparison isolates matching instead of deliberately confounding treatment with day. Unrelated preparation baselines vary with SD 15 and no longer cancel within contrasts; the mean estimate’s simulated SE is about 9.6 instead of 4.2 U/mg. Both use three assay readings per vessel and the same treatment effect process. Randomization is still within the relevant allocation structure. Pairing is useful because matching captures a positively shared baseline; it is not automatically better for arbitrary pairs or every cost/covariance structure. Measuring all controls on unrelated control-only days would add possible confounding, which statistics cannot remove by increasing N. This figure compares estimator precision, not a menu of tests or proof that every paired design is superior.
+
+**Conceptual point:** Meaningful pairing and balanced blocking can reduce irrelevant variation before analysis.
+
+**Likely misconception:** Any post-hoc pairing improves precision, or pairing replaces randomization and day balance.
+
+**Optional follow-up:** What feature makes the two vessels from one preparation a meaningful pair?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## Where should six additional assay wells go? {#six-more-wells .interaction}
+
+<p class="prompt-tag">Choose, then explain what your choice buys</p>
+<div class="fragment"><img class="data-plot short-plot" src="figures/generated/power-wells.png" alt="Under this model, six extra technical assay wells barely change SE; one new independent pair, measured in six wells, reduces SE more." /></div>
+<p class="small">Technical repeats improve measurement precision and assay checks.<br>New preparations add information about population responses.</p>
+<p class="fine">42 assay wells in either option. A new pair also requires new culture work; total costs are not equal.</p>
+
+::: notes
+**Time: 00:35–00:38 (3 minutes).**
+
+**Say:** Make the resource unit explicit: assay wells, not culture vessels. Current design uses 36 readings. Option A adds one assay reading to each vessel in three existing pairs, six additional technical readings. Option B adds one independent preparation split into two vessels, with three readings each, also six assay wells. A reduces SE to 99.7% of baseline; B to about 92.6%. In this model response variation dominates, so independent replication brings more information about the population mean. The numerical comparison concerns precision, not applying an unmodified t calibration to unequal technical counts. Technical replication is useful for measurement precision and assay reliability, especially when technical error is substantial; its value depends on the components and total costs. Option B requires preparation and culture resources beyond assay wells. Never call technical replicates independent biological units.
+
+**Conceptual point:** Replication choices should follow the source of uncertainty and the resource being counted.
+
+**Likely misconception:** Technical repeats are useless, or six extra readings necessarily mean six extra independent responses.
+
+**Optional follow-up:** If technical noise dominated or new cultures were much more expensive, how would you reassess the options?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## What must we specify before calculating N? {#planning-inputs}
+
+<div class="synthesis-grid"><p><span>Question and quantity</span>Which effect, in which experimental space?</p><p><span>Experimental unit</span>What counts as independent replication?</p><p><span>Relevant effect</span>What magnitude is worth detecting?</p><p><span>Expected variation</span>How variable are the paired responses?</p><p><span>Design and analysis</span>How will allocation, blocking and pairing work?</p><p><span>Decision and target</span>Which alpha and desired power?</p></div>
+<p class="takeaway">Only then does a sample-size calculation make sense.</p>
+
+::: notes
+**Time: 00:38–00:41 (3 minutes).**
+
+**Say:** Walk back from the desired answer to the assumptions a calculation needs. Establish the scientific contrast, experimental unit, minimum relevant effect, plausible SD of the relevant response, design, prespecified analysis, alpha and desired power. Desired power and alpha are choices justified by scientific consequences and resources, not mandatory constants. Feasibility, attrition and failed cultures also need operational planning; the following numbers count completed usable pairs and include no attrition allowance. A program can compute consequences of inputs; it cannot validate those inputs scientifically.
+
+**Conceptual point:** A sample-size calculation follows an explicit prospective design specification.
+
+**Likely misconception:** Software can produce a scientifically correct N from arbitrary effect and SD entries.
+
+**Optional follow-up:** Which of these inputs is least well supported for our current assay?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## What if our assumed effect or SD is wrong? {#planning-sensitivity .interaction}
+
+<img class="data-plot" src="figures/generated/power-sensitivity.png" alt="Required independent pairs across effect magnitudes 6, 10 and 14 and difference SDs 8, 12 and 16, with power target 80 percent and two-sided alpha 0.05." />
+<p class="takeaway">Numbers are required <strong>independent preparation pairs</strong>.</p>
+<p class="fine">Illustrative assumptions: paired t analysis, 80% target, two-sided α = 0.05. These are conventions, not requirements or an L1 recommendation.</p>
+
+::: notes
+**Time: 00:41–00:44 (3 minutes).**
+
+**Say:** Use the grid rather than announcing one N. For assumed effect magnitude 10 and paired-change SD 12, the smallest integer N meeting 80% is 14 completed pairs. With effect 6 and SD 16 it is 58; with effect 14 and SD 8 it is 5. The grid uses the normal independent paired-difference model and counts both rejection tails. Eighty percent is a common planning convention, not a universal standard; neither is alpha 0.05 mandatory. The effect and SD values are illustrative scenarios, not validated biological relevance thresholds or confidence bounds from this pilot. If assumptions are wrong, achieved performance changes. Report them, examine sensitivity and consider credible external or pilot variance information without trusting one noisy point estimate. These values exclude attrition, operational block constraints and model misspecification.
+
+**Conceptual point:** Required N is conditional on assumptions, not a certificate of adequate design.
+
+**Likely misconception:** Meeting a calculated N guarantees a decisive result or replication.
+
+**Optional follow-up:** Which assumptions would you want to defend before choosing one of these numbers?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## My p-value is 0.09. What should I do now? {#advice-revisited .interaction}
+
+<div class="research-paths"><div><h3>Inform the next experiment</h3><p class="small">Interpret the effect and interval.<br>Replicate independently if justified.<br>Improve design and reduce avoidable variation.<br>Plan independent N and analysis in advance.</p></div><div><h3>Do not chase the threshold</h3><p class="small">Switch analysis only to get p &lt; 0.05.<br>Delete observations just for a smaller p.<br>Choose one-sided after seeing direction.<br>Keep adding samples until p crosses.</p></div></div>
+
+::: notes
+**Time: 00:44–00:47 (3 minutes).**
+
+**Say:** Return to the audience’s original suggestions and let them revise one. Interpretation, acknowledging uncertainty, an independent replication if justified, better design, reduced avoidable variation and prospective biological replication are defensible directions. A method may need correction if scientifically or diagnostically inappropriate, and exclusions can be justified by an established QC rule; changing choices solely for significance is different and requires transparent handling rather than result shopping. Do not choose a one-sided question after seeing the direction or keep adding observations until a threshold appears. Establish the principle only; the later block will address flexible analysis in detail. Neither high power guarantees replication nor low planned power automatically invalidates a significant result. Evaluate design, assumptions, effect, interval and reporting.
+
+**Conceptual point:** Prospective improvements serve the scientific question; post-hoc threshold chasing does not resolve it.
+
+**Likely misconception:** A different test or selectively reduced dataset is an appropriate fix because it produces a smaller p-value.
+
+**Optional follow-up:** Which original suggestion would you keep, and how would you make it prospective?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## Design for a useful answer {#power-design-synthesis}
+
+<p class="s2-chain">Biological effect + variation<br>+ experimental design + independent N<br><span>↓</span>Precision<br><span>↓</span>Probability of crossing a pre-specified decision threshold</p>
+<p class="fine">The last step also depends on alpha and the planned analysis; crossing a threshold alone does not settle the biological question.</p>
+<p class="takeaway fragment">Power is primarily prospective.<br>How can the next experiment answer the biological question with useful precision?</p>
+
+::: notes
+**Time: 00:47–00:49 (2 minutes).**
+
+**Say:** Connect the pieces in two minutes. At a specified effect, biological variability, design and independent N shape the precision of the estimated effect; the rejection probability additionally depends on the decision rule and analysis. The compact chain is not a claim that precision alone determines power or that crossing a threshold establishes biological importance. Do not make retrospective claims about whether our observed result was a false negative. The relevant question changes from making this p-value significant to designing the next experiment for useful information.
+
+**Conceptual point:** Prospective design ties a biological question to precision and the conditional performance of a procedure.
+
+**Likely misconception:** Power is a post-hoc explanation of why this particular result is non-significant.
+
+**Optional follow-up:** What would you specify differently before collecting the next dataset?
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::
+
+## One question to carry forward {#twenty-outcomes-bridge}
+
+<p class="quote uncertainty-final">Suppose I measured 20 outcomes and only one gave p &lt; 0.05. What now?</p>
+
+::: notes
+**Time: 00:49–00:50 (1 minute).**
+
+**Say:** Read the new practical problem and stop. Do not calculate a probability, introduce a correction or explain the next block. The outcome of this opening is prospective design reasoning for the single prespecified assay question.
+
+**Conceptual point:** A new scientific situation raises the next question after the single-outcome design problem.
+
+**Likely misconception:** The previous single-outcome reasoning has already resolved this new situation.
+
+**Optional follow-up:** Leave this question unanswered.
+
+**Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
+
+:::

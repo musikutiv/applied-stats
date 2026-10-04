@@ -1,0 +1,37 @@
+"preparation","day","vessel","lysate","condition","technical_reading","activity","cell_line","incubation_hours","dose_uM","dmso_percent","simulated"
+"P1","Day 1","P1-A","P1-A-L","Compound Q",1,60.86,"L1",24,10,0.1,TRUE
+"P1","Day 1","P1-A","P1-A-L","Compound Q",2,56.64,"L1",24,10,0.1,TRUE
+"P1","Day 1","P1-A","P1-A-L","Compound Q",3,58.65,"L1",24,10,0.1,TRUE
+"P1","Day 1","P1-B","P1-B-L","Vehicle",1,79.07,"L1",24,0,0.1,TRUE
+"P1","Day 1","P1-B","P1-B-L","Vehicle",2,80.27,"L1",24,0,0.1,TRUE
+"P1","Day 1","P1-B","P1-B-L","Vehicle",3,79.52,"L1",24,0,0.1,TRUE
+"P2","Day 1","P2-A","P2-A-L","Compound Q",1,80.02,"L1",24,10,0.1,TRUE
+"P2","Day 1","P2-A","P2-A-L","Compound Q",2,75.91,"L1",24,10,0.1,TRUE
+"P2","Day 1","P2-A","P2-A-L","Compound Q",3,81.51,"L1",24,10,0.1,TRUE
+"P2","Day 1","P2-B","P2-B-L","Vehicle",1,77.56,"L1",24,0,0.1,TRUE
+"P2","Day 1","P2-B","P2-B-L","Vehicle",2,82.72,"L1",24,0,0.1,TRUE
+"P2","Day 1","P2-B","P2-B-L","Vehicle",3,77.15,"L1",24,0,0.1,TRUE
+"P3","Day 2","P3-A","P3-A-L","Compound Q",1,93.35,"L1",24,10,0.1,TRUE
+"P3","Day 2","P3-A","P3-A-L","Compound Q",2,95.22,"L1",24,10,0.1,TRUE
+"P3","Day 2","P3-A","P3-A-L","Compound Q",3,93.76,"L1",24,10,0.1,TRUE
+"P3","Day 2","P3-B","P3-B-L","Vehicle",1,111.29,"L1",24,0,0.1,TRUE
+"P3","Day 2","P3-B","P3-B-L","Vehicle",2,111.57,"L1",24,0,0.1,TRUE
+"P3","Day 2","P3-B","P3-B-L","Vehicle",3,112.51,"L1",24,0,0.1,TRUE
+"P4","Day 2","P4-A","P4-A-L","Compound Q",1,86.32,"L1",24,10,0.1,TRUE
+"P4","Day 2","P4-A","P4-A-L","Compound Q",2,83.27,"L1",24,10,0.1,TRUE
+"P4","Day 2","P4-A","P4-A-L","Compound Q",3,81.97,"L1",24,10,0.1,TRUE
+"P4","Day 2","P4-B","P4-B-L","Vehicle",1,106.84,"L1",24,0,0.1,TRUE
+"P4","Day 2","P4-B","P4-B-L","Vehicle",2,108.37,"L1",24,0,0.1,TRUE
+"P4","Day 2","P4-B","P4-B-L","Vehicle",3,107.53,"L1",24,0,0.1,TRUE
+"P5","Day 3","P5-A","P5-A-L","Vehicle",1,114.92,"L1",24,0,0.1,TRUE
+"P5","Day 3","P5-A","P5-A-L","Vehicle",2,112.37,"L1",24,0,0.1,TRUE
+"P5","Day 3","P5-A","P5-A-L","Vehicle",3,112.94,"L1",24,0,0.1,TRUE
+"P5","Day 3","P5-B","P5-B-L","Compound Q",1,119.51,"L1",24,10,0.1,TRUE
+"P5","Day 3","P5-B","P5-B-L","Compound Q",2,118.04,"L1",24,10,0.1,TRUE
+"P5","Day 3","P5-B","P5-B-L","Compound Q",3,120.82,"L1",24,10,0.1,TRUE
+"P6","Day 3","P6-A","P6-A-L","Compound Q",1,90.37,"L1",24,10,0.1,TRUE
+"P6","Day 3","P6-A","P6-A-L","Compound Q",2,92.49,"L1",24,10,0.1,TRUE
+"P6","Day 3","P6-A","P6-A-L","Compound Q",3,91.38,"L1",24,10,0.1,TRUE
+"P6","Day 3","P6-B","P6-B-L","Vehicle",1,96.98,"L1",24,0,0.1,TRUE
+"P6","Day 3","P6-B","P6-B-L","Vehicle",2,97.93,"L1",24,0,0.1,TRUE
+"P6","Day 3","P6-B","P6-B-L","Vehicle",3,97.87,"L1",24,0,0.1,TRUE

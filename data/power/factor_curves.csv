@@ -1,0 +1,203 @@
+"factor","value","power"
+"Effect magnitude (U/mg)",0,0.0500000000000001
+"Effect magnitude (U/mg)",0.5,0.0511344487929557
+"Effect magnitude (U/mg)",1,0.0545445028277873
+"Effect magnitude (U/mg)",1.5,0.0602494353821253
+"Effect magnitude (U/mg)",2,0.0682785893794284
+"Effect magnitude (U/mg)",2.5,0.0786673913425585
+"Effect magnitude (U/mg)",3,0.0914521255633368
+"Effect magnitude (U/mg)",3.5,0.10666379824139
+"Effect magnitude (U/mg)",4,0.124321481426658
+"Effect magnitude (U/mg)",4.5,0.144425563453774
+"Effect magnitude (U/mg)",5,0.166951343766766
+"Effect magnitude (U/mg)",5.5,0.19184339453065
+"Effect magnitude (U/mg)",6,0.219011069865206
+"Effect magnitude (U/mg)",6.5,0.24832547834199
+"Effect magnitude (U/mg)",7,0.279618149426844
+"Effect magnitude (U/mg)",7.5,0.312681525231817
+"Effect magnitude (U/mg)",8,0.347271301771053
+"Effect magnitude (U/mg)",8.5,0.383110535865963
+"Effect magnitude (U/mg)",9,0.419895332100605
+"Effect magnitude (U/mg)",9.5,0.457301835527594
+"Effect magnitude (U/mg)",10,0.494994185778042
+"Effect magnitude (U/mg)",10.5,0.532633041107313
+"Effect magnitude (U/mg)",11,0.569884259234098
+"Effect magnitude (U/mg)",11.5,0.606427326078083
+"Effect magnitude (U/mg)",12,0.641963152318278
+"Effect magnitude (U/mg)",12.5,0.676220908010951
+"Effect magnitude (U/mg)",13,0.708963632742304
+"Effect magnitude (U/mg)",13.5,0.739992437476117
+"Effect magnitude (U/mg)",14,0.769149198472873
+"Effect magnitude (U/mg)",14.5,0.796317727428631
+"Effect magnitude (U/mg)",15,0.821423479908822
+"Effect magnitude (U/mg)",15.5,0.844431931748199
+"Effect magnitude (U/mg)",16,0.865345806942329
+"Effect magnitude (U/mg)",16.5,0.88420137863296
+"Effect magnitude (U/mg)",17,0.90106408641086
+"Effect magnitude (U/mg)",17.5,0.916023718800062
+"Effect magnitude (U/mg)",18,0.929189401022466
+"Effect magnitude (U/mg)",18.5,0.940684607405355
+"Effect magnitude (U/mg)",19,0.950642387840502
+"Effect magnitude (U/mg)",19.5,0.959200961781273
+"Effect magnitude (U/mg)",20,0.966499794324914
+"Effect magnitude (U/mg)",20.5,0.972676229794598
+"Effect magnitude (U/mg)",21,0.977862721331271
+"Effect magnitude (U/mg)",21.5,0.98218466209487
+"Effect magnitude (U/mg)",22,0.985758796033725
+"Biological response SD (U/mg)",3,0.997500813250899
+"Biological response SD (U/mg)",3.5,0.995188799835014
+"Biological response SD (U/mg)",4,0.991155823581062
+"Biological response SD (U/mg)",4.5,0.98464696576611
+"Biological response SD (U/mg)",5,0.974917581039137
+"Biological response SD (U/mg)",5.5,0.961380376234415
+"Biological response SD (U/mg)",6,0.943723050446854
+"Biological response SD (U/mg)",6.5,0.921960113344118
+"Biological response SD (U/mg)",7,0.896413361077292
+"Biological response SD (U/mg)",7.5,0.867640621752964
+"Biological response SD (U/mg)",8,0.836341923564213
+"Biological response SD (U/mg)",8.5,0.803268387276438
+"Biological response SD (U/mg)",9,0.769149198472873
+"Biological response SD (U/mg)",9.5,0.734642172149544
+"Biological response SD (U/mg)",10,0.700306639538583
+"Biological response SD (U/mg)",10.5,0.666594015320333
+"Biological response SD (U/mg)",11,0.633850557727114
+"Biological response SD (U/mg)",11.5,0.602327409755674
+"Biological response SD (U/mg)",12,0.572194149757486
+"Biological response SD (U/mg)",12.5,0.543553269673741
+"Biological response SD (U/mg)",13,0.516453999333004
+"Biological response SD (U/mg)",13.5,0.490904636342687
+"Biological response SD (U/mg)",14,0.466883040581512
+"Biological response SD (U/mg)",14.5,0.444345260287625
+"Biological response SD (U/mg)",15,0.423232427453508
+"Biological response SD (U/mg)",15.5,0.403476140019468
+"Biological response SD (U/mg)",16,0.385002572152426
+"Biological response SD (U/mg)",16.5,0.36773554587642
+"Biological response SD (U/mg)",17,0.351598773483897
+"Biological response SD (U/mg)",17.5,0.336517450118288
+"Biological response SD (U/mg)",18,0.322419345285627
+"Biological response SD (U/mg)",18.5,0.30923551380289
+"Biological response SD (U/mg)",19,0.296900721984434
+"Biological response SD (U/mg)",19.5,0.285353664141709
+"Biological response SD (U/mg)",20,0.274537027455662
+"Biological response SD (U/mg)",20.5,0.264397449659027
+"Biological response SD (U/mg)",21,0.2548854031435
+"Biological response SD (U/mg)",21.5,0.24595503068489
+"Biological response SD (U/mg)",22,0.237563951411192
+"Independent preparation pairs",3,0.280461084729766
+"Independent preparation pairs",4,0.472039516543149
+"Independent preparation pairs",5,0.641389893267766
+"Independent preparation pairs",6,0.769149198472873
+"Independent preparation pairs",7,0.857167043871407
+"Independent preparation pairs",8,0.914310556697555
+"Independent preparation pairs",9,0.949861063074202
+"Independent preparation pairs",10,0.971267513366146
+"Independent preparation pairs",11,0.983824603106106
+"Independent preparation pairs",12,0.991033083359776
+"Independent preparation pairs",13,0.995096062662147
+"Independent preparation pairs",14,0.997350207144022
+"Independent preparation pairs",15,0.998583618649305
+"Independent preparation pairs",16,0.999250282598608
+"Independent preparation pairs",17,0.999606682521271
+"Independent preparation pairs",18,0.999795335842017
+"Independent preparation pairs",19,0.99989430026163
+"Independent preparation pairs",20,0.999945789379353
+"Independent preparation pairs",21,0.999972375891148
+"Independent preparation pairs",22,0.99998600812598
+"Independent preparation pairs",23,0.999992952800642
+"Independent preparation pairs",24,0.999996469291671
+"Decision threshold α",0.005,0.263032785515158
+"Decision threshold α",0.006,0.294927567373082
+"Decision threshold α",0.007,0.32378253371945
+"Decision threshold α",0.008,0.350123659925923
+"Decision threshold α",0.009,0.374342178232513
+"Decision threshold α",0.01,0.396739218689641
+"Decision threshold α",0.011,0.41755279758708
+"Decision threshold α",0.012,0.436975089209461
+"Decision threshold α",0.013,0.455163985260717
+"Decision threshold α",0.014,0.472251116480344
+"Decision threshold α",0.015,0.488347588359873
+"Decision threshold α",0.016,0.503548186974365
+"Decision threshold α",0.017,0.517934530023638
+"Decision threshold α",0.018,0.531577471894367
+"Decision threshold α",0.019,0.544538969371533
+"Decision threshold α",0.02,0.556873549804073
+"Decision threshold α",0.021,0.568629481184767
+"Decision threshold α",0.022,0.57984971532467
+"Decision threshold α",0.023,0.590572655928889
+"Decision threshold α",0.024,0.600832789890656
+"Decision threshold α",0.025,0.610661210542523
+"Decision threshold α",0.026,0.620086054698679
+"Decision threshold α",0.027,0.629132870271412
+"Decision threshold α",0.028,0.637824927502102
+"Decision threshold α",0.029,0.646183484033235
+"Decision threshold α",0.03,0.654228011934169
+"Decision threshold α",0.031,0.661976393132565
+"Decision threshold α",0.032,0.66944508846894
+"Decision threshold α",0.033,0.676649284588059
+"Decision threshold α",0.034,0.683603022110947
+"Decision threshold α",0.035,0.690319307914933
+"Decision threshold α",0.036,0.696810213857541
+"Decision threshold α",0.037,0.703086963884654
+"Decision threshold α",0.038,0.709160011143478
+"Decision threshold α",0.039,0.715039106460241
+"Decision threshold α",0.04,0.720733359329378
+"Decision threshold α",0.041,0.726251292386044
+"Decision threshold α",0.042,0.73160089018346
+"Decision threshold α",0.043,0.736789642991641
+"Decision threshold α",0.044,0.741824586206462
+"Decision threshold α",0.045,0.746712335900789
+"Decision threshold α",0.046,0.751459120961597
+"Decision threshold α",0.047,0.756070812202378
+"Decision threshold α",0.048,0.760552948788411
+"Decision threshold α",0.049,0.764910762268896
+"Decision threshold α",0.05,0.769149198472873
+"Decision threshold α",0.051,0.773272937493961
+"Decision threshold α",0.052,0.777286411961659
+"Decision threshold α",0.053,0.781193823773238
+"Decision threshold α",0.054,0.784999159439936
+"Decision threshold α",0.055,0.78870620418338
+"Decision threshold α",0.056,0.792318554902815
+"Decision threshold α",0.057,0.795839632120943
+"Decision threshold α",0.058,0.799272690999539
+"Decision threshold α",0.059,0.80262083152077
+"Decision threshold α",0.06,0.805887007895605
+"Decision threshold α",0.061,0.80907403727871
+"Decision threshold α",0.062,0.812184607846379
+"Decision threshold α",0.063,0.815221286293251
+"Decision threshold α",0.064,0.818186524797264
+"Decision threshold α",0.065,0.821082667497478
+"Decision threshold α",0.066,0.823911956525065
+"Decision threshold α",0.067,0.826676537623878
+"Decision threshold α",0.068,0.829378465393669
+"Decision threshold α",0.069,0.832019708185849
+"Decision threshold α",0.07,0.834602152679049
+"Decision threshold α",0.071,0.837127608159182
+"Decision threshold α",0.072,0.839597810526594
+"Decision threshold α",0.073,0.842014426050825
+"Decision threshold α",0.074,0.844379054891769
+"Decision threshold α",0.075,0.846693234405136
+"Decision threshold α",0.076,0.848958442243395
+"Decision threshold α",0.077,0.851176099278073
+"Decision threshold α",0.078,0.853347572341055
+"Decision threshold α",0.079,0.855474176808877
+"Decision threshold α",0.08,0.857557179036315
+"Decision threshold α",0.081,0.859597798650356
+"Decision threshold α",0.082,0.861597210714
+"Decision threshold α",0.083,0.863556547768585
+"Decision threshold α",0.084,0.865476901762693
+"Decision threshold α",0.085,0.867359325875043
+"Decision threshold α",0.086,0.869204836238254
+"Decision threshold α",0.087,0.87101441356981
+"Decision threshold α",0.088,0.87278900471613
+"Decision threshold α",0.089,0.874529524115183
+"Decision threshold α",0.09,0.876236855182707
+"Decision threshold α",0.091,0.87791185162674
+"Decision threshold α",0.092,0.879555338694819
+"Decision threshold α",0.093,0.881168114357903
+"Decision threshold α",0.094,0.882750950434805
+"Decision threshold α",0.095,0.884304593660645
+"Decision threshold α",0.096,0.885829766702602
+"Decision threshold α",0.097,0.88732716912674
+"Decision threshold α",0.098,0.888797478314391
+"Decision threshold α",0.099,0.890241350341847
+"Decision threshold α",0.1,0.89165942081084

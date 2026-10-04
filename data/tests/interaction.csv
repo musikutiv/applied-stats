@@ -1,0 +1,33 @@
+"treatment","genotype","rep","value"
+"Control","Wild type",1,97.3985437514723
+"Q","Wild type",1,77.7048402192061
+"Control","Knockout",1,93.9079157135142
+"Q","Knockout",1,88.2235823553715
+"Control","Wild type",2,103.645441478748
+"Q","Wild type",2,82.653344418416
+"Control","Knockout",2,98.2039968921705
+"Q","Knockout",2,91.2888011069937
+"Control","Wild type",3,113.75866481596
+"Q","Wild type",3,78.6565134369638
+"Control","Knockout",3,117.370819633766
+"Q","Knockout",3,90.6618491750338
+"Control","Wild type",4,109.951145691173
+"Q","Wild type",4,77.1318282240602
+"Control","Knockout",4,92.3951851450485
+"Q","Knockout",4,92.3537046893521
+"Control","Wild type",5,93.5118217211032
+"Q","Wild type",5,62.2319459787455
+"Control","Knockout",5,97.0212086279821
+"Q","Knockout",5,100.041421206487
+"Control","Wild type",6,118.233029235659
+"Q","Wild type",6,65.4013755063393
+"Control","Knockout",6,91.2431936952883
+"Q","Knockout",6,92.2087310214212
+"Control","Wild type",7,96.3429890927985
+"Q","Wild type",7,78.8021151922777
+"Control","Knockout",7,99.0281609664405
+"Q","Knockout",7,100.076456580454
+"Control","Wild type",8,92.9224729933298
+"Q","Wild type",8,80.1745340843163
+"Control","Knockout",8,102.688295836758
+"Q","Knockout",8,98.2069474198297

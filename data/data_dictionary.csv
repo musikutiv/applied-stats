@@ -1,0 +1,13 @@
+field,meaning,unit_or_values
+preparation,Independently initiated culture preparation,P1 to P6
+day,Shared measurement day,Day 1 to Day 3
+vessel,Treatment-assignment unit,Preparation ID with A or B suffix
+lysate,Lysate from one vessel,Vessel ID with L suffix
+condition,Random assignment within each preparation,Vehicle or Compound Q
+technical_reading,Assay aliquot from the same lysate,1 to 3
+activity,Simulated enzyme activity,U per mg protein
+cell_line,Fictional common cell line,L1
+incubation_hours,Time between treatment and harvest,hours
+dose_uM,Compound Q concentration,micromolar
+dmso_percent,Matched solvent concentration,percent
+simulated,Teaching data indicator,TRUE

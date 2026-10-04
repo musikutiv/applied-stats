@@ -1,0 +1,13 @@
+"preparation","day","vessel","lysate","condition","cell_line","incubation_hours","dose_uM","dmso_percent"
+"P1","Day 1","P1-A","P1-A-L","Compound Q","L1",24,10,0.1
+"P1","Day 1","P1-B","P1-B-L","Vehicle","L1",24,0,0.1
+"P2","Day 1","P2-A","P2-A-L","Compound Q","L1",24,10,0.1
+"P2","Day 1","P2-B","P2-B-L","Vehicle","L1",24,0,0.1
+"P3","Day 2","P3-A","P3-A-L","Compound Q","L1",24,10,0.1
+"P3","Day 2","P3-B","P3-B-L","Vehicle","L1",24,0,0.1
+"P4","Day 2","P4-A","P4-A-L","Compound Q","L1",24,10,0.1
+"P4","Day 2","P4-B","P4-B-L","Vehicle","L1",24,0,0.1
+"P5","Day 3","P5-A","P5-A-L","Vehicle","L1",24,0,0.1
+"P5","Day 3","P5-B","P5-B-L","Compound Q","L1",24,10,0.1
+"P6","Day 3","P6-A","P6-A-L","Compound Q","L1",24,10,0.1
+"P6","Day 3","P6-B","P6-B-L","Vehicle","L1",24,0,0.1

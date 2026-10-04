@@ -1,0 +1,345 @@
+## What do the data actually look like? {#data-look}
+
+<img class="data-plot" src="figures/generated/bio-pairs.png" alt="Six paired preparation panels. Each vehicle circle and compound Q triangle is the average of three technical assay readings. Lines connect matching vessels within each preparation." />
+<p class="takeaway">Are most preparations lower with Q?</p>
+<p class="fine">V = vehicle, Q = compound Q. One dot per vessel; one connected pair per preparation. Simulated data.</p>
+
+::: notes
+**Time: 01:35–01:38 (3 minutes).**
+
+**Say:** Welcome back. These are the established data, now displayed as twelve vessel values forming six biological comparisons. Each dot averages the three technical assay readings from its lysate. Ask for descriptions before explaining the pattern. Four pairs decrease, P2 is almost unchanged, and P5 increases. Do not equate lower activity with therapeutic benefit. P2 differs by only about 0.003 U/mg before display rounding.
+
+**Conceptual point:** The paired plot makes direction, starting level and consistency visible without a numerical summary.
+
+**Likely misconception:** Twelve dots imply twelve independent responses, or the six panels are six different cell lines. The response comparison is paired within each of six L1 preparations.
+
+**Optional follow-up:** Is the same pattern visible in every preparation?
+
+**Sources:** AppliedStats_2026.pdf pp. 25, 121–123, 137–144. New offline plot of the unchanged current simulation.
+
+:::
+
+## How large is each preparation’s change? {#six-changes .interaction}
+
+<img class="data-plot" src="figures/generated/bio-changes.png" alt="The six Q-minus-vehicle changes: P1 about minus 20.9, P2 about zero, P3 minus 17.7, P4 minus 23.7, P5 plus 6.0, P6 minus 6.2 U/mg protein." />
+<p class="takeaway">Are the changes similar? Is one unusual? Does one point drive the picture?</p><p class="fine">Simulated L1 assay. Six independently initiated preparations, each contributing one paired comparison.</p>
+
+::: notes
+**Time: 01:38–01:41 (3 minutes).**
+
+**Say:** Use one minute of paired observation and two minutes for a debrief. The horizontal reference marks equal observed activities in a pair. Negative values mean lower activity with Q. Four reductions range from about 6 to 24 U/mg, one comparison is nearly unchanged, and P5 goes upwards. P4 has the largest reduction. The downward direction appears in several preparations, not just P4. P5 is worth asking about; an opposite direction is not itself proof of a mistake. No deletion or formal leave-one-out procedure is needed.
+
+**Conceptual point:** One observed change per preparation answers the response question while preserving heterogeneity.
+
+**Likely misconception:** All six changes should be alike if an average response exists, or an opposite-direction result should be discarded.
+
+**Optional follow-up:** Which preparation would you inspect in the notebook first, and why?
+
+**Sources:** AppliedStats_2026.pdf pp. 25, 41, 73–74. All six changes are retained.
+
+:::
+
+## What would one number leave out? {#beyond-one-number}
+
+
+<div class="synthesis-grid">
+<p><span>Where?</span>What is a typical change?</p>
+<p><span>How far apart?</span>How much do changes vary?</p>
+<p><span>What pattern?</span>Balanced, clustered, or stretched to one side?</p>
+<p><span>Which observation?</span>Does one preparation stand apart?</p>
+</div>
+<p class="takeaway fragment">Location, spread, shape and unusual observations.</p>
+
+::: notes
+**Time: 01:41–01:43 (2 minutes).**
+
+**Say:** Ask which question the previous graph made them want to answer. Then reveal the short names for those properties. These labels organize their observations rather than precede them as definitions. With only six changes, we can describe the arrangement we see but cannot establish a stable underlying shape.
+
+**Conceptual point:** A dataset has several properties that a single summary cannot preserve.
+
+**Likely misconception:** Knowing an average describes consistency, shape and unusual observations too.
+
+**Optional follow-up:** Which feature of the six changes would disappear first if we only showed their average?
+
+**Sources:** AppliedStats_2026.pdf pp. 32–41. Reordered around the observed assay problem.
+
+:::
+
+## Which number would stand in for these six? {#choose-typical .interaction}
+
+<p class="prompt-tag">Choose a value and explain your choice · 1 minute</p><img class="data-plot short-plot" src="figures/generated/changes-sorted.png" alt="All six paired changes ordered along a number line, with preparation labels and rounded values, before displaying any summary." />
+<p class="takeaway">An average of every value? A value in the middle?</p><p class="fine">Simulated L1 assay. Six independently initiated preparations, each contributing one paired comparison.</p>
+
+::: notes
+**Time: 01:43–01:45 (2 minutes).**
+
+**Say:** Give one minute to choose a representative number and one minute to hear two explanations. Ask for a rule, not just a guess. The display orders the changes but retains preparation IDs. Do not identify a correct summary yet; the next slide compares two reasonable questions.
+
+**Conceptual point:** The choice of a typical value depends on what the summary is intended to represent.
+
+**Likely misconception:** There is one universally correct typical value regardless of the scientific question.
+
+**Optional follow-up:** Would your rule change if one preparation moved much farther away?
+
+**Sources:** AppliedStats_2026.pdf pp. 33–35. Values come from the current six paired changes.
+
+:::
+
+## The average and the middle answer different questions {#mean-and-median}
+
+<img class="data-plot short-plot" src="figures/generated/changes-centres.png" alt="Six ordered paired changes with mean at minus 10.4 and median at minus 11.9 U/mg protein." />
+<div class="definitions-pair">
+<div><p class="compound">Mean: -10.4 U/mg</p><p class="small">Add all six changes, then divide by six.</p></div>
+<div><p class="vehicle">Median: -11.9 U/mg</p><p class="small">Order the changes; average the two middle values.</p></div>
+</div><p class="fine">Simulated L1 assay. Six independently initiated preparations, each contributing one paired comparison.</p>
+
+::: notes
+**Time: 01:45–01:48 (3 minutes).**
+
+**Say:** The mean is -10.4 U/mg and uses every observed magnitude. The median is -11.9 U/mg: with six observations, it is halfway between the third and fourth ordered changes, about −17.68 and −6.18. Use the dots to illustrate the average as a balance point and the median as the middle position. The mean is a natural description of an average quantitative change, especially with approximately symmetric values; the median describes the middle. Our original scientific question concerned an average difference, so retain that distinction rather than swapping targets for a nicer number.
+
+**Conceptual point:** Mean and median are complementary descriptions with different responses to extreme magnitudes.
+
+**Likely misconception:** An asymmetric pattern always requires the median, or the median estimates the same quantity as the mean in every setting.
+
+**Optional follow-up:** Which summary uses how far P5 lies from the other changes?
+
+**Sources:** AppliedStats_2026.pdf pp. 33–35. The categorical skewed-means-median rule is deliberately not reused.
+
+:::
+
+## What if one preparation were extreme? {#extreme-preparation .interaction}
+
+
+<p class="prompt-tag">Predict which summary moves more · then reveal</p>
+<div class="figure-stack">
+<img class="data-plot fragment fade-out" data-fragment-index="0" src="figures/generated/extreme-predict.png" alt="Original changes and a hypothetical variant in which P5 increases by 60 U/mg. Summary values are initially hidden." /><img class="data-plot fragment" data-fragment-index="0" src="figures/generated/extreme-reveal.png" alt="Original mean -10.4, median -11.9. With only P5 changed, mean -0.4, median still -11.9." />
+</div>
+<p class="fine">Hypothetical illustration only. The original dataset is unchanged. Each panel contains six paired changes.</p>
+
+::: notes
+**Time: 01:48–01:51 (3 minutes).**
+
+**Say:** Before advancing, allow a minute to predict what happens when P5 alone moves from about +6.0 to +66.0 U/mg. The other five changes stay fixed. Reveal both summaries together. Mean moves from -10.4 to -0.4, a 10-unit shift because a total increase of 60 is shared over six observations. Median stays at -11.9 because the two middle ordered values stay the same. The hypothetical scenario raises all three Q aliquot readings for P5 by 60 before aggregating, so the displayed change has a consistent underlying construction. It is not a newly observed result.
+
+**Conceptual point:** The median is less sensitive to an extreme magnitude. The mean retains the contribution of that magnitude.
+
+**Likely misconception:** The median can never change when an observation changes, or its robustness makes the extreme observation irrelevant. The unchanged median here depends on unchanged middle ranks.
+
+**Optional follow-up:** What changed about the biological story even though the median stayed fixed?
+
+**Sources:** AppliedStats_2026.pdf p. 35, adapted as a prediction exercise. Explicitly labelled perturbation of the established simulated dataset.
+
+:::
+
+## An unusual preparation needs a question {#unusual-observation}
+
+
+<p class="eyebrow">Returning to the original experiment</p>
+<p class="big">Why did this preparation<br>behave differently?</p>
+<div class="allocation">
+<div><p>Check its history</p><p class="small">Culture, handling, reagents and assay records.</p></div>
+<div><p>Keep the result visible</p><p class="small">Document any justified exclusion and its reason.</p></div>
+</div>
+
+::: notes
+**Time: 01:51–01:53 (2 minutes).**
+
+**Say:** Return explicitly to the original six changes, not the hypothetical extreme. P5 went in the opposite direction; that is a prompt to inspect metadata, not grounds for automatic deletion. A large change could reflect biology, a handling event or a measurement problem. Any exclusion needs a defensible documented reason, preferably a prospective QC rule. The original dataset remains intact. Do not propose that the median substitutes for investigating the experiment.
+
+**Conceptual point:** Unusual observations contain information and require provenance-based judgment.
+
+**Likely misconception:** A point that looks different is necessarily erroneous or removable by a visual rule.
+
+**Optional follow-up:** What notebook evidence would distinguish an assay failure from a genuine response difference?
+
+**Sources:** AppliedStats_2026.pdf pp. 17, 73–74. Corrects the unexplained deletion in the old example.
+
+:::
+
+## Do the preparations all tell the same story? {#range-and-iqr}
+
+<img class="data-plot short-plot" src="figures/generated/changes-spread.png" alt="Original changes with their full range and quartile interval marked. Q1 is about minus 20.1 and Q3 minus 1.5 U/mg protein." />
+<div class="definitions-pair">
+<div><p>Range: 29.8 U/mg</p><p class="small">Largest minus smallest change.</p></div>
+<div><p>IQR: 18.6 U/mg</p><p class="small">Distance from the lower to the upper quartile.</p></div>
+</div><p class="fine">Simulated L1 assay. Six independently initiated preparations, each contributing one paired comparison.</p>
+
+::: notes
+**Time: 01:53–01:56 (3 minutes).**
+
+**Say:** Begin with the need to describe how much the preparations disagree. The full observed span runs from about -23.7 to +6.0 U/mg. Its width is 29.8. Quartiles locate the 25% and 75% positions in the ordered values; their distance is the interquartile range, 18.6. It focuses on the central part rather than the two extremes. Do not derive a quantile algorithm. At n=6 there are several conventions and positions may be interpolated: our R type-7 quartiles are Q1=-20.0975, Q3=-1.5425. This does not mean exactly three observed dots must lie between the displayed boundaries.
+
+**Conceptual point:** Variation is part of the result. Range covers the full observed span, while IQR describes the central spread.
+
+**Likely misconception:** The IQR is a statement about uncertainty in a mean or must contain exactly half the points for every small sample.
+
+**Optional follow-up:** Which width would react more if only the largest observed change moved farther away?
+
+**Sources:** AppliedStats_2026.pdf pp. 36–40. Quantile convention documented in data/derived/README.md.
+
+:::
+
+## How far do changes lie from their mean? {#variance-and-sd}
+
+
+<div class="data-split">
+<div><img class="data-plot" src="figures/generated/changes-deviations.png" alt="Six paired changes and their distances from the mean. A vertical mean line is orange; horizontal distances are teal." /></div>
+<div><p>Variance</p><p class="small">Summarizes squared distances from the mean.</p>
+<p class="keyline">Standard deviation</p><p class="small">The square root puts spread back in the measurement units.</p>
+<p class="medium fragment">SD = 12.1 U/mg</p></div></div><p class="fine">Simulated L1 assay. Six independently initiated preparations, each contributing one paired comparison.</p>
+
+::: notes
+**Time: 01:56–01:59 (3 minutes).**
+
+**Say:** Point to the mean line and the distance to each preparation’s change. Squaring distances makes them nonnegative and gives large deviations greater influence. Sample variance sums these squared deviations and divides by n−1, here five; its value is 147.5 in squared activity units. SD is its square root, 12.1 U/mg. Mention the sample denominator once in speech if needed, with no derivation or exercise. We are describing spread among the six changes, not the precision of their mean. Avoid a percentage-within-one-SD rule for these six values.
+
+**Conceptual point:** Variance quantifies squared deviations; SD expresses that spread in the same units as the changes.
+
+**Likely misconception:** SD is the ordinary mean absolute distance, or an interval describing how well the average is known.
+
+**Optional follow-up:** Which preparation contributes a large squared deviation from this mean?
+
+**Sources:** AppliedStats_2026.pdf p. 40. Uses sample variance with n−1; official R sd documentation confirms the convention.
+
+:::
+
+## Could these have the same mean and SD? {#same-summaries .interaction}
+
+<img class="data-plot" src="figures/generated/same-summaries.png" alt="Two explicitly constructed six-value illustrations. One spreads values across the scale; the other has five equal values and one distant value. Their unrounded mean and sample SD are identical." />
+<p class="takeaway fragment">Both: mean -10.4, SD 12.1 U/mg.</p>
+<p class="fine">Constructed illustrations, not additional experiments. Six values each, scaled to the original data’s mean and SD.</p>
+
+::: notes
+**Time: 01:59–02:02 (3 minutes).**
+
+**Say:** Give a minute for the audience to compare the structures before revealing the matching summaries. These are deliberately constructed sets of six changes, not additional measured preparations. They use the original six changes’ exact mean and sample SD as targets. Identical values are stacked so every point remains visible. The first is distributed across the scale. The second has five equal values and one separated value. Spend the remaining time asking what the two numbers failed to convey. Do not extend into an Anscombe or Datasaurus history.
+
+**Conceptual point:** Summary statistics compress data and cannot replace seeing its structure.
+
+**Likely misconception:** Equal mean and SD imply the same distribution, consistency or biological explanation.
+
+**Optional follow-up:** Which structure would prompt a different laboratory follow-up?
+
+**Sources:** AppliedStats_2026.pdf p. 41, summary-statistics warning. New small illustration built around the current assay scale.
+
+:::
+
+## Which plot preserves the information we need? {#paired-or-box}
+
+
+<div class="plot-compare">
+<div><p>The paired values</p><img class="data-plot" src="figures/generated/bio-pairs-compact.png" alt="Twelve vessel summaries connected as six pairs, retaining baseline activity and direction." /><p class="small">Starting values and within-preparation change.</p></div>
+<div><p>The six changes</p><img class="data-plot" src="figures/generated/changes-boxpoints.png" alt="A horizontal boxplot of the six paired changes with all six raw change points overlaid." /><p class="small">A compact summary, with every change visible.</p></div>
+</div>
+<p class="fine">Same original simulated assay. Left: 12 vessel values forming six pairs. Right: six Q-minus-vehicle changes.</p>
+
+::: notes
+**Time: 02:02–02:05 (3 minutes).**
+
+**Say:** The paired plot preserves both activities and the relationship within a preparation. The boxplot summarizes the six differences rather than treating the two conditions as unpaired groups. Explain that the box runs from Q1 to Q3, and its central line is the median. Whiskers extend to observed values within 1.5 IQR of the quartiles; here they reach the observed extremes. All six points are shown, including those overlaid near the median or whiskers. With six changes, the raw observations carry essential information. A boxplot alone would hide it. Do not read its whiskers as a precision interval or treat points outside whiskers as automatic errors.
+
+**Conceptual point:** The plot should preserve the experimental relationship and the individual observations relevant to the question.
+
+**Likely misconception:** A boxplot includes every important feature, or pairing is unnecessary once values are summarized.
+
+**Optional follow-up:** Which view lets you see that a large change started from a high activity level?
+
+**Sources:** AppliedStats_2026.pdf pp. 25, 38–39, 123, 139. Boxplot of paired changes with raw points, not a copied source layout.
+
+:::
+
+## Can six changes tell us a distribution’s shape? {#six-in-a-histogram}
+
+<img class="data-plot" src="figures/generated/histogram-six.png" alt="The same six changes placed into two histograms with different bin widths, five and ten U/mg. Tick marks show the six observations." />
+<p class="takeaway">The bins change the impression. The observations have not changed.</p>
+<p class="fine">Same six simulated paired changes. Small ticks mark the observations in both panels.</p>
+
+::: notes
+**Time: 02:05–02:07 (2 minutes).**
+
+**Say:** A histogram groups nearby values into bins. These panels use exactly the same six changes and the same axis limits, with widths of five and ten units. The apparent pattern depends strongly on bin choices. We can describe the observed values, but six values give little support for a smooth, stable shape. Histograms can be useful with many relevant observations; smoothing these six into a density curve would not create more information. Do not return to 36 technical readings to make the histogram look better.
+
+**Conceptual point:** For this small biological sample, individual observations are more informative than a heavily binned or smoothed representation.
+
+**Likely misconception:** A smooth curve or a fine bin grid adds biological evidence, or histograms are always inappropriate.
+
+**Optional follow-up:** What experimental information would be lost if we treated all assay aliquots as separate responses?
+
+**Sources:** AppliedStats_2026.pdf pp. 27–30, 39. New comparison on the six current paired changes.
+
+:::
+
+## What does n = 6 actually count? {#n-with-summary}
+
+
+<p class="medium">Mean paired change: <strong>-10.4 U/mg</strong><br>SD of the paired changes: <strong>12.1 U/mg</strong></p>
+<p class="big keyline">Six independently initiated<br>culture preparations</p>
+<p class="takeaway">Each contributes one paired treatment–control comparison.</p>
+
+::: notes
+**Time: 02:07–02:09 (2 minutes).**
+
+**Say:** Read the summary with its full unit description. These six are preparations of L1, not six cells, assay aliquots, donors or days. Each change compares Q against the matching vehicle. Three technical measurements per vessel were averaged before making each contrast. The preparations were run as two pairs on each of three days. Keep the earlier shared-day qualification: independent initiation alone cannot prove independent responses if the day alters the treatment response.
+
+**Conceptual point:** N belongs with every summary and must name what was counted.
+
+**Likely misconception:** A bare n=6 guarantees biological independence or makes the scope obvious.
+
+**Optional follow-up:** What would a reader need in the methods to interpret this n?
+
+**Sources:** AppliedStats_2026.pdf p. 50, connected to pp. 73–74 and 121–122.
+
+:::
+
+## How would you describe this result to a colleague? {#describe-result .interaction}
+
+
+<p class="prompt-tag">Write two sentences · 1 minute</p>
+<p class="medium">Direction and size.<br>Variation and any unusual preparation.<br>What the six observations count.</p>
+<div class="fragment keyline">
+<p class="small">Four preparations decreased, one was almost unchanged and one increased.<br>The mean paired change was -10.4 U/mg, with SD 12.1 U/mg across six independently initiated L1 preparations.</p></div>
+<p class="fine">Describes these simulated observations; does not establish a mechanism or generalize beyond the stated experimental space.</p>
+
+::: notes
+**Time: 02:09–02:12 (3 minutes).**
+
+**Say:** Give one minute to write and one minute to hear a response. Reveal one acceptable description for the final minute. Four preparations decrease, P2 is nearly unchanged, P5 increases; the largest decrease is P4. The mean is -10.4 and SD 12.1 U/mg. Participants may additionally use median -11.9, IQR 18.6, or the observed span if they say what those summaries describe. They should not imply that every preparation decreased or that Q has a proven mechanism. Ask whether the wording faithfully preserves heterogeneity.
+
+**Conceptual point:** A useful descriptive report combines magnitude, variability, exceptions and an explicit replication count.
+
+**Likely misconception:** A summary sentence must choose either raw observations or numerical summaries, rather than use both.
+
+**Optional follow-up:** What claim does this experiment permit from this description alone?
+
+**Sources:** AppliedStats_2026.pdf pp. 50, 81, rebuilt as a short reporting task.
+
+:::
+
+## What can we describe before going further? {#describe-before-inference}
+
+
+<div class="synthesis-grid">
+<p><span>Direction</span>Which way did the response change?</p>
+<p><span>Size</span>How large were the changes?</p>
+<p><span>Variation</span>How far apart were they?</p>
+<p><span>Consistency</span>Did preparations tell the same story?</p>
+<p><span>Exceptions</span>Was any observation unusual?</p>
+<p><span>Replication</span>How many independent observations generated this picture?</p>
+</div>
+<p class="takeaway fragment">We observed an effect. How precisely do we know its size?</p>
+
+::: notes
+**Time: 02:12–02:15 (3 minutes).**
+
+**Say:** Use two minutes for a brisk retrieval round. Identify the direction and magnitude of observed changes, their spread and inconsistency, and the six preparation-level comparisons. Ask what those comparisons might still share across days. Six independently initiated preparations are the counted units; independence of responses also depends on the generating process. In the final minute reveal the question about precision and pause before the next block. An observed effect here means a descriptive difference, not a claim that the treatment mechanism has been established. Invite a prediction; the following repeated-experiment block develops the answer.
+
+**Conceptual point:** Description is a necessary stage before asking how precisely a quantity is known.
+
+**Likely misconception:** The SD of the observed changes has already answered how precisely we know their average.
+
+**Optional follow-up:** Which part of our description is clear, and which question is still unanswered?
+
+**Sources:** AppliedStats_2026.pdf pp. 41, 50, 81. Transition to the next block on repeated experiments and uncertainty.
+
+:::

@@ -1,0 +1,13 @@
+source('R/simulate_intervals.R');source('R/summarise_assay.R');source('R/simulate_assay.R')
+raw <- read.csv('data/simulated/assay_readings.csv');stopifnot(isTRUE(all.equal(raw,simulate_assay(),check.attributes=FALSE)))
+pair <- summarise_assay(raw)$paired;o <- read.csv('data/null/observed_test.csv')
+one <- t.test(pair$difference,mu=0);paired <- t.test(pair$compound,pair$vehicle,paired=TRUE)
+stopifnot(abs(o$t-unname(one$statistic))<1e-12,abs(o$p-one$p.value)<1e-12,abs(o$p-paired$p.value)<1e-12,max(abs(c(o$lower,o$upper)-one$conf.int))<1e-10)
+r <- read.csv('data/null/repeated_changes.csv');x <- matrix(r$change,ncol=6,byrow=TRUE);s <- read.csv('data/null/repeated_statistics.csv')
+stopifnot(nrow(x)==10000,all(table(r$experiment)==6),max(abs(x-simulate_repeated_assay(seed=20261006L,true_mean=0)))<1e-10)
+m <- rowMeans(x);se <- sqrt(rowSums((x-m)^2)/5)/sqrt(6);tt <- m/se;pp <- 2*pt(-abs(tt),5)
+stopifnot(max(abs(s$mean-m))<1e-10,max(abs(s$t-tt))<1e-10,max(abs(s$p-pp))<1e-10)
+stopifnot(all((s$p<.05)==(s$lower>0|s$upper<0)),abs(mean(s$mean))<.15,abs(mean(s$p<.05)-.05)<.012,abs(mean(abs(s$t)>=abs(o$t))-o$p)<.012)
+# Shared simulator default must still reproduce the earlier uncertainty exports.
+old <- read.csv('data/uncertainty/repeated_changes.csv');stopifnot(max(abs(matrix(old$change,ncol=6,byrow=TRUE)-simulate_repeated_assay()))<1e-10)
+cat('PASS: unchanged assay; paired and one-sample t agree; original CI preserved; null simulation reproducible; six changes per experiment; each statistic/p-value verified; CI/test equivalence and Monte Carlo rates checked; previous simulation unchanged.\n')

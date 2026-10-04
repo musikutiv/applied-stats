@@ -1,0 +1,41 @@
+{
+  "screens": 64,
+  "core_slides": 63,
+  "slides_with_notes": 64,
+  "audience_code_elements": 0,
+  "embedded_images": 36,
+  "broken_images": 0,
+  "elapsed_minutes": 205,
+  "teaching_minutes": 190,
+  "break_minutes": 15,
+  "over_original_session_budget_minutes": 25,
+  "new_block": {
+    "core_slides": 14,
+    "minutes": 35,
+    "start": 170,
+    "end": 205
+  },
+  "render_engine": "Quarto 1.8.27",
+  "html_modified": "2026-10-03T09:17:32.144737+02:00",
+  "numerical_validation": "scripts/check_null.R passed: original data and CI preserved; paired/one-sample agreement; reproducible null simulations and unchanged earlier simulations; every t and p recomputed; CI/test equivalence and Monte Carlo rates checked.",
+  "source_validation": "64 complete note sets; continuous timing 0\u2013205 minutes.",
+  "browser_validation": {
+    "surface": "local HTTP preview, 1280x720",
+    "errors": [],
+    "new_slides_with_overflow": [],
+    "visual_review": "All 14 new slides reviewed from captured final reveal states. Final annotated two-tail plot reviewed separately. Ten/hundred/ten-thousand means appear before null terminology; interpretation answer hidden until reveal.",
+    "scope": "Global image/code/notes checks; detailed layout and visual checks on the new block."
+  },
+  "observed_result": {
+    "mean": -10.4066666666667,
+    "se": 4.95798607560831,
+    "t": -2.09897053117275,
+    "df": 5.0,
+    "p": 0.0898705821771447,
+    "lower": -23.1515756139632,
+    "upper": 2.33824228062983
+  },
+  "null_repetitions": 10000,
+  "null_tail_fraction": 0.0907,
+  "null_type_I_fraction": 0.0498
+}

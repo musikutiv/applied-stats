@@ -1,0 +1,12 @@
+# Run from the project root: Rscript scripts/generate_data.R
+source("R/simulate_assay.R")
+source("R/plot_assay.R")
+dir.create("data/simulated", recursive = TRUE, showWarnings = FALSE)
+dir.create("figures/generated", recursive = TRUE, showWarnings = FALSE)
+d <- simulate_assay()
+write.csv(d, "data/simulated/assay_readings.csv", row.names = FALSE)
+metadata <- unique(d[c("preparation", "day", "vessel", "lysate", "condition", "cell_line", "incubation_hours", "dose_uM", "dmso_percent")])
+write.csv(metadata, "data/simulated/assay_metadata.csv", row.names = FALSE)
+plot_assay(d)
+writeLines(capture.output(sessionInfo()), "data/simulated/generation-session.txt")
+cat("Generated 36 readings, vessel metadata and two finished figures.\n")

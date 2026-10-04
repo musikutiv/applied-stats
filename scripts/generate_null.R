@@ -1,0 +1,15 @@
+source('R/simulate_intervals.R');source('R/summarise_assay.R');source('R/plot_null.R')
+x <- simulate_repeated_assay(seed=20261006L,true_mean=0)
+m <- rowMeans(x);s <- sqrt(rowSums((x-m)^2)/5);se <- s/sqrt(6)
+sim <- data.frame(experiment=1:nrow(x),mean=m,sd=s,se=se,t=m/se)
+sim$p <- 2*pt(-abs(sim$t),5)
+sim$lower <- m-qt(.975,5)*se;sim$upper <- m+qt(.975,5)*se
+pair <- summarise_assay(read.csv('data/simulated/assay_readings.csv'))$paired
+fit <- t.test(pair$compound,pair$vehicle,paired=TRUE)
+obs <- data.frame(n=6,mean=mean(pair$difference),sd=sd(pair$difference),se=sd(pair$difference)/sqrt(6),t=unname(fit$statistic),df=5,p=fit$p.value,lower=fit$conf.int[1],upper=fit$conf.int[2])
+write.csv(data.frame(experiment=rep(1:nrow(x),each=6),preparation=rep(1:6,nrow(x)),change=as.vector(t(x))),'data/null/repeated_changes.csv',row.names=FALSE)
+write.csv(sim,'data/null/repeated_statistics.csv',row.names=FALSE)
+write.csv(obs,'data/null/observed_test.csv',row.names=FALSE)
+write.csv(data.frame(seed=20261006,repetitions=nrow(x),true_mean=0,two_sided_tail_fraction=mean(abs(sim$t)>=abs(obs$t)),type_I_fraction=mean(sim$p<.05)),'data/null/metrics.csv',row.names=FALSE)
+plot_null(x,sim,obs)
+print(obs);print(c(tail_fraction=mean(abs(sim$t)>=abs(obs$t)),type_I=mean(sim$p<.05)))

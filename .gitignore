@@ -1,0 +1,11 @@
+.DS_Store
+.quarto/
+.Rhistory
+.RData
+.Rproj.user/
+tmp/
+_quarto_internal_scss_error.scss
+# Finished figures, CSVs and the prototype HTML are intentionally retained.
+
+/.quarto/
+**/*.quarto_ipynb

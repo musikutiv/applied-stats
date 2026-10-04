@@ -1,0 +1,107 @@
+## What does “the compound works” mean? {#claim}
+
+<p class="quote">“Compound Q works.”</p>
+<p class="medium">What claim does this experiment permit?</p>
+<p class="takeaway fragment keyline">Enzyme activity in L1 lysates after 24 hours.</p>
+
+::: notes
+**Time: 00:35–00:38 (3 minutes).**
+
+**Say:** We can now describe the experiment, but what was it intended to establish? Read the lab-meeting claim aloud. Invite two interpretations of “works.” Then reveal the endpoint. This assay addresses activity in a particular preparation under particular conditions; it does not by itself demonstrate a mechanism or clinical benefit.
+
+**Conceptual point:** A measured endpoint is connected to a biological hypothesis but is not synonymous with it.
+
+**Likely misconception:** A well-controlled difference automatically validates the strongest interpretation of the experiment.
+
+**Optional follow-up:** Could enzyme activity change for a reason other than direct inhibition of the enzyme?
+
+**Sources:** A p. 189; R pp. 4, 6–7; D pp. 19–21, 52. Compound and cell line are fictional; possible mechanisms are questions, not assertions.
+:::
+
+## What prediction led us to this assay? {#scientific-cycle}
+
+<div class="cycle">
+<div><p class="step">01</p><p class="label">Observation</p><p class="detail">An earlier pilot looked lower with Q.</p></div>
+<div><p class="step">02</p><p class="label">Question</p><p class="detail">Does Q change activity in L1?</p></div>
+<div><p class="step">03</p><p class="label">Hypothesis</p><p class="detail">Q reduces cellular enzyme activity.</p></div>
+<div><p class="step">04</p><p class="label">Prediction</p><p class="detail">Lower activity after 24 hours than with vehicle.</p></div>
+<div><p class="step">05</p><p class="label">Experiment</p><p class="detail">New paired preparations at a fixed dose.</p></div>
+</div>
+<p class="fine keyline">A possible prospective rationale. We still need to check the dated plan.</p>
+
+::: notes
+**Time: 00:38–00:42 (4 minutes).**
+
+**Say:** Walk through a possible rationale for this experiment. An earlier exploratory pilot might have suggested lower activity. A new experiment could then assess a stated prediction. This is a hypothetical history, not evidence that our current dataset was prospectively planned. We would need a dated plan to know that. Ask which parts of this chain were documented before the experiment; keep the discussion on the research question rather than analytical methods.
+
+**Conceptual point:** Observation, question, biological model, prediction and experiment play distinct roles. Prediction precedes confirmatory data collection.
+
+**Likely misconception:** A plausible explanation written after seeing a result is evidence that the prediction was made beforehand. Or matching a prediction uniquely proves its proposed mechanism.
+
+**Optional follow-up:** Which other biological explanation could produce the same prediction?
+
+**Sources:** A p. 189; R pp. 10–11, 66–70; D p. 52. No pilot dataset is invented as factual evidence.
+:::
+
+## What quantity are we trying to learn? {#target-quantity}
+
+<p class="small">For each preparation, after 24 hours</p>
+<div class="effect-line"><span class="compound">Activity with Q</span><b>−</b><span class="vehicle">Activity with vehicle</span></div>
+<p class="big">The average difference<br>across preparations of L1</p>
+<p class="small keyline">Units: U/mg protein. Negative means lower activity with Q.</p>
+
+::: notes
+**Time: 00:42–00:45 (3 minutes).**
+
+**Say:** We need to state the quantity we want to learn about. Within each preparation, compare the activity with Q against its vehicle vessel. Then our target is the mean of that difference across the relevant population of preparations under these conditions. Keep the language as “the quantity we want to learn.” Do not introduce a technical name or teach how to compute an average. The target is the average biological change across relevant preparations, not the number of measurements. We are defining the question, not summarizing data.
+
+**Conceptual point:** State contrast direction, endpoint, time and biological unit before inference. Distinguish the observed sample estimate from the population target.
+
+**Likely misconception:** “Effect” necessarily means a clinical benefit or a specific mechanism. Our chosen effect here is an absolute mean difference on the assay scale.
+
+**Optional follow-up:** Would the same quantity answer a question about activity after a different incubation time?
+
+**Sources:** A pp. 136–141, 189; D p. 52. Mean-difference concept only; effect estimation and uncertainty remain in the later approved section.
+:::
+
+## How would you rewrite the claim? {#rewrite-claim .interaction}
+
+<p class="prompt-tag">Write with a neighbour · 3 minutes</p>
+<p class="big">“We want to know whether<br>____________ changes<br>____________ in ____________.”</p>
+<p class="takeaway keyline">Include the comparison and the time point.</p>
+
+::: notes
+**Time: 00:45–00:52 (7 minutes).**
+
+**Say:** Give pairs three minutes to formulate a question. Spend four minutes comparing two versions and refining their scope. One acceptable answer: “We want to know whether 10 µM Q, compared with matched vehicle, changes mean enzyme activity after 24 hours across independently initiated preparations of cell line L1 under the specified culture conditions.” Keep a short written version on paper; there is no coding task. Ask what magnitude would matter biologically, but defer numerical threshold selection to later design work.
+
+**Conceptual point:** A research question can be made explicit before choosing an analysis. A good claim identifies the contrast and the scope.
+
+**Likely misconception:** Naming the endpoint alone identifies the population, or a mechanistic claim follows from an endpoint change.
+
+**Optional follow-up:** Which words in your sentence are supported by the assay, and which would require another experiment?
+
+**Sources:** A p. 189; R pp. 4, 10–11; D p. 52. This is the full seven-minute question-rewriting exercise in the approved outline.
+:::
+
+## Did we predict it, or notice it? {#explore-confirm}
+
+<div class="research-paths">
+<div><h3>Exploration</h3><p>Look across outcomes.<br>Notice a pattern.<br>Form a new question.</p></div>
+<div><h3>Confirmation</h3><p>State the prediction first.<br>Fix the key choices.<br>Collect new evidence.</p></div>
+</div>
+<p class="takeaway keyline">Both contribute. Report which happened.</p>
+
+::: notes
+**Time: 00:52–00:55 (3 minutes).**
+
+**Say:** Ask when this endpoint, dose, time and analysis were chosen. If the assay was one of many results inspected before choosing the claim, that is exploration. Its discovery is useful. To assess a prediction without reusing its selection evidence, plan a new appropriate experiment. A dated plan makes chronology visible, but it does not automatically guarantee good design.
+
+**Conceptual point:** Generating a hypothesis and independently evaluating it are different scientific activities. Transparency about selection matters.
+
+**Likely misconception:** Exploratory research is illegitimate or inherently uninformative. Also, describing an analysis as “planned” after seeing its result does not make it prospective.
+
+**Optional follow-up:** If you chose the 24-hour time point after seeing three time points, how would you describe that choice?
+
+**Sources:** R pp. 10–11, 66–70; A p. 189; D p. 52. The source's blanket negative judgments about exploration are intentionally corrected. Multiplicity details wait until Session 2.
+:::

@@ -1,0 +1,17 @@
+---
+pagetitle: "Applied Statistics for Life Scientists — Session 1 prototype"
+---
+
+{{< include sections/_01-my-experiment.qmd >}}
+
+{{< include sections/_02-question.qmd >}}
+
+{{< include sections/_03-sample-to-claim.qmd >}}
+
+{{< include sections/_03b-response-and-break.qmd >}}
+
+{{< include sections/_04-read-the-data.qmd >}}
+
+{{< include sections/_05-effect-and-uncertainty.qmd >}}
+
+{{< include sections/_06-null-model.qmd >}}

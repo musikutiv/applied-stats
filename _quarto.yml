@@ -1,0 +1,46 @@
+project:
+  type: default
+  output-dir: _output
+  render:
+    - session-1.qmd
+    - session-2.qmd
+  resources:
+    - workshop-design-canvas.html
+  execute-dir: project
+lang: en
+format:
+  revealjs:
+    theme: [simple, styles/course.scss]
+    css: styles/course.css
+    width: 1280
+    height: 720
+    margin: 0.06
+    slide-level: 2
+    title-slide: false
+    center: false
+    auto-stretch: false
+    transition: fade
+    background-transition: none
+    slide-number: c/t
+    show-slide-number: all
+    controls: true
+    controls-layout: edges
+    progress: true
+    hash: true
+    history: true
+    navigation-mode: linear
+    touch: true
+    overview: true
+    menu: false
+    chalkboard: false
+    preview-links: false
+    code-tools: false
+    code-fold: false
+    embed-resources: true
+    html-math-method: plain
+    footer: "Applied Statistics for Life Scientists"
+execute:
+  enabled: false
+  echo: false
+  warning: false
+  message: false

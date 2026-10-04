@@ -1,0 +1,232 @@
+## Is my result real? {#is-my-result-real}
+
+<p class="eyebrow">A report from the lab</p>
+<p class="opening-report">“We treated cells with compound Q.<br>We measured enzyme activity.<br>Measurements were performed<br><strong>in triplicate</strong>.”</p>
+
+::: notes
+**Time: 00:00–00:02 (2 minutes).**
+
+**Say:** Give only the three statements on screen. Do not supply a cell line, dose, time, control, total count, plot or protocol yet. This is an incomplete fictional lab report. Ask what the audience would need to know before interpreting it. Let someone question “triplicate”; do not immediately define it for them. If necessary, ask what exactly was repeated.
+
+**Conceptual point:** A familiar methods phrase can conceal very different experimental structures. Missing information must be requested before a claim can be evaluated.
+
+**Likely misconception:** Triplicate unambiguously means three independent biological experiments. At this stage we cannot tell what it means.
+
+**Optional follow-up:** What claim does this experiment permit, with only this information?
+
+**Sources:** AppliedStats_2026.pdf pp. 17, 73–74, 121–122. New fictional wording; no results or source data are displayed.
+:::
+
+## Three of what? {#triplicate .interaction}
+
+<p class="prompt-tag">Compare interpretations · 2 minutes</p>
+<p class="big">What could “in triplicate” mean?</p>
+<div class="triplicate-options fragment">
+<p>Three readings from one lysate?</p>
+<p>Three vessels from one preparation?</p>
+<p>Three separately initiated preparations?</p>
+</div>
+<p class="fine">Possible meanings, not yet the protocol for this experiment.</p>
+
+::: notes
+**Time: 00:02–00:06 (4 minutes).**
+
+**Say:** Give pairs two minutes to propose at least two meanings, without revealing the examples. Advance once to display the possibilities. Use two minutes to hear what information would distinguish them. All are plausible uses of the word. Do not yet say which one applies, introduce technical vocabulary or ask for a numerical N. The next slide provides the first notebook detail.
+
+**Conceptual point:** The word triplicate does not identify what was repeated. Different meanings support different claims.
+
+**Likely misconception:** The best-sounding interpretation is probably the intended one. We must check the experimental record instead.
+
+**Optional follow-up:** What single question would you ask the person who did the experiment?
+
+**Sources:** A pp. 73–74, 121–122; R p. 13. Adapted ambiguity exercise, not a copied source slide.
+:::
+
+## What exactly did we do? {#what-did-we-do}
+
+<p class="small">First notebook detail: one preparation of cell line L1</p>
+<div class="workflow" role="group" aria-label="One preparation followed through treatment and measurement">
+<div class="stage"><div class="prep">P1</div><p>One culture<br>preparation</p></div>
+<div class="connector"></div>
+<div class="stage"><div class="vessels"><div class="vessel v">V</div><div class="vessel q">Q</div></div><p class="small">Split into two vessels<br>Randomly assign V or Q</p></div>
+<div class="connector fragment" data-fragment-index="0"></div>
+<div class="stage fragment" data-fragment-index="0"><div class="reading-row"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="reading-row"><i class="tri"></i><i class="tri"></i><i class="tri"></i></div><p class="small">One lysate per vessel<br>Three assay aliquots each</p></div>
+</div>
+<p class="takeaway fragment" data-fragment-index="0">Here, “triplicate” describes the assay on each lysate.</p>
+<p class="fine">V = vehicle. Q = compound Q. Harvest after 24 hours.</p>
+
+::: notes
+**Time: 00:06–00:09 (3 minutes).**
+
+**Say:** First trace one culture preparation and its two vessels. Random assignment chooses which vessel receives vehicle and which receives Q. The material is harvested after 24 hours. Ask where the triplicate measurements might enter. Then reveal the assay branch: each vessel provides one lysate, assayed in three aliquots. Stop at this one preparation. Do not reveal six preparations, the total counts or the day layout yet.
+
+**Conceptual point:** Trace one piece of biological material through assignment and measurement before counting all repetitions.
+
+**Likely misconception:** Three assay aliquots are three separately treated cultures. In this protocol they all originate from one treated vessel.
+
+**Optional follow-up:** Which earlier step would all three aliquots share?
+
+**Sources:** A pp. 73–74, 121–122; R pp. 4–8, 13; D pp. 5–7. Explicit provenance resolves the ambiguity flagged in CONTENT_MAP.md.
+:::
+
+## Where did we assign the treatment? {#assignment-unit}
+
+<div class="two-col">
+<div><div class="vessels"><div class="vessel v">V</div><div class="vessel q">Q</div></div><p class="small" style="text-align:center;margin-top:24px">Two vessels from preparation P1</p></div>
+<div><p class="big">The culture vessel</p><p class="medium">Our experimental unit</p><p class="small">We assign one vessel to each condition within a preparation.</p></div>
+</div>
+<p class="takeaway keyline">The preparation connects the vessels as a pair.</p>
+
+::: notes
+**Time: 00:09–00:11 (2 minutes).**
+
+**Say:** The treatment enters at the vessel level. That makes the vessel the experimental or treatment-assignment unit here. Allocation is constrained within each preparation: one vessel gets vehicle and one compound. The preparation is a block, so the two vessel outcomes share a history. Later we compare them within that pair.
+
+**Conceptual point:** Assignment unit and unit used for a biological comparison need not be identical. An experimental unit does not imply that all outcomes are uncorrelated.
+
+**Likely misconception:** Calling the vessel an experimental unit means its outcome is unrelated to the other vessel’s outcome. Pairing must be preserved.
+
+**Optional follow-up:** If treatment were assigned to an entire plate, what would change?
+
+**Sources:** A pp. 121–122, 137–144; R pp. 59–62. Terminology made explicit for this defined design.
+:::
+
+## What is N here? {#what-is-n .interaction}
+
+<p class="prompt-tag">Trace the design, then discuss · 2 minutes</p>
+<p class="medium">Six separately initiated preparations of L1.<br>Each follows the split we just saw.</p>
+<p class="takeaway">What would you count, and what would you call it?</p>
+<div class="count-grid fragment">
+<div><div class="count">36</div><div class="count-label">assay readings</div></div>
+<div><div class="count">12</div><div class="count-label">treatment-assigned vessels</div></div>
+<div><div class="count">6</div><div class="count-label">paired biological comparisons</div></div>
+</div>
+
+::: notes
+**Time: 00:11–00:18 (7 minutes).**
+
+**Say:** Reveal that the same split was repeated with six cultures initiated and maintained separately, all from L1. Allow two minutes to draw the hierarchy and decide on counts. Spend three minutes hearing explanations before revealing the 36/12/6 answer. Use two further minutes to ask what each number counts. Each preparation contributes a vehicle-versus-Q comparison. Do not announce that the six comparisons must be independent; we have not yet inspected what they share across days. Ask for a report with nouns, not a bare N.
+
+**Conceptual point:** The number depends on the unit. Twelve assigned vessels form six paired biological comparisons, with 36 assay readings.
+
+**Likely misconception:** The largest count is the biological sample size, or separate preparation labels alone establish independence. The replication and shared-variation discussion follows.
+
+**Optional follow-up:** What claim does this experiment permit if the 36 measurements come from only these six preparations?
+
+**Sources:** A pp. 69, 73–74, 121–122. Combines the previous N question and count-answer slides; discussion is retained.
+:::
+
+## What did we repeat? {#replication}
+
+<div class="replication">
+<div><p class="medium">The assay on one lysate</p><div class="reading-row" style="justify-content:flex-start"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><p>Technical replication</p><p class="small">How much does the measurement vary?</p></div>
+<div><p class="medium">The culture preparation</p><div class="repeat-preps"><div class="prep">P1</div><div class="prep">P2</div><div class="prep">P3</div></div><p>Biological replication</p><p class="small">How much does the result vary across preparations?</p></div>
+</div>
+
+<p class="takeaway keyline">What claim does this experiment permit?</p>
+
+::: notes
+**Time: 00:18–00:22 (4 minutes).**
+
+**Say:** Use two minutes for the audience to explain what each repetition tells us and two minutes to debrief. Repeating the assay helps us examine the measurement process. Independently initiated preparations let us see variation in the biological system as defined here. Neither is useless; they answer different questions. All preparations remain from cell line L1. Return to the question on screen: six preparations can speak to repetition within this system, while three assay aliquots alone cannot establish repetition across preparations.
+
+**Conceptual point:** What is repeated determines which sources of variation are represented.
+
+**Likely misconception:** Technical replication is bad practice, or biological replication automatically samples different people. Both claims are wrong. The distinction is contextual and depends on the target claim.
+
+**Optional follow-up:** Which repeat would address concern about an inconsistent plate reader? Which would address inconsistent culture responses?
+
+**Sources:** A pp. 12, 68, 73–74, 121–122; R p. 53. No outlier removal or inference is taught here.
+:::
+
+## What does the control actually control for? {#control .interaction}
+
+<p class="prompt-tag">Think, then compare answers · 1 minute</p>
+<div class="control-contrast">
+<div class="vehicle"><p class="label">Vehicle</p><p>0.1% DMSO<br>No compound Q</p></div>
+<div class="compound"><p class="label">Compound Q</p><p>0.1% DMSO<br>10 µM compound Q</p></div>
+</div>
+<p class="takeaway fragment">A contrast with the same solvent and handling.</p>
+
+::: notes
+**Time: 00:22–00:26 (4 minutes).**
+
+**Say:** Ask for one minute of thought and discussion before the reveal. Both vessels have the same solvent concentration and handling. The contrast isolates the addition of compound Q relative to this vehicle condition within the design. We do not have an untreated arm, so we cannot separately estimate the solvent's effect. The endpoint is enzyme activity in the lysate, expressed per mg protein. Use the extra minute to ask “What claim does this experiment permit?” and compare an endpoint claim with a direct-mechanism claim.
+
+**Conceptual point:** A control supports a particular comparison; it does not establish every causal or mechanistic claim.
+
+**Likely misconception:** A vehicle control proves the compound acts directly on the enzyme. It cannot alone distinguish direct enzyme action, altered cell state or interference with the assay. These are possibilities to consider, not assertions about Q.
+
+**Optional follow-up:** What additional experiment would check whether Q changes the assay signal even without living cells?
+
+**Sources:** R pp. 6–8; D pp. 19–22. Dose, cell line name and solvent are fictional scenario choices, not a recommended laboratory protocol.
+:::
+
+## Which observations are independent? {#independence .interaction}
+
+<p class="prompt-tag">Which pairs share a source of variation?</p>
+<div class="comparison-row"><span class="letter">A</span><span>Two readings</span><span>from one lysate</span></div>
+<div class="comparison-row"><span class="letter">B</span><span>Vehicle and compound</span><span>from one preparation</span></div>
+<div class="comparison-row"><span class="letter">C</span><span>Two preparations</span><span>measured on the same day</span></div>
+
+::: notes
+**Time: 00:26–00:29 (3 minutes).**
+
+**Say:** Use one minute of pair discussion and two minutes of debrief. A shares a lysate; B shares its preparation and possibly day; C can share day conditions. Do not simply label C independent. Independence is about the process and model, not the distance between dots or their different identifiers. For C, introduce only that some preparations were measured on the same day. The next slide reveals the full day layout. No numerical plot is needed: the shared sources follow from the experimental history.
+
+**Conceptual point:** Shared sources of variation can make outcomes dependent. Independent technical measurement errors do not turn shared biological material into independent treatment evidence.
+
+**Likely misconception:** Different wells or different labels ensure independence, or a statistical test can certify independence from a small dataset.
+
+**Optional follow-up:** What change to the day's reagents might move several values together?
+
+**Sources:** A pp. 17, 119, 121–122; R pp. 8, 33, 53. The exercise completes the hierarchy discussion without a formal dependence model.
+:::
+
+## Did we compare both conditions each day? {#day-layout}
+
+<div class="day-grid" role="img" aria-label="Actual layout. Day 1 contains preparation pairs P1 and P2. Day 2 contains P3 and P4. Day 3 contains P5 and P6. Every preparation has a vehicle and a compound vessel.">
+<div class="day"><p class="day-name">Day 1</p><div class="pair-row"><span>P1</span><span class="pair-mark"><i class="dot"></i><i class="tri"></i></span></div><div class="pair-row"><span>P2</span><span class="pair-mark"><i class="dot"></i><i class="tri"></i></span></div></div>
+<div class="day"><p class="day-name">Day 2</p><div class="pair-row"><span>P3</span><span class="pair-mark"><i class="dot"></i><i class="tri"></i></span></div><div class="pair-row"><span>P4</span><span class="pair-mark"><i class="dot"></i><i class="tri"></i></span></div></div>
+<div class="day"><p class="day-name">Day 3</p><div class="pair-row"><span>P5</span><span class="pair-mark"><i class="dot"></i><i class="tri"></i></span></div><div class="pair-row"><span>P6</span><span class="pair-mark"><i class="dot"></i><i class="tri"></i></span></div></div>
+</div>
+<div class="legend"><span><i class="dot"></i>Vehicle vessel</span><span><i class="tri"></i>Compound vessel</span></div>
+<p class="takeaway fragment">A shift affecting both conditions equally cancels in their difference.</p>
+
+<!-- REVIEW: Six independent pair contrasts are a teaching-model assumption, not an empirical finding. A day-specific treatment response would induce dependence between the two contrasts on that day. Retain this qualification when editing. -->
+::: notes
+**Time: 00:29–00:32 (3 minutes).**
+
+**Say:** This is the final notebook reveal: two preparation pairs on each day, with both conditions in every pair. Ask the audience to trace one within-day comparison. A change in conditions between days is a batch effect. If a day adds the same amount to both conditions, subtraction removes that component. Ask what happens if Q's response itself differs by day.
+
+**Conceptual point:** The layout separates treatment from day. Pairing can remove a shared additive shift, but does not eliminate all possible batch effects.
+
+**Likely misconception:** Six contrasts are universally independent, or blocking removes every batch problem. The simulation assumes independent preparation effects and technical errors, fixed shared additive day shifts, and no day-by-treatment interaction. A shared treatment response by day could correlate the two contrasts on that day. Independence would then need a different model or more independent days.
+
+**Optional follow-up:** If the compound degrades on one day, will the difference still be unaffected?
+
+**Sources:** A pp. 190–192; R pp. 8, 62. The universal “ideal design” claims in the sources are deliberately not reused. Keep the arithmetic illustration to words; the model details remain in notes.
+:::
+
+## What if controls ran on Monday? {#confounding}
+
+<p class="eyebrow">A different, hypothetical layout</p>
+<div class="day-grid fault" role="img" aria-label="Hypothetical confounded design: all vehicle vessels on Monday, all compound vessels on Tuesday, with no within-day treatment comparison.">
+<div class="day"><p class="day-name">Monday</p><div class="pair-mark"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><p>All vehicle vessels</p></div>
+<div class="day"><p class="day-name">Tuesday</p><div class="pair-mark"><i class="tri"></i><i class="tri"></i><i class="tri"></i><i class="tri"></i><i class="tri"></i><i class="tri"></i></div><p>All compound vessels</p></div>
+</div>
+<p class="takeaway fragment">Treatment and day change together. Which caused the difference?</p>
+
+::: notes
+**Time: 00:32–00:35 (3 minutes).**
+
+**Say:** Explicitly announce that this is not our actual protocol. It is a hypothetical scheduling shortcut. Give pairs time to identify the missing comparison. Without within-day treatment comparisons, a difference could arise from treatment, day, or both. Label this confounding only after the audience explains the problem. Give the layout comparison its full three minutes. Close the first 35-minute section with “What claim does this experiment permit?” A treatment-specific claim cannot be separated from a day effect in this alternative layout.
+
+**Conceptual point:** Complete treatment/day confounding prevents separating their effects from these observations alone. More readings of the same lysates do not create the missing comparison.
+
+**Likely misconception:** A later calculation can recover both effects without new information or strong external assumptions. Also avoid suggesting that every batch effect is complete confounding.
+
+**Optional follow-up:** What is the smallest change to the schedule that creates a treatment comparison within a day?
+
+**Sources:** R pp. 6–8, 59–62; A pp. 187–192. New schematic. No questionable numerical claims imported.
+:::

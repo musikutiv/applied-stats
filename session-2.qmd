@@ -1,0 +1,14 @@
+---
+pagetitle: "Applied Statistics for Life Scientists — Session 2"
+format:
+  revealjs:
+    css: [styles/course.css, styles/session-2.css]
+---
+
+{{< include sections/_s2-01-power-and-design.qmd >}}
+
+{{< include sections/_s2-02-multiplicity.qmd >}}
+
+{{< include sections/_s2-03-tests-from-design.qmd >}}
+
+{{< include sections/_s2-04-final-workshop.qmd >}}

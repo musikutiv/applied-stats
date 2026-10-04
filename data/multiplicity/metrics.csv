@@ -1,0 +1,2 @@
+"all_null_fwer","theoretical_fwer","expected_false_count","per_test_rate","min_of_five_rate","mixed_bh_fdr","mixed_bh_fwer","mixed_holm_fwer"
+0.6427,0.641514077591458,1.0023,0.050115,0.2307,0.0413123809523812,0.1016,0.0421

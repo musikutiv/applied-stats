@@ -1,0 +1,58 @@
+{
+  "presentation": "session-2",
+  "slides": 69,
+  "core_slides": 68,
+  "minutes": 180,
+  "slides_with_notes": 69,
+  "audience_code_elements": 0,
+  "embedded_images": 31,
+  "broken_images": 0,
+  "render_engine": "Quarto 1.8.27",
+  "html_modified": "2026-10-03T21:58:59.523664+02:00",
+  "source_validation": "69 complete note sets; continuous timing 00:00\u201303:00, including break 01:20\u201301:35.",
+  "numerical_validation": "scripts/check_power.R passed; reproducible simulations, each p/CI, selected examples, analytic R agreement, minimal integer planning Ns, precision/design/resource calculations. scripts/check_multiplicity.R passed: seed reproduction, direct t calculation, manual Holm/BH agreement, family rates, zero-discovery convention and selection illustration. scripts/check_tests.R passed: Welch direct interval/df/p calculation, paired equivalence, interaction difference-of-differences, ANOVA/lm agreement and seed reproduction. scripts/check_workshop.R passed: 270 readings, 90 vessel/protein means, 60 screen calculations, exact reported technical-well p=.032, hierarchy and exclusion checks.",
+  "browser_validation": {
+    "surface": "local HTTP preview, 1280x720",
+    "errors": [],
+    "slides_with_overflow": [],
+    "visual_review": "All 14 workshop screens visually reviewed; crowded full-data axis labels shortened and final figure rechecked. Hierarchy reveals 0\u20134 layers sequentially. Printable canvas reviewed with 14 fields. All earlier blocks reviewed during their build.",
+    "scope": "Complete Session 2 through final course landing."
+  },
+  "power_simulation": {
+    "seed": 20261007,
+    "experiments": 10000,
+    "empirical_power": 0.78,
+    "analytic_power": 0.769149198472873,
+    "beta": 0.22
+  },
+  "session_1_preservation": "SHA-256 verified unchanged main QMD, all seven sections and rendered HTML.",
+  "teaching_minutes": 165,
+  "break_minutes": 15,
+  "multiplicity": {
+    "new_core_slides": 18,
+    "new_teaching_minutes": 45,
+    "all_null_fwer": 0.6427,
+    "mixed_bh_fdr": 0.04131238,
+    "mixed_bh_fwer": 0.1016,
+    "stop": "Fine. But which statistical test should I actually use for my experiment?"
+  },
+  "tests_block": {
+    "core_slides": 18,
+    "minutes": 45,
+    "start": "01:50",
+    "end": "02:35",
+    "workshop_remaining_minutes": 25,
+    "stop": "Now design an experiment that statistics will not have to rescue."
+  },
+  "workshop": {
+    "screens": 14,
+    "minutes": 25,
+    "start": "02:35",
+    "end": "03:00",
+    "group_work_minutes": 6,
+    "compare_redesigns_minutes": 5,
+    "reported_p": 0.032,
+    "reported_p_valid_for_biological_inference": false,
+    "printable_canvas": "workshop-design-canvas.html"
+  }
+}
