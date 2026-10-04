@@ -4,24 +4,24 @@
 <p class="prompt-tag">Carry the design into the data · 2 minutes in pairs</p>
 <p class="medium">“We now understand the experiment.<br>Before testing anything, what actually happened?”</p>
 <div class="allocation">
-<div><p>One value per vessel</p><p class="small">The three assay aliquots have already been summarized.</p></div>
+<div><p>One value per tube</p><p class="small">The three assay aliquots have already been summarized.</p></div>
 <div><p>One change per preparation</p><p class="small">Compound Q minus its paired vehicle.</p></div>
 </div>
 <p class="takeaway fragment">Six preparations contribute six paired changes.</p>
 
 
 ::: notes
-**Time: 01:15–01:20 (5 minutes).**
+**Time: 01:18–01:23 (5 minutes).**
 
-**Say:** The approved opening stops at minute 75. Use the remaining five minutes before the planned break to connect its design to the observations we will describe. Give pairs two minutes to identify the relevant change and three minutes to debrief. Each vessel contributes the arithmetic average of its three technical readings; no aliquots were omitted. Each preparation then supplies one Q-minus-vehicle comparison. This preprocessing respects the simple balanced assay design. The term average is familiar language here; its definition comes later. Ask which experimental space the six preparations cover. No result is revealed until after the break.
+**Say:** The opening block is complete. Use the five minutes before the planned break to connect its design to the observations we will describe. Give pairs two minutes to identify the relevant change and three minutes to debrief. Each tube contributes the arithmetic average of its three technical readings; no aliquots were omitted. Each preparation then supplies one Q-minus-vehicle comparison. This preprocessing respects the simple balanced assay design. The term average is familiar language here; its definition comes later. Ask which experimental space the six preparations cover. No result is revealed until after the break.
 
-**Conceptual point:** The six biological responses are paired changes. Twelve vessel summaries are their ingredients; 36 technical readings are not 36 treatment responses.
+**Conceptual point:** The six biological responses are paired changes. Twelve tube summaries are their ingredients; 36 technical readings are not 36 treatment responses.
 
 **Likely misconception:** Summarizing assay repeats loses six biological experiments or establishes independence. The original raw readings remain available, and the dependence caveat from the earlier block still applies.
 
 **Optional follow-up:** Which count belongs beside a summary of the treatment response?
 
-**Sources:** AppliedStats_2026.pdf pp. 73–74, 121–122, adapted to the current protocol. Bridge completes the planned population block at minute 80.
+**Sources:** AppliedStats_2026.pdf pp. 73–74, 121–122, adapted to the current protocol. Bridge completes the population block before the break.
 
 :::
 
@@ -33,9 +33,9 @@
 
 
 ::: notes
-**Time: 01:20–01:35 (15 minutes).**
+**Time: 01:23–01:38 (15 minutes).**
 
-**Say:** Pause for the full 15 minutes. Resume the session at elapsed time 01:35. This is a break screen, not a core teaching slide.
+**Say:** Pause for the full 15 minutes. Resume the session at elapsed time 01:38. This is a break screen, not a core teaching slide.
 
 **Conceptual point:** Preserve the planned break and separation between establishing the experiment and describing its results.
 
@@ -43,6 +43,6 @@
 
 **Optional follow-up:** No audience task during the break.
 
-**Sources:** COURSE_OUTLINE.md: break at 01:20–01:35.
+**Sources:** COURSE_OUTLINE.md: planned mid-session break (now 01:23–01:38).
 
 :::

@@ -44,6 +44,7 @@
 
 ## Suppose the true mean effect is −14 U/mg {#specified-effect .interaction}
 
+<p class="prompt-tag">Predict · discuss with a neighbour</p>
 <p class="medium">Same L1 protocol. Six new preparation pairs.<br>True mean effect fixed at <strong>−14 U/mg</strong>.</p>
 <p class="takeaway">Would every repetition give p &lt; 0.05?</p>
 <div class="fragment keyline"><p class="small">Same variability and paired t analysis.<br>Two-sided decision rule fixed in advance: p &lt; 0.05.</p></div>
@@ -52,7 +53,7 @@
 ::: notes
 **Time: 00:06–00:08 (2 minutes).**
 
-**Say:** Ask for a prediction before explaining. We return to the original generating model, whose mean −14 was fixed before its observed sample existed. It is not the observed estimate −10.4, not an estimate of truth derived from p, and not a validated minimum relevant effect. Each repetition creates six independent preparation changes with biological effect SD 9, vessel SD 3 and triplicate technical SD 2.5; additive shared baselines cancel. The two-sided paired t rule is fixed at 0.05 for this illustration. It is not a mandatory rule for all science.
+**Say:** Ask for a prediction before explaining. We return to the original generating model, whose mean −14 was fixed before its observed sample existed. It is not the observed estimate −10.4, not an estimate of truth derived from p, and not a validated minimum relevant effect. Each repetition creates six independent preparation changes with biological effect SD 9, tube SD 3 and triplicate technical SD 2.5; additive shared baselines cancel. The two-sided paired t rule is fixed at 0.05 for this illustration. It is not a mandatory rule for all science.
 
 **Conceptual point:** Procedure performance can be evaluated under a specified nonzero effect, without claiming that effect is known in real data.
 
@@ -66,6 +67,7 @@
 
 ## Same biology, different experiments {#same-biology .interaction}
 
+<p class="prompt-tag">Inspect both experiments · 1 minute</p>
 <img class="data-plot" src="figures/generated/power-examples.png" alt="Two simulated experiments each show six changes, their mean, 95 percent interval and p-value; one crosses 0.05 and one does not." />
 <p class="takeaway">How can both arise from the same true mean effect?</p>
 <p class="fine">Illustrative contrast: first rejection and first non-rejection selected from the simulation. Dashed line: true mean −14; solid line: 0.</p>
@@ -131,6 +133,7 @@
 
 ## Can we conclude that Q has no effect? {#uncertainty-not-absence .interaction}
 
+<p class="prompt-tag">Discuss · 1 minute</p>
 <img class="data-plot short-plot" src="figures/generated/null-ci-zero.png" alt="The unchanged mean paired effect minus 10.4 U/mg with 95 percent interval minus 23.2 to plus 2.3, including zero." />
 <p class="takeaway">Zero, small effects and substantial reductions remain compatible.</p>
 <p class="small">Our actual result: mean −10.4 · 95% CI −23.2 to +2.3 U/mg · p = 0.090</p>
@@ -151,6 +154,26 @@
 
 :::
 
+## p > α does not mean no effect {#no-effect-fallacy}
+
+<p class="big">Our interval: −23 to +2 U/mg.</p>
+<p class="big">It includes zero — and a reduction<br>of almost a quarter of enzyme activity.</p>
+<p class="takeaway keyline">Absence of evidence is not evidence of absence.</p>
+
+::: notes
+**Time: 00:19–00:20 (1 minute).**
+
+**Say:** State this once, clearly, and move on. The interval covers zero — that is why p exceeds α. But it also covers biologically meaningful reductions: −23 U/mg against a vehicle mean of about 98 U/mg is a loss of roughly 24% of activity. A non-significant result from this experiment cannot distinguish "no effect" from "an effect we lacked the power to see." Do not open a discussion.
+
+**Conceptual point:** A wide interval that includes zero is compatible with many effect sizes, including large ones. Non-rejection is not confirmation of the null.
+
+**Likely misconception:** p > 0.05 means the treatment has no effect, or the null hypothesis is true.
+
+**Optional follow-up:** None — this is a statement, not a discussion.
+
+**Sources:** Altman & Bland (1995) *BMJ* 311:1600 — "Absence of evidence is not evidence of absence."
+:::
+
 ## What would change that proportion? {#power-factors}
 
 <p class="prompt-tag">Predict each change before the next reveal</p>
@@ -163,9 +186,9 @@
 <p class="fine">Vary one assumption at a time: effect, biological variability, independent N, then alpha. Other settings stay fixed.</p>
 
 ::: notes
-**Time: 00:19–00:23 (4 minutes).**
+**Time: 00:20–00:24 (4 minutes).**
 
-**Say:** Use four short predictions, one before each reveal. Larger true effect moves estimates further from zero; lower biological variability narrows their distribution; larger independent N lowers SE. A smaller alpha lowers the long-run Type I rate but also lowers power, all else fixed. Baseline is effect magnitude 14, n=6, biological-effect SD 9, vessel SD 3, technical SD 2.5 with three aliquots, and two-sided alpha 0.05. The variability curve changes only biological-effect SD and retains the measurement components. These curves use exact noncentral-t probabilities under independent normal differences, counting both tails. No derivation is needed. Do not recommend loosening alpha to rescue the observed p-value; it is a prospective decision setting.
+**Say:** Use four short predictions, one before each reveal. Larger true effect moves estimates further from zero; lower biological variability narrows their distribution; larger independent N lowers SE. A smaller alpha lowers the long-run Type I rate but also lowers power, all else fixed. Baseline is effect magnitude 14, n=6, biological-effect SD 9, tube SD 3, technical SD 2.5 with three aliquots, and two-sided alpha 0.05. The variability curve changes only biological-effect SD and retains the measurement components. These curves use exact noncentral-t probabilities under independent normal differences, counting both tails. No derivation is needed. Do not recommend loosening alpha to rescue the observed p-value; it is a prospective decision setting.
 
 **Conceptual point:** Power changes when the assumed effect, variability or procedure changes.
 
@@ -179,11 +202,12 @@
 
 ## What effect is worth detecting? {#minimum-relevant-effect .interaction}
 
+<p class="prompt-tag">Decide · then defend your threshold</p>
 <div class="research-paths"><div><h3>What we observed</h3><p>−10.4 U/mg<br>from six preparations</p></div><div><h3>What would matter</h3><p>A minimum relevant effect<br>justified by the biology</p></div></div>
 <p class="takeaway">“How many replicates?” comes after “What question must they answer?”</p>
 
 ::: notes
-**Time: 00:23–00:27 (4 minutes).**
+**Time: 00:24–00:28 (4 minutes).**
 
 **Say:** Ask participants to describe how they would decide whether an enzyme-activity reduction matters: downstream biology, assay reliability, prior evidence or a decision to proceed. The observed effect is a noisy estimate from a small sample; it is not automatically the truth to plug into planning. The teaching mean −14 is likewise not an established relevant threshold. Specify a minimum relevant effect on the same U/mg scale and within the defined L1 conditions. Planning detects a departure from zero assuming an effect of that size; it does not prove an effect exceeds the relevance boundary. No numeric biological threshold is invented.
 
@@ -203,9 +227,9 @@
 <p class="takeaway">Plan with the variability of the <strong>paired changes</strong>.</p>
 
 ::: notes
-**Time: 00:27–00:29 (2 minutes).**
+**Time: 00:28–00:30 (2 minutes).**
 
-**Say:** Recover the experimental unit and hierarchy from Session 1. Technical measurements are from the same lysate. Biological-effect variation is across independently initiated preparations. Vessel noise also enters the paired contrast. Shared additive preparation and day offsets cancel in our simple paired model; treatment-by-day variation would not. The total SD of paired changes, about 10.16 in the model, combines remaining components and is the input for the paired calculation. It is not just SD 9 of the latent biological effect, nor an SD calculated from all 36 readings. Some systematic sources produce bias or confounding rather than harmless random noise.
+**Say:** Recover the experimental unit and hierarchy from Session 1. Technical measurements are from the same lysate. Biological-effect variation is across independently initiated preparations. Tube noise also enters the paired contrast. Shared additive preparation and day offsets cancel in our simple paired model; treatment-by-day variation would not. The total SD of paired changes, about 10.16 in the model, combines remaining components and is the input for the paired calculation. It is not just SD 9 of the latent biological effect, nor an SD calculated from all 36 readings. Some systematic sources produce bias or confounding rather than harmless random noise.
 
 **Conceptual point:** The relevant variability depends on the unit, contrast and experimental design.
 
@@ -219,12 +243,13 @@
 
 ## Does doubling N halve the uncertainty? {#more-independent-pairs .interaction}
 
+<p class="prompt-tag">Predict before the reveal</p>
 <img class="data-plot" src="figures/generated/power-precision.png" alt="SE of the mean change falls from about 5.86 to 4.15, 2.93 and 2.07 U/mg for 3, 6, 12 and 24 independent pairs." />
 <p class="takeaway fragment">SE ∝ 1 / √n · doubling n multiplies SE by about 0.71</p>
 <p class="fine">Independent pairs under the same model. More pairs do not repair bias, confounding or a restricted sampling frame.</p>
 
 ::: notes
-**Time: 00:29–00:32 (3 minutes).**
+**Time: 00:30–00:33 (3 minutes).**
 
 **Say:** Ask for a prediction before revealing the relationship. At n=3,6,12,24 the modeled SEs are about 5.86,4.15,2.93,2.07 U/mg. Each doubling gives the same relative reduction of about 29%, with smaller absolute gains while adding more preparations. Halving SE takes roughly four times the independent N. These are analytic precision calculations under the independent-contrast model; the n=3 illustration is not presented as an exact copy of the original two-pairs-per-day schedule. Independent N may improve power and precision but cannot fix systematic bias, a wrong experimental unit or a narrow cell-line claim.
 
@@ -240,20 +265,20 @@
 
 ## Can a better comparison remove irrelevant variation? {#pairing-design}
 
-<img class="data-plot" src="figures/generated/power-design.png" alt="Sampling distributions for six compound and six vehicle cultures from unrelated preparations versus six matched split preparations, both with twelve assigned culture vessels." />
+<img class="data-plot" src="figures/generated/power-design.png" alt="Sampling distributions for six compound and six vehicle cultures from unrelated preparations versus six matched split preparations, both with twelve assigned culture tubes." />
 <p class="takeaway">Shared preparation variation cancels in a meaningful paired contrast.</p>
-<p class="fine">Same 12 culture vessels, true mean −14 and balanced conditions across days. Pairing must reflect a real shared source.</p>
+<p class="fine">Same 12 culture tubes, true mean −14 and balanced conditions across days. Pairing must reflect a real shared source.</p>
 
 ::: notes
-**Time: 00:32–00:35 (3 minutes).**
+**Time: 00:33–00:36 (3 minutes).**
 
-**Say:** Compare twelve unrelated preparations, six per condition, with six independent preparations split into twelve vessels. Both layouts balance conditions across days, so this comparison isolates matching instead of deliberately confounding treatment with day. Unrelated preparation baselines vary with SD 15 and no longer cancel within contrasts; the mean estimate’s simulated SE is about 9.6 instead of 4.2 U/mg. Both use three assay readings per vessel and the same treatment effect process. Randomization is still within the relevant allocation structure. Pairing is useful because matching captures a positively shared baseline; it is not automatically better for arbitrary pairs or every cost/covariance structure. Measuring all controls on unrelated control-only days would add possible confounding, which statistics cannot remove by increasing N. This figure compares estimator precision, not a menu of tests or proof that every paired design is superior.
+**Say:** Compare twelve unrelated preparations, six per condition, with six independent preparations split into twelve tubes. Both layouts balance conditions across days, so this comparison isolates matching instead of deliberately confounding treatment with day. Unrelated preparation baselines vary with SD 15 and no longer cancel within contrasts; the mean estimate’s simulated SE is about 9.6 instead of 4.2 U/mg. Both use three assay readings per tube and the same treatment effect process. Randomization is still within the relevant allocation structure. Pairing is useful because matching captures a positively shared baseline; it is not automatically better for arbitrary pairs or every cost/covariance structure. Measuring all controls on unrelated control-only days would add possible confounding, which statistics cannot remove by increasing N. This figure compares estimator precision, not a menu of tests or proof that every paired design is superior.
 
 **Conceptual point:** Meaningful pairing and balanced blocking can reduce irrelevant variation before analysis.
 
 **Likely misconception:** Any post-hoc pairing improves precision, or pairing replaces randomization and day balance.
 
-**Optional follow-up:** What feature makes the two vessels from one preparation a meaningful pair?
+**Optional follow-up:** What feature makes the two tubes from one preparation a meaningful pair?
 
 **Sources:** Adapted concepts: COURSE_OUTLINE.md sections 7–8; CONTENT_MAP.md flags on power and pairing; AppliedStats_2026.pdf pp. 92–95, 99, 137–148, 161–164, 187–192; Stats_PhD_MR_CVS_2024.pdf pp. 56–62; DoctaMed.pdf pp. 37–42, 45–46. New figures from the documented L1 model. Calculation reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html; two-sided rejection counts both tails.
 
@@ -267,9 +292,9 @@
 <p class="fine">42 assay wells in either option. A new pair also requires new culture work; total costs are not equal.</p>
 
 ::: notes
-**Time: 00:35–00:38 (3 minutes).**
+**Time: 00:36–00:39 (3 minutes).**
 
-**Say:** Make the resource unit explicit: assay wells, not culture vessels. Current design uses 36 readings. Option A adds one assay reading to each vessel in three existing pairs, six additional technical readings. Option B adds one independent preparation split into two vessels, with three readings each, also six assay wells. A reduces SE to 99.7% of baseline; B to about 92.6%. In this model response variation dominates, so independent replication brings more information about the population mean. The numerical comparison concerns precision, not applying an unmodified t calibration to unequal technical counts. Technical replication is useful for measurement precision and assay reliability, especially when technical error is substantial; its value depends on the components and total costs. Option B requires preparation and culture resources beyond assay wells. Never call technical replicates independent biological units.
+**Say:** Make the resource unit explicit: assay wells, not culture tubes. Current design uses 36 readings. Option A adds one assay reading to each tube in three existing pairs, six additional technical readings. Option B adds one independent preparation split into two tubes, with three readings each, also six assay wells. A reduces SE to 99.7% of baseline; B to about 92.6%. In this model response variation dominates, so independent replication brings more information about the population mean. The numerical comparison concerns precision, not applying an unmodified t calibration to unequal technical counts. Technical replication is useful for measurement precision and assay reliability, especially when technical error is substantial; its value depends on the components and total costs. Option B requires preparation and culture resources beyond assay wells. Never call technical replicates independent biological units.
 
 **Conceptual point:** Replication choices should follow the source of uncertainty and the resource being counted.
 
@@ -287,7 +312,7 @@
 <p class="takeaway">Only then does a sample-size calculation make sense.</p>
 
 ::: notes
-**Time: 00:38–00:41 (3 minutes).**
+**Time: 00:39–00:42 (3 minutes).**
 
 **Say:** Walk back from the desired answer to the assumptions a calculation needs. Establish the scientific contrast, experimental unit, minimum relevant effect, plausible SD of the relevant response, design, prespecified analysis, alpha and desired power. Desired power and alpha are choices justified by scientific consequences and resources, not mandatory constants. Feasibility, attrition and failed cultures also need operational planning; the following numbers count completed usable pairs and include no attrition allowance. A program can compute consequences of inputs; it cannot validate those inputs scientifically.
 
@@ -301,14 +326,15 @@
 
 :::
 
-## What if our assumed effect or SD is wrong? {#planning-sensitivity .interaction}
+## How many pairs does your experiment need? {#planning-sensitivity .interaction}
 
+<p class="prompt-tag">Find your experiment's number in the grid</p>
 <img class="data-plot" src="figures/generated/power-sensitivity.png" alt="Required independent pairs across effect magnitudes 6, 10 and 14 and difference SDs 8, 12 and 16, with power target 80 percent and two-sided alpha 0.05." />
 <p class="takeaway">Numbers are required <strong>independent preparation pairs</strong>.</p>
 <p class="fine">Illustrative assumptions: paired t analysis, 80% target, two-sided α = 0.05. These are conventions, not requirements or an L1 recommendation.</p>
 
 ::: notes
-**Time: 00:41–00:44 (3 minutes).**
+**Time: 00:42–00:45 (3 minutes).**
 
 **Say:** Use the grid rather than announcing one N. For assumed effect magnitude 10 and paired-change SD 12, the smallest integer N meeting 80% is 14 completed pairs. With effect 6 and SD 16 it is 58; with effect 14 and SD 8 it is 5. The grid uses the normal independent paired-difference model and counts both rejection tails. Eighty percent is a common planning convention, not a universal standard; neither is alpha 0.05 mandatory. The effect and SD values are illustrative scenarios, not validated biological relevance thresholds or confidence bounds from this pilot. If assumptions are wrong, achieved performance changes. Report them, examine sensitivity and consider credible external or pilot variance information without trusting one noisy point estimate. These values exclude attrition, operational block constraints and model misspecification.
 
@@ -324,10 +350,11 @@
 
 ## My p-value is 0.09. What should I do now? {#advice-revisited .interaction}
 
+<p class="prompt-tag">Revise your earlier advice · 1 minute</p>
 <div class="research-paths"><div><h3>Inform the next experiment</h3><p class="small">Interpret the effect and interval.<br>Replicate independently if justified.<br>Improve design and reduce avoidable variation.<br>Plan independent N and analysis in advance.</p></div><div><h3>Do not chase the threshold</h3><p class="small">Switch analysis only to get p &lt; 0.05.<br>Delete observations just for a smaller p.<br>Choose one-sided after seeing direction.<br>Keep adding samples until p crosses.</p></div></div>
 
 ::: notes
-**Time: 00:44–00:47 (3 minutes).**
+**Time: 00:45–00:48 (3 minutes).**
 
 **Say:** Return to the audience’s original suggestions and let them revise one. Interpretation, acknowledging uncertainty, an independent replication if justified, better design, reduced avoidable variation and prospective biological replication are defensible directions. A method may need correction if scientifically or diagnostically inappropriate, and exclusions can be justified by an established QC rule; changing choices solely for significance is different and requires transparent handling rather than result shopping. Do not choose a one-sided question after seeing the direction or keep adding observations until a threshold appears. Establish the principle only; the later block will address flexible analysis in detail. Neither high power guarantees replication nor low planned power automatically invalidates a significant result. Evaluate design, assumptions, effect, interval and reporting.
 
@@ -348,7 +375,7 @@
 <p class="takeaway fragment">Power is primarily prospective.<br>How can the next experiment answer the biological question with useful precision?</p>
 
 ::: notes
-**Time: 00:47–00:49 (2 minutes).**
+**Time: 00:48–00:50 (2 minutes).**
 
 **Say:** Connect the pieces in two minutes. At a specified effect, biological variability, design and independent N shape the precision of the estimated effect; the rejection probability additionally depends on the decision rule and analysis. The compact chain is not a claim that precision alone determines power or that crossing a threshold establishes biological importance. Do not make retrospective claims about whether our observed result was a false negative. The relevant question changes from making this p-value significant to designing the next experiment for useful information.
 
@@ -367,7 +394,7 @@
 <p class="quote uncertainty-final">Suppose I measured 20 outcomes and only one gave p &lt; 0.05. What now?</p>
 
 ::: notes
-**Time: 00:49–00:50 (1 minute).**
+**Time: 00:50–00:51 (1 minute).**
 
 **Say:** Read the new practical problem and stop. Do not calculate a probability, introduce a correction or explain the next block. The outcome of this opening is prospective design reasoning for the single prespecified assay question.
 

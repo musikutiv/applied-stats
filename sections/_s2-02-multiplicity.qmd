@@ -6,9 +6,9 @@
 <p class="fine">Hypothetical expansion of the assay—not a revision of the observed enzyme result, p = 0.090.</p>
 
 ::: notes
-**Time: 00:50–00:52 (2 minutes).**
+**Time: 00:51–00:53 (2 minutes).**
 
-**Say:** Ask for an answer before revealing the distinction. The raw p-value still describes its particular test under that test’s assumptions. But finding a small result after twenty chances is a different event from a single preselected comparison. State the central question aloud: how many chances did we give ourselves to find something? This is a hypothetical expanded L1 protocol; the original enzyme result has not been changed to 0.03. No correction method is needed yet.
+**Say:** Ask for an answer before revealing the distinction. The raw p-value still describes its particular test under that test's assumptions. But finding a small result after twenty chances is a different event from a single preselected comparison. State the central question aloud: how many chances did we give ourselves to find something? This is a hypothetical expanded L1 protocol; the original enzyme result has not been changed to 0.03. No correction method is needed yet.
 
 **Conceptual point:** A valid individual p-value and the interpretation of a selected finding across many tests are different questions.
 
@@ -31,7 +31,7 @@
 <p class="fine">Six paired changes per marker. Independent markers, all nulls true. First three simulated experiments, unselected.</p>
 
 ::: notes
-**Time: 00:52–00:55 (3 minutes).**
+**Time: 00:53–00:56 (3 minutes).**
 
 **Say:** Show one set of twenty p-values and ask for a prediction, then reveal two more experiments. Each marker is tested on six independent normal paired changes with true mean zero and a two-sided paired t procedure. Markers are independent in this illustration; real markers can be correlated. Standardized marker units have SD one, so these are not twenty literal enzyme-activity measurements on one scale. Red dots cross 0.05 and are Type I errors because we know the simulated truth. Ordinary small p-values arise without a biological effect. These are the first three experiments, not chosen to achieve a desired pattern.
 
@@ -54,7 +54,7 @@
 <p class="fine">One symbol = one 20-test experiment. A 5% per-test rate is not a 5% any-error rate.</p>
 
 ::: notes
-**Time: 00:55–00:58 (3 minutes).**
+**Time: 00:56–00:59 (3 minutes).**
 
 **Say:** Collect predictions before revealing the grid. Crosses mean at least one of twenty null tests crossed 0.05; the first hundred families are unselected. Across all 10,000, 64.27% had one or more. On the next click show the independence calculation: the probability none crosses is .95 to the twentieth power, so its complement is about .6415. Emphasize that this exact formula requires independent tests with exact .05 marginal size. Correlated valid marker tests do not generally have this same probability. Distinguish the per-test probability from the chance of any false rejection across a family; an expected false count is a third quantity, introduced later.
 
@@ -70,13 +70,14 @@
 
 ## Which claims belong to the same family? {#define-family .interaction}
 
+<p class="prompt-tag">What shared claim would make these one family?</p>
 <p class="medium"><strong>Family-wise error rate (FWER)</strong></p>
 <p class="takeaway">Probability of at least one Type I error within a defined family of hypotheses</p>
 <div class="definitions-pair"><p class="small">20 prespecified cytokines<br>Several treatment contrasts</p><p class="small">Multiple time points<br>Several primary endpoints</p></div>
 <p class="fine">The family follows the scientific claims and decision—not whichever results look interesting.</p>
 
 ::: notes
-**Time: 00:58–01:00 (2 minutes).**
+**Time: 00:59–01:01 (2 minutes).**
 
 **Say:** Only now name FWER. It is a probability that any true null in a defined family is rejected, even if some other hypotheses in that family are false. Ask which outcomes contribute to the same intended claim or decision. Twenty cytokines for one question may form a family; so might several contrasts, time points or primary endpoints. Scientific context and the promised error protection determine the family; there is not one uniquely correct grouping independent of purpose. Define it prospectively where possible, not after seeing which grouping gives a favorable result.
 
@@ -90,72 +91,6 @@
 
 :::
 
-## Can we limit the chance of even one false claim? {#bonferroni}
-
-<p class="medium">Share the family’s error allowance across its tests.</p>
-<p class="uncertainty-equation">0.05 / 20 = 0.0025</p>
-<p class="takeaway">Bonferroni: compare each raw p-value with α / m.</p>
-<p class="fine">Controls FWER with valid individual p-values—even without independence. It can be conservative.</p>
-
-::: notes
-**Time: 01:00–01:02 (2 minutes).**
-
-**Say:** Introduce Bonferroni only after the family problem. For desired family-wise alpha .05 and twenty hypotheses, allocate .0025 to each individual test. The chance of any false rejection cannot exceed the sum of the individual false-rejection probabilities, which is at most .05. This union-bound argument does not require independence, but it does require valid individual p-values for the hypotheses and a defined family. The method may be conservative, particularly with redundant/correlated tests or large families. It does not repair an invalid test or unaccounted data-driven selection.
-
-**Conceptual point:** A simple allocation of the family error allowance controls FWER without assuming independent tests.
-
-**Likely misconception:** The same independence assumption needed for the .64 calculation is needed for Bonferroni.
-
-**Optional follow-up:** What must still be valid before this adjustment can protect the family?
-
-**Sources:** Concepts adapted from CONTENT_MAP.md section 9 and review register: AppliedStats_2026.pdf pp. 78–80, 167–173, 178–184; Stats_PhD_MR_CVS_2024.pdf pp. 63–70; DoctaMed.pdf p. 44. Figures rebuilt, not copied. Method reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/p.adjust.html (Holm strong FWER control; BH FDR and dependence caveats).
-
-:::
-
-## Could we adjust the p-values instead? {#adjusted-p-values}
-
-<p class="medium">Bonferroni-adjusted p = min(1, m × raw p)</p>
-<p class="takeaway">Opening example: <strong>0.03 → 0.60</strong> for 20 tests</p>
-<div class="keyline"><p class="small">A simulated marker, M03: raw p = 0.00264 → adjusted p = 0.0528<br>Estimated change 0.73 · ordinary 95% CI 0.39 to 1.07</p></div>
-<p class="fine">Standardized marker units. The displayed CI is unadjusted, not a simultaneous 95% interval.</p>
-
-::: notes
-**Time: 01:02–01:04 (2 minutes).**
-
-**Say:** An adjusted p-value lets us compare with the original family threshold .05 instead of moving each threshold. Cap the product at one. Opening p=.03 becomes .60 for twenty hypotheses. Keep magnitude and uncertainty visible: in the first all-null family with any crossing (repeat 2), the first crossing marker M03 has estimate .728, ordinary CI .390 to 1.065, raw p .002639 and Bonferroni p .052779. This marker is selected to illustrate a finding and is labelled simulated; its truth is zero despite the apparently directional ordinary interval. The CI is individual and unadjusted: it is not a family-protected interval corresponding to the adjusted decision. Do not silently imply otherwise or report only the threshold label.
-
-**Conceptual point:** Adjusted p-values are an alternative scale for the same multiplicity decision, not replacements for effect reporting.
-
-**Likely misconception:** An adjusted p-value changes the effect estimate, or an ordinary interval automatically gains simultaneous coverage.
-
-**Optional follow-up:** Which parts of the report changed after adjustment, and which did not?
-
-**Sources:** Concepts adapted from CONTENT_MAP.md section 9 and review register: AppliedStats_2026.pdf pp. 78–80, 167–173, 178–184; Stats_PhD_MR_CVS_2024.pdf pp. 63–70; DoctaMed.pdf p. 44. Figures rebuilt, not copied. Method reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/p.adjust.html (Holm strong FWER control; BH FDR and dependence caveats).
-
-:::
-
-## Can we protect the family without one rigid cutoff? {#holm-step-down}
-
-<p class="small">Constructed family of five hypotheses · compare adjusted p-values with 0.05</p>
-<table class="multi-table"><thead><tr><th>Rank</th><th>Raw p</th><th>Bonferroni</th><th>Holm</th></tr></thead><tbody><tr><td>1</td><td>0.006</td><td>0.030</td><td>0.030</td></tr><tr><td>2</td><td>0.011</td><td>0.055</td><td>0.044</td></tr><tr><td>3</td><td>0.016</td><td>0.080</td><td>0.048</td></tr><tr><td>4</td><td>0.030</td><td>0.150</td><td>0.060</td></tr><tr><td>5</td><td>0.200</td><td>1.000</td><td>0.200</td></tr></tbody></table>
-<p class="takeaway fragment">Bonferroni rejects 1; Holm rejects 3.</p>
-<p class="fine">Holm orders the tests and steps down, stopping at the first failure. Both control FWER.</p>
-
-::: notes
-**Time: 01:04–01:07 (3 minutes).**
-
-**Say:** This is an explicitly constructed five-hypothesis example, not the original twenty-marker dataset. Explain the intuition: begin with the smallest p and the strictest cutoff, then continue through successively less stringent cutoffs while all preceding comparisons pass. Raw cutoffs are .01, .0125, .01667, .025, .05; the fourth fails, so stop there. Adjusted p-values preserve this step-down logic. At .05 Bonferroni rejects only the first, Holm the first three. With valid individual p-values, Holm provides strong FWER control under arbitrary dependence and is at least as powerful as Bonferroni, making it generally preferable when this form of FWER control is the goal. Do not require memorization or extend to a method catalogue.
-
-**Conceptual point:** Holm improves on simple Bonferroni while retaining strong family-wise protection.
-
-**Likely misconception:** Holm abandons FWER control, or a later p can be accepted after the step-down process has stopped.
-
-**Optional follow-up:** Why is it useful to report the method and the family alongside adjusted p-values?
-
-**Sources:** Concepts adapted from CONTENT_MAP.md section 9 and review register: AppliedStats_2026.pdf pp. 78–80, 167–173, 178–184; Stats_PhD_MR_CVS_2024.pdf pp. 63–70; DoctaMed.pdf p. 44. Figures rebuilt, not copied. Method reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/p.adjust.html (Holm strong FWER control; BH FDR and dependence caveats).
-
-:::
-
 ## What if we measured 20,000 genes? {#twenty-thousand}
 
 <img class="data-plot short-plot" src="figures/generated/multi-genes.png" alt="Two hundred dots represent twenty thousand genes; ten rust dots represent the expected one thousand raw false positives." />
@@ -163,7 +98,7 @@
 <p class="fine">All nulls true; valid exact 5% tests. Each dot represents 100 genes. Illustration of an expectation—not one observed screen.</p>
 
 ::: notes
-**Time: 01:07–01:09 (2 minutes).**
+**Time: 01:01–01:03 (2 minutes).**
 
 **Say:** Change scale to an exploratory transcriptome-wide screen. Under twenty thousand true nulls, the expected number of raw p-values below .05 is one thousand. Expectation is a repeated-run average, not an exact count in one screen. This expected-count calculation uses linearity of expectation and does not require independent tests if each marginal size is .05; valid conservative tests give at most that expectation. Under independence the probability of at least one is essentially one, a different quantity from the expected count. The dot display depicts the expectation rather than an invented RNA-seq dataset or software output. Protecting against even one error may be demanding for candidate discovery, motivating a different scientific goal.
 
@@ -182,42 +117,18 @@
 <p class="small">New simulation: 4 nonzero marker effects + 16 true nulls; independent tests.</p>
 <img class="data-plot multi-short" src="figures/generated/multi-fdp.png" alt="False-discovery proportions across the first eighty mixed-truth screens; the mean across ten thousand is about 4.1 percent." />
 <p class="takeaway"><strong>FDR:</strong> expected false-discovery proportion over repeated use</p>
-<p class="fine">Line: mean false fraction 4.1% across 10,000 screens. No discoveries → fraction 0.<br>One dataset’s fraction is not guaranteed to equal the target.</p>
+<p class="fine">Line: mean false fraction 4.1% across 10,000 screens. No discoveries → fraction 0.<br>One dataset's fraction is not guaranteed to equal the target.</p>
 
 ::: notes
-**Time: 01:09–01:12 (3 minutes).**
+**Time: 01:03–01:05 (2 minutes).**
 
-**Say:** Contrast the scientific aim of avoiding even one false confirmatory claim with producing a candidate list for follow-up. Name FDR only after posing the list question. The definition is E[V/max(R,1)], where V is false rejections and R all discoveries; if R=0 the fraction is zero. Unlike the initial all-null case, this separate illustration has four nonzero marker effects (1.5 paired-change SD units) and sixteen true nulls, all independent, with six changes per marker. The first eighty BH-controlled screens show variable realized fractions; a teal line marks the mean across ten thousand, about 4.13%. The procedure is named on the next slide. A realized list can have zero, a substantial fraction, or even all false discoveries. In real science we do not know which claims are false. FDR 5% is not a guarantee about this particular list; under all nulls FDR equals FWER, so mixed truth is used to illustrate the distinction.
+**Say:** Contrast the scientific aim of avoiding even one false confirmatory claim with producing a candidate list for follow-up. Name FDR only after posing the list question. FDR is the expected proportion of false discoveries among all discoveries; if there are no discoveries, the fraction is zero by convention. The first eighty BH-controlled screens show variable realized fractions; the teal line marks the mean across ten thousand, about 4.1%. FDR 5% is not a guarantee about this list — it is a repeated-use expectation. A realized list can have zero, a large fraction, or even all false discoveries. In real science we do not know which specific claims are false. The concept of a fraction rather than a count is the take-home.
 
 **Conceptual point:** FDR is a repeated-procedure expectation of a fraction, not a known fraction in one observed discovery set.
 
-**Likely misconception:** At 5% FDR exactly 5% of this study’s significant genes are false.
+**Likely misconception:** At 5% FDR exactly 5% of this study's significant genes are false.
 
 **Optional follow-up:** Why must a run with no discoveries still have a defined fraction?
-
-**Sources:** Concepts adapted from CONTENT_MAP.md section 9 and review register: AppliedStats_2026.pdf pp. 78–80, 167–173, 178–184; Stats_PhD_MR_CVS_2024.pdf pp. 63–70; DoctaMed.pdf p. 44. Figures rebuilt, not copied. Method reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/p.adjust.html (Holm strong FWER control; BH FDR and dependence caveats).
-
-:::
-
-<!-- DEPENDENCE REVIEW: Classical BH control is conditional on independence or suitable positive dependence (PRDS); no arbitrary-dependence guarantee is asserted. Real correlated markers require assessment. -->
-
-## How does Benjamini–Hochberg choose a discovery set? {#bh-ranked}
-
-<img class="data-plot multi-short" src="figures/generated/multi-bh.png" alt="Ordered p-values and the BH rank line for eight hypotheses at target 0.05; the largest qualifying rank is four." />
-<p class="small">Ordered p: .002, .009, .018, .024, .055, .150, .400, .800</p>
-<p class="takeaway fragment">Largest qualifying rank: 4 → select ranks 1–4.</p>
-<p class="fine">Constructed m = 8 example; line = rank × 0.05 / 8. Ranks 6–8 lie above the plotted range. Report “BH-adjusted p”, not an undefined q-value.</p>
-
-::: notes
-**Time: 01:12–01:15 (3 minutes).**
-
-**Say:** Introduce BH as a standard practical FDR procedure. For this constructed eight-hypothesis example, order p-values and compare to a rank-dependent line: rank times target .05 divided by eight. Find the largest qualifying rank, four, then select all ranks up to it. This is step-up logic; unlike Holm, do not stop at the first failed rank. The first four BH-adjusted p-values are .016,.036,.048,.048, then .088,.200,.457,.800. A BH-adjusted p-value is not automatically every quantity called a q-value; name the procedure used. The classical guarantee needs independent valid p-values, or appropriate positive dependence (PRDS on true-null statistics). Arbitrary dependence cannot be ignored. Methods suited to other structures need assessment; do not add another method catalogue. The target was chosen for illustration, not mandated for every screen.
-
-**Conceptual point:** BH uses ordered evidence and family size to control a discovery-list error criterion under stated conditions.
-
-**Likely misconception:** BH is the same as Bonferroni, or retains its usual guarantee under any dependence and selection process.
-
-**Optional follow-up:** Why must the complete family size be known before this rank line is drawn?
 
 **Sources:** Concepts adapted from CONTENT_MAP.md section 9 and review register: AppliedStats_2026.pdf pp. 78–80, 167–173, 178–184; Stats_PhD_MR_CVS_2024.pdf pp. 63–70; DoctaMed.pdf p. 44. Figures rebuilt, not copied. Method reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/p.adjust.html (Holm strong FWER control; BH FDR and dependence caveats).
 
@@ -227,12 +138,12 @@
 
 <div class="research-paths"><div><h3>Confirmatory family</h3><p class="small">How likely is even one false rejection?<br><strong>FWER</strong></p></div><div><h3>Exploratory candidate list</h3><p class="small">What false fraction is controlled on average?<br><strong>FDR</strong></p></div></div>
 <p class="takeaway">Choose the error criterion from the scientific purpose.</p>
-<p class="fine">In our mixed simulation, BH’s mean false fraction is 4.1%; its probability of any false rejection is 10.2%.</p>
+<p class="fine">In our mixed simulation, controlling FDR kept the average false fraction at 4.1% — but at least one false hit still occurred in 10.2% of screens.</p>
 
 ::: notes
-**Time: 01:15–01:17 (2 minutes).**
+**Time: 01:05–01:07 (2 minutes).**
 
-**Say:** Compare promises rather than declaring a winning correction. A few prespecified primary outcomes may need strong protection against any false claim. A transcriptome-wide candidate screen with independent confirmation planned may prioritize a controlled expected false fraction. In the mixed simulation BH gives FDR 4.13% and FWER 10.16%; those are different denominators and summaries, not contradictory results. Holm in that same model has FWER about 4.21%. These realized rates are model-specific, not guarantees for all datasets. Error control does not establish biological importance; keep magnitude, uncertainty and validation in view.
+**Say:** Compare promises rather than declaring a winning correction. A few prespecified primary outcomes may need strong protection against any false claim. A transcriptome-wide candidate screen with independent confirmation planned may prioritize a controlled expected false fraction. In the mixed simulation BH gives FDR 4.13% and FWER 10.16%; those are different denominators and summaries, not contradictory results. These realized rates are model-specific, not guarantees for all datasets. Error control does not establish biological importance; keep magnitude, uncertainty and validation in view.
 
 **Conceptual point:** FWER and FDR address different scientific commitments.
 
@@ -246,11 +157,12 @@
 
 ## You report p = 0.03. What else did you try? {#what-else-tried .interaction}
 
+<p class="prompt-tag">Name one hidden opportunity from your own work</p>
 <div class="multi-choices"><p class="fragment">20 endpoints</p><p class="fragment">Several doses</p><p class="fragment">Several time points</p><p class="fragment">Several subgroups</p><p class="fragment">Different exclusion rules</p><p class="fragment">Transformed or untransformed outcome</p><p class="fragment">Paired or unpaired analysis</p><p class="fragment">One-sided or two-sided test</p><p class="fragment">Stopping or adding observations after a look</p></div>
 <p class="takeaway">Multiple opportunities can be visible—or hidden in analytical choices.</p>
 
 ::: notes
-**Time: 01:17–01:20 (3 minutes).**
+**Time: 01:07–01:10 (3 minutes).**
 
 **Say:** Reveal the choices one at a time and invite examples. Multiplicity can come from planned parallel tests and from decisions affected by observed outcomes. The opportunities are not interchangeable: paired versus unpaired must follow design; transformations and exclusions can be scientifically justified; stopping rules change the sampling procedure. Do not automatically apply a simple Bonferroni count to every option on this slide. The issue is what full selection process produced the reported analysis and whether its claimed error guarantee accounts for that process. Avoid moralizing: thoughtful analysts can create a data-dependent path without deliberate threshold chasing.
 
@@ -264,42 +176,43 @@
 
 :::
 
+## The test direction must be specified before seeing the data {#one-sided-after-peeking}
+
+<div class="research-paths">
+<div><h3>Planned one-sided</h3><p class="small">Direction fixed before collection: only a reduction is biologically plausible.</p><p class="small">α = 0.05 on one tail. Legitimate.</p></div>
+<div><h3>Post-hoc one-sided</h3><p class="small">Direction chosen after seeing the effect is negative: "clearly it's a reduction, so one-sided."</p><p class="small">Two-sided p = 0.090 → one-sided p = 0.045. The α = 0.05 promise was not what was kept.</p></div>
+</div>
+<p class="takeaway">Choosing the direction after looking is a hidden extra test.</p>
+
+::: notes
+**Time: 01:10–01:12 (2 minutes).**
+
+**Say:** The one-sided versus two-sided decision must be made before the data are examined, not after. For the L1 experiment: two-sided p is 0.090. If you look at the data, observe the negative sign, and then decide to use a one-sided test, you obtain p = 0.045 — just across the threshold. But you used the data twice: once to choose the direction, and once to compute the p-value. The effective α is no longer 0.05. The test is legitimate only if the direction was fixed before collection on scientific grounds — for example, if a positive enzyme increase from a kinase inhibitor is mechanistically impossible and would not be reported regardless of size. That constraint must be documented before the experiment. Retrospective justification ("of course we only expected a reduction") is not equivalent.
+
+**Conceptual point:** A p-value guarantees its stated error rate only when the procedure — including the direction — is fully pre-specified. Post-hoc direction choice changes the effective procedure.
+
+**Likely misconception:** Choosing one-sided because the observed direction is "biologically obvious in hindsight" is a legitimate scientific justification.
+
+**Optional follow-up:** How would you document a pre-specified one-sided decision in a lab notebook entry written before the experiment?
+
+**Sources:** Bland & Altman (1994) *BMJ* 309:248 — one-tailed vs two-tailed significance; Vaux (2012) *Nature* 492:180.
+:::
+
 ## A pause before we examine selection {#multiplicity-break .break-slide}
 
 <p class="big">15-minute break</p>
-<p class="takeaway">Next: what does the reported p-value leave out?</p>
+<p class="takeaway">Next: exploration vs confirmation.</p>
 
 ::: notes
-**Time: 01:20–01:35 (15 minutes).**
+**Time: 01:12–01:27 (15 minutes).**
 
-**Say:** Take the scheduled break from 01:20 to 01:35. Resume with the selection illustration. Do not use the break to add teaching content.
+**Say:** Take the scheduled break from 01:12 to 01:27. Resume with exploration versus confirmation. Do not use the break to add teaching content.
 
 **Conceptual point:** Preserve the planned break and attention for the remaining block.
 
 **Likely misconception:** The scheduled break is optional overflow time.
 
 **Optional follow-up:** No audience task during the break.
-
-**Sources:** Concepts adapted from CONTENT_MAP.md section 9 and review register: AppliedStats_2026.pdf pp. 78–80, 167–173, 178–184; Stats_PhD_MR_CVS_2024.pdf pp. 63–70; DoctaMed.pdf p. 44. Figures rebuilt, not copied. Method reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/p.adjust.html (Holm strong FWER control; BH FDR and dependence caveats).
-
-:::
-
-## What does the reported p-value leave out? {#selection-and-paths}
-
-<img class="data-plot" src="figures/generated/multi-selection.png" alt="Distribution of one prespecified null p-value compared with the smallest of five independent null p-values." />
-<p class="takeaway">Researcher degrees of freedom: the selection process matters.</p>
-<p class="fine">Illustration only: five independent opportunities, retain the smallest. One final test can also emerge through data-dependent decisions—the garden of forking paths.</p>
-
-::: notes
-**Time: 01:35–01:38 (3 minutes).**
-
-**Say:** After the break, recover the choices from the previous slide. The left shows the first prespecified valid p-value; the right retains the minimum of the first five independent null tests. About 23.07% of minima fall below .05, versus about 5% for a fixed single test. This is an intentionally simplified selection illustration, not an exact behavioral model or a recommendation to count five for every analysis workflow. Name researcher degrees of freedom. Distinguish explicitly trying many analyses and selecting one from making data-dependent decisions along a path even when only one final test is executed. The garden of forking paths refers to possible decisions the data could have led to; the final nominal p-value alone does not include that selection. The number of commands run is not the full inferential procedure. A formal remedy must match the process; routine multiplicity adjustment does not automatically repair it.
-
-**Conceptual point:** Nominal single-test error guarantees can fail when the selected procedure is not the one those guarantees describe.
-
-**Likely misconception:** Only intentionally running many tests creates selection, or a generic adjustment repairs every adaptive path.
-
-**Optional follow-up:** What would need to be fixed or recorded so a reader could understand the procedure?
 
 **Sources:** Concepts adapted from CONTENT_MAP.md section 9 and review register: AppliedStats_2026.pdf pp. 78–80, 167–173, 178–184; Stats_PhD_MR_CVS_2024.pdf pp. 63–70; DoctaMed.pdf p. 44. Figures rebuilt, not copied. Method reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/p.adjust.html (Holm strong FWER control; BH FDR and dependence caveats).
 
@@ -312,7 +225,7 @@
 <p class="small">An exploratory finding is not prespecified confirmation just because the same analysis is described that way afterward.</p>
 
 ::: notes
-**Time: 01:38–01:40 (2 minutes).**
+**Time: 01:27–01:29 (2 minutes).**
 
 **Say:** Reconnect to Session 1. Transformations, subgroup inspection and hypothesis generation are legitimate exploratory work. The problem is attaching confirmatory error guarantees as though the hypothesis and analysis had been fixed before those same observations were examined. Report discovery as discovery and independently test important resulting claims with an appropriate design. Independence means genuinely new information not reused to select the claim; it does not guarantee success. Avoid suggesting that every exploratory calculation needs a mechanical adjustment or that exploration is inferior science.
 
@@ -328,11 +241,12 @@
 
 ## What does the reader learn from these two reports? {#selective-reporting .interaction}
 
-<div class="research-paths"><div><h3>Report A</h3><p class="small">“Outcome X was significantly affected, p = 0.03.”</p></div><div><h3>Report B</h3><p class="small">“We examined 20 prespecified outcomes. X had raw p = 0.03; the full family, effect estimates, intervals and planned multiplicity analysis are reported.”</p></div></div>
+<p class="prompt-tag">Compare reports A and B · 1 minute</p>
+<div class="research-paths"><div><h3>Report A</h3><p class="small">"Outcome X was significantly affected, p = 0.03."</p></div><div><h3>Report B</h3><p class="small">"We examined 20 prespecified outcomes. X had raw p = 0.03; the full family, effect estimates, intervals and planned multiplicity analysis are reported."</p></div></div>
 <p class="takeaway">Same raw p-value. A different view of how it was found.</p>
 
 ::: notes
-**Time: 01:40–01:43 (3 minutes).**
+**Time: 01:29–01:32 (3 minutes).**
 
 **Say:** Allow a minute to compare reports and two to discuss. Imagine twenty measured outcomes, nineteen without a small p and one p=.03. Report A hides that context. Report B tells the reader what the family was and makes the full results available; it must actually provide the named estimates and analysis, not merely claim transparency. If Bonferroni on twenty was the plan, .03 becomes .60; other strategies depend on the specified purpose. Reporting all outcomes does not itself correct invalid inference, but concealing them prevents assessment. Distinguish raw from adjusted p-values and ordinary from multiplicity-aware intervals. Do not describe the nineteen as proof that those markers have no effect.
 
@@ -352,7 +266,7 @@
 <p class="takeaway">Prespecification makes the claim and its error guarantee interpretable.</p>
 
 ::: notes
-**Time: 01:43–01:45 (2 minutes).**
+**Time: 01:32–01:34 (2 minutes).**
 
 **Say:** Connect the multiplicity problem to experimental design. Where feasible, record the scientific purpose, primary/secondary outcomes, family, contrasts, analysis population, exclusions, stopping and multiplicity strategy before outcomes guide those choices. This can be a clear lab plan; do not claim that every laboratory experiment requires a formal preregistration. Plans may need justified amendments or exploratory follow-up, which should be disclosed as such. Prespecification does not guarantee a correct model or meaningful question; it makes the target and procedure assessable.
 
@@ -366,32 +280,12 @@
 
 :::
 
-## Twenty outcomes, one small p-value. What now? {#multiplicity-synthesis .interaction}
-
-<div class="synthesis-grid"><p><span>One planned question</span>One specified inferential procedure</p><p><span>Many planned questions</span>Define the family and error criterion</p><p><span>Data-dependent choices</span>Account for how the result was selected</p><p><span>Exploratory discovery</span>Report transparently; confirm independently</p></div>
-<p class="takeaway">Interpret the effect and uncertainty in the context of all the opportunities and selections.</p>
-
-::: notes
-**Time: 01:45–01:49 (4 minutes).**
-
-**Say:** Use the first two minutes as a retrieval discussion: were the twenty outcomes prespecified, do they form one family, was the purpose confirmatory or exploratory, and what effects and intervals were observed? Then ask how hypotheses and the reported analysis were selected, and which error criterion fits the scientific objective. Use the displayed four paths to synthesize responses in the remaining two minutes. There is no single correction that answers every version of the opening question. A p-value alone omits the opportunity and selection context. Adjustment does not create independent confirmation, repair an invalid model, or eliminate selective reporting. Keep the biological effect and uncertainty central rather than replacing one threshold with another.
-
-**Conceptual point:** The scientific purpose, family and selection process determine what inference can be defended.
-
-**Likely misconception:** The answer to any multiplicity problem is simply to run one correction method.
-
-**Optional follow-up:** What claim would you now make about the selected marker, and what would you need to learn next?
-
-**Sources:** Concepts adapted from CONTENT_MAP.md section 9 and review register: AppliedStats_2026.pdf pp. 78–80, 167–173, 178–184; Stats_PhD_MR_CVS_2024.pdf pp. 63–70; DoctaMed.pdf p. 44. Figures rebuilt, not copied. Method reference: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/p.adjust.html (Holm strong FWER control; BH FDR and dependence caveats).
-
-:::
-
 ## One question to carry forward {#which-test-bridge}
 
 <p class="quote uncertainty-final">Fine. But which statistical test should I actually use for my experiment?</p>
 
 ::: notes
-**Time: 01:49–01:50 (1 minute).**
+**Time: 01:34–01:35 (1 minute).**
 
 **Say:** Read the practical question and stop. Do not introduce tests, a decision tree or the next section. This block establishes the context in which a choice of statistical procedure will later make sense.
 

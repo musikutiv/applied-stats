@@ -1,14 +1,15 @@
 ## Could this result arise if there were no effect? {#could-this-arise .interaction}
 
+<p class="prompt-tag">Predict before the reveal</p>
 <p class="medium">We observed a mean paired change of <strong>−10.4 U/mg</strong>.</p>
 <p class="takeaway">What would we expect if the true average treatment effect were exactly zero?</p>
-<div class="fragment keyline"><p class="medium">Same variability. Same six preparations.<br>Same paired experiment. True mean <strong>0</strong>.</p></div>
+<div class="fragment keyline"><p class="medium">Same variability. Six new preparations.<br>Same paired experiment. True mean <strong>0</strong>.</p></div>
 <p class="fine">Hypothetical L1 model: no average effect, not identical responses in every preparation.</p>
 
 ::: notes
-**Time: 02:50–02:52 (2 minutes).**
+**Time: 02:56–02:58 (2 minutes).**
 
-**Say:** Reconnect to the unanswered question. Invite predictions before the reveal. Keep the six observed differences and −10.4 estimate unchanged. Change only the mean effect in the simulation from −14 to zero. Biological effect SD remains 9, vessel SD 3 and technical-reading SD 2.5; pairing, triplicate averaging and assay rounding remain. Positive and negative preparation effects can still occur. Do not name the null hypothesis yet. This is a hypothetical generating model, not a conclusion about compound Q.
+**Say:** Reconnect to the unanswered question. Invite predictions before the reveal. Keep the six observed differences and −10.4 estimate unchanged. Change only the mean effect in the simulation from −14 to zero. Biological effect SD remains 9, tube SD 3 and technical-reading SD 2.5; pairing, triplicate averaging and assay rounding remain. Positive and negative preparation effects can still occur. Do not name the null hypothesis yet. This is a hypothetical generating model, not a conclusion about compound Q.
 
 **Conceptual point:** The no-average-effect situation is a concrete model for repeated experiments.
 
@@ -27,9 +28,9 @@
 <p class="fine">Dark dots: preparation changes. Rust diamonds: means. Vertical line: fixed true mean 0.</p>
 
 ::: notes
-**Time: 02:52–02:54 (2 minutes).**
+**Time: 02:58–03:00 (2 minutes).**
 
-**Say:** Trace the six dots and the diamond in each row. These are the first three repetitions from seed 20261006, not selected examples. New preparations give nonzero means despite a fixed population average of zero. Use the same within-vessel averaging and Q-minus-vehicle subtraction as for our observed experiment. The fixed line belongs to the hypothetical model; the diamonds belong to particular samples.
+**Say:** Trace the six dots and the diamond in each row. These are the first three repetitions from seed 20261006, not selected examples. New preparations give nonzero means despite a fixed population average of zero. Use the same within-tube averaging and Q-minus-vehicle subtraction as for our observed experiment. The fixed line belongs to the hypothetical model; the diamonds belong to particular samples.
 
 **Conceptual point:** Nonzero estimates are expected under repeated sampling even without an average treatment effect.
 
@@ -52,7 +53,7 @@
 <p class="fine">One entry = one experiment’s mean. Six new paired changes per experiment.</p>
 
 ::: notes
-**Time: 02:54–02:57 (3 minutes).**
+**Time: 03:00–03:03 (3 minutes).**
 
 **Say:** Accumulate 10, 100 and 10,000 means before naming the distribution on a final click. Define a null distribution as the distribution of the statistic across repeated experiments if the null hypothesis and model assumptions were true. Then name H0: the population mean paired effect is zero. The horizontal axis is in the same units, with the same 36-unit span and one-unit bins as the previous sampling-distribution sequence, now centered on zero. It is not a histogram of six observations and not a distribution of probabilities that hypotheses are true.
 
@@ -68,12 +69,13 @@
 
 ## Does our observed mean look ordinary here? {#observed-in-null .interaction}
 
+<p class="prompt-tag">Ordinary or unusual? · look before reading on</p>
 <img class="data-plot" src="figures/generated/null-observed-mean.png" alt="Null distribution of means with observed mean minus 10.4 marked in rust." />
 <p class="takeaway">Ordinary or unusual under this no-average-effect model?</p>
 <p class="fine">Same null simulation and axes. Observed data remain unchanged.</p>
 
 ::: notes
-**Time: 02:57–02:59 (2 minutes).**
+**Time: 03:03–03:05 (2 minutes).**
 
 **Say:** Allow a short visual judgment before introducing any probability. The observed mean is toward the left of the simulated cloud. Ask what controls its distance from the center relative to the cloud’s width. Do not quote the fraction of raw means beyond this line as the paired t p-value. This raw-mean simulation uses a known generating spread; the real analysis estimates spread from six differences. The next slides make that transition explicit. No probabilities of hypotheses are being shown.
 
@@ -94,7 +96,7 @@
 <p class="fine">Constructed comparison. Lines show ±1 estimated SE, not confidence intervals or a recommended generic error-bar display.</p>
 
 ::: notes
-**Time: 02:59–03:01 (2 minutes).**
+**Time: 03:05–03:07 (2 minutes).**
 
 **Say:** Compare the identical estimates with estimated SEs of 2 and 10. These are constructed illustrations, not alternative analyses of our six observations. The same raw mean is many SEs from zero in one and about one SE from zero in the other. The short lines are explicitly one-SE spans used to explain standardization; do not teach them as a replacement for raw data or confidence intervals. Keep magnitude distinct from extremeness relative to uncertainty.
 
@@ -111,55 +113,33 @@
 ## How many standard errors away from zero? {#our-paired-t}
 
 <img class="data-plot short-plot" src="figures/generated/null-se-steps.png" alt="Observed mean minus 10.4 and null zero, separated by about 2.10 steps of the estimated SE 4.96." />
-<p class="takeaway">t = observed mean / estimated SE<br><strong>−10.4 / 4.96 ≈ −2.10</strong></p>
-<p class="fine">One-sample t statistic on the six paired differences · same analysis as a paired t-test.</p>
+<p class="takeaway">Our mean sits 2.1 SE steps below zero.</p>
+<p class="medium">This distance, counted in SE steps, is called <strong>t</strong>. Here t = −2.10.</p>
+<p class="small">Now we ask: how often would chance alone produce a result at least that far from zero?</p>
 
 ::: notes
-**Time: 03:01–03:04 (3 minutes).**
+**Time: 03:07–03:10 (3 minutes).**
 
-**Say:** Use the ruler before reading the expression. The observed mean is about 2.10 estimated standard errors below zero. Negative means lower activity with Q; extremeness will use distance in either direction. Full precision is mean −10.4066667, SE 4.9579861 and t −2.098971. The subtraction of zero is implicit in the displayed numerator. Each hypothetical repetition must now calculate its own mean divided by its own estimated SE. Using one fixed SE for every simulated repetition would not generate the appropriate t reference distribution.
+**Say:** Point to the figure. Zero is where no effect would sit. Our mean is 2.1 SE steps below it. That gap is what we need to judge — not the raw number, but how far it sits relative to the uncertainty in our estimate. Name it once: this SE-step distance is the t statistic, t = −2.10; it is the number software reports and the one you will see in papers. Negative means lower activity with Q; we will count distance in either direction. The question now is how often the null model would produce a result at least this far from zero. That is what the next slide answers.
 
-**Conceptual point:** The standardized statistic expresses discrepancy from the null in estimated-SE units.
+**Conceptual point:** The standardized distance from zero is what the reference distribution compares against, not the raw mean.
 
-**Likely misconception:** The test uses the SD of 36 technical readings, or t retains the assay’s U/mg units.
+**Likely misconception:** The test uses the SD of 36 technical readings, or a bigger raw mean always gives a smaller p-value regardless of SE.
 
-**Optional follow-up:** Why must each simulated experiment estimate its own SE?
+**Optional follow-up:** If our SE had been 10 instead of 5, how many steps away would our mean be?
 
-**Sources:** Concepts adapted from AppliedStats_2026.pdf pp. 89–99, 106–114, 136, 142–146; Stats_PhD_MR_CVS_2024.pdf pp. 50–55; DoctaMed.pdf pp. 30–39. Figures rebuilt; chance-language corrections follow CONTENT_MAP.md. R stats documentation, Student t distribution: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/TDist.html. The paired t calculation uses the six differences. Interpretation reference: ASA statement, https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf.
-
-:::
-
-<!-- MODEL REVIEW: Exact t calibration requires iid normal paired differences. Rounding is negligible in this simulation, but n=6 cannot verify normality or independence in real assays. -->
-
-## Why are the tails wider with six preparations? {#why-t-five}
-
-<img class="data-plot" src="figures/generated/null-t-distribution.png" alt="Histogram of null t statistics with t distribution of five degrees of freedom and a dashed standard normal curve." />
-<p class="takeaway">Estimating the spread from six changes adds uncertainty.</p>
-<p class="fine">Teal: t distribution, 5 degrees of freedom. Dashed: standard normal. Bars: simulated t statistics.</p>
-
-::: notes
-**Time: 03:04–03:06 (2 minutes).**
-
-**Say:** Name the t distribution after showing the simulated standardized statistics. For independent, identically distributed normal paired differences, mean divided by its estimated SE under H0 follows t with n−1=5 degrees of freedom. The estimated SD fluctuates across six-preparation experiments, giving heavier tails than standard normal. No derivation is needed. The original simulation uses normal independent components, with negligible two-decimal rounding; its t behavior is correspondingly approximate. Six observations cannot establish normality. Dependence, severe non-normality or treatment-by-day variation would require further assessment, not a blind use of this curve.
-
-**Conceptual point:** The reference distribution accounts for uncertainty in the estimated spread.
-
-**Likely misconception:** Any set of six observations automatically produces an exact t reference distribution.
-
-**Optional follow-up:** What is being estimated from only six observations as well as the mean?
-
-**Sources:** Concepts adapted from AppliedStats_2026.pdf pp. 89–99, 106–114, 136, 142–146; Stats_PhD_MR_CVS_2024.pdf pp. 50–55; DoctaMed.pdf pp. 30–39. Figures rebuilt; chance-language corrections follow CONTENT_MAP.md. R stats documentation, Student t distribution: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/TDist.html. The paired t calculation uses the six differences. Interpretation reference: ASA statement, https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf.
+**Sources:** Concepts adapted from AppliedStats_2026.pdf pp. 89–99, 106–114, 136, 142–146; Stats_PhD_MR_CVS_2024.pdf pp. 50–55; DoctaMed.pdf pp. 30–39.
 
 :::
 
 ## How often would a result be at least this extreme? {#two-sided-p-value}
 
 <img class="data-plot null-tail-plot" src="figures/generated/null-two-tails.png" alt="t distribution with both tails shaded beyond minus 2.10 and plus 2.10." />
-<p class="null-definition">The p-value is the probability, assuming H<sub>0</sub> and the model, of a test statistic at least as extreme as the one observed.</p>
+<p class="null-definition">The p-value: if there were no true effect, how often would an experiment land at least as far from zero as ours — 2.1 SE steps, in either direction?</p>
 <p class="takeaway fragment"><strong>Two-sided p = 0.090</strong> · both directions count</p>
 
 ::: notes
-**Time: 03:06–03:09 (3 minutes).**
+**Time: 03:10–03:13 (3 minutes).**
 
 **Say:** Point to the observed t at −2.10 and the equally distant +2.10 boundary. The question was about an average change in either direction, so add both tail probabilities. The actual paired t p-value is 0.08987058, rounded to 0.090. Under H0 and the assumptions, about 9% of repeated experiments produce absolute t at least 2.10. The simulation gives 9.07%, close to the analytical value; it is the standardized statistic, not the raw mean, being counted. Integrating the t distribution includes its entire infinite tails even though the plot shows only −5 to +5. Do not choose the direction after seeing a negative estimate.
 
@@ -177,12 +157,15 @@
 
 <p class="prompt-tag">Which statements are correct?</p>
 <div class="null-options"><p>A · There is a 9% probability that H<sub>0</sub> is true.</p><p>B · There is a 9% probability that the result occurred by chance.</p><p>C · There is a 91% probability that the treatment really works.</p><p>D · A large p-value proves there is no effect.</p></div>
-<div class="fragment"><p class="takeaway"><strong>All four are incorrect.</strong></p><p class="small">Assuming H<sub>0</sub> and the model: about 9% of repetitions give |t| at least 2.10.</p></div>
+<div class="fragment"><p class="takeaway"><strong>All four are incorrect.</strong></p><p class="small">If there were no true effect, about 9% of repeated experiments would land at least 2.1 SE steps from zero.</p></div>
+<p class="small fragment">B is close — but drops the condition. Repair: <em>"Assuming no true average effect, about 9% of repetitions produce a result at least this extreme."</em> Without that phrase, B implies the p-value assigns probability to H<sub>0</sub> being false — which it cannot do.</p>
 
 ::: notes
-**Time: 03:09–03:13 (4 minutes).**
+**Time: 03:13–03:17 (4 minutes).**
 
-**Say:** Give one minute of individual choice and a minute of pair discussion, then reveal and debrief. All options reverse or distort the conditional statement. We assumed H0 to calculate the reference distribution; we did not calculate its probability. Chance is already part of the sampling model under both zero and nonzero mean effects. One minus p is not a probability that a compound works, and a large p does not prove zero effect. Ask participants to repair one sentence by starting with “Assuming the true average were zero and the model held…” No alternative inferential framework is needed.
+**Say:** Give one minute of individual choice and a minute of pair discussion, then reveal and debrief. All options reverse or distort the conditional statement. We assumed H0 to calculate the reference distribution; we did not calculate its probability. One minus p is not a probability that a compound works, and a large p does not prove zero effect.
+
+On B specifically: it is the most seductive wrong answer and worth one extra minute. “By chance” sounds like it means “no real effect,” but that is exactly what we have not established. Results arise from random sampling whether or not there is a true effect — the question is only how often they are this extreme under H0. B drops the conditioning phrase, so it reads as if the p-value assigns a 9% probability to the null being true and a 91% probability to the treatment working — which is option C restated. Once participants add “assuming no true average effect,” B becomes approximately the correct statement. That addition is the whole point: the condition is not decorative, it is what makes the number mean anything.
 
 **Conceptual point:** The probability is about possible data/statistics under an assumed model, not about the truth of that model.
 
@@ -202,7 +185,7 @@
 <p class="fine">The interval also shows the size and uncertainty of the effect.</p>
 
 ::: notes
-**Time: 03:13–03:16 (3 minutes).**
+**Time: 03:17–03:20 (3 minutes).**
 
 **Say:** Return to the unchanged interval and its zero line. At the conventional 0.05 threshold, the matching two-sided paired t calculation and its 95% interval agree as displayed. Includes means including the endpoints; at an exact endpoint the matching p is 0.05. This correspondence requires the same data, assumptions, contrast and procedure. It is not a general rule about overlap of two separate group intervals. The interval gives the range and magnitude of compatible mean effects, rather than compatibility with only the single zero value. Here it permits appreciable reductions as well as near-zero and small positive effects. The threshold’s decision meaning comes next.
 
@@ -224,7 +207,7 @@
 <p class="fine">First 100 null repetitions, in order. Rust crosses: p &lt; 0.05. Across 10,000: 4.98%.</p>
 
 ::: notes
-**Time: 03:16–03:19 (3 minutes).**
+**Time: 03:20–03:23 (3 minutes).**
 
 **Say:** Only now introduce alpha as the prespecified decision threshold, a convention rather than a natural evidence boundary. A rejection under the chosen rule is often called statistically significant; that label does not establish biological importance. Every displayed experiment was generated with a true zero mean. Each rust cross is a rejection of a true H0, called a Type I error. There are not necessarily exactly five crosses in each block of 100; the first 100 are shown unselected. Across the same 10,000 null experiments 4.98% meet p<0.05. Under the ideal continuous normal model this rule’s long-run Type I rate is 5%; our rounded simulation approximates it. Alpha is not the probability that a particular conclusion is wrong, nor the proportion of all rejected claims that are false. A testing rule must be fixed in advance; do not retune it for the observed result.
 
@@ -246,7 +229,7 @@
 <p class="small">“Significant” and “not significant” cannot replace effect size, uncertainty or biological importance.</p>
 
 ::: notes
-**Time: 03:19–03:21 (2 minutes).**
+**Time: 03:23–03:25 (2 minutes).**
 
 **Say:** Ask whether these values alone make the studies scientifically different. Under a prespecified p<0.05 rule the labels differ, but the data’s incompatibility with the null changes continuously rather than jumping at the cutoff. The comparison is only about nearby values for comparable analyses; p-values alone cannot rank very different experiments or scientific importance. A statistically significant result can be biologically small and does not guarantee replication. A result just above the convention does not establish no effect. Ask for estimates, intervals, design and biological context.
 
@@ -262,13 +245,14 @@
 
 ## What can we report about compound Q? {#report-q-with-p .interaction}
 
+<p class="prompt-tag">Report to a neighbour · 1 minute</p>
 <img class="data-plot short-plot" src="figures/generated/null-ci-zero.png" alt="The same L1 paired-effect interval from minus 23.2 to plus 2.3 around mean minus 10.4." />
-<p class="takeaway"><strong>−10.4 U/mg</strong> · 95% CI <strong>−23.2 to +2.3</strong><br>t(5) = <strong>−2.10</strong> · two-sided p = <strong>0.090</strong></p>
+<p class="takeaway"><strong>−10.4 U/mg</strong> · 95% CI <strong>−23.2 to +2.3</strong><br>paired t-test: t = <strong>−2.10</strong> · two-sided p = <strong>0.090</strong></p>
 <p class="small">What did we observe? How large and how uncertain?<br>How compatible with zero? What can we not conclude?</p>
 <p class="fine">Six L1 preparation pairs · conditional on independent, approximately normal differences.</p>
 
 ::: notes
-**Time: 03:21–03:24 (3 minutes).**
+**Time: 03:25–03:28 (3 minutes).**
 
 **Say:** Give a minute for a spoken or written report and two for debrief. The observed mean is a reduction of 10.4 U/mg, with the displayed broad interval. The t statistic is 2.10 estimated SEs below zero. Assuming zero mean and the model, an absolute statistic this large or larger occurs about 9% of the time. At a prespecified 0.05 rule this would not reject H0; explain if using that phrase that it does not establish H0. The interval remains compatible with substantial reductions and some small increases. No validated biological relevance threshold is supplied. Do not conclude that Q works or does not work, infer a mechanism, or generalize beyond the specified L1 process. Dependence or bias would undermine the simple model rather than being repaired by a p-value.
 
@@ -287,7 +271,7 @@
 <p class="quote uncertainty-final">What if the experiment was simply too small to give a clear answer?</p>
 
 ::: notes
-**Time: 03:24–03:25 (1 minute).**
+**Time: 03:28–03:29 (1 minute).**
 
 **Say:** Read the question and stop. It is a possibility to investigate, not a conclusion that this experiment was necessarily too small. Leave the question unanswered. Do not introduce the next block’s concepts, formulas or planning advice.
 

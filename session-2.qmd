@@ -11,4 +11,6 @@ format:
 
 {{< include sections/_s2-03-tests-from-design.qmd >}}
 
-{{< include sections/_s2-04-final-workshop.qmd >}}
+{{< include sections/_s2-04-common-issues.qmd >}}
+
+{{< include sections/_s2-05-final-workshop.qmd >}}

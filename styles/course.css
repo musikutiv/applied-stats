@@ -42,10 +42,10 @@
 .reveal .stage { text-align:center; }
 .reveal .stage .small { margin-top:18px; }
 .reveal .prep { width:125px; height:100px; border:3px solid var(--ink); border-radius:13px 13px 32px 32px; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; background:#eeeae0; font-size:27px; }
-.reveal .vessels { display:flex; gap:18px; justify-content:center; align-items:end; }
-.reveal .vessel { width:103px; height:90px; border:3px solid currentColor; border-radius:10px 10px 24px 24px; display:flex; align-items:center; justify-content:center; font-size:27px; font-weight:600; }
-.reveal .vessel.v { color:var(--vehicle); background:#e6f0ed; }
-.reveal .vessel.q { color:var(--compound); background:#f4e9df; }
+.reveal .tubes { display:flex; gap:18px; justify-content:center; align-items:end; }
+.reveal .tube { width:103px; height:90px; border:3px solid currentColor; border-radius:10px 10px 24px 24px; display:flex; align-items:center; justify-content:center; font-size:27px; font-weight:600; }
+.reveal .tube.v { color:var(--vehicle); background:#e6f0ed; }
+.reveal .tube.q { color:var(--compound); background:#f4e9df; }
 .reveal .reading-row { display:flex; gap:13px; justify-content:center; margin:22px 0; align-items:center; }
 .reveal .dot { display:inline-block; width:19px; height:19px; border-radius:50%; background:var(--vehicle); }
 .reveal .tri { display:inline-block; width:0; height:0; border-left:11px solid transparent; border-right:11px solid transparent; border-bottom:21px solid var(--compound); }

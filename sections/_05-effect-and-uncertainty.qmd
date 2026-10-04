@@ -5,9 +5,9 @@
 <p class="fine">Simulated L1 assay · Q minus vehicle · six independently initiated preparations.</p>
 
 ::: notes
-**Time: 02:15–02:17 (2 minutes).**
+**Time: 02:19–02:21 (2 minutes).**
 
-**Say:** Return to the six unchanged paired changes. Each is a Q-minus-vehicle contrast after technical repeats were averaged within each vessel. The vertical line is their mean, −10.4 U/mg. Our target is the average paired effect across the specified L1 preparation process. The sample gives an estimate of that quantity, not its known population value. Preserve the culture conditions, dose and 24-hour endpoint from the opening.
+**Say:** Return to the six unchanged paired changes. Each is a Q-minus-vehicle contrast after technical repeats were averaged within each tube. The vertical line is their mean, −10.4 U/mg. Our target is the average paired effect across the specified L1 preparation process. The sample gives an estimate of that quantity, not its known population value. Preserve the culture conditions, dose and 24-hour endpoint from the opening.
 
 **Conceptual point:** A particular sample gives a particular estimate of the population quantity.
 
@@ -27,7 +27,7 @@
 <p class="fine">Repeat the biological experiment, not the assay on the same lysates.</p>
 
 ::: notes
-**Time: 02:17–02:19 (2 minutes).**
+**Time: 02:21–02:23 (2 minutes).**
 
 **Say:** Allow a minute for predictions, then hear two explanations. Repeating means six newly initiated preparations, again split between vehicle and Q, with the same technical averaging. Ask whether variation among the new preparations can move the estimated mean even when the underlying response mechanism stays unchanged. Do not show simulation results until participants have predicted.
 
@@ -45,12 +45,13 @@
 
 <img class="data-plot" src="figures/generated/unc-three-repeats.png" alt="Three simulated repetitions with six preparation changes each; diamonds show each repetition’s different mean." />
 <p class="takeaway">Six dots → one mean in each repetition</p>
-<p class="fine">Simulation truth held fixed at −14 U/mg. Dark dots: preparations. Rust diamonds: experiment means.</p>
+<p class="small">In a simulation we choose the truth: here the true mean effect is set to <strong>−14 U/mg</strong>. Our real estimate (−10.4) is one draw from experiments like these.</p>
+<p class="fine">Dark dots: preparations. Rust diamonds: experiment means.</p>
 
 ::: notes
-**Time: 02:19–02:22 (3 minutes).**
+**Time: 02:23–02:26 (3 minutes).**
 
-**Say:** Trace one row: six paired changes become one diamond. Then compare three rows. These are the first three repetitions from the fixed seed, not selected examples. In our teaching simulation we know the true average: −14 U/mg. The experiment’s estimate need not equal it. This value was already in the original data-generating model; it was not fitted to −10.4. The generator preserves normal preparation effects (SD 9), vessel errors (SD 3), three technical errors (SD 2.5) and two-decimal assay rounding. Shared additive preparation and day baselines cancel in paired differences, apart from negligible rounding. There is no treatment-by-day variation. Real experiments do not give us a known truth.
+**Say:** Trace one row: six paired changes become one diamond. Then compare three rows. These are the first three repetitions from the fixed seed, not selected examples. In our teaching simulation we know the true average: −14 U/mg. The experiment’s estimate need not equal it. This value was already in the original data-generating model; it was not fitted to −10.4. The generator preserves normal preparation effects (SD 9), tube errors (SD 3), three technical errors (SD 2.5) and two-decimal assay rounding. Shared additive preparation and day baselines cancel in paired differences, apart from negligible rounding. There is no treatment-by-day variation. Real experiments do not give us a known truth.
 
 **Conceptual point:** Different sample means can come from the same fixed underlying population mean.
 
@@ -71,7 +72,7 @@
 <p class="fine">Every entry is one experiment’s mean, not one preparation. Same horizontal scale at every reveal.</p>
 
 ::: notes
-**Time: 02:22–02:25 (3 minutes).**
+**Time: 02:26–02:29 (3 minutes).**
 
 **Say:** Reveal 10, then 100, then 10,000 accumulated means. Each comes from six newly generated paired changes. The frequency scale is a fraction of experiments so panels remain comparable as repetitions accumulate. Point to the fixed −14 line. Name this the sampling distribution of the mean. This is not the shape of our original six measurements, and it is not a probability distribution for possible true means. Simulation approximates what repeated sampling under the known model would generate; it does not turn our one observed experiment into 10,000 real replications.
 
@@ -85,14 +86,14 @@
 
 :::
 
-## What varies: a preparation or our estimate? {#sd-versus-se}
+## Preparations vary more than their mean does {#sd-versus-se}
 
 <img class="data-plot" src="figures/generated/unc-sd-se.png" alt="Left: spread of simulated preparation responses. Right: narrower spread of simulated six-preparation means, on identical horizontal axes." />
 <div class="definitions-pair"><p class="small"><strong>SD</strong> · spread of preparation responses</p><p class="small"><strong>SE</strong> · spread of the estimated mean across repetitions</p></div>
 <p class="fine">Both panels use the same simulation model. Each experiment on the right has n = 6.</p>
 
 ::: notes
-**Time: 02:25–02:28 (3 minutes).**
+**Time: 02:29–02:32 (3 minutes).**
 
 **Say:** Spend one minute asking what one contribution represents on each side. The left pools preparation responses from the repeated simulations; the right contains one mean per experiment. Both horizontal axes are identical. The spread of the means is the standard error of this estimator. Simulated response SD is about 10.2 U/mg; simulated SD of means is about 4.1 U/mg. These are model repetition results, not the original sample’s SD of 12.1 or its estimated SE. Variation among individual responses and variability of their estimated average answer different questions. This is not a recommendation to replace raw observations with SEM error bars.
 
@@ -110,11 +111,11 @@
 
 <p class="medium">For independent preparation-level changes:</p>
 <p class="uncertainty-equation">SE(mean) = SD / √n</p>
-<p class="takeaway fragment">Our estimated SE: 12.1 / √6 ≈ <strong>5.0 U/mg</strong></p>
+<p class="takeaway fragment">Our estimated SE: 12.1 / √6 ≈ <strong>4.96 U/mg</strong></p>
 <p class="fine">SD is the sample SD of paired changes. n counts preparation pairs, not technical readings.</p>
 
 ::: notes
-**Time: 02:28–02:30 (2 minutes).**
+**Time: 02:32–02:34 (2 minutes).**
 
 **Say:** Only now show the formula. The true SE uses the population SD; we estimate it by substituting the sample SD. Using full precision, 12.1445/sqrt(6)=4.9580 U/mg. Display rounding gives 5.0. This estimate need not equal the simulated long-run SE of about 4.1: the six observed responses are themselves a variable sample. The formula requires independent, identically distributed contrasts with finite variance. It is not automatically valid for shared treatment-by-day responses, clustered preparations, or correlated repeated measures. Normality is not needed for this variance identity; the small-sample t interval introduced next uses a stronger distributional assumption.
 
@@ -133,12 +134,12 @@
 <p class="prompt-tag">Predict before revealing</p>
 <div class="fragment" data-fragment-index="0"><img class="data-plot" src="figures/generated/unc-precision.png" alt="Sampling distributions with original variability at n=6, larger biological variability at n=6, and original variability at n=24." /></div>
 <p class="takeaway fragment" data-fragment-index="0">More biological variation → larger SE<br>More independent preparations → smaller SE</p>
-<p class="fine">True mean remains −14 U/mg in all three scenarios. All plots show experiment means.</p>
+<p class="fine">Simulated true mean −14 U/mg in all three scenarios. All plots show experiment means.</p>
 
 ::: notes
-**Time: 02:30–02:33 (3 minutes).**
+**Time: 02:34–02:37 (3 minutes).**
 
-**Say:** Ask for predictions about doubling biological response variability and about increasing independent preparations from six to 24, then reveal the plots. Keep the true mean fixed. In the variability scenario only preparation-effect SD rises from 9 to 18; vessel and technical variation stay unchanged, so total SD does not exactly double. Empirical SE rises from 4.1 to 7.6 U/mg. With 24 preparations it falls to about 2.1. This larger experiment uses twelve days with two pairs per day, retaining the same additive-day assumption. Four times as many independent preparations roughly halves SE. More technical readings may reduce technical noise, but cannot substitute for new preparation responses. More n improves precision under this model; it does not fix biased sampling or broaden the cell-line claim.
+**Say:** Ask for predictions about doubling biological response variability and about increasing independent preparations from six to 24, then reveal the plots. Keep the true mean fixed. In the variability scenario only preparation-effect SD rises from 9 to 18; tube and technical variation stay unchanged, so total SD does not exactly double. Empirical SE rises from 4.1 to 7.6 U/mg. With 24 preparations it falls to about 2.1. This larger experiment uses twelve days with two pairs per day, retaining the same additive-day assumption. Four times as many independent preparations roughly halves SE. More technical readings may reduce technical noise, but cannot substitute for new preparation responses. More n improves precision under this model; it does not fix biased sampling or broaden the cell-line claim.
 
 **Conceptual point:** Precision depends on both response variability and independent replication, even at a fixed mean effect.
 
@@ -160,7 +161,7 @@
 <p class="fine">Assumes independent, approximately normal paired changes under this L1 protocol.</p>
 
 ::: notes
-**Time: 02:33–02:35 (2 minutes).**
+**Time: 02:37–02:39 (2 minutes).**
 
 **Say:** Motivate the range before revealing it. An interval combines the best estimate and uncertainty in that estimate. This is a paired t interval, calculated on the six differences, not separate intervals around vehicle and compound. The offline calculation is mean ± qt(0.975,5) × sample SD/sqrt(6), with multiplier 2.5706 and margin 12.7449 U/mg. At n=6 a generic two-SE shortcut is too narrow. Explain the method’s name briefly without a derivation. Exact nominal coverage requires independent normal differences; the existing Gaussian generator meets this before negligible measurement rounding. Six observations cannot establish approximate normality. Real data would require substantive checks of the model and dependence.
 
@@ -178,10 +179,10 @@
 
 <img class="data-plot coverage-plot" src="figures/generated/unc-coverage.png" alt="First sixty 95 percent t intervals. A fixed vertical line marks the true simulated mean minus 14; rust intervals miss it." />
 <p class="takeaway fragment">95.3% covered the true mean across 10,000 repetitions</p>
-<p class="fine">First 60 shown, in order. Vertical line: fixed true mean −14. Teal intervals contain it; rust intervals miss it.</p>
+<p class="fine">First 60 shown, in order. Vertical line: the simulated true mean, −14. Teal intervals contain it; rust intervals miss it.</p>
 
 ::: notes
-**Time: 02:35–02:39 (4 minutes).**
+**Time: 02:39–02:43 (4 minutes).**
 
 **Say:** Give a minute to inspect the fixed vertical line and moving intervals. Trace one interval that contains the line and one that misses it. Every repetition uses six preparation changes, its own mean and SD, and the same t multiplier for five degrees of freedom. The figure shows the first 60 without selecting a desired pattern. Then reveal that 95.3% of 10,000 intervals contain the fixed true −14 value. This proportion is a Monte Carlo result, not a target enforced by searching seeds. It need not be exactly 95%, especially among the 60 shown. The method is assessed across hypothetical repetitions, though in the lab we ordinarily obtain only one interval. Known truth is available only because this is a simulation.
 
@@ -195,34 +196,37 @@
 
 :::
 
-## What does “95%” actually promise? {#meaning-of-confidence .interaction}
+## What does our interval tell us? {#meaning-of-confidence}
 
-<p class="uncertainty-statement">If we repeated this procedure many times, approximately 95% of the intervals constructed this way would contain the true population mean.</p>
-<div class="fragment"><p class="takeaway">Practical shorthand: “values reasonably compatible with the data and model.”</p><p class="small">The fixed true mean does not have a 95% probability of lying in this particular computed interval.</p></div>
+<p class=”big”>Our result: −23 to +2 U/mg.</p>
+<p class=”big”>These are the effect sizes the data cannot rule out.</p>
+<p class=”takeaway fragment”>The interval shows compatible values — not a probability that the true effect is inside it.</p>
+<p class=”small fragment”>Wider interval = less precise estimate, not a worse experiment.</p>
 
 ::: notes
-**Time: 02:39–02:42 (3 minutes).**
+**Time: 02:43–02:46 (3 minutes).**
 
-**Say:** Read the repeated-procedure statement slowly and ask participants what is varying. Our intervals vary; the population mean is fixed. After observing the data, this particular interval either includes that mean or does not. Scientists often use the compatibility shorthand on the slide, but it is not a posterior probability statement, a probability assigned equally to values inside, or a hard boundary between possible and impossible values. Compatibility depends on the chosen method and model. A narrow interval cannot account for every bias or missing population. Do not introduce an alternative inferential framework here.
+**Say:** Point to the numbers first. Minus twenty-three to plus two. Those are the effect sizes we cannot dismiss with this data. Ask participants: does that include zero? Yes. Does it include a ten-unit reduction? Yes. Does it include a twenty-unit reduction? Yes. Everything in that range is compatible with what we observed. The 95% does not mean there is a 95% chance the true effect is somewhere in that interval — the true effect is a fixed number, not a random variable. What varies is the interval itself: if we ran the experiment again, we would get a different interval. Roughly 95% of all such intervals, across many repetitions, would catch the true value. But we do not have many repetitions — we have one, and it either caught it or it did not. The practical message: report the interval, and read it as a range of plausible values.
 
-**Conceptual point:** Long-run coverage and practical interpretation of one observed interval are related but different statements.
+**Conceptual point:** The interval is a statement about compatible data, not a probability distribution over the true effect.
 
-**Likely misconception:** 95% confidence means a 95% chance the fixed parameter is inside this particular interval, or all included values are equally supported.
+**Likely misconception:** 95% CI means a 95% chance the true effect is inside this particular interval, or that values outside the interval are impossible.
 
-**Optional follow-up:** Which word would you change in “95% of the preparation responses lie in this interval”?
+**Optional follow-up:** If our interval had been −23 to −2 instead, what would change about what we can say?
 
-**Sources:** AppliedStats_2026.pdf pp. 56–62, 67, 75–80; Stats_PhD_MR_CVS_2024.pdf pp. 37–44; DoctaMed.pdf pp. 10–17. Concepts rebuilt using the recurring assay; probability wording corrected according to CONTENT_MAP.md. NIST/SEMATECH, Confidence Limits for the Mean: https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm (t-based interval and repeated-sampling interpretation).
+**Sources:** AppliedStats_2026.pdf pp. 56–62, 67, 75–80; Stats_PhD_MR_CVS_2024.pdf pp. 37–44; DoctaMed.pdf pp. 10–17.
 
 :::
 
 ## Same estimate. Which answer is more precise? {#interval-width .interaction}
 
+<p class="prompt-tag">Predict before the reveal</p>
 <img class="data-plot" src="figures/generated/unc-width.png" alt="Two illustrative estimates both minus 10. Wide 95 percent interval minus 25 to plus 5; narrow interval minus 13 to minus 7." />
 <p class="takeaway fragment">The narrower interval gives a more precise estimate.</p>
 <p class="fine">Constructed 95% CI illustrations on the same scale, not additional L1 observations.</p>
 
 ::: notes
-**Time: 02:42–02:44 (2 minutes).**
+**Time: 02:46–02:48 (2 minutes).**
 
 **Say:** Let participants identify the identical centers before comparing widths. Both point estimates are −10 U/mg, but one allows a much wider range of mean effects. Precision is represented by width, not by how far the estimate lies along the axis. These are constructed illustrations, not selected repetitions or new assay results. Their endpoints are not being used as a binary decision or a rule based on overlap. Interval width alone says nothing about whether an experiment is unbiased.
 
@@ -243,7 +247,7 @@
 <p class="fine">Constructed 95% CI illustrations · biological importance requires biological judgment.</p>
 
 ::: notes
-**Time: 02:44–02:46 (2 minutes).**
+**Time: 02:48–02:50 (2 minutes).**
 
 **Say:** Separate two questions explicitly. The larger estimated reduction is much less precisely located; the smaller estimated reduction is more precisely located. Ask which would matter biologically and accept that we need context and a relevant-effect scale. These hypothetical values do not define a relevance threshold for L1. A precise small estimate is not automatically useful; a large uncertain estimate can still motivate work. Do not compare interval overlap or introduce a binary classification.
 
@@ -259,13 +263,14 @@
 
 ## What can we now say about compound Q? {#our-effect-and-interval .interaction}
 
+<p class="prompt-tag">Formulate a statement · 1 minute</p>
 <img class="data-plot short-plot" src="figures/generated/unc-observed-ci.png" alt="Mean paired change minus 10.4 U/mg, 95 percent confidence interval minus 23.2 to plus 2.3." />
 <p class="takeaway"><strong>−10.4 U/mg</strong> · 95% CI <strong>−23.2 to +2.3</strong></p>
 <p class="small">Best estimate? Remaining uncertainty?<br>Which effect sizes remain compatible? Narrow enough for our biological question?</p>
 <p class="fine">Six L1 preparations · Q minus vehicle · conditional on independent, approximately normal paired changes.</p>
 
 ::: notes
-**Time: 02:46–02:49 (3 minutes).**
+**Time: 02:50–02:53 (3 minutes).**
 
 **Say:** Give a minute for pairs to formulate a statement, then debrief. Our best estimate is an average reduction of about 10.4 U/mg. The interval ranges from a reduction of about 23.2 to an increase of about 2.3. Under the stated model, substantial reductions as well as near-zero and small positive average changes remain compatible at this confidence level. Whether that range is useful depends on the biologically relevant magnitude; we have not supplied a validated threshold. Do not turn this into works/does not work. Do not treat the simulated truth as information available from a real assay. The interval concerns the defined L1 preparation process, not patients, other cell lines or all laboratories. Shared treatment-by-day variation would undermine the simple calculation. No point was removed.
 
@@ -279,12 +284,34 @@
 
 :::
 
+## Report the estimate and its precision {#report-se-not-sd}
+
+<div class="research-paths">
+<div><h3>SD — spread of preparations</h3><p>How much do individual<br>preparations vary?</p><p class="small">Describes biological variability<br>across observations.</p></div>
+<div><h3>SE or CI — estimate precision</h3><p>How well does the mean<br>characterise the true average?</p><p class="small">Describes how precisely<br>we know the average effect.</p></div>
+</div>
+<p class="takeaway keyline">Report what your reader needs: the effect size and how precisely it is known.</p>
+
+::: notes
+**Time: 02:53–02:55 (2 minutes).**
+
+**Say:** Many papers still report mean ± SD when describing a treatment effect. The SD is a correct description of preparation-to-preparation variability, but it does not address how confidently the mean has been estimated. If the question is "how large is the effect, and how well do we know it?", the SE or CI is the relevant quantity. A wider CI from six preparations tells the reader more about the reliability of the estimate than an SD does. SD remains appropriate when the goal is genuinely to characterise variability — for instance, describing how heterogeneous a cell population is. The choice depends on the claim.
+
+**Conceptual point:** SD describes scatter in the observations; SE and CI describe precision of the estimate. Match the reported quantity to the question being answered.
+
+**Likely misconception:** SD is always more honest because it is larger, or SE is a corrected version of SD. They describe different things.
+
+**Optional follow-up:** If a collaborator sends you a figure with mean ± SD error bars on a treatment comparison, what would you ask them?
+
+**Sources:** Cumming et al. (2007) J Cell Biol — error bar guidelines. Vaux (2012) Nature. AppliedStats_2026.pdf pp. 56–62.
+:::
+
 ## One question to carry forward {#no-average-effect-bridge}
 
 <p class="quote uncertainty-final">Suppose there were actually no average treatment effect. How unusual would our observed estimate be?</p>
 
 ::: notes
-**Time: 02:49–02:50 (1 minute).**
+**Time: 02:55–02:56 (1 minute).**
 
 **Say:** Read the question and pause before continuing. The completed block has distinguished preparation variation, variability of an estimator, and uncertainty about a fixed population mean. The next teaching block begins with the question on screen; leave its explanation to that block.
 
