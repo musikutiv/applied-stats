@@ -1,0 +1,20 @@
+---
+pagetitle: "CRC205 — Applied Statistics for Life Scientists"
+format:
+  revealjs:
+    css: [styles/course.css, styles/session-2.css]
+    footer: "CRC205 · Applied Statistics for Life Scientists"
+---
+
+## Applied Statistics for Life Scientists {#crc-title .crc-title}
+
+<p class="crc-course">CRC205</p>
+<p class="crc-date">5.8.2026</p>
+<p class="crc-author">Dr. Tobias Straub<br>BMC, LMU</p>
+<p class="crc-link">Slides: <a href="https://musikutiv.github.io/applied-stats/crc205.html">musikutiv.github.io/applied-stats/crc205.html</a></p>
+
+::: notes
+Title slide. Show while participants arrive; the course starts at 13:30. Point to the link so participants can follow the slides on their own devices.
+:::
+
+{{< include sections/_crc205-generated.qmd >}}

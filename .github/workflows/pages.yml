@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - "_output/session-*.html"
+      - "_output/crc205.html"
       - "pages/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
@@ -32,7 +33,7 @@ jobs:
         run: |
           mkdir site
           cp pages/index.html site/
-          cp _output/session-1.html _output/session-2.html site/
+          cp _output/session-1.html _output/session-2.html _output/crc205.html site/
           touch site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:

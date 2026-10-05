@@ -4,6 +4,7 @@ project:
   render:
     - session-1.qmd
     - session-2.qmd
+    - crc205.qmd
   resources:
     - workshop-design-canvas.html
   execute-dir: project
