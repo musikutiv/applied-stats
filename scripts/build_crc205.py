@@ -28,7 +28,7 @@ PART1 = [
                            "day-layout", "confounding"]),
     ("2 · Question and claim", ["claim", "target-quantity", "sample-population",
                                 "population-question", "response-unit"]),
-    ("3 · Reading the data", ["data-look", "six-changes", "mean-and-median", "variance-and-sd",
+    ("3 · Reading the data", ["data-look", "six-changes", "mean-and-median", "quantiles-intro", "variance-and-sd",
                               "paired-or-box", "describe-result"]),
     ("4 · Effect and uncertainty", ["one-sample-estimate", "new-preparations-new-mean",
                                     "sampling-distribution", "sd-versus-se", "estimate-the-se",

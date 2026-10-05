@@ -162,7 +162,7 @@ Pause for the full 15 minutes. Resume the session at elapsed time 01:38. This is
 
 ---
 
-### BLOCK 3 · Reading the Data (01:38–02:19)
+### BLOCK 3 · Reading the Data (01:38–02:20)
 
 ---
 
@@ -196,249 +196,249 @@ The mean is -10.4 U/mg and uses every observed magnitude. The median is -11.9 U/
 
 ---
 
-**What is a quartile? — 01:51–01:52**
+**What is a quartile? — 01:51–01:53**
 
-Quartiles divide sorted data at the 25%, 50% and 75% positions. Q2 is the median we just used under a different name. Q1 is the boundary below which 25% of values fall; Q3 is below which 75% fall. Do not explain the exact algorithm — it depends on n and the software convention. The next slide shows what happens when one value is extreme; the slide after this block uses Q1 and Q3 to describe spread.
+Start with the dots: twelve values, sorted from smallest to largest. Cut them into four groups with the same number of values — three each, so each group holds a quarter. The three cuts are the quartiles. The first cut, Q1, has a quarter of the values below it. The middle cut, Q2, has half below it — that is the median we just met. The third cut, Q3, has three quarters below it. Then move to the bottom half of the figure: a box plot is simply a drawing of these cuts. The box runs from Q1 to Q3, so it always contains the middle half of the values; the line inside is the median; the lines on either side reach out to the lowest and highest quarter. Do not explain how software places the cut when the values do not divide evenly — conventions differ slightly and it does not matter here.
 
 ---
 
-**What if one preparation were extreme? — 01:52–01:55** [INTERACTION]
+**What if one preparation were extreme? — 01:53–01:56** [INTERACTION]
 
 Before advancing, allow a minute to predict what happens when P5 alone moves from about +6.0 to +66.0 U/mg. The other five changes stay fixed. Reveal both summaries together. Mean moves from -10.4 to -0.4, a 10-unit shift because a total increase of 60 is shared over six observations. Median stays at -11.9 because the two middle ordered values stay the same. The hypothetical scenario raises all three Q aliquot readings for P5 by 60 before aggregating, so the displayed change has a consistent underlying construction. It is not a newly observed result.
 
 ---
 
-**An unusual preparation needs a question — 01:55–01:57**
+**An unusual preparation needs a question — 01:56–01:58**
 
 Return explicitly to the original six changes, not the hypothetical extreme. P5 went in the opposite direction; that is a prompt to inspect metadata, not grounds for automatic deletion. A large change could reflect biology, a handling event or a measurement problem. Any exclusion needs a defensible documented reason, preferably a prospective QC rule. The original dataset remains intact. Do not propose that the median substitutes for investigating the experiment.
 
 ---
 
-**Do the preparations all tell the same story? — 01:57–02:00**
+**Do the preparations all tell the same story? — 01:58–02:01**
 
 Begin with the need to describe how much the preparations disagree. The full observed span runs from about -23.7 to +6.0 U/mg. Its width is 29.8. Quartiles locate the 25% and 75% positions in the ordered values; their distance is the interquartile range, 18.6. It focuses on the central part rather than the two extremes. Do not derive a quantile algorithm. At n=6 there are several conventions and positions may be interpolated: our R type-7 quartiles are Q1=-20.0975, Q3=-1.5425. This does not mean exactly three observed dots must lie between the displayed boundaries.
 
 ---
 
-**How far do changes lie from their mean? — 02:00–02:03**
+**How far do changes lie from their mean? — 02:01–02:04**
 
 Point to the mean line and the distance to each preparation’s change. Squaring distances makes them nonnegative and gives large deviations greater influence. Sample variance sums these squared deviations and divides by n−1, here five; its value is 147.5 in squared activity units. SD is its square root, 12.1 U/mg. Mention the sample denominator once in speech if needed, with no derivation or exercise. We are describing spread among the six changes, not the precision of their mean. Avoid a percentage-within-one-SD rule for these six values.
 
 ---
 
-**Could these have the same mean and SD? — 02:03–02:06** [INTERACTION]
+**Could these have the same mean and SD? — 02:04–02:07** [INTERACTION]
 
 Give a minute for the audience to compare the structures before revealing the matching summaries. These are deliberately constructed sets of six changes, not additional measured preparations. They use the original six changes’ exact mean and sample SD as targets. Identical values are stacked so every point remains visible. The first is distributed across the scale. The second has five equal values and one separated value. Spend the remaining time asking what the two numbers failed to convey. Do not extend into an Anscombe or Datasaurus history.
 
 ---
 
-**Which plot preserves the information we need? — 02:06–02:09**
+**Which plot preserves the information we need? — 02:07–02:10**
 
 The paired plot preserves both activities and the relationship within a preparation. The boxplot summarizes the six differences rather than treating the two conditions as unpaired groups. Explain that the box runs from Q1 to Q3, and its central line is the median. Whiskers extend to observed values within 1.5 IQR of the quartiles; here they reach the observed extremes. All six points are shown, including those overlaid near the median or whiskers. With six changes, the raw observations carry essential information. A boxplot alone would hide it. Do not read its whiskers as a precision interval or treat points outside whiskers as automatic errors.
 
 ---
 
-**What most papers show — 02:09–02:11**
+**What most papers show — 02:10–02:12**
 
 This is the most common figure type in cell biology publications. Bars show the group mean; error bars are ±1 SEM; individual points are jittered to reduce overplotting. Ask the audience what they can no longer see. The within-preparation structure is invisible: there is no way to tell that P1 vehicle and P1 compound came from the same culture. The scatter looks similar between groups, but that masks the consistent direction of the differences. The large visual space from zero to about 80 U/mg communicates nothing about the biology. This is not a dishonest figure — it is a lossy one.
 
 ---
 
-**What does n = 6 actually count? — 02:11–02:13**
+**What does n = 6 actually count? — 02:12–02:14**
 
 Read the summary with its full unit description. These six are preparations of L1, not six cells, assay aliquots, donors or days. Each change compares Q against the matching vehicle. Three technical measurements per tube were averaged before making each contrast. The preparations were run as two pairs on each of three days. Keep the earlier shared-day qualification: independent initiation alone cannot prove independent responses if the day alters the treatment response.
 
 ---
 
-**How would you describe this result to a colleague? — 02:13–02:16** [INTERACTION]
+**How would you describe this result to a colleague? — 02:14–02:17** [INTERACTION]
 
 Give one minute to write and one minute to hear a response. Reveal one acceptable description for the final minute. Four preparations decrease, P2 is nearly unchanged, P5 increases; the largest decrease is P4. The mean is -10.4 and SD 12.1 U/mg. Participants may additionally use median -11.9, IQR 18.6, or the observed span if they say what those summaries describe. They should not imply that every preparation decreased or that Q has a proven mechanism. Ask whether the wording faithfully preserves heterogeneity.
 
 ---
 
-**What can we describe before going further? — 02:16–02:19**
+**What can we describe before going further? — 02:17–02:20**
 
 Use two minutes for a brisk retrieval round. Identify the direction and magnitude of observed changes, their spread and inconsistency, and the six preparation-level comparisons. Ask what those comparisons might still share across days. Six independently initiated preparations are the counted units; independence of responses also depends on the generating process. In the final minute reveal the question about precision and pause before the next block. An observed effect here means a descriptive difference, not a claim that the treatment mechanism has been established. Invite a prediction; the following repeated-experiment block develops the answer.
 
 ---
 
-### BLOCK 4 · Effect and Uncertainty (02:19–02:56)
+### BLOCK 4 · Effect and Uncertainty (02:20–02:57)
 
 ---
 
-**Six preparations give one estimate — 02:19–02:21**
+**Six preparations give one estimate — 02:20–02:22**
 
 Return to the six unchanged paired changes. Each is a Q-minus-vehicle contrast after technical repeats were averaged within each tube. The vertical line is their mean, −10.4 U/mg. Our target is the average paired effect across the specified L1 preparation process. The sample gives an estimate of that quantity, not its known population value. Preserve the culture conditions, dose and 24-hour endpoint from the opening.
 
 ---
 
-**If we repeated the experiment, would we get the same answer? — 02:21–02:23** [INTERACTION]
+**If we repeated the experiment, would we get the same answer? — 02:22–02:24** [INTERACTION]
 
 Allow a minute for predictions, then hear two explanations. Repeating means six newly initiated preparations, again split between vehicle and Q, with the same technical averaging. Ask whether variation among the new preparations can move the estimated mean even when the underlying response mechanism stays unchanged. Do not show simulation results until participants have predicted.
 
 ---
 
-**New preparations, new mean — 02:23–02:26**
+**New preparations, new mean — 02:24–02:27**
 
 Trace one row: six paired changes become one diamond. Then compare three rows. These are the first three repetitions from the fixed seed, not selected examples. In our teaching simulation we know the true average: −14 U/mg. The experiment’s estimate need not equal it. This value was already in the original data-generating model; it was not fitted to −10.4. The generator preserves normal preparation effects (SD 9), tube errors (SD 3), three technical errors (SD 2.5) and two-decimal assay rounding. Shared additive preparation and day baselines cancel in paired differences, apart from negligible rounding. There is no treatment-by-day variation. Real experiments do not give us a known truth.
 
 ---
 
-**What happens when we collect the means? — 02:26–02:29**
+**What happens when we collect the means? — 02:27–02:30**
 
 Reveal 10, then 100, then 10,000 accumulated means. Each comes from six newly generated paired changes. The frequency scale is a fraction of experiments so panels remain comparable as repetitions accumulate. Point to the fixed −14 line. Name this the sampling distribution of the mean. This is not the shape of our original six measurements, and it is not a probability distribution for possible true means. Simulation approximates what repeated sampling under the known model would generate; it does not turn our one observed experiment into 10,000 real replications.
 
 ---
 
-**Preparations vary more than their mean does — 02:29–02:32**
+**Preparations vary more than their mean does — 02:30–02:33**
 
 Spend one minute asking what one contribution represents on each side. The left pools preparation responses from the repeated simulations; the right contains one mean per experiment. Both horizontal axes are identical. The spread of the means is the standard error of this estimator. Simulated response SD is about 10.2 U/mg; simulated SD of means is about 4.1 U/mg. These are model repetition results, not the original sample’s SD of 12.1 or its estimated SE. Variation among individual responses and variability of their estimated average answer different questions. This is not a recommendation to replace raw observations with SEM error bars.
 
 ---
 
-**How can one experiment estimate that spread? — 02:32–02:34**
+**How can one experiment estimate that spread? — 02:33–02:35**
 
 Only now show the formula. The true SE uses the population SD; we estimate it by substituting the sample SD. Using full precision, 12.1445/sqrt(6)=4.9580 U/mg. Display rounding gives 5.0. This estimate need not equal the simulated long-run SE of about 4.1: the six observed responses are themselves a variable sample. The formula requires independent, identically distributed contrasts with finite variance. It is not automatically valid for shared treatment-by-day responses, clustered preparations, or correlated repeated measures. Normality is not needed for this variance identity; the small-sample t interval introduced next uses a stronger distributional assumption.
 
 ---
 
-**What would make the answer more precise? — 02:34–02:37** [INTERACTION]
+**What would make the answer more precise? — 02:35–02:38** [INTERACTION]
 
 Ask for predictions about doubling biological response variability and about increasing independent preparations from six to 24, then reveal the plots. Keep the true mean fixed. In the variability scenario only preparation-effect SD rises from 9 to 18; tube and technical variation stay unchanged, so total SD does not exactly double. Empirical SE rises from 4.1 to 7.6 U/mg. With 24 preparations it falls to about 2.1. This larger experiment uses twelve days with two pairs per day, retaining the same additive-day assumption. Four times as many independent preparations roughly halves SE. More technical readings may reduce technical noise, but cannot substitute for new preparation responses. More n improves precision under this model; it does not fix biased sampling or broaden the cell-line claim.
 
 ---
 
-**Can we show a range around our estimate? — 02:37–02:39**
+**Can we show a range around our estimate? — 02:38–02:40**
 
 Motivate the range before revealing it. An interval combines the best estimate and uncertainty in that estimate. This is a paired t interval, calculated on the six differences, not separate intervals around vehicle and compound. The offline calculation is mean ± qt(0.975,5) × sample SD/sqrt(6), with multiplier 2.5706 and margin 12.7449 U/mg. At n=6 a generic two-SE shortcut is too narrow. Explain the method’s name briefly without a derivation. Exact nominal coverage requires independent normal differences; the existing Gaussian generator meets this before negligible measurement rounding. Six observations cannot establish approximate normality. Real data would require substantive checks of the model and dependence.
 
 ---
 
-**Would the intervals keep finding the true mean? — 02:39–02:43**
+**Would the intervals keep finding the true mean? — 02:40–02:44**
 
 Give a minute to inspect the fixed vertical line and moving intervals. Trace one interval that contains the line and one that misses it. Every repetition uses six preparation changes, its own mean and SD, and the same t multiplier for five degrees of freedom. The figure shows the first 60 without selecting a desired pattern. Then reveal that 95.3% of 10,000 intervals contain the fixed true −14 value. This proportion is a Monte Carlo result, not a target enforced by searching seeds. It need not be exactly 95%, especially among the 60 shown. The method is assessed across hypothetical repetitions, though in the lab we ordinarily obtain only one interval. Known truth is available only because this is a simulation.
 
 ---
 
-**What does our interval tell us? — 02:43–02:46**
+**What does our interval tell us? — 02:44–02:47**
 
 Point to the numbers first. Minus twenty-three to plus two. Those are the effect sizes we cannot dismiss with this data. Ask participants: does that include zero? Yes. Does it include a ten-unit reduction? Yes. Does it include a twenty-unit reduction? Yes. Everything in that range is compatible with what we observed. The 95% does not mean there is a 95% chance the true effect is somewhere in that interval — the true effect is a fixed number, not a random variable. What varies is the interval itself: if we ran the experiment again, we would get a different interval. Roughly 95% of all such intervals, across many repetitions, would catch the true value. But we do not have many repetitions — we have one, and it either caught it or it did not. The practical message: report the interval, and read it as a range of plausible values.
 
 ---
 
-**Same estimate. Which answer is more precise? — 02:46–02:48** [INTERACTION]
+**Same estimate. Which answer is more precise? — 02:47–02:49** [INTERACTION]
 
 Let participants identify the identical centers before comparing widths. Both point estimates are −10 U/mg, but one allows a much wider range of mean effects. Precision is represented by width, not by how far the estimate lies along the axis. These are constructed illustrations, not selected repetitions or new assay results. Their endpoints are not being used as a binary decision or a rule based on overlap. Interval width alone says nothing about whether an experiment is unbiased.
 
 ---
 
-**Is a large effect always precisely known? — 02:48–02:50**
+**Is a large effect always precisely known? — 02:49–02:51**
 
 Separate two questions explicitly. The larger estimated reduction is much less precisely located; the smaller estimated reduction is more precisely located. Ask which would matter biologically and accept that we need context and a relevant-effect scale. These hypothetical values do not define a relevance threshold for L1. A precise small estimate is not automatically useful; a large uncertain estimate can still motivate work. Do not compare interval overlap or introduce a binary classification.
 
 ---
 
-**What can we now say about compound Q? — 02:50–02:53** [INTERACTION]
+**What can we now say about compound Q? — 02:51–02:54** [INTERACTION]
 
 Give a minute for pairs to formulate a statement, then debrief. Our best estimate is an average reduction of about 10.4 U/mg. The interval ranges from a reduction of about 23.2 to an increase of about 2.3. Under the stated model, substantial reductions as well as near-zero and small positive average changes remain compatible at this confidence level. Whether that range is useful depends on the biologically relevant magnitude; we have not supplied a validated threshold. Do not turn this into works/does not work. Do not treat the simulated truth as information available from a real assay. The interval concerns the defined L1 preparation process, not patients, other cell lines or all laboratories. Shared treatment-by-day variation would undermine the simple calculation. No point was removed.
 
 ---
 
-**Report the estimate and its precision — 02:53–02:55**
+**Report the estimate and its precision — 02:54–02:56**
 
 Many papers still report mean ± SD when describing a treatment effect. The SD is a correct description of preparation-to-preparation variability, but it does not address how confidently the mean has been estimated. If the question is "how large is the effect, and how well do we know it?", the SE or CI is the relevant quantity. A wider CI from six preparations tells the reader more about the reliability of the estimate than an SD does. SD remains appropriate when the goal is genuinely to characterise variability — for instance, describing how heterogeneous a cell population is. The choice depends on the claim.
 
 ---
 
-**One question to carry forward — 02:55–02:56**
+**One question to carry forward — 02:56–02:57**
 
 Read the question and pause before continuing. The completed block has distinguished preparation variation, variability of an estimator, and uncertainty about a fixed population mean. The next teaching block begins with the question on screen; leave its explanation to that block.
 
 ---
 
-### BLOCK 5 · The Null Model (02:56–03:30)
+### BLOCK 5 · The Null Model (02:57–03:31)
 
 ---
 
-**Could this result arise if there were no effect? — 02:56–02:58** [INTERACTION]
+**Could this result arise if there were no effect? — 02:57–02:59** [INTERACTION]
 
 Reconnect to the unanswered question. Invite predictions before the reveal. Keep the six observed differences and −10.4 estimate unchanged. Change only the mean effect in the simulation from −14 to zero. Biological effect SD remains 9, tube SD 3 and technical-reading SD 2.5; pairing, triplicate averaging and assay rounding remain. Positive and negative preparation effects can still occur. Do not name the null hypothesis yet. This is a hypothetical generating model, not a conclusion about compound Q.
 
 ---
 
-**Zero on average does not mean zero every time — 02:58–03:00**
+**Zero on average does not mean zero every time — 02:59–03:01**
 
 Trace the six dots and the diamond in each row. These are the first three repetitions from seed 20261006, not selected examples. New preparations give nonzero means despite a fixed population average of zero. Use the same within-tube averaging and Q-minus-vehicle subtraction as for our observed experiment. The fixed line belongs to the hypothetical model; the diamonds belong to particular samples.
 
 ---
 
-**What would the no-effect model produce? — 03:00–03:03**
+**What would the no-effect model produce? — 03:01–03:04**
 
 Accumulate 10, 100 and 10,000 means before naming the distribution on a final click. Define a null distribution as the distribution of the statistic across repeated experiments if the null hypothesis and model assumptions were true. Then name H0: the population mean paired effect is zero. The horizontal axis is in the same units, with the same 36-unit span and one-unit bins as the previous sampling-distribution sequence, now centered on zero. It is not a histogram of six observations and not a distribution of probabilities that hypotheses are true.
 
 ---
 
-**Does our observed mean look ordinary here? — 03:03–03:05** [INTERACTION]
+**Does our observed mean look ordinary here? — 03:04–03:06** [INTERACTION]
 
 Allow a short visual judgment before introducing any probability. The observed mean is toward the left of the simulated cloud. Ask what controls its distance from the center relative to the cloud’s width. Do not quote the fraction of raw means beyond this line as the paired t p-value. This raw-mean simulation uses a known generating spread; the real analysis estimates spread from six differences. The next slides make that transition explicit. No probabilities of hypotheses are being shown.
 
 ---
 
-**Is −10.4 equally surprising in every experiment? — 03:05–03:07**
+**Is −10.4 equally surprising in every experiment? — 03:06–03:08**
 
 Compare the identical estimates with estimated SEs of 2 and 10. These are constructed illustrations, not alternative analyses of our six observations. The same raw mean is many SEs from zero in one and about one SE from zero in the other. The short lines are explicitly one-SE spans used to explain standardization; do not teach them as a replacement for raw data or confidence intervals. Keep magnitude distinct from extremeness relative to uncertainty.
 
 ---
 
-**How many standard errors away from zero? — 03:07–03:10**
+**How many standard errors away from zero? — 03:08–03:11**
 
 Point to the figure. Zero is where no effect would sit. Our mean is 2.1 SE steps below it. That gap is what we need to judge — not the raw number, but how far it sits relative to the uncertainty in our estimate. Name it once: this SE-step distance is the t statistic, t = −2.10; it is the number software reports and the one you will see in papers. Negative means lower activity with Q; we will count distance in either direction. The question now is how often the null model would produce a result at least this far from zero. That is what the next slide answers.
 
 ---
 
-**How often would a result be at least this extreme? — 03:10–03:13**
+**How often would a result be at least this extreme? — 03:11–03:14**
 
 Point to the observed t at −2.10 and the equally distant +2.10 boundary. The question was about an average change in either direction, so add both tail probabilities. The actual paired t p-value is 0.08987058, rounded to 0.090. Under H0 and the assumptions, about 9% of repeated experiments produce absolute t at least 2.10. The simulation gives 9.07%, close to the analytical value; it is the standardized statistic, not the raw mean, being counted. Integrating the t distribution includes its entire infinite tails even though the plot shows only −5 to +5. Do not choose the direction after seeing a negative estimate.
 
 ---
 
-**What does p = 0.090 mean? — 03:13–03:17** [INTERACTION]
+**What does p = 0.090 mean? — 03:14–03:18** [INTERACTION]
 
 Give one minute of individual choice and a minute of pair discussion, then reveal and debrief. All options reverse or distort the conditional statement. We assumed H0 to calculate the reference distribution; we did not calculate its probability. One minus p is not a probability that a compound works, and a large p does not prove zero effect.
 
 ---
 
-**How does this connect to our interval? — 03:17–03:20**
+**How does this connect to our interval? — 03:18–03:21**
 
 Return to the unchanged interval and its zero line. At the conventional 0.05 threshold, the matching two-sided paired t calculation and its 95% interval agree as displayed. Includes means including the endpoints; at an exact endpoint the matching p is 0.05. This correspondence requires the same data, assumptions, contrast and procedure. It is not a general rule about overlap of two separate group intervals. The interval gives the range and magnitude of compatible mean effects, rather than compatibility with only the single zero value. Here it permits appreciable reductions as well as near-zero and small positive effects. The threshold’s decision meaning comes next.
 
 ---
 
-**What does a 0.05 decision rule control? — 03:20–03:23**
+**What does a 0.05 decision rule control? — 03:21–03:24**
 
 Only now introduce alpha as the prespecified decision threshold, a convention rather than a natural evidence boundary. A rejection under the chosen rule is often called statistically significant; that label does not establish biological importance. Every displayed experiment was generated with a true zero mean. Each rust cross is a rejection of a true H0, called a Type I error. There are not necessarily exactly five crosses in each block of 100; the first 100 are shown unselected. Across the same 10,000 null experiments 4.98% meet p<0.05. Under the ideal continuous normal model this rule’s long-run Type I rate is 5%; our rounded simulation approximates it. Alpha is not the probability that a particular conclusion is wrong, nor the proportion of all rejected claims that are false. A testing rule must be fixed in advance; do not retune it for the observed result.
 
 ---
 
-**Are these scientifically different? — 03:23–03:25** [INTERACTION]
+**Are these scientifically different? — 03:24–03:26** [INTERACTION]
 
 Ask whether these values alone make the studies scientifically different. Under a prespecified p<0.05 rule the labels differ, but the data’s incompatibility with the null changes continuously rather than jumping at the cutoff. The comparison is only about nearby values for comparable analyses; p-values alone cannot rank very different experiments or scientific importance. A statistically significant result can be biologically small and does not guarantee replication. A result just above the convention does not establish no effect. Ask for estimates, intervals, design and biological context.
 
 ---
 
-**A small p-value is not a large effect — 03:25–03:26**
+**A small p-value is not a large effect — 03:26–03:27**
 
 Point at the two p-values first: identical. Then at the two effects: −2 versus −20 U/mg. Experiment A has 200 pairs, so even a tiny change is estimated precisely and lies far from zero in SE steps. Experiment B has only six pairs, so a large change gives the same p. Ask which result matters biologically. A loss of 2 U/mg against roughly 98 U/mg is about 2% of activity; −20 is about 20%. The p-value cannot tell you this; the effect and its interval can. Both experiments are constructed illustrations, not L1 data.
 
 ---
 
-**What can we report about compound Q? — 03:26–03:29** [INTERACTION]
+**What can we report about compound Q? — 03:27–03:30** [INTERACTION]
 
 Give a minute for a spoken or written report and two for debrief. The observed mean is a reduction of 10.4 U/mg, with the displayed broad interval. The t statistic is 2.10 estimated SEs below zero. Assuming zero mean and the model, an absolute statistic this large or larger occurs about 9% of the time. At a prespecified 0.05 rule this would not reject H0; explain if using that phrase that it does not establish H0. The interval remains compatible with substantial reductions and some small increases. No validated biological relevance threshold is supplied. Do not conclude that Q works or does not work, infer a mechanism, or generalize beyond the specified L1 process. Dependence or bias would undermine the simple model rather than being repaired by a p-value.
 
 ---
 
-**One question to carry forward — 03:29–03:30**
+**One question to carry forward — 03:30–03:31**
 
 Read the question and stop. It is a possibility to investigate, not a conclusion that this experiment was necessarily too small. Leave the question unanswered. Do not introduce the next block’s concepts, formulas or planning advice.
 

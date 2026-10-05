@@ -111,39 +111,22 @@
 
 ## What is a quartile? {#quantiles-intro}
 
-<p class="medium">Sort all values from smallest to largest.<br>Cut into four equal pieces.</p>
-<div style="margin:38px 0 0;">
-<div style="display:flex; height:64px; border:2px solid var(--vehicle); border-radius:6px; overflow:hidden;">
-<div style="flex:1; display:flex; align-items:center; justify-content:center; font-size:24px; color:var(--vehicle);">25%</div>
-<div style="width:3px; background:var(--vehicle);"></div>
-<div style="flex:1; display:flex; align-items:center; justify-content:center; font-size:24px; color:var(--vehicle);">25%</div>
-<div style="width:3px; background:var(--vehicle);"></div>
-<div style="flex:1; display:flex; align-items:center; justify-content:center; font-size:24px; color:var(--vehicle);">25%</div>
-<div style="width:3px; background:var(--vehicle);"></div>
-<div style="flex:1; display:flex; align-items:center; justify-content:center; font-size:24px; color:var(--vehicle);">25%</div>
-</div>
-<div style="display:flex; margin-top:14px;">
-<div style="flex:0.5;"></div>
-<div style="flex:1; text-align:center; font-size:24px; color:var(--vehicle); font-weight:600;">Q1</div>
-<div style="flex:1; text-align:center; font-size:24px; color:var(--vehicle); font-weight:600;">Q2 · median</div>
-<div style="flex:1; text-align:center; font-size:24px; color:var(--vehicle); font-weight:600;">Q3</div>
-<div style="flex:0.5;"></div>
-</div>
-</div>
-<p class="takeaway" style="margin-top:36px;">Q2 is the median — the midpoint we already discussed.</p>
+<p class="medium">Sort the values. Cut them into four groups of equal size.</p>
+<img class="data-plot" src="figures/generated/quartiles-boxplot.png" alt="Twelve sorted values in four groups of three. Dashed cuts between the groups are labelled Q1, Q2 = median and Q3. Below, a box plot built from the same cuts: the box runs from Q1 to Q3 with a line at the median and holds the middle half of the values; lines reach out to the lowest and highest quarter." />
+<p class="takeaway fragment">The three cuts are the quartiles. A box plot draws them: the box holds the middle half of the values.</p>
 
 ::: notes
-**Time: 01:51–01:52 (1 minute).**
+**Time: 01:51–01:53 (2 minutes).**
 
-**Say:** Quartiles divide sorted data at the 25%, 50% and 75% positions. Q2 is the median we just used under a different name. Q1 is the boundary below which 25% of values fall; Q3 is below which 75% fall. Do not explain the exact algorithm — it depends on n and the software convention. The next slide shows what happens when one value is extreme; the slide after this block uses Q1 and Q3 to describe spread.
+**Say:** Start with the dots: twelve values, sorted from smallest to largest. Cut them into four groups with the same number of values — three each, so each group holds a quarter. The three cuts are the quartiles. The first cut, Q1, has a quarter of the values below it. The middle cut, Q2, has half below it — that is the median we just met. The third cut, Q3, has three quarters below it. Then move to the bottom half of the figure: a box plot is simply a drawing of these cuts. The box runs from Q1 to Q3, so it always contains the middle half of the values; the line inside is the median; the lines on either side reach out to the lowest and highest quarter. Do not explain how software places the cut when the values do not divide evenly — conventions differ slightly and it does not matter here.
 
-**Conceptual point:** Quartiles are position markers in sorted data, not a formula. The key fact is their meaning as 25%, 50%, 75% landmarks.
+**Conceptual point:** Quartiles are the cut points that split sorted data into four equal-sized groups; a box plot is a picture of them.
 
-**Likely misconception:** Quartiles require a large sample, or the algorithm is the concept. Both wrong — the idea works at any n, even if the exact position convention varies.
+**Likely misconception:** The box contains most of the data, or quartiles need a formula. The box always holds the middle half — no more, no less.
 
-**Optional follow-up:** Which quartile boundary is the same as the median?
+**Optional follow-up:** If we added one very large value, which part of the box plot would move most?
 
-**Sources:** AppliedStats_2026.pdf pp. 36–40.
+**Sources:** AppliedStats_2026.pdf pp. 36–40. Figure: scripts/generate_quartiles.R (illustrative values).
 :::
 
 ## What if one preparation were extreme? {#extreme-preparation .interaction}
@@ -156,7 +139,7 @@
 <p class="fine">Hypothetical illustration only. The original dataset is unchanged. Each panel contains six paired changes.</p>
 
 ::: notes
-**Time: 01:52–01:55 (3 minutes).**
+**Time: 01:53–01:56 (3 minutes).**
 
 **Say:** Before advancing, allow a minute to predict what happens when P5 alone moves from about +6.0 to +66.0 U/mg. The other five changes stay fixed. Reveal both summaries together. Mean moves from -10.4 to -0.4, a 10-unit shift because a total increase of 60 is shared over six observations. Median stays at -11.9 because the two middle ordered values stay the same. The hypothetical scenario raises all three Q aliquot readings for P5 by 60 before aggregating, so the displayed change has a consistent underlying construction. It is not a newly observed result.
 
@@ -181,7 +164,7 @@
 </div>
 
 ::: notes
-**Time: 01:55–01:57 (2 minutes).**
+**Time: 01:56–01:58 (2 minutes).**
 
 **Say:** Return explicitly to the original six changes, not the hypothetical extreme. P5 went in the opposite direction; that is a prompt to inspect metadata, not grounds for automatic deletion. A large change could reflect biology, a handling event or a measurement problem. Any exclusion needs a defensible documented reason, preferably a prospective QC rule. The original dataset remains intact. Do not propose that the median substitutes for investigating the experiment.
 
@@ -204,7 +187,7 @@
 </div><p class="fine">Simulated L1 assay. Six independently initiated preparations, each contributing one paired comparison.</p>
 
 ::: notes
-**Time: 01:57–02:00 (3 minutes).**
+**Time: 01:58–02:01 (3 minutes).**
 
 **Say:** Begin with the need to describe how much the preparations disagree. The full observed span runs from about -23.7 to +6.0 U/mg. Its width is 29.8. Quartiles locate the 25% and 75% positions in the ordered values; their distance is the interquartile range, 18.6. It focuses on the central part rather than the two extremes. Do not derive a quantile algorithm. At n=6 there are several conventions and positions may be interpolated: our R type-7 quartiles are Q1=-20.0975, Q3=-1.5425. This does not mean exactly three observed dots must lie between the displayed boundaries.
 
@@ -228,7 +211,7 @@
 <p class="medium fragment">SD = 12.1 U/mg</p></div></div><p class="fine">Simulated L1 assay. Six independently initiated preparations, each contributing one paired comparison.</p>
 
 ::: notes
-**Time: 02:00–02:03 (3 minutes).**
+**Time: 02:01–02:04 (3 minutes).**
 
 **Say:** Point to the mean line and the distance to each preparation’s change. Squaring distances makes them nonnegative and gives large deviations greater influence. Sample variance sums these squared deviations and divides by n−1, here five; its value is 147.5 in squared activity units. SD is its square root, 12.1 U/mg. Mention the sample denominator once in speech if needed, with no derivation or exercise. We are describing spread among the six changes, not the precision of their mean. Avoid a percentage-within-one-SD rule for these six values.
 
@@ -250,7 +233,7 @@
 <p class="fine">Constructed illustrations, not additional experiments. Six values each, scaled to the original data’s mean and SD.</p>
 
 ::: notes
-**Time: 02:03–02:06 (3 minutes).**
+**Time: 02:04–02:07 (3 minutes).**
 
 **Say:** Give a minute for the audience to compare the structures before revealing the matching summaries. These are deliberately constructed sets of six changes, not additional measured preparations. They use the original six changes’ exact mean and sample SD as targets. Identical values are stacked so every point remains visible. The first is distributed across the scale. The second has five equal values and one separated value. Spend the remaining time asking what the two numbers failed to convey. Do not extend into an Anscombe or Datasaurus history.
 
@@ -274,7 +257,7 @@
 <p class="fine">Same original simulated assay. Left: 12 tube values forming six pairs. Right: six Q-minus-vehicle changes.</p>
 
 ::: notes
-**Time: 02:06–02:09 (3 minutes).**
+**Time: 02:07–02:10 (3 minutes).**
 
 **Say:** The paired plot preserves both activities and the relationship within a preparation. The boxplot summarizes the six differences rather than treating the two conditions as unpaired groups. Explain that the box runs from Q1 to Q3, and its central line is the median. Whiskers extend to observed values within 1.5 IQR of the quartiles; here they reach the observed extremes. All six points are shown, including those overlaid near the median or whiskers. With six changes, the raw observations carry essential information. A boxplot alone would hide it. Do not read its whiskers as a precision interval or treat points outside whiskers as automatic errors.
 
@@ -295,7 +278,7 @@
 <p class="fine">Same six L1 preparations. Error bars: ±1 SEM. Jitter shows scatter within each group, not which points came from the same preparation.</p>
 
 ::: notes
-**Time: 02:09–02:11 (2 minutes).**
+**Time: 02:10–02:12 (2 minutes).**
 
 **Say:** This is the most common figure type in cell biology publications. Bars show the group mean; error bars are ±1 SEM; individual points are jittered to reduce overplotting. Ask the audience what they can no longer see. The within-preparation structure is invisible: there is no way to tell that P1 vehicle and P1 compound came from the same culture. The scatter looks similar between groups, but that masks the consistent direction of the differences. The large visual space from zero to about 80 U/mg communicates nothing about the biology. This is not a dishonest figure — it is a lossy one.
 
@@ -316,7 +299,7 @@
 <p class="takeaway">Each contributes one paired treatment–control comparison.</p>
 
 ::: notes
-**Time: 02:11–02:13 (2 minutes).**
+**Time: 02:12–02:14 (2 minutes).**
 
 **Say:** Read the summary with its full unit description. These six are preparations of L1, not six cells, assay aliquots, donors or days. Each change compares Q against the matching vehicle. Three technical measurements per tube were averaged before making each contrast. The preparations were run as two pairs on each of three days. Keep the earlier shared-day qualification: independent initiation alone cannot prove independent responses if the day alters the treatment response.
 
@@ -340,7 +323,7 @@
 <p class="fine">Describes these simulated observations; does not establish a mechanism or generalize beyond the stated experimental space.</p>
 
 ::: notes
-**Time: 02:13–02:16 (3 minutes).**
+**Time: 02:14–02:17 (3 minutes).**
 
 **Say:** Give one minute to write and one minute to hear a response. Reveal one acceptable description for the final minute. Four preparations decrease, P2 is nearly unchanged, P5 increases; the largest decrease is P4. The mean is -10.4 and SD 12.1 U/mg. Participants may additionally use median -11.9, IQR 18.6, or the observed span if they say what those summaries describe. They should not imply that every preparation decreased or that Q has a proven mechanism. Ask whether the wording faithfully preserves heterogeneity.
 
@@ -368,7 +351,7 @@
 <p class="takeaway fragment">We observed an effect. How precisely do we know its size?</p>
 
 ::: notes
-**Time: 02:16–02:19 (3 minutes).**
+**Time: 02:17–02:20 (3 minutes).**
 
 **Say:** Use two minutes for a brisk retrieval round. Identify the direction and magnitude of observed changes, their spread and inconsistency, and the six preparation-level comparisons. Ask what those comparisons might still share across days. Six independently initiated preparations are the counted units; independence of responses also depends on the generating process. In the final minute reveal the question about precision and pause before the next block. An observed effect here means a descriptive difference, not a claim that the treatment mechanism has been established. Invite a prediction; the following repeated-experiment block develops the answer.
 
