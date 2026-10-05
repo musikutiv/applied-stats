@@ -11,3 +11,4 @@ _quarto_internal_scss_error.scss
 **/*.quarto_ipynb
 
 resume.txt
+__pycache__/
