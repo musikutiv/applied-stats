@@ -226,7 +226,7 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 <p class="prompt-tag">Two hypothetical results</p>
 <div class="null-neighbours"><p>p = 0.049</p><p>p = 0.051</p></div>
 <p class="takeaway fragment">A decision threshold does not create a jump in evidence.</p>
-<p class="small">“Significant” and “not significant” cannot replace effect size, uncertainty or biological importance.</p>
+<p class="small fragment">“Significant” and “not significant” cannot replace effect size, uncertainty or biological importance.</p>
 
 ::: notes
 **Time: 03:06–03:08 (2 minutes).**

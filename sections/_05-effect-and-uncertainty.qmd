@@ -23,7 +23,7 @@
 
 <p class="prompt-tag">Predict · discuss with a neighbour</p>
 <p class="medium">Six new preparations.<br>The same L1 protocol and paired comparison.</p>
-<p class="takeaway fragment">Would the mean be exactly −10.4 again?</p>
+<p class="takeaway">Would the mean be exactly −10.4 again?</p>
 <p class="fine">Repeat the biological experiment, not the assay on the same lysates.</p>
 
 ::: notes

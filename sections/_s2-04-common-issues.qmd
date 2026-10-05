@@ -48,8 +48,8 @@
 
 <p class="prompt-tag">Which panel shows the larger effect? · 1 minute</p>
 <img class="data-plot" src="figures/generated/bar-truncated.png" alt="Side-by-side bar charts of Vehicle and Compound Q mean enzyme activity. Left panel: y-axis from 0 to 130 — the bars are similar heights and the difference looks modest. Right panel: y-axis from 70 to 115 — the bars appear dramatically different although the underlying data are identical." />
-<p class="takeaway">Same data. A bar chart encodes length from zero — a truncated axis is a visual distortion.</p>
-<p class="fine">Both panels show the same L1 enzyme experiment. A dot plot or line plot with a marked non-zero baseline can legitimately start elsewhere; a bar chart cannot.</p>
+<p class="takeaway fragment">Same data. A bar chart encodes length from zero — a truncated axis is a visual distortion.</p>
+<p class="fine fragment">Both panels show the same L1 enzyme experiment. A dot plot or line plot with a marked non-zero baseline can legitimately start elsewhere; a bar chart cannot.</p>
 
 ::: notes
 **Time: 02:33–02:36 (3 minutes).**
@@ -69,8 +69,8 @@
 
 <p class="prompt-tag">Which panel lets you compare all four conditions? · 1 minute</p>
 <img class="data-plot" src="figures/generated/axis-break-vs-log.png" alt="Two bar charts of simulated cytokine release across four conditions. Left: linear scale — the three low-value bars are barely visible next to the stimulated bar. Right: log₁₀ scale — all four bars are legible and proportional differences are preserved." />
-<p class="takeaway">An axis break removes the middle of the scale — log scale preserves it.</p>
-<p class="small">Publications often use a gap symbol (⁄⁄) to skip the empty middle of the y-axis. This hides how far apart the values really are. Log scale is the honest alternative when effects are proportional.</p>
+<p class="takeaway fragment">An axis break removes the middle of the scale — log scale preserves it.</p>
+<p class="small fragment">Publications often use a gap symbol (⁄⁄) to skip the empty middle of the y-axis. This hides how far apart the values really are. Log scale is the honest alternative when effects are proportional.</p>
 
 ::: notes
 **Time: 02:36–02:39 (3 minutes).**
@@ -133,10 +133,10 @@
 
 <p class="prompt-tag">What can you do with the right panel that you cannot with the left? · 2 minutes</p>
 <div style="display:flex; gap:28px; align-items:flex-start; margin-top:10px;">
-<div style="flex:1; text-align:center;"><img style="width:100%; border-radius:4px;" src="figures/generated/bar-conventional.png" alt="Bar chart of Vehicle and Compound Q mean enzyme activity with SEM error bars and jittered individual points. The pairing between preparations is invisible."/><p class="small" style="margin-top:8px; color:var(--muted);">Bar chart · means ± SEM · pairing invisible</p></div>
-<div style="flex:1; text-align:center;"><img style="width:100%; border-radius:4px;" src="figures/generated/bio-pairs.png" alt="Paired dot plot showing enzyme activity for all six L1 preparations under Vehicle and Compound Q conditions, with connecting lines showing the direction of each preparation's response."/><p class="small" style="margin-top:8px; color:var(--muted);">Paired plot · individual preparations · direction readable</p></div>
+<div style="flex:1; text-align:center;"><img style="width:100%; border-radius:4px;" src="figures/generated/bar-conventional.png" alt="Bar chart of Vehicle and Compound Q mean enzyme activity with SEM error bars and jittered individual points. The pairing between preparations is invisible."/><p class="small" style="margin-top:8px; color:var(--muted);">Bar chart · means ± SEM</p></div>
+<div style="flex:1; text-align:center;"><img style="width:100%; border-radius:4px;" src="figures/generated/bio-pairs.png" alt="Paired dot plot showing enzyme activity for all six L1 preparations under Vehicle and Compound Q conditions, with connecting lines showing the direction of each preparation's response."/><p class="small" style="margin-top:8px; color:var(--muted);">Paired plot · six preparations</p></div>
 </div>
-<p class="takeaway">A good figure lets a careful reader re-examine the raw evidence.</p>
+<p class="takeaway fragment">Only the right panel shows which values belong together and which way each preparation moved. A good figure lets a careful reader re-examine the raw evidence.</p>
 
 ::: notes
 **Time: 02:43–02:46 (3 minutes).**

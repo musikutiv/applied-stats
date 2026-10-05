@@ -72,10 +72,10 @@
 ## Which claims belong to the same family? {#define-family .interaction}
 
 <p class="prompt-tag">What shared claim would make these one family?</p>
-<p class="medium"><strong>Family-wise error rate (FWER)</strong></p>
-<p class="takeaway">Probability of at least one Type I error within a defined family of hypotheses</p>
 <div class="definitions-pair"><p class="small">20 prespecified cytokines<br>Several treatment contrasts</p><p class="small">Multiple time points<br>Several primary endpoints</p></div>
-<p class="fine">The family follows the scientific claims and decision—not whichever results look interesting.</p>
+<p class="medium fragment"><strong>Family-wise error rate (FWER)</strong></p>
+<p class="takeaway fragment">Probability of at least one Type I error within a defined family of hypotheses</p>
+<p class="fine fragment">The family follows the scientific claims and decision—not whichever results look interesting.</p>
 
 ::: notes
 **Time: 00:59–01:01 (2 minutes).**
@@ -246,7 +246,7 @@
 
 <p class="prompt-tag">Compare reports A and B · 1 minute</p>
 <div class="research-paths"><div><h3>Report A</h3><p class="small">"Outcome X was significantly affected, p = 0.03."</p></div><div><h3>Report B</h3><p class="small">"We examined 20 prespecified outcomes. X had raw p = 0.03; the full family, effect estimates, intervals and planned multiplicity analysis are reported."</p></div></div>
-<p class="takeaway">Same raw p-value. A different view of how it was found.</p>
+<p class="takeaway fragment">Same raw p-value. A different view of how it was found.</p>
 
 ::: notes
 **Time: 01:29–01:32 (3 minutes).**

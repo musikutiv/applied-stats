@@ -763,7 +763,7 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 <p class="prompt-tag">Two hypothetical results</p>
 <div class="null-neighbours"><p>p = 0.049</p><p>p = 0.051</p></div>
 <p class="takeaway fragment">A decision threshold does not create a jump in evidence.</p>
-<p class="small">“Significant” and “not significant” cannot replace effect size, uncertainty or biological importance.</p>
+<p class="small fragment">“Significant” and “not significant” cannot replace effect size, uncertainty or biological importance.</p>
 
 ::: notes
 **Time: 15:19–15:21 (2 minutes).**
@@ -960,7 +960,7 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 
 <p class="prompt-tag">Decide · then defend your threshold</p>
 <div class="research-paths"><div><h3>What we observed</h3><p>−10.4 U/mg<br>from six preparations</p></div><div><h3>What would matter</h3><p>A minimum relevant effect<br>justified by the biology</p></div></div>
-<p class="takeaway">“How many replicates?” comes after “What question must they answer?”</p>
+<p class="takeaway fragment">“How many replicates?” comes after “What question must they answer?”</p>
 
 ::: notes
 **Time: 16:17–16:21 (4 minutes).**
@@ -1002,7 +1002,7 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 
 <p class="prompt-tag">Choose, then explain what your choice buys</p>
 <div class="fragment"><img class="data-plot short-plot" src="figures/generated/power-wells.png" alt="Under this model, six extra technical assay wells barely change SE; one new independent pair, measured in six wells, reduces SE more." /></div>
-<p class="small">Technical repeats improve measurement precision and assay checks.<br>New preparations add information about population responses.</p>
+<p class="small fragment">Technical repeats improve measurement precision and assay checks.<br>New preparations add information about population responses.</p>
 <p class="fine">42 assay wells in either option. A new pair also requires new culture work; total costs are not equal.</p>
 
 ::: notes
@@ -1045,7 +1045,7 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 ## My p-value is 0.09. What should I do now? {#advice-revisited .interaction}
 
 <p class="prompt-tag">Revise your earlier advice · 1 minute</p>
-<div class="research-paths"><div><h3>Inform the next experiment</h3><p class="small">Interpret the effect and interval.<br>Replicate independently if justified.<br>Improve design and reduce avoidable variation.<br>Plan independent N and analysis in advance.</p></div><div><h3>Do not chase the threshold</h3><p class="small">Switch analysis only to get p &lt; 0.05.<br>Delete observations just for a smaller p.<br>Choose one-sided after seeing direction.<br>Keep adding samples until p crosses.</p></div></div>
+<div class="research-paths fragment"><div><h3>Inform the next experiment</h3><p class="small">Interpret the effect and interval.<br>Replicate independently if justified.<br>Improve design and reduce avoidable variation.<br>Plan independent N and analysis in advance.</p></div><div><h3>Do not chase the threshold</h3><p class="small">Switch analysis only to get p &lt; 0.05.<br>Delete observations just for a smaller p.<br>Choose one-sided after seeing direction.<br>Keep adding samples until p crosses.</p></div></div>
 
 ::: notes
 **Time: 16:30–16:33 (3 minutes).**
@@ -1110,10 +1110,10 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 ## Which claims belong to the same family? {#define-family .interaction}
 
 <p class="prompt-tag">What shared claim would make these one family?</p>
-<p class="medium"><strong>Family-wise error rate (FWER)</strong></p>
-<p class="takeaway">Probability of at least one Type I error within a defined family of hypotheses</p>
 <div class="definitions-pair"><p class="small">20 prespecified cytokines<br>Several treatment contrasts</p><p class="small">Multiple time points<br>Several primary endpoints</p></div>
-<p class="fine">The family follows the scientific claims and decision—not whichever results look interesting.</p>
+<p class="medium fragment"><strong>Family-wise error rate (FWER)</strong></p>
+<p class="takeaway fragment">Probability of at least one Type I error within a defined family of hypotheses</p>
+<p class="fine fragment">The family follows the scientific claims and decision—not whichever results look interesting.</p>
 
 ::: notes
 **Time: 16:38–16:40 (2 minutes).**
@@ -1264,7 +1264,7 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 
 <p class="prompt-tag">Compare reports A and B · 1 minute</p>
 <div class="research-paths"><div><h3>Report A</h3><p class="small">"Outcome X was significantly affected, p = 0.03."</p></div><div><h3>Report B</h3><p class="small">"We examined 20 prespecified outcomes. X had raw p = 0.03; the full family, effect estimates, intervals and planned multiplicity analysis are reported."</p></div></div>
-<p class="takeaway">Same raw p-value. A different view of how it was found.</p>
+<p class="takeaway fragment">Same raw p-value. A different view of how it was found.</p>
 
 ::: notes
 **Time: 16:53–16:56 (3 minutes).**
@@ -1507,8 +1507,8 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 <p class="prompt-tag">Vote before the reveal</p>
 <div class="tests-grid"><p>Shapiro–Wilk p &gt; 0.05<br>↓<br>t-test?</p><p>Shapiro–Wilk p &lt; 0.05<br>↓<br>Mann–Whitney?</p></div>
 <p class="takeaway fragment">No: this is not a sound automatic decision rule.</p>
-<p class="small">The normality assumption applies to the <strong>population</strong> — not to whether your sample looks bell-shaped.</p>
-<p class="small">Small N can hide important departures.<br>Large N can detect practically unimportant departures.</p>
+<p class="small fragment">The normality assumption applies to the <strong>population</strong> — not to whether your sample looks bell-shaped.</p>
+<p class="small fragment">Small N can hide important departures.<br>Large N can detect practically unimportant departures.</p>
 
 ::: notes
 **Time: 17:19–17:22 (3 minutes).**
@@ -1527,8 +1527,8 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 ## Delete it? Transform? Switch the test? {#extreme-observation .interaction}
 
 <p class="prompt-tag">What evidence would you seek first?</p>
-<img class="data-plot tests-plot" src="figures/generated/tests-outlier.png" alt="Eight illustrative culture measurements, one extreme activity value." /><p class="takeaway">First investigate why the observation is extreme.</p>
-<p class="small">Recording error? Prespecified QC failure? Biology? Model mismatch?</p>
+<img class="data-plot tests-plot" src="figures/generated/tests-outlier.png" alt="Eight illustrative culture measurements, one extreme activity value." /><p class="takeaway fragment">First investigate why the observation is extreme.</p>
+<p class="small fragment">Recording error? Prespecified QC failure? Biology? Model mismatch?</p>
 
 ::: notes
 **Time: 17:22–17:24 (2 minutes).**
@@ -1569,8 +1569,8 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 
 <p class="prompt-tag">Which panel shows the larger effect? · 1 minute</p>
 <img class="data-plot" src="figures/generated/bar-truncated.png" alt="Side-by-side bar charts of Vehicle and Compound Q mean enzyme activity. Left panel: y-axis from 0 to 130 — the bars are similar heights and the difference looks modest. Right panel: y-axis from 70 to 115 — the bars appear dramatically different although the underlying data are identical." />
-<p class="takeaway">Same data. A bar chart encodes length from zero — a truncated axis is a visual distortion.</p>
-<p class="fine">Both panels show the same L1 enzyme experiment. A dot plot or line plot with a marked non-zero baseline can legitimately start elsewhere; a bar chart cannot.</p>
+<p class="takeaway fragment">Same data. A bar chart encodes length from zero — a truncated axis is a visual distortion.</p>
+<p class="fine fragment">Both panels show the same L1 enzyme experiment. A dot plot or line plot with a marked non-zero baseline can legitimately start elsewhere; a bar chart cannot.</p>
 
 ::: notes
 **Time: 17:27–17:30 (3 minutes).**
@@ -1590,8 +1590,8 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 
 <p class="prompt-tag">Which panel lets you compare all four conditions? · 1 minute</p>
 <img class="data-plot" src="figures/generated/axis-break-vs-log.png" alt="Two bar charts of simulated cytokine release across four conditions. Left: linear scale — the three low-value bars are barely visible next to the stimulated bar. Right: log₁₀ scale — all four bars are legible and proportional differences are preserved." />
-<p class="takeaway">An axis break removes the middle of the scale — log scale preserves it.</p>
-<p class="small">Publications often use a gap symbol (⁄⁄) to skip the empty middle of the y-axis. This hides how far apart the values really are. Log scale is the honest alternative when effects are proportional.</p>
+<p class="takeaway fragment">An axis break removes the middle of the scale — log scale preserves it.</p>
+<p class="small fragment">Publications often use a gap symbol (⁄⁄) to skip the empty middle of the y-axis. This hides how far apart the values really are. Log scale is the honest alternative when effects are proportional.</p>
 
 ::: notes
 **Time: 17:30–17:33 (3 minutes).**
@@ -1653,10 +1653,10 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 
 <p class="prompt-tag">What can you do with the right panel that you cannot with the left? · 2 minutes</p>
 <div style="display:flex; gap:28px; align-items:flex-start; margin-top:10px;">
-<div style="flex:1; text-align:center;"><img style="width:100%; border-radius:4px;" src="figures/generated/bar-conventional.png" alt="Bar chart of Vehicle and Compound Q mean enzyme activity with SEM error bars and jittered individual points. The pairing between preparations is invisible."/><p class="small" style="margin-top:8px; color:var(--muted);">Bar chart · means ± SEM · pairing invisible</p></div>
-<div style="flex:1; text-align:center;"><img style="width:100%; border-radius:4px;" src="figures/generated/bio-pairs.png" alt="Paired dot plot showing enzyme activity for all six L1 preparations under Vehicle and Compound Q conditions, with connecting lines showing the direction of each preparation's response."/><p class="small" style="margin-top:8px; color:var(--muted);">Paired plot · individual preparations · direction readable</p></div>
+<div style="flex:1; text-align:center;"><img style="width:100%; border-radius:4px;" src="figures/generated/bar-conventional.png" alt="Bar chart of Vehicle and Compound Q mean enzyme activity with SEM error bars and jittered individual points. The pairing between preparations is invisible."/><p class="small" style="margin-top:8px; color:var(--muted);">Bar chart · means ± SEM</p></div>
+<div style="flex:1; text-align:center;"><img style="width:100%; border-radius:4px;" src="figures/generated/bio-pairs.png" alt="Paired dot plot showing enzyme activity for all six L1 preparations under Vehicle and Compound Q conditions, with connecting lines showing the direction of each preparation's response."/><p class="small" style="margin-top:8px; color:var(--muted);">Paired plot · six preparations</p></div>
 </div>
-<p class="takeaway">A good figure lets a careful reader re-examine the raw evidence.</p>
+<p class="takeaway fragment">Only the right panel shows which values belong together and which way each preparation moved. A good figure lets a careful reader re-examine the raw evidence.</p>
 
 ::: notes
 **Time: 17:37–17:40 (3 minutes).**
@@ -1908,8 +1908,8 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 ## What improved before any test was run? {#r-what-changed .interaction}
 
 <p class="prompt-tag">Name your most consequential change · 1 minute</p>
-<div class="research-paths"><div><h3>Original report</h3><p>One “representative” day shown<br>n counted ELISA wells<br>Day 4 dropped after seeing it<br>IL-6 picked from three readouts<br>Pooled bars, linear scale</p></div><div><h3>Planned repeat</h3><p>Every experiment shown<br>n = independent experiments<br>QC rule fixed in advance<br>One primary readout<br>Paired log fold changes with CI</p></div></div>
-<p class="takeaway">Most of the improvement happened before the statistical test.</p>
+<div class="research-paths"><div><h3>Original report</h3><p>One “representative” day shown<br>n counted ELISA wells<br>Day 4 dropped after seeing it<br>IL-6 picked from three readouts<br>Pooled bars, linear scale</p></div><div class="fragment"><h3>Planned repeat</h3><p>Every experiment shown<br>n = independent experiments<br>QC rule fixed in advance<br>One primary readout<br>Paired log fold changes with CI</p></div></div>
+<p class="takeaway fragment">Most of the improvement happened before the statistical test.</p>
 
 ::: notes
 **Time: 18:09–18:11 (2 minutes).**

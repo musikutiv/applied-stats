@@ -234,8 +234,8 @@
 ## What improved before any test was run? {#r-what-changed .interaction}
 
 <p class="prompt-tag">Name your most consequential change · 1 minute</p>
-<div class="research-paths"><div><h3>Original report</h3><p>One “representative” day shown<br>n counted ELISA wells<br>Day 4 dropped after seeing it<br>IL-6 picked from three readouts<br>Pooled bars, linear scale</p></div><div><h3>Planned repeat</h3><p>Every experiment shown<br>n = independent experiments<br>QC rule fixed in advance<br>One primary readout<br>Paired log fold changes with CI</p></div></div>
-<p class="takeaway">Most of the improvement happened before the statistical test.</p>
+<div class="research-paths"><div><h3>Original report</h3><p>One “representative” day shown<br>n counted ELISA wells<br>Day 4 dropped after seeing it<br>IL-6 picked from three readouts<br>Pooled bars, linear scale</p></div><div class="fragment"><h3>Planned repeat</h3><p>Every experiment shown<br>n = independent experiments<br>QC rule fixed in advance<br>One primary readout<br>Paired log fold changes with CI</p></div></div>
+<p class="takeaway fragment">Most of the improvement happened before the statistical test.</p>
 
 ::: notes
 **Time: 03:15–03:17 (2 minutes).**

@@ -209,7 +209,7 @@
 <p class="prompt-tag">Choose a question · then name its effect</p>
 <div class="tests-grid"><p>Any difference among means?</p><p>Each dose versus control?</p><p>A dose-response trend?</p><p>High dose versus low dose?</p></div>
 <p class="takeaway fragment">An omnibus test asks whether all group means can be equal.</p>
-<p class="small">Planned contrasts answer specific questions. Several contrasts may require multiplicity control.</p>
+<p class="small fragment">Planned contrasts answer specific questions. Several contrasts may require multiplicity control.</p>
 
 ::: notes
 **Time: 01:57–02:00 (3 minutes).**
@@ -351,8 +351,8 @@
 <p class="prompt-tag">Vote before the reveal</p>
 <div class="tests-grid"><p>Shapiro–Wilk p &gt; 0.05<br>↓<br>t-test?</p><p>Shapiro–Wilk p &lt; 0.05<br>↓<br>Mann–Whitney?</p></div>
 <p class="takeaway fragment">No: this is not a sound automatic decision rule.</p>
-<p class="small">The normality assumption applies to the <strong>population</strong> — not to whether your sample looks bell-shaped.</p>
-<p class="small">Small N can hide important departures.<br>Large N can detect practically unimportant departures.</p>
+<p class="small fragment">The normality assumption applies to the <strong>population</strong> — not to whether your sample looks bell-shaped.</p>
+<p class="small fragment">Small N can hide important departures.<br>Large N can detect practically unimportant departures.</p>
 
 ::: notes
 **Time: 02:12–02:15 (3 minutes).**
@@ -412,8 +412,8 @@
 ## Delete it? Transform? Switch the test? {#extreme-observation .interaction}
 
 <p class="prompt-tag">What evidence would you seek first?</p>
-<img class="data-plot tests-plot" src="figures/generated/tests-outlier.png" alt="Eight illustrative culture measurements, one extreme activity value." /><p class="takeaway">First investigate why the observation is extreme.</p>
-<p class="small">Recording error? Prespecified QC failure? Biology? Model mismatch?</p>
+<img class="data-plot tests-plot" src="figures/generated/tests-outlier.png" alt="Eight illustrative culture measurements, one extreme activity value." /><p class="takeaway fragment">First investigate why the observation is extreme.</p>
+<p class="small fragment">Recording error? Prespecified QC failure? Biology? Model mismatch?</p>
 
 ::: notes
 **Time: 02:19–02:21 (2 minutes).**

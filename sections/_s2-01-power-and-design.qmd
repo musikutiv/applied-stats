@@ -136,9 +136,9 @@
 
 <p class="prompt-tag">Discuss · 1 minute</p>
 <img class="data-plot short-plot" src="figures/generated/null-ci-zero.png" alt="The unchanged mean paired effect minus 10.4 U/mg with 95 percent interval minus 23.2 to plus 2.3, including zero." />
-<p class="takeaway">Zero, small effects and substantial reductions remain compatible.</p>
 <p class="small">Our actual result: mean −10.4 · 95% CI −23.2 to +2.3 U/mg · p = 0.090</p>
-<p class="fine">This is uncertainty about the mean effect, not proof of absence.</p>
+<p class="takeaway fragment">Zero, small effects and substantial reductions remain compatible.</p>
+<p class="fine fragment">This is uncertainty about the mean effect, not proof of absence.</p>
 
 ::: notes
 **Time: 00:16–00:19 (3 minutes).**
@@ -207,7 +207,7 @@
 
 <p class="prompt-tag">Decide · then defend your threshold</p>
 <div class="research-paths"><div><h3>What we observed</h3><p>−10.4 U/mg<br>from six preparations</p></div><div><h3>What would matter</h3><p>A minimum relevant effect<br>justified by the biology</p></div></div>
-<p class="takeaway">“How many replicates?” comes after “What question must they answer?”</p>
+<p class="takeaway fragment">“How many replicates?” comes after “What question must they answer?”</p>
 
 ::: notes
 **Time: 00:24–00:28 (4 minutes).**
@@ -247,7 +247,7 @@
 ## Does doubling N halve the uncertainty? {#more-independent-pairs .interaction}
 
 <p class="prompt-tag">Predict before the reveal</p>
-<img class="data-plot" src="figures/generated/power-precision.png" alt="SE of the mean change falls from about 5.86 to 4.15, 2.93 and 2.07 U/mg for 3, 6, 12 and 24 independent pairs." />
+<img class="data-plot fragment" src="figures/generated/power-precision.png" alt="SE of the mean change falls from about 5.86 to 4.15, 2.93 and 2.07 U/mg for 3, 6, 12 and 24 independent pairs." />
 <p class="takeaway fragment">SE ∝ 1 / √n · doubling n multiplies SE by about 0.71</p>
 <p class="fine">Independent pairs under the same model. More pairs do not repair bias, confounding or a restricted sampling frame.</p>
 
@@ -291,7 +291,7 @@
 
 <p class="prompt-tag">Choose, then explain what your choice buys</p>
 <div class="fragment"><img class="data-plot short-plot" src="figures/generated/power-wells.png" alt="Under this model, six extra technical assay wells barely change SE; one new independent pair, measured in six wells, reduces SE more." /></div>
-<p class="small">Technical repeats improve measurement precision and assay checks.<br>New preparations add information about population responses.</p>
+<p class="small fragment">Technical repeats improve measurement precision and assay checks.<br>New preparations add information about population responses.</p>
 <p class="fine">42 assay wells in either option. A new pair also requires new culture work; total costs are not equal.</p>
 
 ::: notes
@@ -354,7 +354,7 @@
 ## My p-value is 0.09. What should I do now? {#advice-revisited .interaction}
 
 <p class="prompt-tag">Revise your earlier advice · 1 minute</p>
-<div class="research-paths"><div><h3>Inform the next experiment</h3><p class="small">Interpret the effect and interval.<br>Replicate independently if justified.<br>Improve design and reduce avoidable variation.<br>Plan independent N and analysis in advance.</p></div><div><h3>Do not chase the threshold</h3><p class="small">Switch analysis only to get p &lt; 0.05.<br>Delete observations just for a smaller p.<br>Choose one-sided after seeing direction.<br>Keep adding samples until p crosses.</p></div></div>
+<div class="research-paths fragment"><div><h3>Inform the next experiment</h3><p class="small">Interpret the effect and interval.<br>Replicate independently if justified.<br>Improve design and reduce avoidable variation.<br>Plan independent N and analysis in advance.</p></div><div><h3>Do not chase the threshold</h3><p class="small">Switch analysis only to get p &lt; 0.05.<br>Delete observations just for a smaller p.<br>Choose one-sided after seeing direction.<br>Keep adding samples until p crosses.</p></div></div>
 
 ::: notes
 **Time: 00:45–00:48 (3 minutes).**
