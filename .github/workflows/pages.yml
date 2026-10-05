@@ -1,0 +1,41 @@
+# Publishes the rendered slides in _output/ to GitHub Pages.
+# Render locally (quarto render), commit _output/, push to main.
+name: Publish slides
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "_output/session-*.html"
+      - "pages/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble site
+        run: |
+          mkdir site
+          cp pages/index.html site/
+          cp _output/session-1.html _output/session-2.html site/
+          touch site/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
