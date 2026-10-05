@@ -39,14 +39,15 @@
 **Sources:** Rebuilt using CONTENT_MAP.md concepts: experimental units and pairing (A pp. 121–144), models and assumptions (A pp. 115–160), design and sampling (R pp. 45–62), and prospective planning (D pp. 45–46, 52). Numerical examples are newly generated or explicitly reuse the original L1 data. Method checks: official R t.test, lm and wilcox.test documentation; see SESSION2_TESTS_NOTES.md.
 :::
 
-## What did the instrument—or observer—record? {#outcome-structure}
+## What did the instrument—or observer—record? {#outcome-structure .interaction}
 
-<div class="tests-grid">
+<p class="prompt-tag">Classify your own endpoint · then reveal</p>
+<div class="tests-grid fragment">
 <p><strong>Continuous</strong><br>Activity · fluorescence · expression</p>
 <p><strong>Binary</strong><br>Alive/dead · response/no response</p>
 <p><strong>Count</strong><br>Colonies · mutations · events</p>
 <p><strong>Time to event</strong><br>Time until death or differentiation</p></div>
-<p class="takeaway">The outcome’s structure shapes the model.</p>
+<p class="takeaway fragment">The outcome’s structure shapes the model.</p>
 
 ::: notes
 **Time: 01:40–01:42 (2 minutes).**
@@ -145,9 +146,10 @@
 **Sources:** Rebuilt using CONTENT_MAP.md concepts: experimental units and pairing (A pp. 121–144), models and assumptions (A pp. 115–160), design and sampling (R pp. 45–62), and prospective planning (D pp. 45–46, 52). Numerical examples are newly generated or explicitly reuse the original L1 data. Method checks: official R t.test, lm and wilcox.test documentation; see SESSION2_TESTS_NOTES.md.
 :::
 
-## Same measurements. Same analysis? {#same-columns-different-design}
+## Same measurements. Same analysis? {#same-columns-different-design .interaction}
 
-<div class="tests-grid"><p><strong>A</strong> Six control cultures + six unrelated Q cultures</p><p><strong>B</strong> Six preparations, each split into control and Q</p></div><img class="data-plot tests-plot" src="figures/generated/tests-design-ci.png" alt="Identical observed group values yield different intervals under independent and paired design assumptions." /><p class="takeaway">The spreadsheet columns do not tell us the design.</p>
+<p class="prompt-tag">Predict: does the interval change? · then reveal</p>
+<div class="tests-grid"><p><strong>A</strong> Six control cultures + six unrelated Q cultures</p><p><strong>B</strong> Six preparations, each split into control and Q</p></div><img class="data-plot tests-plot fragment" src="figures/generated/tests-design-ci.png" alt="Identical observed group values yield different intervals under independent and paired design assumptions." /><p class="takeaway fragment">The spreadsheet columns do not tell us the design.</p>
 <p class="fine">Counterfactual comparison using the same values. The actual L1 experiment is B.</p>
 
 ::: notes

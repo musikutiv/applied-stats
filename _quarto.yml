@@ -32,7 +32,10 @@ format:
     navigation-mode: linear
     touch: true
     overview: true
-    menu: false
+    menu:
+      side: left
+      numbers: true
+      hideMissingTitles: true
     chalkboard: false
     preview-links: false
     code-tools: false

@@ -20,8 +20,9 @@
 
 :::
 
-## What happens when none of the markers responds? {#twenty-true-nulls}
+## What happens when none of the markers responds? {#twenty-true-nulls .interaction}
 
+<p class="prompt-tag">Predict before the next experiments appear</p>
 <div class="uncertainty-stack">
 <img data-fragment-index="0" class="data-plot fragment fade-out" src="figures/generated/multi-twenty-1.png" alt="Twenty raw p-values from simulated experiment 1; all twenty null hypotheses are true." />
 <img data-fragment-index="0" class="data-plot fragment fade-in-then-out" src="figures/generated/multi-twenty-2.png" alt="Twenty raw p-values from simulated experiment 2; all twenty null hypotheses are true." />

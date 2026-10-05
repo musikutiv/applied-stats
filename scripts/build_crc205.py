@@ -23,11 +23,10 @@ SECTION_FILES = ["_01-my-experiment", "_02-question", "_03-sample-to-claim",
 START, BREAK_START, BREAK_END, END = "13:30", "15:30", "16:00", "18:30"
 
 PART1 = [
-    ("1 · My experiment", ["is-my-result-real", "six-of-what", "what-did-we-do", "assignment-unit",
-                           "what-is-n", "replication", "data-points-concept", "independence",
-                           "day-layout", "confounding"]),
-    ("2 · Question and claim", ["claim", "target-quantity", "sample-population",
-                                "population-question", "response-unit"]),
+    ("1 · My experiment", ["six-of-what", "what-did-we-do", "what-is-n", "data-points-concept",
+                           "independence", "day-layout", "confounding"]),
+    ("2 · Question and claim", ["claim", "target-quantity", "population-question",
+                                "sample-population", "response-unit"]),
     ("3 · Reading the data", ["data-look", "six-changes", "mean-and-median", "quantiles-intro", "variance-and-sd",
                               "paired-or-box", "describe-result"]),
     ("4 · Effect and uncertainty", ["one-sample-estimate", "new-preparations-new-mean",

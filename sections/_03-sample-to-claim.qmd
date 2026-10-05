@@ -1,43 +1,3 @@
-## Which future experiments should this inform? {#sample-population}
-
-<div class="scope">
-<div><p class="small">Our sample</p><div class="sample-preps"><div class="prep">P1</div><div class="prep">P2</div><div class="prep">P3</div><div class="prep">P4</div><div class="prep">P5</div><div class="prep">P6</div></div></div>
-<div class="population"><p class="medium">Further preparations<br>of cell line L1</p><p class="small">Under the culture and assay<br>conditions we have specified</p></div>
-</div>
-<p class="takeaway keyline">The population can be a set of possible experimental preparations.</p>
-
-::: notes
-**Time: 00:57–01:01 (4 minutes).**
-
-**Say:** Six preparations are the ones we observed. Our question usually reaches beyond them to preparations we might make next. That collection of possible preparations, under defined culture and assay conditions, is a target population. It need not be a population of people. Ask which conditions should be held fixed and which may vary within the claim.
-
-**Conceptual point:** In laboratory biology, a population is defined by the scope of the intended inference and the process that could generate new experimental units.
-
-**Likely misconception:** Repeating a single cell line samples the population of all human cells, or the population is automatically everything in the incubator.
-
-**Optional follow-up:** Would a new serum lot still fall inside your intended claim?
-
-**Sources:** R pp. 16–33, especially 30–33; A pp. 56–58, 63, 71; D pp. 9–20. Rebuilt sampling-space idea with the recurring assay rather than M&Ms or BMI data.
-:::
-
-## A central purpose of experimentation {#prediction-purpose}
-
-<p class="big">Predict the outcome<br>of the same experiment.</p>
-
-::: notes
-**Time: 01:01–01:02 (1 minute).**
-
-**Say:** Land this as one declarative statement. Do not open a discussion. Statistical inference does not generalise to patients—it characterises the variability of this protocol, in this cell line, under these conditions. If a researcher cannot say what another six preparations would plausibly show, they cannot yet call their result scientific. This sets up every number in the second half of Session 1: the mean tells us the centre, the CI the range a repetition should produce, the test how compatible that centre is with zero effect. Move directly to the next slide.
-
-**Conceptual point:** Reproducibility of the same experimental protocol, under the same defined conditions, is the minimal scientific standard before any generalisation is attempted. Statistical inference provides the quantitative account of that reproducibility.
-
-**Likely misconception:** Statistical significance implies the result generalises broadly, or a small p-value alone establishes reproducibility. Neither follows without evidence about the process generating the data.
-
-**Optional follow-up:** What would need to change about the protocol for a repetition to count as "the same experiment"?
-
-**Sources:** R pp. 30–33; A pp. 56–58; D pp. 9–20. Makes explicit what the sources treat as implicit background.
-:::
-
 ## What population would you claim this applies to? {#population-question .interaction}
 
 <p class="prompt-tag">Choose a claim and defend its limits · 3 minutes</p>
@@ -49,7 +9,7 @@
 <p class="takeaway fragment">What would you need to know before choosing A?</p>
 
 ::: notes
-**Time: 01:02–01:10 (8 minutes).**
+**Time: 00:48–00:56 (8 minutes).**
 
 **Say:** Three minutes in pairs, three minutes hearing two arguments, two minutes to debrief. A is the intended narrow target, not a guaranteed extrapolation. Ask whether the six preparations and three days cover the conditions they mean by “these conditions,” and whether selection, QC or unrecorded batches matter. Fold the previous separate scope-of-replication slide into this debrief: repeated preparations of L1 cover preparation variation; other cell lines or donors require additional biological sampling, and a claim across laboratories needs evidence relevant to laboratories. More assay readings of these lysates cannot supply those missing systems. B requires sampling additional biological systems. C requires a much broader chain of evidence; do not turn this into a clinical-trial lecture.
 
@@ -62,52 +22,24 @@
 **Sources:** R pp. 27–33, 45–47; A pp. 63, 71; D pp. 18–20. This is the approved eight-minute claim/population exercise. Do not introduce numerical inference to decide representativity.
 :::
 
-## What must we know before drawing an inference? {#before-inference .synthesis}
+## Our sample and its population {#sample-population}
 
-<div class="synthesis-grid">
-<p><span>01</span>What is the experimental unit?</p>
-<p><span>02</span>What was compared?</p>
-<p><span>03</span>What was repeated?</p>
-<p><span>04</span>Which observations share sources of variation?</p>
-<p><span>05</span>What effect or quantity are we trying to estimate?</p>
-<p><span>06</span>What population or experimental space does the claim concern?</p>
+<div class="scope">
+<div><p class="small">Our sample</p><div class="sample-preps"><div class="prep">P1</div><div class="prep">P2</div><div class="prep">P3</div><div class="prep">P4</div><div class="prep">P5</div><div class="prep">P6</div></div></div>
+<div class="population"><p class="medium">Further preparations<br>of cell line L1</p><p class="small">Under the culture and assay<br>conditions we have specified</p></div>
 </div>
-<p class="small">With a neighbour: answer these for the experiment we have just uncovered.</p>
+<p class="takeaway keyline">The population: preparations we have not made yet. The purpose: predict what the same experiment would show again.</p>
 
 ::: notes
-**Time: 01:10–01:15 (5 minutes).**
+**Time: 00:56–01:00 (4 minutes).**
 
-**Say:** Use two minutes for paired retrieval, then three minutes to collect concise answers. Unit: treatment-assigned tube. Comparison: 10 µM Q versus matched vehicle after 24 hours. Repeated: six independently initiated L1 preparations, with three assay aliquots per lysate. Shared variation: lysate, preparation and day. Quantity: the average within-preparation Q-minus-vehicle activity difference. Space: further L1 preparations under specified culture and assay conditions, with scope depending on what was sampled. These six questions retrieve existing ideas; introduce no new method or calculation.
+**Say:** Resolve the vote. The six preparations are our sample. The defensible population is option A: further preparations of L1, made under the culture and assay conditions we specified. A population need not be people — here it is the set of experiments we could still run. Land the purpose in one sentence: statistical inference tells us what another six preparations would plausibly show; it does not generalise to other cell lines or patients. Every number in the second half — mean, interval, p-value — answers that question. Options B and C need different experiments, not a better analysis.
 
-**Conceptual point:** An interpretable claim needs a coherent account of design, repetition, target quantity and scope before statistical inference.
+**Conceptual point:** In laboratory biology, a population is defined by the scope of the intended inference and the process that could generate new experimental units.
 
-**Likely misconception:** Completing a checklist proves an effect or guarantees the assumptions. These questions make the claim assessable; they do not establish its truth.
+**Likely misconception:** Repeating a single cell line samples the population of all human cells, or the population is automatically everything in the incubator.
 
-**Optional follow-up:** Which missing answer would most change the claim you could defend?
+**Optional follow-up:** Would a new serum lot still fall inside your intended claim?
 
-**Sources:** Synthesis of the current prototype, adapted from A p. 189; R pp. 30–33, 73–75; D pp. 52–53. New retrieval slide, not an extension of course content.
-:::
-
-## What claim does this experiment permit? {#allocation-sampling}
-
-<div class="allocation-sampling">
-<div><h3>Assigning treatment</h3><p>Which tube gets Q?</p><p class="small">Random allocation protects the comparison from systematic assignment choices.</p></div>
-<div><h3>Choosing preparations</h3><p>Which biology enters the experiment?</p><p class="small">Sampling determines which systems and conditions we observe.</p></div>
-</div>
-<p class="takeaway fragment keyline">A fair comparison can still support a narrow claim.</p>
-
-::: notes
-**Time: 01:15–01:18 (3 minutes).**
-
-**Say:** Use one minute to revisit the distinction and two minutes for the closing audience response. Ask whether random assignment also makes the sample representative. Random assignment within each preparation helps protect the treatment comparison from systematic allocation bias. It does not turn a convenience selection of one cell line into a sample of all donors or cell types. Chance imbalance and other biases can still occur. Ask the class to finish two short sentences: “Our comparison is…” and “Our claim covers…”. Complete the opening block after their answers. The following bridge carries these design questions into the data.
-
-**Conceptual point:** Random allocation and population sampling address different questions. Internal comparison and external generalization must both be considered.
-
-**Likely misconception:** Any use of randomness makes the entire experiment representative, or larger N alone fixes a restricted sampling frame.
-
-**Optional follow-up:** What would you change first if the claim needed to cover more than L1?
-
-**Sources:** R pp. 30–33, 45–47; A pp. 63, 119. Corrects the conflation of sample size, independence and representativity flagged in CONTENT_MAP.md.
-
-**Facilitator boundary:** The opening block ends here. A five-minute bridge leads into the planned break; descriptive data follow after it.
+**Sources:** R pp. 16–33, especially 30–33; A pp. 56–58, 63, 71; D pp. 9–20. Rebuilt sampling-space idea with the recurring assay rather than M&Ms or BMI data.
 :::

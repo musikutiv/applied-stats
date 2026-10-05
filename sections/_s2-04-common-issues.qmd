@@ -23,11 +23,12 @@
 **Sources:** Tufte, E.R. (2001) *The Visual Display of Quantitative Information*; Drummond & Vowler (2011) *J Physiol* 589:1929–1931; Weissgerber et al. (2015) *PLOS Biol* 13:e1002128.
 :::
 
-## When the effect is multiplicative, use the log scale {#log-scale-multiplicative}
+## When the effect is multiplicative, use the log scale {#log-scale-multiplicative .interaction}
 
-<img class="data-plot" src="figures/generated/log-scale-compare.png" alt="Two-panel figure. Left: line plot showing a 3-fold up (baseline 100 to treated 300) and a 3-fold down (baseline 100 to treated 33) change on an absolute scale — the upward change appears much larger. Right: bar chart of the same changes as log₂ fold change, showing +1.58 and −1.58 symmetrically." />
-<p class="takeaway">A fold change is already a ratio — the log scale treats equal folds equally.</p>
-<p class="fine">Left: absolute scale. Three-fold up = +200; three-fold down = −67. Asymmetric on this scale. Right: log₂ fold change. Both are ±1.58. RNA-seq log₂ fold change applies this directly. For the L1 enzyme assay, absolute differences are appropriate — effects are small and baselines similar.</p>
+<p class="prompt-tag">Predict: how do 3-fold up and 3-fold down look? · then reveal</p>
+<img class="data-plot fragment" src="figures/generated/log-scale-compare.png" alt="Two-panel figure. Left: line plot showing a 3-fold up (baseline 100 to treated 300) and a 3-fold down (baseline 100 to treated 33) change on an absolute scale — the upward change appears much larger. Right: bar chart of the same changes as log₂ fold change, showing +1.58 and −1.58 symmetrically." />
+<p class="takeaway fragment">A fold change is already a ratio — the log scale treats equal folds equally.</p>
+<p class="fine fragment">Left: absolute scale. Three-fold up = +200; three-fold down = −67. Asymmetric on this scale. Right: log₂ fold change. Both are ±1.58. RNA-seq log₂ fold change applies this directly. For the L1 enzyme assay, absolute differences are appropriate — effects are small and baselines similar.</p>
 
 ::: notes
 **Time: 02:30–02:33 (3 minutes).**
@@ -104,11 +105,15 @@
 :::
 
 
-## Three error bars. Three different claims. {#error-bars-which}
+## Three error bars. Three different claims. {#error-bars-which .interaction}
 
-<img class="data-plot" src="figures/generated/error-bars-comparison.png" alt="Three panels each showing Vehicle and Compound Q group means. Left panel: ± SD error bars (widest). Centre panel: ± SEM error bars (narrower). Right panel: ± 95% CI error bars (widest for this small n). The widths differ substantially across panels." />
-<p class="takeaway">An unlabelled error bar tells you nothing. Label it — or the reader has to guess.</p>
-<p class="fine">Same six L1 preparations throughout. SD: spread of individual preparations. SEM: precision of the group mean. 95% CI: range of effect sizes compatible with the data. Each answers a different question.</p>
+<p class="prompt-tag">Which is SD, SEM, 95% CI? · then reveal</p>
+<div class="uncertainty-stack">
+<img class="data-plot fragment fade-out" data-fragment-index="0" src="figures/generated/error-bars-unlabelled.png" alt="The same three error-bar panels labelled only A, B and C." />
+<img class="data-plot fragment" data-fragment-index="0" src="figures/generated/error-bars-comparison.png" alt="Three panels each showing Vehicle and Compound Q group means. Left panel: ± SD error bars (widest). Centre panel: ± SEM error bars (narrower). Right panel: ± 95% CI error bars (widest for this small n). The widths differ substantially across panels." />
+</div>
+<p class="takeaway fragment" data-fragment-index="1">An unlabelled error bar tells you nothing. Label it — or the reader has to guess.</p>
+<p class="fine fragment" data-fragment-index="1">Same six L1 preparations throughout. SD: spread of individual preparations. SEM: precision of the group mean. 95% CI: range of effect sizes compatible with the data. Each answers a different question.</p>
 
 ::: notes
 **Time: 02:40–02:43 (3 minutes).**

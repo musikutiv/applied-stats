@@ -58,3 +58,15 @@ ggsave(
   }
 )
 message("Saved error-bars-comparison.png")
+
+# Unlabelled version for the guessing step: same panels, titles A / B / C.
+p_blank <- eb_panel("sd", "A") | eb_panel("sem", "B") | eb_panel("ci95", "C")
+ggsave(
+  "figures/generated/error-bars-unlabelled.png", p_blank,
+  width = 14, height = 4.5, dpi = 180,
+  device = function(filename, width, height, res, ...) {
+    grDevices::png(filename, width = width, height = height, units = "in", res = res,
+      type = if (Sys.info()[["sysname"]] == "Darwin") "quartz" else "cairo", ...)
+  }
+)
+message("Saved error-bars-unlabelled.png")

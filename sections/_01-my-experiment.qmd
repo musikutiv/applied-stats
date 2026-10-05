@@ -1,47 +1,29 @@
-## Is my result real? {#is-my-result-real}
-
-<p class="eyebrow">A report from the lab</p>
-<p class="opening-report">“We treated cells with compound Q.<br>We measured enzyme activity.<br>n = 6 replicates.”</p>
-
-::: notes
-**Time: 00:00–00:02 (2 minutes).**
-
-**Say:** Give only the three statements on screen. Do not supply a cell line, dose, time, control, plot or protocol yet. This is an incomplete fictional lab report, worded the way a methods section or figure legend typically reads. Ask what the audience would need to know before interpreting it. Let someone question “replicates”; do not immediately define it for them. If necessary, ask what exactly was repeated six times.
-
-**Context (not yet revealed):** L1 is a human cell line stably expressing kinase Q. Compound Q is a selective ATP-competitive inhibitor of kinase Q. The assay measures kinase Q activity (substrate phosphorylation rate, U/mg protein). These details are revealed progressively from slide 3 onward.
-
-**Conceptual point:** A familiar methods phrase can conceal very different experimental structures. Missing information must be requested before a claim can be evaluated.
-
-**Likely misconception:** “Replicates” unambiguously means six independent experiments. In practice the word is used for anything from repeated readings or separate wells to separate experiment days. At this stage we cannot tell what it means.
-
-**Optional follow-up:** What claim does this experiment permit, with only this information?
-
-**Sources:** AppliedStats_2026.pdf pp. 17, 73–74, 121–122. New fictional wording; no results or source data are displayed.
-:::
-
 ## Six of what? {#six-of-what .interaction}
 
-<p class="prompt-tag">Compare interpretations · 2 minutes</p>
-<p class="big">What could “6 replicates” mean?</p>
+<p class="prompt-tag">Discuss with a neighbour · 2 minutes</p>
+<p class="eyebrow">A report from the lab</p>
+<p class="opening-report compact">“We treated cells with compound Q.<br>We measured enzyme activity.<br>n = 6 replicates.”</p>
+<p class="takeaway keyline">What could “6 replicates” mean?</p>
 <div class="triplicate-options fragment">
 <p>Six readings of one sample?</p>
 <p>Six cultures from one passage, treated on the same day?</p>
 <p>Six separately initiated preparations, on different days?</p>
 </div>
-<p class="fine">Possible meanings, not yet the protocol for this experiment.</p>
 
 ::: notes
-**Time: 00:02–00:06 (4 minutes).**
+**Time: 00:00–00:06 (6 minutes).**
 
-**Say:** Give pairs two minutes to propose at least two meanings, without revealing the examples. Advance once to display the possibilities. Use two minutes to hear what information would distinguish them. All are plausible uses of the word. Do not yet say which one applies, introduce technical vocabulary or ask for a numerical N. The next slide provides the first notebook detail.
+**Say:** Open with the report on screen and nothing else. It is an incomplete fictional lab report, worded the way a methods section or figure legend typically reads. Do not supply a cell line, dose, time, control, plot or protocol yet. Ask what "6 replicates" could mean and give pairs two minutes to propose at least two meanings. Then advance once to show three possibilities and use two minutes to hear what information would distinguish them. All three are common uses of the word. Do not say which one applies, introduce technical vocabulary or ask for a numerical N. The next slide provides the first notebook detail.
 
-**Conceptual point:** The word “replicates” does not identify what was repeated. Six readings of one sample share everything; six preparations on different days share much less. Different meanings support different claims.
+**Context (not yet revealed):** L1 is a human cell line stably expressing kinase Q. Compound Q is a selective ATP-competitive inhibitor of kinase Q. The assay measures kinase Q activity (substrate phosphorylation rate, U/mg protein). These details are revealed progressively from the next slide onward.
 
-**Likely misconception:** The best-sounding interpretation is probably the intended one. We must check the experimental record instead.
+**Conceptual point:** The word "replicates" does not identify what was repeated. Six readings of one sample share everything; six preparations on different days share much less. Different meanings support different claims.
+
+**Likely misconception:** "Replicates" unambiguously means six independent experiments. In practice the word is used for anything from repeated readings or separate wells to separate experiment days.
 
 **Optional follow-up:** What single question would you ask the person who did the experiment?
 
-**Sources:** A pp. 73–74, 121–122; R p. 13. Adapted ambiguity exercise, not a copied source slide.
+**Sources:** AppliedStats_2026.pdf pp. 17, 73–74, 121–122; R p. 13. New fictional wording; adapted ambiguity exercise.
 :::
 
 ## What exactly did we do? {#what-did-we-do}
@@ -71,28 +53,6 @@
 **Sources:** A pp. 73–74, 121–122; R pp. 4–8, 13; D pp. 5–7. Explicit provenance resolves the ambiguity flagged in CONTENT_MAP.md.
 :::
 
-## The tube is the experimental unit {#assignment-unit}
-
-<div class="two-col">
-<div><div class="tubes"><div class="tube v">V</div><div class="tube q">Q</div></div><p class="small" style="text-align:center;margin-top:24px">Two tubes from preparation P1</p></div>
-<div><p class="big">The culture tube</p><p class="medium">Our experimental unit</p><p class="small">We assign one tube to each condition within a preparation.</p></div>
-</div>
-<p class="takeaway keyline">The preparation connects the tubes as a pair.</p>
-
-::: notes
-**Time: 00:09–00:11 (2 minutes).**
-
-**Say:** The treatment enters at the tube level. That makes the tube the experimental or treatment-assignment unit here. Allocation is constrained within each preparation: one tube gets vehicle and one compound. The preparation is a block, so the two tube outcomes share a history. Later we compare them within that pair.
-
-**Conceptual point:** Assignment unit and unit used for a biological comparison need not be identical. An experimental unit does not imply that all outcomes are uncorrelated.
-
-**Likely misconception:** Calling the tube an experimental unit means its outcome is unrelated to the other tube’s outcome. Pairing must be preserved.
-
-**Optional follow-up:** If treatment were assigned to an entire plate, what would change?
-
-**Sources:** A pp. 121–122, 137–144; R pp. 59–62. Terminology made explicit for this defined design.
-:::
-
 ## What is N here? {#what-is-n .interaction}
 
 <p class="prompt-tag">Trace the design, then discuss · 2 minutes</p>
@@ -105,7 +65,7 @@
 </div>
 
 ::: notes
-**Time: 00:11–00:18 (7 minutes).**
+**Time: 00:09–00:16 (7 minutes).**
 
 **Say:** Reveal that the same split was repeated with six cultures initiated and maintained separately, all from L1. Allow two minutes to draw the hierarchy and decide on counts. Spend three minutes hearing explanations before revealing the 36/12/6 answer. Use two further minutes to ask what each number counts. Each preparation contributes a vehicle-versus-Q comparison. Do not announce that the six comparisons must be independent; we have not yet inspected what they share across days. Ask for a report with nouns, not a bare N.
 
@@ -118,71 +78,27 @@
 **Sources:** A pp. 69, 73–74, 121–122. Combines the previous N question and count-answer slides; discussion is retained.
 :::
 
-## Technical and biological replication are different {#replication}
-
-<div class="replication">
-<div><p class="medium">The assay on one lysate</p><div class="reading-row" style="justify-content:flex-start"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><p>Technical replication</p><p class="small">How much does the measurement vary?</p></div>
-<div><p class="medium">The culture preparation</p><div class="repeat-preps"><div class="prep">P1</div><div class="prep">P2</div><div class="prep">P3</div></div><p>Biological replication</p><p class="small">How much does the result vary across preparations?</p></div>
-</div>
-
-<p class="takeaway keyline">What claim does this experiment permit?</p>
-
-::: notes
-**Time: 00:18–00:22 (4 minutes).**
-
-**Say:** Use two minutes for the audience to explain what each repetition tells us and two minutes to debrief. Repeating the assay helps us examine the measurement process. Independently initiated preparations let us see variation in the biological system as defined here. Neither is useless; they answer different questions. All preparations remain from cell line L1. Return to the question on screen: six preparations can speak to repetition within this system, while three assay aliquots alone cannot establish repetition across preparations.
-
-**Conceptual point:** What is repeated determines which sources of variation are represented.
-
-**Likely misconception:** Technical replication is bad practice, or biological replication automatically samples different people. Both claims are wrong. The distinction is contextual and depends on the target claim.
-
-**Optional follow-up:** Which repeat would address concern about an inconsistent plate reader? Which would address inconsistent culture responses?
-
-**Sources:** A pp. 12, 68, 73–74, 121–122; R p. 53. No outlier removal or inference is taught here.
-:::
-
-## What does the control actually control for? {#control .interaction}
-
-<p class="prompt-tag">Think, then compare answers · 1 minute</p>
-<div class="control-contrast">
-<div class="vehicle"><p class="label">Vehicle</p><p>0.1% DMSO<br>No compound Q</p></div>
-<div class="compound"><p class="label">Compound Q</p><p>0.1% DMSO<br>10 µM compound Q</p></div>
-</div>
-<p class="takeaway fragment">A contrast with the same solvent and handling.</p>
-
-::: notes
-**Time: 00:22–00:26 (4 minutes).**
-
-**Say:** Ask for one minute of thought and discussion before the reveal. Both tubes have the same solvent concentration and handling. The contrast isolates the addition of compound Q relative to this vehicle condition within the design. We do not have an untreated arm, so we cannot separately estimate the solvent's effect. The endpoint is enzyme activity in the lysate, expressed per mg protein. Use the extra minute to ask “What claim does this experiment permit?” and compare an endpoint claim with a direct-mechanism claim.
-
-**Conceptual point:** A control supports a particular comparison; it does not establish every causal or mechanistic claim.
-
-**Likely misconception:** A vehicle control proves the compound acts directly on the enzyme. It cannot alone distinguish direct enzyme action, altered cell state or interference with the assay. These are possibilities to consider, not assertions about Q.
-
-**Optional follow-up:** What additional experiment would check whether Q changes the assay signal even without living cells?
-
-**Sources:** R pp. 6–8; D pp. 19–22. L1, compound Q and the assay conditions are fictional scenario choices, not a recommended laboratory protocol.
-:::
-
 ## How many data points do we really have? {#data-points-concept}
 
-<p class="medium">36 readings. 12 tubes. 6 preparations.</p>
-<p class="medium fragment">Treat all 36 as separate biological evidence<br>and your analysis looks far more certain than it is.</p>
+<p class="medium">Treat all 36 readings as separate biological evidence<br>and your analysis looks far more certain than it is.</p>
+<div class="research-paths fragment">
+<div><h3>Technical replicates</h3><p>3 aliquots of one lysate<br>→ how precise is the assay?</p></div>
+<div><h3>Biological replicates</h3><p>6 separately initiated preparations<br>→ how does the biology vary?</p></div>
+</div>
 <p class="takeaway fragment">The number of measurements and the amount of evidence are not the same thing.</p>
-<p class="small fragment">Three aliquots from one lysate all share the same extraction, treatment, and cell history. If the lysate was over-diluted, all three shift together — they do not provide three separate votes on the biology.</p>
 
 ::: notes
-**Time: 00:26–00:28 (2 minutes).**
+**Time: 00:16–00:19 (3 minutes).**
 
-**Say:** We just established the 36/12/6 hierarchy. Now ask: if someone analysed all 36 readings as 36 separate biological observations, what would happen? The analysis would appear very precise — narrow uncertainty, confident conclusions — but that precision would be false, because most of it reflects measurement variation within a single lysate, not biological variation across preparations. This is not a rare mistake; it has a name — pseudoreplication — and it appears routinely in the literature. The point to land before the exercise: counting measurements is not the same as counting independent biological events. Two readings can look completely separate — different well positions, different labels, different numbers — and still carry the same biological information if they came from the same source. The exercise on the next slide asks exactly that question.
+**Say:** Start from the counts just revealed. If someone analysed all 36 readings as 36 separate biological observations, the analysis would look very precise — narrow uncertainty, confident conclusions — but that precision would be false. Ask why before revealing the two columns. Three aliquots from one lysate share the same cells, treatment and extraction: if that lysate was over-diluted, all three shift together. They tell us how precise the assay is, not how the biology varies. The six separately initiated preparations are the biological replicates; they carry the evidence about compound Q. Neither kind of repetition is useless — they answer different questions. Treating technical replicates as biological ones has a name, pseudoreplication, and it is common in the literature. The exercise on the next slide asks which observations really are independent.
 
-**Conceptual point:** Inflating N by treating shared-source observations as independent produces overconfident statistical conclusions — intervals that are too narrow, p-values that are too small.
+**Conceptual point:** What was repeated determines what the repetition tells you. Technical replicates measure the assay; biological replicates measure the biology.
 
-**Likely misconception:** More measurements always mean more evidence. They do — about the thing that was repeated. Technical replicates give more evidence about the measurement; biological replicates about the biology.
+**Likely misconception:** More measurements always mean more evidence. They do — about the thing that was repeated.
 
-**Optional follow-up:** Name one published paper in your field where the reported N seemed surprisingly large for the described biology.
+**Optional follow-up:** Which repeat would address an inconsistent plate reader? Which would address inconsistent culture responses?
 
-**Sources:** Lazic (2010) *J Neurosci Methods* 187:180–183 — pseudoreplication in neuroscience; Lazic et al. (2018) *BMC Neurosci* 19:9; A pp. 17, 119; R pp. 8, 33.
+**Sources:** Lazic (2010) *BMC Neurosci* 11:5 — pseudoreplication; A pp. 12, 68, 73–74, 121–122; R p. 53.
 :::
 
 ## Which observations are independent? {#independence .interaction}
@@ -193,7 +109,7 @@
 <div class="comparison-row"><span class="letter">C</span><span>Two preparations</span><span>measured on the same day</span></div>
 
 ::: notes
-**Time: 00:28–00:31 (3 minutes).**
+**Time: 00:19–00:22 (3 minutes).**
 
 **Say:** Use one minute of pair discussion and two minutes of debrief. A shares a lysate; B shares its preparation and possibly day; C can share day conditions. Do not simply label C independent. Independence is about the process and model, not the distance between dots or their different identifiers. For C, introduce only that some preparations were measured on the same day. The next slide reveals the full day layout. No numerical plot is needed: the shared sources follow from the experimental history.
 
@@ -206,7 +122,7 @@
 **Sources:** A pp. 17, 119, 121–122; R pp. 8, 33, 53. The exercise completes the hierarchy discussion without a formal dependence model.
 :::
 
-## Each day: two preparations, both conditions {#day-layout}
+## A paired design {#day-layout}
 
 <div class="day-grid" role="img" aria-label="Actual layout. Day 1 contains preparation pairs P1 and P2. Day 2 contains P3 and P4. Day 3 contains P5 and P6. Every preparation has a vehicle and a compound tube.">
 <div class="day"><p class="day-name">Day 1</p><div class="pair-row"><span>P1</span><span class="pair-mark"><i class="dot"></i><i class="tri"></i></span></div><div class="pair-row"><span>P2</span><span class="pair-mark"><i class="dot"></i><i class="tri"></i></span></div></div>
@@ -214,13 +130,13 @@
 <div class="day"><p class="day-name">Day 3</p><div class="pair-row"><span>P5</span><span class="pair-mark"><i class="dot"></i><i class="tri"></i></span></div><div class="pair-row"><span>P6</span><span class="pair-mark"><i class="dot"></i><i class="tri"></i></span></div></div>
 </div>
 <div class="legend"><span><i class="dot"></i>Vehicle tube</span><span><i class="tri"></i>Compound tube</span></div>
-<p class="takeaway fragment">A shift affecting both conditions equally cancels in their difference.</p>
+<p class="takeaway fragment">Each preparation is its own control: comparing within it cancels what both tubes share.</p>
 
 <!-- REVIEW: Six independent pair contrasts are a teaching-model assumption, not an empirical finding. A day-specific treatment response would induce dependence between the two contrasts on that day. Retain this qualification when editing. -->
 ::: notes
-**Time: 00:31–00:34 (3 minutes).**
+**Time: 00:22–00:25 (3 minutes).**
 
-**Say:** This is the final notebook reveal: two preparation pairs on each day, with both conditions in every pair. Ask the audience to trace one within-day comparison. A change in conditions between days is a batch effect. If a day adds the same amount to both conditions, subtraction removes that component. Ask what happens if Q's response itself differs by day.
+**Say:** This is the final notebook reveal: two preparations on each day, and both conditions — vehicle and Q — in every preparation. Name it: this is a paired design. Each preparation provides its own control. Ask the audience to trace one within-day comparison. A change in conditions between days is a batch effect. If a day adds the same amount to both conditions, subtraction removes that component. Ask what happens if Q's response itself differs by day.
 
 **Conceptual point:** The layout separates treatment from day. Pairing can remove a shared additive shift, but does not eliminate all possible batch effects.
 
@@ -231,8 +147,9 @@
 **Sources:** A pp. 190–192; R pp. 8, 62. The universal “ideal design” claims in the sources are deliberately not reused. Keep the arithmetic illustration to words; the model details remain in notes.
 :::
 
-## What if controls ran on Monday? {#confounding}
+## What if controls ran on Monday? {#confounding .interaction}
 
+<p class="prompt-tag">Find the missing comparison · with a neighbour, 1 minute</p>
 <p class="eyebrow">A different, hypothetical layout</p>
 <div class="day-grid fault" role="img" aria-label="Hypothetical confounded design: all vehicle tubes on Monday, all compound tubes on Tuesday, with no within-day treatment comparison.">
 <div class="day"><p class="day-name">Monday</p><div class="pair-mark"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><p>All vehicle tubes</p></div>
@@ -241,9 +158,9 @@
 <p class="takeaway fragment">Treatment and day change together. Which caused the difference?</p>
 
 ::: notes
-**Time: 00:34–00:37 (3 minutes).**
+**Time: 00:25–00:28 (3 minutes).**
 
-**Say:** Explicitly announce that this is not our actual protocol. It is a hypothetical scheduling shortcut. Give pairs time to identify the missing comparison. Without within-day treatment comparisons, a difference could arise from treatment, day, or both. Label this confounding only after the audience explains the problem. Give the layout comparison its full three minutes. Close the first 35-minute section with “What claim does this experiment permit?” A treatment-specific claim cannot be separated from a day effect in this alternative layout.
+**Say:** Explicitly announce that this is not our actual protocol. It is a hypothetical scheduling shortcut. Give pairs time to identify the missing comparison. Without within-day treatment comparisons, a difference could arise from treatment, day, or both. Label this confounding only after the audience explains the problem. Give the layout comparison its full three minutes. Close the first section with “What claim does this experiment permit?” A treatment-specific claim cannot be separated from a day effect in this alternative layout.
 
 **Conceptual point:** Complete treatment/day confounding prevents separating their effects from these observations alone. More readings of the same lysates do not create the missing comparison.
 

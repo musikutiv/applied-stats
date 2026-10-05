@@ -3,7 +3,7 @@
 
 <p class="prompt-tag">Carry the design into the data · 2 minutes in pairs</p>
 <p class="medium">“We now understand the experiment.<br>Before testing anything, what actually happened?”</p>
-<div class="allocation">
+<div class="allocation fragment">
 <div><p>One value per tube</p><p class="small">The three assay aliquots have already been summarized.</p></div>
 <div><p>One change per preparation</p><p class="small">Compound Q minus its paired vehicle.</p></div>
 </div>
@@ -11,7 +11,7 @@
 
 
 ::: notes
-**Time: 01:18–01:23 (5 minutes).**
+**Time: 01:00–01:05 (5 minutes).**
 
 **Say:** The opening block is complete. Use the five minutes before the planned break to connect its design to the observations we will describe. Give pairs two minutes to identify the relevant change and three minutes to debrief. Each tube contributes the arithmetic average of its three technical readings; no aliquots were omitted. Each preparation then supplies one Q-minus-vehicle comparison. This preprocessing respects the simple balanced assay design. The term average is familiar language here; its definition comes later. Ask which experimental space the six preparations cover. No result is revealed until after the break.
 
@@ -33,9 +33,9 @@
 
 
 ::: notes
-**Time: 01:23–01:38 (15 minutes).**
+**Time: 01:05–01:20 (15 minutes).**
 
-**Say:** Pause for the full 15 minutes. Resume the session at elapsed time 01:38. This is a break screen, not a core teaching slide.
+**Say:** Pause for the full 15 minutes. Resume the session at elapsed time 01:20. This is a break screen, not a core teaching slide.
 
 **Conceptual point:** Preserve the planned break and separation between establishing the experiment and describing its results.
 
@@ -43,6 +43,6 @@
 
 **Optional follow-up:** No audience task during the break.
 
-**Sources:** COURSE_OUTLINE.md: planned mid-session break (now 01:23–01:38).
+**Sources:** COURSE_OUTLINE.md: planned mid-session break (now 01:05–01:20).
 
 :::

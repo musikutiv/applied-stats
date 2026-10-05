@@ -87,8 +87,9 @@
 
 :::
 
-## What proportion would cross the threshold? {#power-as-frequency}
+## What proportion would cross the threshold? {#power-as-frequency .interaction}
 
+<p class="prompt-tag">Estimate the share of crosses before the reveal</p>
 <img class="data-plot short-plot" src="figures/generated/power-decisions.png" alt="First one hundred repetitions from a true minus 14 population, with crosses for p below 0.05 and dots otherwise." />
 <p class="takeaway fragment" data-fragment-index="0"><strong>78%</strong> crossed p &lt; 0.05 across 10,000 repetitions.</p>
 <p class="small fragment" data-fragment-index="1"><strong>Power = P(reject H<sub>0</sub> | a specified alternative is true)</strong></p>
@@ -176,7 +177,7 @@
 **Sources:** Altman & Bland (1995) *BMJ* 311:1600 — "Absence of evidence is not evidence of absence."
 :::
 
-## What would change that proportion? {#power-factors}
+## What would change that proportion? {#power-factors .interaction}
 
 <p class="prompt-tag">Predict each change before the next reveal</p>
 <div class="uncertainty-stack">

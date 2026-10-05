@@ -8,21 +8,15 @@
 
 ---
 
-### 1 · My experiment (13:30–14:03)
+### 1 · My experiment (13:30–13:58)
 
 ---
 
-**Is my result real? — 13:30–13:32**
+**Six of what? — 13:30–13:36** [INTERACTION]
 
-Give only the three statements on screen. Do not supply a cell line, dose, time, control, plot or protocol yet. This is an incomplete fictional lab report, worded the way a methods section or figure legend typically reads. Ask what the audience would need to know before interpreting it. Let someone question “replicates”; do not immediately define it for them. If necessary, ask what exactly was repeated six times.
+Open with the report on screen and nothing else. It is an incomplete fictional lab report, worded the way a methods section or figure legend typically reads. Do not supply a cell line, dose, time, control, plot or protocol yet. Ask what "6 replicates" could mean and give pairs two minutes to propose at least two meanings. Then advance once to show three possibilities and use two minutes to hear what information would distinguish them. All three are common uses of the word. Do not say which one applies, introduce technical vocabulary or ask for a numerical N. The next slide provides the first notebook detail.
 
-*(Context not yet revealed: L1 is a human cell line stably expressing kinase Q. Compound Q is a selective ATP-competitive inhibitor of kinase Q. The assay measures kinase Q activity (substrate phosphorylation rate, U/mg protein). These details are revealed progressively from slide 3 onward.)*
-
----
-
-**Six of what? — 13:32–13:36** [INTERACTION]
-
-Give pairs two minutes to propose at least two meanings, without revealing the examples. Advance once to display the possibilities. Use two minutes to hear what information would distinguish them. All are plausible uses of the word. Do not yet say which one applies, introduce technical vocabulary or ask for a numerical N. The next slide provides the first notebook detail.
+*(Context not yet revealed: L1 is a human cell line stably expressing kinase Q. Compound Q is a selective ATP-competitive inhibitor of kinase Q. The assay measures kinase Q activity (substrate phosphorylation rate, U/mg protein). These details are revealed progressively from the next slide onward.)*
 
 ---
 
@@ -32,71 +26,53 @@ First trace one culture preparation and its two tubes. Random assignment chooses
 
 ---
 
-**The tube is the experimental unit — 13:39–13:41**
-
-The treatment enters at the tube level. That makes the tube the experimental or treatment-assignment unit here. Allocation is constrained within each preparation: one tube gets vehicle and one compound. The preparation is a block, so the two tube outcomes share a history. Later we compare them within that pair.
-
----
-
-**What is N here? — 13:41–13:48** [INTERACTION]
+**What is N here? — 13:39–13:46** [INTERACTION]
 
 Reveal that the same split was repeated with six cultures initiated and maintained separately, all from L1. Allow two minutes to draw the hierarchy and decide on counts. Spend three minutes hearing explanations before revealing the 36/12/6 answer. Use two further minutes to ask what each number counts. Each preparation contributes a vehicle-versus-Q comparison. Do not announce that the six comparisons must be independent; we have not yet inspected what they share across days. Ask for a report with nouns, not a bare N.
 
 ---
 
-**Technical and biological replication are different — 13:48–13:52**
+**How many data points do we really have? — 13:46–13:49**
 
-Use two minutes for the audience to explain what each repetition tells us and two minutes to debrief. Repeating the assay helps us examine the measurement process. Independently initiated preparations let us see variation in the biological system as defined here. Neither is useless; they answer different questions. All preparations remain from cell line L1. Return to the question on screen: six preparations can speak to repetition within this system, while three assay aliquots alone cannot establish repetition across preparations.
-
----
-
-**How many data points do we really have? — 13:52–13:54**
-
-We just established the 36/12/6 hierarchy. Now ask: if someone analysed all 36 readings as 36 separate biological observations, what would happen? The analysis would appear very precise — narrow uncertainty, confident conclusions — but that precision would be false, because most of it reflects measurement variation within a single lysate, not biological variation across preparations. This is not a rare mistake; it has a name — pseudoreplication — and it appears routinely in the literature. The point to land before the exercise: counting measurements is not the same as counting independent biological events. Two readings can look completely separate — different well positions, different labels, different numbers — and still carry the same biological information if they came from the same source. The exercise on the next slide asks exactly that question.
+Start from the counts just revealed. If someone analysed all 36 readings as 36 separate biological observations, the analysis would look very precise — narrow uncertainty, confident conclusions — but that precision would be false. Ask why before revealing the two columns. Three aliquots from one lysate share the same cells, treatment and extraction: if that lysate was over-diluted, all three shift together. They tell us how precise the assay is, not how the biology varies. The six separately initiated preparations are the biological replicates; they carry the evidence about compound Q. Neither kind of repetition is useless — they answer different questions. Treating technical replicates as biological ones has a name, pseudoreplication, and it is common in the literature. The exercise on the next slide asks which observations really are independent.
 
 ---
 
-**Which observations are independent? — 13:54–13:57** [INTERACTION]
+**Which observations are independent? — 13:49–13:52** [INTERACTION]
 
 Use one minute of pair discussion and two minutes of debrief. A shares a lysate; B shares its preparation and possibly day; C can share day conditions. Do not simply label C independent. Independence is about the process and model, not the distance between dots or their different identifiers. For C, introduce only that some preparations were measured on the same day. The next slide reveals the full day layout. No numerical plot is needed: the shared sources follow from the experimental history.
 
 ---
 
-**Each day: two preparations, both conditions — 13:57–14:00**
+**A paired design — 13:52–13:55**
 
-This is the final notebook reveal: two preparation pairs on each day, with both conditions in every pair. Ask the audience to trace one within-day comparison. A change in conditions between days is a batch effect. If a day adds the same amount to both conditions, subtraction removes that component. Ask what happens if Q's response itself differs by day.
-
----
-
-**What if controls ran on Monday? — 14:00–14:03**
-
-Explicitly announce that this is not our actual protocol. It is a hypothetical scheduling shortcut. Give pairs time to identify the missing comparison. Without within-day treatment comparisons, a difference could arise from treatment, day, or both. Label this confounding only after the audience explains the problem. Give the layout comparison its full three minutes. Close the first 35-minute section with “What claim does this experiment permit?” A treatment-specific claim cannot be separated from a day effect in this alternative layout.
+This is the final notebook reveal: two preparations on each day, and both conditions — vehicle and Q — in every preparation. Name it: this is a paired design. Each preparation provides its own control. Ask the audience to trace one within-day comparison. A change in conditions between days is a batch effect. If a day adds the same amount to both conditions, subtraction removes that component. Ask what happens if Q's response itself differs by day.
 
 ---
 
-### 2 · Question and claim (14:03–14:26)
+**What if controls ran on Monday? — 13:55–13:58** [INTERACTION]
+
+Explicitly announce that this is not our actual protocol. It is a hypothetical scheduling shortcut. Give pairs time to identify the missing comparison. Without within-day treatment comparisons, a difference could arise from treatment, day, or both. Label this confounding only after the audience explains the problem. Give the layout comparison its full three minutes. Close the first section with “What claim does this experiment permit?” A treatment-specific claim cannot be separated from a day effect in this alternative layout.
 
 ---
 
-**What does “the compound works” mean? — 14:03–14:06**
+### 2 · Question and claim (13:58–14:21)
+
+---
+
+**What does “the compound works” mean? — 13:58–14:01**
 
 We can now describe the experiment, but what was it intended to establish? Read the lab-meeting claim aloud. Invite two interpretations of “works.” Then reveal the endpoint. This assay addresses activity in a particular preparation under particular conditions; it does not by itself demonstrate a mechanism or clinical benefit.
 
 ---
 
-**What quantity are we trying to learn? — 14:06–14:09**
+**What quantity are we trying to learn? — 14:01–14:04**
 
 We need to state the quantity we want to learn about. Within each preparation, compare the activity with Q against its vehicle tube. Then our target is the mean of that difference across the relevant population of preparations under these conditions. Keep the language as “the quantity we want to learn.” Do not introduce a technical name or teach how to compute an average. The target is the average biological change across relevant preparations, not the number of measurements. We are defining the question, not summarizing data.
 
 ---
 
-**Which future experiments should this inform? — 14:09–14:13**
-
-Six preparations are the ones we observed. Our question usually reaches beyond them to preparations we might make next. That collection of possible preparations, under defined culture and assay conditions, is a target population. It need not be a population of people. Ask which conditions should be held fixed and which may vary within the claim.
-
----
-
-**What population would you claim this applies to? — 14:13–14:21** [INTERACTION]
+**What population would you claim this applies to? — 14:04–14:12** [INTERACTION]
 
 Three minutes in pairs, three minutes hearing two arguments, two minutes to debrief. A is the intended narrow target, not a guaranteed extrapolation. Ask whether the six preparations and three days cover the conditions they mean by “these conditions,” and whether selection, QC or unrecorded batches matter. Fold the previous separate scope-of-replication slide into this debrief: repeated preparations of L1 cover preparation variation; other cell lines or donors require additional biological sampling, and a claim across laboratories needs evidence relevant to laboratories. More assay readings of these lysates cannot supply those missing systems. B requires sampling additional biological systems. C requires a much broader chain of evidence; do not turn this into a clinical-trial lecture.
 
@@ -104,157 +80,163 @@ Three minutes in pairs, three minutes hearing two arguments, two minutes to debr
 
 ---
 
-**Which observations describe the treatment response? — 14:21–14:26** [INTERACTION]
+**Our sample and its population — 14:12–14:16**
+
+Resolve the vote. The six preparations are our sample. The defensible population is option A: further preparations of L1, made under the culture and assay conditions we specified. A population need not be people — here it is the set of experiments we could still run. Land the purpose in one sentence: statistical inference tells us what another six preparations would plausibly show; it does not generalise to other cell lines or patients. Every number in the second half — mean, interval, p-value — answers that question. Options B and C need different experiments, not a better analysis.
+
+---
+
+**Which observations describe the treatment response? — 14:16–14:21** [INTERACTION]
 
 The opening block is complete. Use these five minutes to connect its design to the observations we will describe. Give pairs two minutes to identify the relevant change and three minutes to debrief. Each tube contributes the arithmetic average of its three technical readings; no aliquots were omitted. Each preparation then supplies one Q-minus-vehicle comparison. This preprocessing respects the simple balanced assay design. The term average is familiar language here; its definition comes later. Ask which experimental space the six preparations cover. The data follow on the next slide.
 
 ---
 
-### 3 · Reading the data (14:26–14:46)
+### 3 · Reading the data (14:21–14:41)
 
 ---
 
-**What do the data actually look like? — 14:26–14:29**
+**What do the data actually look like? — 14:21–14:24**
 
 Welcome back. These are the established data, now displayed as twelve tube values forming six biological comparisons. Each dot averages the three technical assay readings from its lysate. Ask for descriptions before explaining the pattern. Four pairs decrease, P2 is almost unchanged, and P5 increases. Do not equate lower activity with therapeutic benefit. P2 differs by only about 0.003 U/mg before display rounding.
 
 ---
 
-**How large is each preparation’s change? — 14:29–14:32** [INTERACTION]
+**How large is each preparation’s change? — 14:24–14:27** [INTERACTION]
 
 Use one minute of paired observation and two minutes for a debrief. The horizontal reference marks equal observed activities in a pair. Negative values mean lower activity with Q. Four reductions range from about 6 to 24 U/mg, one comparison is nearly unchanged, and P5 goes upwards. P4 has the largest reduction. The downward direction appears in several preparations, not just P4. P5 is worth asking about; an opposite direction is not itself proof of a mistake. No deletion or formal leave-one-out procedure is needed.
 
 ---
 
-**The average and the middle answer different questions — 14:32–14:35**
+**The average and the middle answer different questions — 14:27–14:30**
 
 The mean is -10.4 U/mg and uses every observed magnitude. The median is -11.9 U/mg: with six observations, it is halfway between the third and fourth ordered changes, about −17.68 and −6.18. Use the dots to illustrate the average as a balance point and the median as the middle position. The mean is a natural description of an average quantitative change, especially with approximately symmetric values; the median describes the middle. Our original scientific question concerned an average difference, so retain that distinction rather than swapping targets for a nicer number.
 
 ---
 
-**What is a quartile? — 14:35–14:37**
+**What is a quartile? — 14:30–14:32**
 
 Start with the dots: twelve values, sorted from smallest to largest. Cut them into four groups with the same number of values — three each, so each group holds a quarter. The three cuts are the quartiles. The first cut, Q1, has a quarter of the values below it. The middle cut, Q2, has half below it — that is the median we just met. The third cut, Q3, has three quarters below it. Then move to the bottom half of the figure: a box plot is simply a drawing of these cuts. The box runs from Q1 to Q3, so it always contains the middle half of the values; the line inside is the median; the lines on either side reach out to the lowest and highest quarter. Do not explain how software places the cut when the values do not divide evenly — conventions differ slightly and it does not matter here.
 
 ---
 
-**How far do changes lie from their mean? — 14:37–14:40**
+**How far do changes lie from their mean? — 14:32–14:35**
 
 Point to the mean line and the distance to each preparation’s change. Squaring distances makes them nonnegative and gives large deviations greater influence. Sample variance sums these squared deviations and divides by n−1, here five; its value is 147.5 in squared activity units. SD is its square root, 12.1 U/mg. Mention the sample denominator once in speech if needed, with no derivation or exercise. We are describing spread among the six changes, not the precision of their mean. Avoid a percentage-within-one-SD rule for these six values.
 
 ---
 
-**Which plot preserves the information we need? — 14:40–14:43**
+**Which plot preserves the information we need? — 14:35–14:38**
 
 The paired plot preserves both activities and the relationship within a preparation. The boxplot summarizes the six differences rather than treating the two conditions as unpaired groups. Explain that the box runs from Q1 to Q3, and its central line is the median. Whiskers extend to observed values within 1.5 IQR of the quartiles; here they reach the observed extremes. All six points are shown, including those overlaid near the median or whiskers. With six changes, the raw observations carry essential information. A boxplot alone would hide it. Do not read its whiskers as a precision interval or treat points outside whiskers as automatic errors.
 
 ---
 
-**How would you describe this result to a colleague? — 14:43–14:46** [INTERACTION]
+**How would you describe this result to a colleague? — 14:38–14:41** [INTERACTION]
 
 Give one minute to write and one minute to hear a response. Reveal one acceptable description for the final minute. Four preparations decrease, P2 is nearly unchanged, P5 increases; the largest decrease is P4. The mean is -10.4 and SD 12.1 U/mg. Participants may additionally use median -11.9, IQR 18.6, or the observed span if they say what those summaries describe. They should not imply that every preparation decreased or that Q has a proven mechanism. Ask whether the wording faithfully preserves heterogeneity.
 
 ---
 
-### 4 · Effect and uncertainty (14:46–15:06)
+### 4 · Effect and uncertainty (14:41–15:01)
 
 ---
 
-**Six preparations give one estimate — 14:46–14:48**
+**Six preparations give one estimate — 14:41–14:43**
 
 Return to the six unchanged paired changes. Each is a Q-minus-vehicle contrast after technical repeats were averaged within each tube. The vertical line is their mean, −10.4 U/mg. Our target is the average paired effect across the specified L1 preparation process. The sample gives an estimate of that quantity, not its known population value. Preserve the culture conditions, dose and 24-hour endpoint from the opening.
 
 ---
 
-**New preparations, new mean — 14:48–14:51**
+**New preparations, new mean — 14:43–14:46**
 
 Trace one row: six paired changes become one diamond. Then compare three rows. These are the first three repetitions from the fixed seed, not selected examples. In our teaching simulation we know the true average: −14 U/mg. The experiment’s estimate need not equal it. This value was already in the original data-generating model; it was not fitted to −10.4. The generator preserves normal preparation effects (SD 9), tube errors (SD 3), three technical errors (SD 2.5) and two-decimal assay rounding. Shared additive preparation and day baselines cancel in paired differences, apart from negligible rounding. There is no treatment-by-day variation. Real experiments do not give us a known truth.
 
 ---
 
-**What happens when we collect the means? — 14:51–14:54**
+**What happens when we collect the means? — 14:46–14:49**
 
 Reveal 10, then 100, then 10,000 accumulated means. Each comes from six newly generated paired changes. The frequency scale is a fraction of experiments so panels remain comparable as repetitions accumulate. Point to the fixed −14 line. Name this the sampling distribution of the mean. This is not the shape of our original six measurements, and it is not a probability distribution for possible true means. Simulation approximates what repeated sampling under the known model would generate; it does not turn our one observed experiment into 10,000 real replications.
 
 ---
 
-**Preparations vary more than their mean does — 14:54–14:57**
+**Preparations vary more than their mean does — 14:49–14:52**
 
 Spend one minute asking what one contribution represents on each side. The left pools preparation responses from the repeated simulations; the right contains one mean per experiment. Both horizontal axes are identical. The spread of the means is the standard error of this estimator. Simulated response SD is about 10.2 U/mg; simulated SD of means is about 4.1 U/mg. These are model repetition results, not the original sample’s SD of 12.1 or its estimated SE. Variation among individual responses and variability of their estimated average answer different questions. This is not a recommendation to replace raw observations with SEM error bars.
 
 ---
 
-**How can one experiment estimate that spread? — 14:57–14:59**
+**How can one experiment estimate that spread? — 14:52–14:54**
 
 Only now show the formula. The true SE uses the population SD; we estimate it by substituting the sample SD. Using full precision, 12.1445/sqrt(6)=4.9580 U/mg. Display rounding gives 5.0. This estimate need not equal the simulated long-run SE of about 4.1: the six observed responses are themselves a variable sample. The formula requires independent, identically distributed contrasts with finite variance. It is not automatically valid for shared treatment-by-day responses, clustered preparations, or correlated repeated measures. Normality is not needed for this variance identity; the small-sample t interval introduced next uses a stronger distributional assumption.
 
 ---
 
-**Can we show a range around our estimate? — 14:59–15:01**
+**Can we show a range around our estimate? — 14:54–14:56**
 
 Motivate the range before revealing it. An interval combines the best estimate and uncertainty in that estimate. This is a paired t interval, calculated on the six differences, not separate intervals around vehicle and compound. The offline calculation is mean ± qt(0.975,5) × sample SD/sqrt(6), with multiplier 2.5706 and margin 12.7449 U/mg. At n=6 a generic two-SE shortcut is too narrow. Explain the method’s name briefly without a derivation. Exact nominal coverage requires independent normal differences; the existing Gaussian generator meets this before negligible measurement rounding. Six observations cannot establish approximate normality. Real data would require substantive checks of the model and dependence.
 
 ---
 
-**What does our interval tell us? — 15:01–15:04**
+**What does our interval tell us? — 14:56–14:59**
 
 Point to the numbers first. Minus twenty-three to plus two. Those are the effect sizes we cannot dismiss with this data. Ask participants: does that include zero? Yes. Does it include a ten-unit reduction? Yes. Does it include a twenty-unit reduction? Yes. Everything in that range is compatible with what we observed. The 95% does not mean there is a 95% chance the true effect is somewhere in that interval — the true effect is a fixed number, not a random variable. What varies is the interval itself: if we ran the experiment again, we would get a different interval. Roughly 95% of all such intervals, across many repetitions, would catch the true value. But we do not have many repetitions — we have one, and it either caught it or it did not. The practical message: report the interval, and read it as a range of plausible values.
 
 ---
 
-**Report the estimate and its precision — 15:04–15:06**
+**Report the estimate and its precision — 14:59–15:01**
 
 Many papers still report mean ± SD when describing a treatment effect. The SD is a correct description of preparation-to-preparation variability, but it does not address how confidently the mean has been estimated. If the question is "how large is the effect, and how well do we know it?", the SE or CI is the relevant quantity. A wider CI from six preparations tells the reader more about the reliability of the estimate than an SD does. SD remains appropriate when the goal is genuinely to characterise variability — for instance, describing how heterogeneous a cell population is. The choice depends on the claim.
 
 ---
 
-### 5 · p-values (15:06–15:27)
+### 5 · p-values (15:01–15:22)
 
 ---
 
-**Could this result arise if there were no effect? — 15:06–15:08** [INTERACTION]
+**Could this result arise if there were no effect? — 15:01–15:03** [INTERACTION]
 
 Pose the question: suppose there were no average treatment effect — how unusual would our estimate be? Invite predictions before the reveal. Keep the six observed differences and −10.4 estimate unchanged. Change only the mean effect in the simulation from −14 to zero. Biological effect SD remains 9, tube SD 3 and technical-reading SD 2.5; pairing, triplicate averaging and assay rounding remain. Positive and negative preparation effects can still occur. Do not name the null hypothesis yet. This is a hypothetical generating model, not a conclusion about compound Q.
 
 ---
 
-**What would the no-effect model produce? — 15:08–15:11**
+**What would the no-effect model produce? — 15:03–15:06**
 
 Accumulate 10, 100 and 10,000 means before naming the distribution on a final click. Define a null distribution as the distribution of the statistic across repeated experiments if the null hypothesis and model assumptions were true. Then name H0: the population mean paired effect is zero. The horizontal axis is in the same units, with the same 36-unit span and one-unit bins as the previous sampling-distribution sequence, now centered on zero. It is not a histogram of six observations and not a distribution of probabilities that hypotheses are true.
 
 ---
 
-**How many standard errors away from zero? — 15:11–15:14**
+**How many standard errors away from zero? — 15:06–15:09**
 
 Point to the figure. Zero is where no effect would sit. Our mean is 2.1 SE steps below it. That gap is what we need to judge — not the raw number, but how far it sits relative to the uncertainty in our estimate. Name it once: this SE-step distance is the t statistic, t = −2.10; it is the number software reports and the one you will see in papers. Negative means lower activity with Q; we will count distance in either direction. The question now is how often the null model would produce a result at least this far from zero. That is what the next slide answers.
 
 ---
 
-**How often would a result be at least this extreme? — 15:14–15:17**
+**How often would a result be at least this extreme? — 15:09–15:12**
 
 Point to the observed t at −2.10 and the equally distant +2.10 boundary. The question was about an average change in either direction, so add both tail probabilities. The actual paired t p-value is 0.08987058, rounded to 0.090. Under H0 and the assumptions, about 9% of repeated experiments produce absolute t at least 2.10. The simulation gives 9.07%, close to the analytical value; it is the standardized statistic, not the raw mean, being counted. Integrating the t distribution includes its entire infinite tails even though the plot shows only −5 to +5. Do not choose the direction after seeing a negative estimate.
 
 ---
 
-**What does p = 0.090 mean? — 15:17–15:21** [INTERACTION]
+**What does p = 0.090 mean? — 15:12–15:16** [INTERACTION]
 
 Give one minute of individual choice and a minute of pair discussion, then reveal and debrief. All options reverse or distort the conditional statement. We assumed H0 to calculate the reference distribution; we did not calculate its probability. One minus p is not a probability that a compound works, and a large p does not prove zero effect.
 
 ---
 
-**What does a 0.05 decision rule control? — 15:21–15:24**
+**What does a 0.05 decision rule control? — 15:16–15:19**
 
 Only now introduce alpha as the prespecified decision threshold, a convention rather than a natural evidence boundary. A rejection under the chosen rule is often called statistically significant; that label does not establish biological importance. Every displayed experiment was generated with a true zero mean. Each rust cross is a rejection of a true H0, called a Type I error. There are not necessarily exactly five crosses in each block of 100; the first 100 are shown unselected. Across the same 10,000 null experiments 4.98% meet p<0.05. Under the ideal continuous normal model this rule’s long-run Type I rate is 5%; our rounded simulation approximates it. Alpha is not the probability that a particular conclusion is wrong, nor the proportion of all rejected claims that are false. A testing rule must be fixed in advance; do not retune it for the observed result.
 
 ---
 
-**Are these scientifically different? — 15:24–15:26** [INTERACTION]
+**Are these scientifically different? — 15:19–15:21** [INTERACTION]
 
 Ask whether these values alone make the studies scientifically different. Under a prespecified p<0.05 rule the labels differ, but the data’s incompatibility with the null changes continuously rather than jumping at the cutoff. The comparison is only about nearby values for comparable analyses; p-values alone cannot rank very different experiments or scientific importance. A statistically significant result can be biologically small and does not guarantee replication. A result just above the convention does not establish no effect. Ask for estimates, intervals, design and biological context.
 
 ---
 
-**A small p-value is not a large effect — 15:26–15:27**
+**A small p-value is not a large effect — 15:21–15:22**
 
 Point at the two p-values first: identical. Then at the two effects: −2 versus −20 U/mg. Experiment A has 200 pairs, so even a tiny change is estimated precisely and lies far from zero in SE steps. Experiment B has only six pairs, so a large change gives the same p. Ask which result matters biologically. A loss of 2 U/mg against roughly 98 U/mg is about 2% of activity; −20 is about 20%. The p-value cannot tell you this; the effect and its interval can. Both experiments are constructed illustrations, not L1 data.
 
@@ -304,7 +286,7 @@ Let participants inspect the two experiments for one minute. Dots are the six ch
 
 ---
 
-**What proportion would cross the threshold? — 16:09–16:12**
+**What proportion would cross the threshold? — 16:09–16:12** [INTERACTION]
 
 Ask the audience to estimate the proportion of crosses, then reveal 78% across 10,000 trials. Only on the next click name statistical power. In plain language it is the long-run probability that this experiment and analysis will reject under a specified nonzero effect. It belongs to a full set of assumptions: effect, variability, independent N, design, alpha and analysis. The finite simulation gives 78%; the ideal normal paired-difference calculation gives about 76.9%, a Monte Carlo difference of about one percentage point. Do not present either as a guarantee that a particular replication succeeds. The crosses use the same decision symbols as Part 1, but the assumed truth is now nonzero; they are not Type I errors in this scenario. The first 100 are unselected; the illustrative pair from the previous slide is not the frequency denominator.
 
@@ -318,7 +300,7 @@ State this once, clearly, and move on. The interval covers zero — that is why 
 
 ---
 
-**What would change that proportion? — 16:13–16:17**
+**What would change that proportion? — 16:13–16:17** [INTERACTION]
 
 Use four short predictions, one before each reveal. Larger true effect moves estimates further from zero; lower biological variability narrows their distribution; larger independent N lowers SE. A smaller alpha lowers the long-run Type I rate but also lowers power, all else fixed. Baseline is effect magnitude 14, n=6, biological-effect SD 9, tube SD 3, technical SD 2.5 with three aliquots, and two-sided alpha 0.05. The variability curve changes only biological-effect SD and retains the measurement components. These curves use exact noncentral-t probabilities under independent normal differences, counting both tails. No derivation is needed. Do not recommend loosening alpha to rescue the observed p-value; it is a prospective decision setting.
 
@@ -440,7 +422,7 @@ The previous slide could not be answered from the row count, only from metadata.
 
 ---
 
-**Same measurements. Same analysis? — 17:02–17:05**
+**Same measurements. Same analysis? — 17:02–17:05** [INTERACTION]
 
 Have the audience predict whether the mean difference or its uncertainty changes. Both analyses give −10.4. Under unrelated-culture assumptions the Welch interval is −33.6 to 12.8; under the actual paired design it is −23.2 to 2.3. This is a counterfactual illustration, not permission to choose the narrower result. Positive within-pair association removes shared variation here. Pairing does not universally improve precision; covariance and the cost/design context matter. Choose the procedure from provenance before inspecting which gives a preferred answer.
 
@@ -504,7 +486,7 @@ Ask what evidence participants would seek before changing the analysis. This is 
 
 ---
 
-**When the effect is multiplicative, use the log scale — 17:24–17:27**
+**When the effect is multiplicative, use the log scale — 17:24–17:27** [INTERACTION]
 
 Ask participants to predict what three-fold up and three-fold down look like on an absolute scale before revealing the left panel. Show the asymmetry: from a baseline of 100, three-fold up is +200 while three-fold down is only −67. The visual impression on the absolute scale is that the upward effect is roughly three times the downward effect — but both represent the same fold change. On the log₂ scale, both are ±1.58, which is why RNA-seq analysis uses log₂ fold change as standard. Connect to what they already know: when a paper reports "2-fold induction," that is a ratio, and ratios should be compared on the log scale. Briefly note that for the L1 enzyme data, absolute differences are appropriate: the baseline range is narrow (79–113 U/mg), effects are small fractions of baseline, and U/mg differences are directly interpretable. The choice depends on whether effects are expected to compound multiplicatively or add linearly across the measurement range.
 
@@ -528,7 +510,7 @@ Tie the last two slides together. Most quantities measured in a life-science lab
 
 ---
 
-**Three error bars. Three different claims. — 17:34–17:37**
+**Three error bars. Three different claims. — 17:34–17:37** [INTERACTION]
 
 Cover the panel titles and ask what the bars mean. Reveal them. SD is the spread in the raw data — it describes biological variability and stays roughly constant as n increases. SEM is SD/√n — it shrinks as you add replicates regardless of the biology and describes estimation precision. A 95% CI is wider than SEM (approximately ±t·SEM for small n) and describes the range of effect sizes the data cannot rule out — which is what a reader needs to assess a claim. For six preparations, the CI is notably wider than the SEM. The rule from Part 1: use SD to describe how variable the preparations are; when reporting an effect, give the SEM or, better, the 95% CI — and always say which. The problem is not SEM itself but an unlabelled bar, or SEM used to describe variability, which makes the data look less variable than they are. Recall from Part 1: report the CI or SE with the effect estimate, not the SD alone, when your reader needs to know how precisely the effect is known.
 
