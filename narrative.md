@@ -356,7 +356,7 @@ Read the question and pause before continuing. The completed block has distingui
 
 ---
 
-### BLOCK 5 · The Null Model (02:56–03:29)
+### BLOCK 5 · The Null Model (02:56–03:30)
 
 ---
 
@@ -426,13 +426,19 @@ Ask whether these values alone make the studies scientifically different. Under 
 
 ---
 
-**What can we report about compound Q? — 03:25–03:28** [INTERACTION]
+**A small p-value is not a large effect — 03:25–03:26**
+
+Point at the two p-values first: identical. Then at the two effects: −2 versus −20 U/mg. Experiment A has 200 pairs, so even a tiny change is estimated precisely and lies far from zero in SE steps. Experiment B has only six pairs, so a large change gives the same p. Ask which result matters biologically. A loss of 2 U/mg against roughly 98 U/mg is about 2% of activity; −20 is about 20%. The p-value cannot tell you this; the effect and its interval can. Both experiments are constructed illustrations, not L1 data.
+
+---
+
+**What can we report about compound Q? — 03:26–03:29** [INTERACTION]
 
 Give a minute for a spoken or written report and two for debrief. The observed mean is a reduction of 10.4 U/mg, with the displayed broad interval. The t statistic is 2.10 estimated SEs below zero. Assuming zero mean and the model, an absolute statistic this large or larger occurs about 9% of the time. At a prespecified 0.05 rule this would not reject H0; explain if using that phrase that it does not establish H0. The interval remains compatible with substantial reductions and some small increases. No validated biological relevance threshold is supplied. Do not conclude that Q works or does not work, infer a mechanism, or generalize beyond the specified L1 process. Dependence or bias would undermine the simple model rather than being repaired by a p-value.
 
 ---
 
-**One question to carry forward — 03:28–03:29**
+**One question to carry forward — 03:29–03:30**
 
 Read the question and stop. It is a possibility to investigate, not a conclusion that this experiment was necessarily too small. Leave the question unanswered. Do not introduce the next block’s concepts, formulas or planning advice.
 
@@ -630,7 +636,7 @@ Take the scheduled break from 01:12 to 01:27. Resume with exploration versus con
 
 **Exploration is useful science — 01:27–01:29**
 
-Reconnect to Session 1. Transformations, subgroup inspection and hypothesis generation are legitimate exploratory work. The problem is attaching confirmatory error guarantees as though the hypothesis and analysis had been fixed before those same observations were examined. Report discovery as discovery and independently test important resulting claims with an appropriate design. Independence means genuinely new information not reused to select the claim; it does not guarantee success. Avoid suggesting that every exploratory calculation needs a mechanical adjustment or that exploration is inferior science.
+Reconnect to Session 1. Transformations, subgroup inspection and hypothesis generation are legitimate exploratory work. The problem is attaching confirmatory error guarantees as though the hypothesis and analysis had been fixed before those same observations were examined. Report discovery as discovery and independently test important resulting claims with an appropriate design. Independence means genuinely new information not reused to select the claim; it does not guarantee success. Avoid suggesting that every exploratory calculation needs a mechanical adjustment or that exploration is inferior science. Land the key message: when the hypothesis was suggested by the same data, a p-value from those data has almost no evidential value — it describes how unusual the pattern was that we already selected for being unusual. Show the exploration; reserve testing for the new experiment.
 
 ---
 
@@ -652,7 +658,7 @@ Read the practical question and stop. Do not introduce tests, a decision tree or
 
 ---
 
-### BLOCK 3 · Tests From Design (01:35–02:26)
+### BLOCK 3 · Tests From Design (01:35–02:29)
 
 ---
 
@@ -680,233 +686,273 @@ Deliberately withhold counts at the higher levels. Allow a short discussion befo
 
 ---
 
-**Do independently treated cultures differ on average? — 01:44–01:47**
+**Metadata decide the analysis — 01:44–01:45**
+
+The previous slide could not be answered from the row count, only from metadata. For every measured value, record which preparation, culture or donor it came from, the day or batch, the treated tube or well, and the technical replicate number. Add plate positions, passage numbers, reagent lots and any exclusion with its reason. This costs minutes at the bench and is impossible to recover later. It is also what lets a statistician — or a reviewer — check pairing, blocking and pseudoreplication.
+
+---
+
+**Do independently treated cultures differ on average? — 01:45–01:48**
 
 Ask for the direction and precision of the mean difference before naming Welch. Each point represents one independent culture, not a technical read. Bars show group means; the reported interval is for Q minus control, not two separate group intervals. The simulated populations have SDs 10 and 17; no equal-variance assumption is imposed. Welch is the default independent-group t procedure here, with an approximate degrees-of-freedom calculation we will not derive. The interval includes zero and meaningful negative changes. The p-value is .105, secondary to the effect and interval.
 
 ---
 
-**The design created pairs — 01:47–01:50**
+**The design created pairs — 01:48–01:51**
 
 Ask whether the two columns are independent, then trace a preparation line. Average the technical readings within each tube before constructing Q minus vehicle for each preparation. The six independent differences, rather than twelve independent tubes or thirty-six readings, supply replication for this paired analysis. The paired test is algebraically a one-sample t-test on the differences; exact small-sample inference assumes independent normally distributed differences. Shared day effects must cancel in differences under our simplified additive model; residual dependence would require more care.
 
 ---
 
-**Same measurements. Same analysis? — 01:50–01:53**
+**Same measurements. Same analysis? — 01:51–01:54**
 
 Have the audience predict whether the mean difference or its uncertainty changes. Both analyses give −10.4. Under unrelated-culture assumptions the Welch interval is −33.6 to 12.8; under the actual paired design it is −23.2 to 2.3. This is a counterfactual illustration, not permission to choose the narrower result. Positive within-pair association removes shared variation here. Pairing does not universally improve precision; covariance and the cost/design context matter. Choose the procedure from provenance before inspecting which gives a preferred answer.
 
 ---
 
-**Four doses: should we run six separate tests? — 01:53–01:55**
+**Pairing and blocking buy power — 01:54–01:55**
+
+Generalise the previous slide. Splitting each preparation into a vehicle and a Q tube — or running both conditions on the same day, plate or animal — lets the shared variation cancel in the comparison. The same twelve tubes then give a narrower interval and a higher chance of detecting a real effect, so fewer independent units are needed for the same precision. This links back to the power block in this session. Two conditions: the shared source must be real (same preparation, day, donor or litter), and the analysis must keep the pairing; a paired design analysed as unrelated groups throws the advantage away. Pairing only helps when the paired units actually resemble each other.
+
+---
+
+**Four doses: should we run six separate tests? — 01:55–01:57**
 
 Ask why four groups yield six pairs and reconnect to the multiplicity block. A group indicator linear model represents the four means together; classical one-way ANOVA tests a restriction on those means. A two-group equal-variance t-test is a special case of that classical framework. Do not quietly equate an ordinary homoscedastic linear-model fit with Welch: unequal variances can require Welch-type or other suitable inference. A common model does not by itself eliminate multiplicity.
 
 ---
 
-**What would we want to know about these doses? — 01:55–01:58** [INTERACTION]
+**What would we want to know about these doses? — 01:57–02:00** [INTERACTION]
 
 Let the audience choose a question and articulate its effect quantity. The omnibus null sets all four population means equal; rejecting it does not identify a particular contrast or prove every group differs. Dose versus control contrasts form a natural prespecified family when that is the aim; a trend additionally requires meaningful dose spacing and a justified functional form. A high-minus-low contrast is a different estimand. Planned contrasts need not wait for a significant omnibus test when the inferential plan already specifies them. Discuss uncertainty and the family, without teaching post-hoc menus.
 
 ---
 
-**Does Q have the same effect in both genotypes? — 01:58–02:01**
+**Does Q have the same effect in both genotypes? — 02:00–02:03**
 
 Ask participants to compare slopes before naming interaction. The fitted Q effect is −27.9 in wild type and −4.8 in knockout; knockout minus wild-type effect is +23.0 activity units (model-based 95% CI approximately 11.8 to 34.2). A factorial linear model estimates this difference of differences. These are independent cultures with normal equal-SD errors in the teaching generator. Genotype need not be randomized, and a genotype mechanism claim requires comparable genetic backgrounds and design. Significant in wild type but not in knockout does not itself establish different effects; assess the interaction directly, with its interval. No factorial table drill.
 
 ---
 
-**Time-course experiments: showing the effect vs. testing it — 02:01–02:04** [INTERACTION]
+**Simple designs need fewer replicates — 02:03–02:04**
+
+Look back at the last few slides: two groups, paired, four doses, genotype by treatment. Each step adds groups or factors, and each step spreads the same number of replicates thinner. A paired two-condition comparison concentrates all independent replication on one question; that is why it needs the smallest N. Comparisons among several doses or genotypes need more units per group, and an interaction — a difference between two effects — is estimated with roughly twice the SE of a main effect, so detecting one of the same size needs about four times the sample size. Before adding conditions, ask whether each one serves the primary question.
+
+---
+
+**Time-course experiments: showing the effect vs. testing it — 02:04–02:07** [INTERACTION]
 
 Two minutes in pairs, then collect two or three answers. Most will say six tests or one two-way ANOVA. The problem with six separate tests: every time point draws its tubes from the same preparations, so the comparisons are correlated and the false positive rate is inflated unless corrected. The problem with two-way ANOVA: it assumes all measurements are independent observations. A lysate assay cannot measure one tube twice, so each time point is a separate tube — but tubes harvested at 2 h and 24 h from the same preparation share its biology, handling, passage and any uncontrolled drift. They are related, not independent. A standard two-way ANOVA ignores that correlation entirely. Time-courses are almost always pioneering experiments — you are watching when and how an effect develops. That is exploration, not confirmation.
 
 ---
 
-**A time-course is most honest as exploration — 02:04–02:06**
+**A time-course is most honest as exploration — 02:07–02:09**
 
 Present these as three legitimate routes, not a hierarchy. Most time-course experiments in this audience's work are genuinely exploratory — the researcher wants to know whether the effect builds, peaks, or reverses. That is valuable science; it does not require a p-value. If the biological question really is about a specific time point — for example, the moment of peak inhibition as established by prior literature — pre-specify it before collecting data and test once. If multiple time points were pre-planned, apply FWER correction such as Holm. If the shape of the whole curve matters, reduce each experimental unit to one derived number first: AUC summarises total exposure; a rate constant or half-maximum time captures kinetics. Each unit then gives one observation and you can run an ordinary t-test or regression on those derived values. Do not test every time point and report only the significant ones.
 
 ---
 
-**In any of these designs — what is one independent observation? — 02:06–02:07**
+**In any of these designs — what is one independent observation? — 02:09–02:10**
 
 Every design we have seen — two groups, paired, doses, factorial — requires the same first step: identify what was independently initiated and assigned. The test follows from that answer, not from the number of rows in the spreadsheet. The next slide shows what happens when measurements are confused with independent observations.
 
 ---
 
-**Do 100 cells from one culture give N = 100? — 02:07–02:09**
+**Do 100 cells from one culture give N = 100? — 02:10–02:12**
 
 Retrieve pseudoreplication. Cells from a common culture can share biology and handling; repeated measurements of an animal share that animal. Appropriate unit summaries can answer a unit-level question, but discard some information and need scientifically sensible weighting. Hierarchical or mixed-effects models can represent shared variation and repeated structure when supported by enough independent units. A mixed model cannot manufacture independent biological replication from a single culture or resolve treatment perfectly confounded with culture. Distinguish repeated times from independent repeated experiments.
 
 ---
 
-**Does a normality test tell you which analysis to use? — 02:09–02:12** [INTERACTION]
+**Does a normality test tell you which analysis to use? — 02:12–02:15** [INTERACTION]
 
 Collect a vote before revealing the answer. Failure to reject normality does not verify it. At small N there is little information about tails; at large N a tiny deviation can be detectable without invalidating mean inference. The relevant issue is adequacy of the model and sampling distribution for the intended estimate, not ritual use of a preliminary significance test. Robustness depends on sample size, skewness, outliers, allocation balance and variance patterns. Selecting an analysis through a preliminary test can also alter the operating properties of the whole procedure. Plots diagnose structure and problems; they cannot prove normality.
 
 ---
 
-**What must be credible for inference about a mean? — 02:12–02:14**
+**What must be credible for inference about a mean? — 02:15–02:17**
 
 Separate assumptions. Independence comes from design; it is not checked by a histogram. Normal independent observations give the exact classical one-sample t reference; the paired version concerns differences. Welch uses an approximate reference even under unequal-variance normal populations. With sufficient independent information, mean inference may be approximately reliable beyond normal populations, but no universal N threshold protects against heavy tails, severe skewness or influential observations. Finite variance, balance and the particular model matter. Assess group residual patterns rather than demanding a pooled mixture of different means be normal. Visual review cannot establish exact distributional assumptions.
 
 ---
 
-**If the data are not normal, automatically use ranks? — 02:14–02:16**
+**If the data are not normal, automatically use ranks? — 02:17–02:19**
 
 Mann–Whitney compares independent groups using ranks. Its usual exact null is identical distributions (with ties handled appropriately); the statistic relates to the probability one randomly chosen observation exceeds the other, counting ties by half. It is not an omnibus detector of every distributional difference. Under a common-shape location-shift model, location and median shift interpretations are justified. Without that structure, differing shapes or spreads complicate an interpretation as a median shift, and equal medians do not by themselves describe its null. It does not repair clustering, biased sampling or adaptive reporting. Choose the target first and a procedure valid for its null.
 
 ---
 
-**Delete it? Transform? Switch the test? — 02:16–02:18** [INTERACTION]
+**Delete it? Transform? Switch the test? — 02:19–02:21** [INTERACTION]
 
 Ask what evidence participants would seek before changing the analysis. This is a constructed dataset, not another alteration of the original assay. Check the source record, assay calibration, sample identity and prespecified QC criteria. Correct a verified recording error with an audit trail; exclusions require a defensible reason. A genuine extreme biological observation may matter to the mean and target population. Transformation changes the scale and often the effect quantity; a rank method answers another question. Sensitivity analyses can show influence, but report data-dependent choices and all relevant results. Never delete solely because a p-value improves.
 
 ---
 
-**What must an analysis plan connect? — 02:18–02:21** [INTERACTION]
+**What must an analysis plan connect? — 02:21–02:24** [INTERACTION]
 
 Give pairs a minute to apply this to the L1 assay: mean activity change, tube allocation within preparation, continuous outcome, six independent paired contrasts under the working model, Q versus vehicle, a planned contrast, model of differences, estimate and interval, then a paired test if useful. Multiplicity belongs in planning, even though it is listed last as a final check. Revisit population and experimental space in the quantity statement. If a model does not fit the design, return to the earlier questions rather than selecting a different software label. Preserve this retrieval time.
 
 ---
 
-**Where do familiar procedure names fit? — 02:21–02:23**
+**Where do familiar procedure names fit? — 02:24–02:26**
 
 Do not read every cell aloud. Use the table to locate names people already know. Ordinary linear-model standard errors are not automatically Welch; choose the variance model/inference appropriately. Logistic coefficients concern log odds, although fitted probabilities can yield risks and risk differences. Fisher’s exact test addresses suitable small contingency-table questions with independent units and conditional assumptions; a small table does not remove clustering. Counts may need offsets and overdispersion handling rather than a default Poisson model. Time-to-event questions from earlier require survival methods respecting censoring, deliberately not taught here. None of these frameworks automatically solves bias or defines the scientific quantity.
 
 ---
 
-**Tell me how you did the experiment—and what you want to learn. — 02:23–02:26** [INTERACTION]
+**Tell me how you did the experiment—and what you want to learn. — 02:26–02:29** [INTERACTION]
 
 Spend two minutes collecting requested information. Retrieve biological question, unit, target population/experimental space, endpoint, design, pairing/blocking/clustering, effect, variation, independent sample size, planned comparisons and multiplicity. Ask which decisions were prospective and which arose during exploration. The central response is: tell me exactly how you did the experiment and what you want to learn. Reveal the workshop bridge last and stop. The separately built workshop will have 20–25 minutes; do not run or improvise its content in this block.
 
 ---
 
-### BLOCK 4 · Common Issues (02:26–02:42)
+### BLOCK 4 · Common Issues (02:29–02:46)
 
 ---
 
-**Five issues you will see in almost every paper — 02:26–02:27**
+**Five issues you will see in almost every paper — 02:29–02:30**
 
 Preview the four topics without discussing them yet. This block is practical: each issue appears in the literature your participants already read. Move quickly to the first slide; the meat is in what follows.
 
 ---
 
-**When the effect is multiplicative, use the log scale — 02:27–02:30**
+**When the effect is multiplicative, use the log scale — 02:30–02:33**
 
 Ask participants to predict what three-fold up and three-fold down look like on an absolute scale before revealing the left panel. Show the asymmetry: from a baseline of 100, three-fold up is +200 while three-fold down is only −67. The visual impression on the absolute scale is that the upward effect is roughly three times the downward effect — but both represent the same fold change. On the log₂ scale, both are ±1.58, which is why RNA-seq analysis uses log₂ fold change as standard. Connect to what they already know: when a paper reports "2-fold induction," that is a ratio, and ratios should be compared on the log scale. Briefly note that for the L1 enzyme data, absolute differences are appropriate: the baseline range is narrow (79–113 U/mg), effects are small fractions of baseline, and U/mg differences are directly interpretable. The choice depends on whether effects are expected to compound multiplicatively or add linearly across the measurement range.
 
 ---
 
-**What does chopping the y-axis do? — 02:30–02:33** [INTERACTION]
+**What does chopping the y-axis do? — 02:33–02:36** [INTERACTION]
 
 Ask which panel shows the larger effect. Wait for a show of hands, then confirm: they are identical data. The right panel truncates the y-axis at 70, so the visible bar lengths represent roughly 27 and 17 units instead of 97 and 87. The visual height ratio is about 1.6; the actual ratio is about 1.1. The bar chart uses visual area as its information — cropping it at an arbitrary point changes that information without changing the numbers. For line plots and dot plots, a non-zero baseline with clearly labelled axes can be legitimate when the data range is far above zero; the bar chart is the problem because the bar's length is its encoding, and it starts at zero by convention. Ask participants to find an example in a paper they know.
 
 ---
 
-**When values span orders of magnitude — 02:33–02:36** [INTERACTION]
+**When values span orders of magnitude — 02:36–02:39** [INTERACTION]
 
 Ask which panel lets them compare all four conditions meaningfully. On the linear scale, the three low-value bars are barely visible — they look identical even though low and high dose differ by four-fold. Publications often solve this by cutting out the middle of the y-axis with a break symbol. That removes the true distance between values from the visual — a reader cannot tell how far the stimulated bar is from the others. Log scale is the correct solution when data span more than one order of magnitude: on a log scale, equal vertical distances mean equal fold changes. The stimulated condition is about 80-fold above unstimulated. On the linear scale that relationship is invisible; on the log scale it is clearly encoded. Axis breaks are tempting and look authoritative in papers — point out they are almost always a sign that log scale should have been used instead.
 
 ---
 
-**Three error bars. Three different claims. — 02:36–02:39**
+**Many lab measurements belong on a log scale — 02:39–02:40**
 
-Cover the panel titles and ask what the bars mean. Reveal them. SD is the spread in the raw data — it describes biological variability and stays roughly constant as n increases. SEM is SD/√n — it shrinks as you add replicates regardless of the biology and describes estimation precision. A 95% CI is wider than SEM (approximately ±t·SEM for small n) and describes the range of effect sizes the data cannot rule out — which is what a reader needs to assess a claim. For six preparations, the CI is notably wider than the SEM. Many published figures show SEM because it looks smaller, suggesting more precision than the data support. An unlabelled error bar cannot be distinguished. Recall from Session 1: report the CI or SE with the effect estimate, not the SD alone, when your reader needs to know how precisely the effect is known.
+Tie the last two slides together. Most quantities measured in a life-science lab — fluorescence intensity, qPCR and RNA-seq expression, Western blot or ELISA signals, cytokine concentrations, cell or colony counts — behave multiplicatively: treatments change them by a factor, and higher levels vary more. Log-transform before computing means, intervals and tests, and plot on a log axis. Report results as fold changes, back-transformed from the log scale. The L1 enzyme assay is an exception only because the effect is small relative to a narrow baseline range.
 
 ---
 
-**What does an honest figure let you do? — 02:39–02:42** [INTERACTION]
+**Three error bars. Three different claims. — 02:40–02:43**
+
+Cover the panel titles and ask what the bars mean. Reveal them. SD is the spread in the raw data — it describes biological variability and stays roughly constant as n increases. SEM is SD/√n — it shrinks as you add replicates regardless of the biology and describes estimation precision. A 95% CI is wider than SEM (approximately ±t·SEM for small n) and describes the range of effect sizes the data cannot rule out — which is what a reader needs to assess a claim. For six preparations, the CI is notably wider than the SEM. The rule from Session 1: use SD to describe how variable the preparations are; when reporting an effect, give the SEM or, better, the 95% CI — and always say which. The problem is not SEM itself but an unlabelled bar, or SEM used to describe variability, which makes the data look less variable than they are. Recall from Session 1: report the CI or SE with the effect estimate, not the SD alone, when your reader needs to know how precisely the effect is known.
+
+---
+
+**What does an honest figure let you do? — 02:43–02:46** [INTERACTION]
 
 Allow two minutes in pairs, then collect answers. With the right panel, a reader can: see each individual preparation; see which preparations responded consistently; check whether one preparation is driving the result; verify the direction; mentally reproduce the paired analysis. With the left panel, a reader sees only group means and one aggregate uncertainty measure. The jitter in the bar chart does not show which Vehicle and Compound Q dots came from the same preparation — the pairing is invisible. The honest figure is not more complicated: it displays the same six values each, but preserves the experimental structure. Invite a brief discussion of whether participants' most recent submitted figure would pass this test.
 
 ---
 
-### BLOCK 5 · Final Workshop — Compound R (02:42–03:07)
+### BLOCK 5 · Final Workshop — Compound R (02:46–03:23)
 
 ---
 
-**“Compound R significantly suppresses inflammation” — 02:42–02:43** [INTERACTION]
+**“Compound R suppresses inflammation” — 02:46–02:48** [INTERACTION]
 
-Give participants one minute to react without correcting them. Present this as a colleague asking for help, not a trap or evidence of incompetence. The illustrative report omits information that participants must request. Do not lead with which test was used. The entire workshop is fictional teaching data.
-
-*Instructor-only provenance: this is Line B, day 2, P1, high dose versus stimulated vehicle. Three assay wells per condition are aliquots of one treated culture-tube lysate, not three independently treated cultures. Mean signals are 100 and 86.8169. The displayed Welch calculation on technical wells is exactly .032, but does not justify biological treatment inference. Do not reveal this yet.*
+Present this as a colleague's lab-meeting slide, not a trap. Give participants a minute to react without correcting them. Most will find it convincing: a clean 40% reduction, tiny error bars, three stars, and the reassuring legend "representative of independent experiments". Do not reveal anything yet. Instructor-only provenance: the figure shows day 1 of four experiments; n = 3 are the three ELISA wells of one supernatant per condition; the Welch t-test on those wells gives p = 0.00008. The entire scenario is fictional teaching data (scripts/generate_workshop.R).
 
 ---
 
-**What do you need to know before interpreting this? — 02:43–02:46** [INTERACTION]
+**What do you need to know before interpreting this? — 02:48–02:51** [INTERACTION]
 
-Let participants supply questions for roughly two minutes, then group them verbally for one minute. Do not display a checklist. If needed, ask one neutral follow-up. Listen for what n counts; independent repetition; culture/well generation; contemporaneous vehicle; allocation across days; line shown; proteins, doses and comparisons inspected; exclusion rationale; prospective hypothesis and analysis; population or experimental space. Answer that these details are available on the next slides. Reward requests for provenance without turning this into an exam. Avoid labelling exploratory work as misconduct.
-
----
-
-**What was actually repeated? — 02:46–02:47** [INTERACTION]
-
-Reveal each layer after asking for a guess. There are two established cell lines, three experiment days, and one separately initiated preparation per line each day. Each available condition receives one culture tube; stimulation is common to all tubes, followed by vehicle or R for the same duration. Each lysate is assayed in three multiplex wells measuring five proteins. Thus the three wells are technical measurement repeats, not separately treated biological units. The tube receives treatment; independent biological replication for treatment comparisons comes from preparation/day repeats, with common preparation and day structure retained. Line is not an independent replicate of a universal cell population. No pooling of preparations occurred.
+Let participants supply questions for about two minutes, then group them for one minute. Do not show a checklist. Listen for: what does n = 3 count; how many independent experiments; what does "representative" mean and how was it chosen; were vehicle and R run on the same day; were other readouts measured; were any experiments or values left out; was the analysis planned in advance. Answer that the next slides reveal the details. Reward requests for provenance; avoid treating the researcher as dishonest — every step here is common practice.
 
 ---
 
-**What else changed when the dose changed? — 02:47–02:48** [INTERACTION]
+**What was actually repeated? — 02:51–02:53** [INTERACTION]
 
-Explain that available plate capacity led to vehicle/low/medium on day 1, vehicle/high on day 2, and all conditions on day 3, identically for both lines. Allocation within each day was randomized, and every treated tube has a contemporaneous vehicle. This is an incomplete, imbalanced block design, not perfect treatment/day confounding. Comparing pooled dose means without day structure mixes different day compositions. Some within-day contrasts remain identifiable; only two preparations per line inform each nonzero dose. Day and preparation cannot be separately disentangled within a line here. Ask for balanced complete blocks next time if feasible, with randomized tube and assay positions. A model cannot replace the missing independent replication or create an unobserved condition.
-
----
-
-**“Suppresses inflammation”—in what experimental space? — 02:48–02:49** [INTERACTION]
-
-Ask for a scoped statement. A lower signal for one protein in one cell-line preparation is not proof of broad suppression of inflammation. Comparable future preparations of a stated line under the laboratory protocol are a plausible narrow target for a better replicated follow-up. Two available lines are not a random sample of all cells or patients. The same inflammatory stimulation and matched solvent were used throughout. Vehicle controls solvent and handling under stimulation; it does not establish absence of toxicity or assay interference. If the mechanistic claim requires those distinctions, request suitable viability/assay controls using concepts already taught. Do not add a separate new methods lesson.
+Reveal each layer after asking for a guess. Each day a fresh culture is stimulated and one well receives vehicle, one R: the culture well is the experimental unit, and the day is the independent replicate of the comparison. The three ELISA wells measure the same supernatant; they describe pipetting and plate precision, not biology. So the reported n = 3 and p < 0.001 describe how reproducible the ELISA is on day 1. The honest n for the treatment effect is the number of experiments — four, or three after the exclusion we will see next. "Representative" meant the clearest-looking day. Link back to Session 1: these are technical triplicates presented as replicates.
 
 ---
 
-**How many chances did we give ourselves? — 02:49–02:50** [INTERACTION]
+**“Day 4 was left out — the stimulation didn't work.” — 02:53–02:55** [INTERACTION]
 
-Allow a quick response before revealing the actual audit. The researcher compared each available dose with its same-day vehicle separately for every line/protein: two contrasts on day 1, one on day 2 and three on day 3, times two lines times five proteins, giving sixty technical-well Welch calculations. These tests share controls and protein measurements, so they are dependent; neither sixty nor thirty is an effective independent-test count. The .032 panel was selected as a promising example, not a prespecified primary endpoint and not necessarily the minimum p-value. The researcher had a broad exploratory goal and chose the analysis/reporting focus after seeing the screen. Define purpose and family before proposing a multiplicity strategy. Adjustment cannot repair invalid biological replication. Show all outcomes and uncertainty where defensible; do not mechanically calculate .032 times sixty.
-
----
-
-**“One value was excluded because it looked wrong.” — 02:50–02:51** [INTERACTION]
-
-Ask for evidence before revealing the location. The value is 190 activity units; the other technical readings are retained. The record does not establish assay failure, recording error or biological cause. No prospective exclusion criterion was documented. The choice was made after viewing the screen, but we do not know whether the researcher checked its influence on a p-value. Do not invent intent. The exclusion is in another protein/line/dose, so it did not generate the selected .032 result. Valid exclusions are possible with a defensible measurement-based reason and audit trail. Retain it for transparent review and report sensitivity if unresolved; do not use a significance-improving rule.
+Ask what would make the exclusion legitimate before revealing the details. A valid exclusion needs a reason that is independent of the treatment result and, ideally, a rule written down before the data came in — for example, "an experiment counts only if LPS raises IL-6 at least ten-fold over an unstimulated well". Here there was no rule and no unstimulated well, so "the stimulation didn't work" cannot be checked. Vehicle IL-6 on day 4 was lower than on other days, but day 1 was not much higher. The decision was made after seeing that R had no effect that day. Do not accuse the researcher of misconduct: this is a very common, well-intended judgement. The next slides show how much it matters.
 
 ---
 
-**Describe the data before testing them. — 02:51–02:53** [INTERACTION]
+**Look at all four experiments — 02:55–02:58** [INTERACTION]
 
-Give most of these two minutes to participants. All 90 tube/protein summaries are shown: two lines, nine available condition-tubes per line across days, five proteins. These are not 90 independent biological observations. Conditions on a trace share a preparation; proteins from a lysate and lines on a day share sources of variation. Means include the excluded reading; its marked tube mean is therefore different from the researcher’s retained-well mean. Day traces do not imply longitudinal follow-up or a fitted dose-response curve. Ask about decrease, size on the displayed arbitrary assay scale, variation across days and inconsistent proteins. Signal values across proteins are not directly comparable biological effect scales. P1 tends to decline with dose in this constructed screen, but effect estimates across independent preparations remain uncertain with so few repeats. Avoid significance stars and a new pooled p-value. The individual excluded reading can be checked in the CSV or facilitator figure; the full plot shows biological-unit summaries, not technical rows counted as N.
-
----
-
-**Repeat the study so it can answer your biological question. — 02:53–02:59** [INTERACTION]
-
-Distribute workshop-design-canvas.html as a one-page handout or keep this slide visible. Give six minutes, with a one-minute warning. Participants choose a defensible narrow question and sketch the allocation/replication. They need not fill every box in prose. Circulate and ask what independently repeats, which sources of biological variation matter, whether controls support the claim, how the primary effect is defined, and what sample-size inputs are still missing. Do not provide an invented numerical N without a scientifically relevant effect and plausible variability. Encourage different legitimate questions: one chosen line/protein/dose confirmation versus a broader exploratory screen with an explicit family. Keep participants talking; do not lecture through the canvas.
+Give pairs two minutes. On the left, the days are pooled on a linear scale with SEM: the day-to-day differences in IL-6 (about 500 to 2400 pg/mL) swamp the treatment effect and the bars overlap. On the right, the same eight values are paired by day and plotted on a log scale: within each of days 1–3, R lowered IL-6 by roughly 25–40%, while on day 4 it did not. Connect three key messages: pair or block by day, use a log scale for cytokines, and show the individual experiments. Ask what a reader would conclude from each panel.
 
 ---
 
-**One defensible repeat—not the only one. — 02:59–03:02**
+**Analyse the experiment, not the ELISA wells — 02:58–03:01**
 
-Ask one group to describe its choice for a minute before revealing or discussing this example. Then spend two minutes comparing. This independent repeat confirms a hypothesis generated by the original screen; choosing the focus now does not make the old result confirmatory. Prepare multiple independently initiated Line B cultures; split each across vehicle and high R, with same-day matched handling and randomized positions. Retain three assay repeats for precision, average after prospectively defined QC, and analyse independent preparation differences if their assumptions are credible. If multiple preparations share day-dependent treatment effects, balance/block and reflect the dependence; sample days as required by the target. Choose independent N prospectively from a minimum relevant effect, plausible SD of paired differences, desired precision/power, alpha and attrition; no reliable N is determined by this tiny screen. Add controls needed to distinguish reduced protein response from assay interference or nonspecific cell loss before claiming a mechanism. Secondary lines/doses/proteins remain transparently exploratory or receive a prespecified family and suitable multiplicity plan. Report estimates, intervals, raw structure and any p-values.
-
----
-
-**What improved before any test was run? — 03:02–03:04** [INTERACTION]
-
-Invite groups to identify their most consequential change and one remaining limitation. Preserve useful features of the original: contemporaneous controls, some day overlap, two lines and a legitimate exploratory screen. Some issues can be improved analytically now: show all data, clarify provenance, restore/review the unexplained exclusion, respect blocks, and label selection. Other limits cannot be repaired from these data: inadequate independent replication, unmeasured controls and restricted experimental space. Explain that a new experiment supplies information, not just a more favourable p-value. Avoid implying the original researcher was incompetent.
+Walk through the three numbers. The reported p < 0.001 came from ELISA wells of one day. The appropriate analysis uses one value per experiment: the log fold change R/vehicle within each day, then a paired (one-sample) t-test on those values. With days 1–3: IL-6 fell to 0.65 of vehicle (95% CI 0.46 to 0.92), p = 0.03. With all four days: 0.74 (0.46 to 1.18), p = 0.14. The estimate barely moves; the interval and the p-value do. Point out that the after-the-fact exclusion is exactly what moves p across 0.05. Neither version supports a confident claim: three or four experiments give a wide interval. The data are compatible with anything from a 50% reduction to no effect.
 
 ---
 
-**“My p-value is 0.032. Is my result real?” — 03:04–03:05** [INTERACTION]
+**IL-6, TNF and IL-1β were measured. Why report only IL-6? — 03:01–03:03** [INTERACTION]
 
-Give participants about forty seconds to formulate a response before revealing the final prompt. Seek a useful conversation rather than yes/no. The laboratory observations exist, but their interpretation depends on design, uncertainty and selection; this technical-well p-value cannot support the biological claim as reported. A promising exploratory pattern can justify an independent repeat without being treated as established truth.
+Reveal that the ELISA panel also measured TNF and IL-1β, which showed no consistent change. IL-6 was reported because it "worked". That is not dishonest by intention, but it turns the experiment into a search: with three readouts the chance that at least one looks convincing by chance is higher than for one pre-chosen readout. The IL-6 signal is a reasonable hypothesis for a new experiment, with IL-6 named as the primary readout in advance. Also note the biology: an anti-inflammatory compound that lowers IL-6 but not TNF or IL-1β calls for a narrower claim than "suppresses inflammation".
 
 ---
 
-**From a biological question to a defensible claim — 03:05–03:06**
+**“Suppresses inflammation” — what can these data support? — 03:03–03:05** [INTERACTION]
+
+Ask for votes and one reason each. Only the third option matches the evidence: one cell type, one stimulus, one dose, one readout, a consistent reduction in three of four experiments and an interval that still includes no effect. "Suppresses inflammation" generalises from one cytokine to a biological process; TNF and IL-1β contradict it. Patients are far outside the experimental space. Link back to the Session 1 population question: the claim follows what was sampled and measured, not the p-value.
+
+---
+
+**Done correctly, the answer is usually less exciting — 03:05–03:06**
+
+Name what just happened. Every correction — counting experiments instead of ELISA wells, keeping day 4, reporting all three cytokines, narrowing the claim — made the result less spectacular. This is the normal experience of doing it properly, not bad luck. Reassure the audience: a modest, honest result is publishable, a solid basis for the next experiment, and far less likely to collapse when someone else repeats it. The exciting version is the one that tends not to replicate.
+
+---
+
+**Repeat the study so it can answer the question — 03:06–03:12** [INTERACTION]
+
+Distribute workshop-design-canvas.html as a handout or keep this slide visible. Give six minutes with a one-minute warning. Circulate and ask: what is the experimental unit; how many independent experiments and why; do vehicle and R share a day and plate; what makes an experiment valid, decided in advance; what is the primary readout; which scale and figure. Accept different defensible designs. Do not supply a number for N without a relevant effect and an estimate of variability — but point out that the day-to-day variability seen here is useful planning information.
+
+---
+
+**One defensible repeat — not the only one — 03:12–03:15**
+
+Ask one group to present its design first, then compare with this example. The repeat confirms the hypothesis generated by the original data; choosing IL-6 now does not make the old result confirmatory. N: with a standard deviation of about 0.4 in log2 fold change between experiments (as in the four days here) and a relevant effect of a 30% reduction, about seven paired experiments give 80% power at α = 0.05 — this is an illustration of the planning logic, not a recommendation. The QC rule makes exclusions independent of the treatment result. ELISA triplicates are kept and averaged per culture well: they improve the measurement, not N. Add a viability readout if the claim is that R lowers IL-6 production rather than killing cells.
+
+---
+
+**What improved before any test was run? — 03:15–03:17** [INTERACTION]
+
+Ask groups for their single most consequential change and one remaining limitation. Some problems can be fixed by reanalysis now: show all four days, analyse per experiment, report both versions of the day-4 decision, report all three cytokines. Others need new data: more independent experiments, an unstimulated control, a fixed QC rule and a pre-chosen primary readout. A new experiment adds information; it is not a search for a better p-value.
+
+---
+
+**Plan the experiment before you pipette — 03:17–03:18**
+
+Connect the comparison on the previous slide to a habit: every improvement in the planned repeat was a decision made before data collection. Recommend writing a one-page plan — question, primary readout, experimental unit, number of independent experiments, pairing or blocking, QC and exclusion rules, planned analysis — and discussing it with a colleague or statistician before starting. Point to the two books: Lazic is written for laboratory biologists and covers experimental units, pseudoreplication, blocking and power with lab examples; Glass covers the logic of hypotheses, controls and experimental strategy. Both are readable without a statistics background.
+
+---
+
+**“My p-value is below 0.001. Is my result real?” — 03:18–03:20** [INTERACTION]
+
+Give participants about a minute to formulate a response, then reveal the prompt. Aim for a useful conversation rather than yes or no. The IL-6 reduction may well be real — three of four experiments point the same way — but the reported p-value describes ELISA precision on one day, and the honest evidence is weaker and depends on a post-hoc exclusion. The constructive answer is a planned repeat, not a verdict on the researcher.
+
+---
+
+**From a biological question to a defensible claim — 03:20–03:21**
 
 Use the diagram as a reconstruction, not another list of definitions. Ask where the group made its most important decision. The path is iterative: a model informs estimation and uncertainty even though it is named later in this conceptual chain; planning revisits the question and design. Power follows the relevant effect and independent information, while multiplicity follows intended claims and selection opportunities. Neither is an isolated last-minute statistical repair. Do not introduce a new formula.
 
 ---
 
-**Statistics cannot rescue an experiment that could not answer the question. — 03:06–03:07**
+**Ten things to take home — 03:21–03:22**
+
+Read the ten messages without elaborating; each one was already discussed. Ask participants which one would most change how they plan or report their next experiment. Then move to the final slide.
+
+---
+
+**Statistics cannot rescue an experiment that could not answer the question. — 03:22–03:23**
 
 Connect explicitly to the opening motivation: researchers often seek statistical help only after collecting data. This is an invitation to bring the biological question and protocol earlier, not a criticism of colleagues or a claim that imperfect data are worthless. Thoughtful reanalysis may recover supported comparisons; it cannot create missing independent units, identify completely confounded effects or supply absent population coverage. Ask each participant to choose one design conversation to have before the next collection. Thank them and stop here.
 

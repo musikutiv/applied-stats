@@ -218,16 +218,18 @@
 
 :::
 
-## Exploration is useful science {#explore-then-confirm}
+## Exploration is useful science {#explore-then-confirm .key-message}
+
+<p class="key-label">Key message</p>
 
 <p class="medium">Explore → generate a hypothesis<br>→ independently test it</p>
-<p class="takeaway">Show which ideas emerged from the data.</p>
-<p class="small">An exploratory finding is not prespecified confirmation just because the same analysis is described that way afterward.</p>
+<p class="key-statement compact">A p-value from exploratory data means little:<br>the hypothesis came from the same data.</p>
+<p class="key-support">Show which ideas emerged from the data — and test them in a new experiment.</p>
 
 ::: notes
 **Time: 01:27–01:29 (2 minutes).**
 
-**Say:** Reconnect to Session 1. Transformations, subgroup inspection and hypothesis generation are legitimate exploratory work. The problem is attaching confirmatory error guarantees as though the hypothesis and analysis had been fixed before those same observations were examined. Report discovery as discovery and independently test important resulting claims with an appropriate design. Independence means genuinely new information not reused to select the claim; it does not guarantee success. Avoid suggesting that every exploratory calculation needs a mechanical adjustment or that exploration is inferior science.
+**Say:** Reconnect to Session 1. Transformations, subgroup inspection and hypothesis generation are legitimate exploratory work. The problem is attaching confirmatory error guarantees as though the hypothesis and analysis had been fixed before those same observations were examined. Report discovery as discovery and independently test important resulting claims with an appropriate design. Independence means genuinely new information not reused to select the claim; it does not guarantee success. Avoid suggesting that every exploratory calculation needs a mechanical adjustment or that exploration is inferior science. Land the key message: when the hypothesis was suggested by the same data, a p-value from those data has almost no evidential value — it describes how unusual the pattern was that we already selected for being unusual. Show the exploration; reserve testing for the new experiment.
 
 **Conceptual point:** Exploration and confirmation serve complementary roles with different inferential claims.
 

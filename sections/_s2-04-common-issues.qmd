@@ -10,7 +10,7 @@
 <p class="takeaway">Recognising these makes you a better reader — and a better author.</p>
 
 ::: notes
-**Time: 02:26–02:27 (1 minute).**
+**Time: 02:29–02:30 (1 minute).**
 
 **Say:** Preview the four topics without discussing them yet. This block is practical: each issue appears in the literature your participants already read. Move quickly to the first slide; the meat is in what follows.
 
@@ -30,7 +30,7 @@
 <p class="fine">Left: absolute scale. Three-fold up = +200; three-fold down = −67. Asymmetric on this scale. Right: log₂ fold change. Both are ±1.58. RNA-seq log₂ fold change applies this directly. For the L1 enzyme assay, absolute differences are appropriate — effects are small and baselines similar.</p>
 
 ::: notes
-**Time: 02:27–02:30 (3 minutes).**
+**Time: 02:30–02:33 (3 minutes).**
 
 **Say:** Ask participants to predict what three-fold up and three-fold down look like on an absolute scale before revealing the left panel. Show the asymmetry: from a baseline of 100, three-fold up is +200 while three-fold down is only −67. The visual impression on the absolute scale is that the upward effect is roughly three times the downward effect — but both represent the same fold change. On the log₂ scale, both are ±1.58, which is why RNA-seq analysis uses log₂ fold change as standard. Connect to what they already know: when a paper reports "2-fold induction," that is a ratio, and ratios should be compared on the log scale. Briefly note that for the L1 enzyme data, absolute differences are appropriate: the baseline range is narrow (79–113 U/mg), effects are small fractions of baseline, and U/mg differences are directly interpretable. The choice depends on whether effects are expected to compound multiplicatively or add linearly across the measurement range.
 
@@ -51,7 +51,7 @@
 <p class="fine">Both panels show the same L1 enzyme experiment. A dot plot or line plot with a marked non-zero baseline can legitimately start elsewhere; a bar chart cannot.</p>
 
 ::: notes
-**Time: 02:30–02:33 (3 minutes).**
+**Time: 02:33–02:36 (3 minutes).**
 
 **Say:** Ask which panel shows the larger effect. Wait for a show of hands, then confirm: they are identical data. The right panel truncates the y-axis at 70, so the visible bar lengths represent roughly 27 and 17 units instead of 97 and 87. The visual height ratio is about 1.6; the actual ratio is about 1.1. The bar chart uses visual area as its information — cropping it at an arbitrary point changes that information without changing the numbers. For line plots and dot plots, a non-zero baseline with clearly labelled axes can be legitimate when the data range is far above zero; the bar chart is the problem because the bar's length is its encoding, and it starts at zero by convention. Ask participants to find an example in a paper they know.
 
@@ -72,7 +72,7 @@
 <p class="small">Publications often use a gap symbol (⁄⁄) to skip the empty middle of the y-axis. This hides how far apart the values really are. Log scale is the honest alternative when effects are proportional.</p>
 
 ::: notes
-**Time: 02:33–02:36 (3 minutes).**
+**Time: 02:36–02:39 (3 minutes).**
 
 **Say:** Ask which panel lets them compare all four conditions meaningfully. On the linear scale, the three low-value bars are barely visible — they look identical even though low and high dose differ by four-fold. Publications often solve this by cutting out the middle of the y-axis with a break symbol. That removes the true distance between values from the visual — a reader cannot tell how far the stimulated bar is from the others. Log scale is the correct solution when data span more than one order of magnitude: on a log scale, equal vertical distances mean equal fold changes. The stimulated condition is about 80-fold above unstimulated. On the linear scale that relationship is invisible; on the log scale it is clearly encoded. Axis breaks are tempting and look authoritative in papers — point out they are almost always a sign that log scale should have been used instead.
 
@@ -85,6 +85,25 @@
 **Sources:** Tufte (2001) *The Visual Display of Quantitative Information* pp. 53–77; Bland & Altman (1996) *BMJ* 312:1079 — log transformation for proportional differences.
 :::
 
+## Many lab measurements belong on a log scale {#log-measurements .key-message}
+
+<p class="key-label">Key message</p>
+<p class="key-statement">Fluorescence, RNA and protein levels, cytokines, counts:<br>analyse and plot them on a log scale.</p>
+<p class="key-support">These quantities change by factors, not fixed amounts, and their spread grows with their level. On the log scale fold changes become symmetric and comparable.</p>
+
+::: notes
+**Time: 02:39–02:40 (1 minute).**
+
+**Say:** Tie the last two slides together. Most quantities measured in a life-science lab — fluorescence intensity, qPCR and RNA-seq expression, Western blot or ELISA signals, cytokine concentrations, cell or colony counts — behave multiplicatively: treatments change them by a factor, and higher levels vary more. Log-transform before computing means, intervals and tests, and plot on a log axis. Report results as fold changes, back-transformed from the log scale. The L1 enzyme assay is an exception only because the effect is small relative to a narrow baseline range.
+
+**Conceptual point:** The scale of analysis should match how the biology changes: proportional changes call for a log scale.
+
+**Likely misconception:** Log transformation is a cosmetic trick to make data look normal, or is only needed for RNA-seq.
+
+**Sources:** Bland & Altman (1996) *BMJ* 312:1079; Keene (1995) *Stat Med* 14:811 — the log transformation is special.
+:::
+
+
 ## Three error bars. Three different claims. {#error-bars-which}
 
 <img class="data-plot" src="figures/generated/error-bars-comparison.png" alt="Three panels each showing Vehicle and Compound Q group means. Left panel: ± SD error bars (widest). Centre panel: ± SEM error bars (narrower). Right panel: ± 95% CI error bars (widest for this small n). The widths differ substantially across panels." />
@@ -92,9 +111,9 @@
 <p class="fine">Same six L1 preparations throughout. SD: spread of individual preparations. SEM: precision of the group mean. 95% CI: range of effect sizes compatible with the data. Each answers a different question.</p>
 
 ::: notes
-**Time: 02:36–02:39 (3 minutes).**
+**Time: 02:40–02:43 (3 minutes).**
 
-**Say:** Cover the panel titles and ask what the bars mean. Reveal them. SD is the spread in the raw data — it describes biological variability and stays roughly constant as n increases. SEM is SD/√n — it shrinks as you add replicates regardless of the biology and describes estimation precision. A 95% CI is wider than SEM (approximately ±t·SEM for small n) and describes the range of effect sizes the data cannot rule out — which is what a reader needs to assess a claim. For six preparations, the CI is notably wider than the SEM. Many published figures show SEM because it looks smaller, suggesting more precision than the data support. An unlabelled error bar cannot be distinguished. Recall from Session 1: report the CI or SE with the effect estimate, not the SD alone, when your reader needs to know how precisely the effect is known.
+**Say:** Cover the panel titles and ask what the bars mean. Reveal them. SD is the spread in the raw data — it describes biological variability and stays roughly constant as n increases. SEM is SD/√n — it shrinks as you add replicates regardless of the biology and describes estimation precision. A 95% CI is wider than SEM (approximately ±t·SEM for small n) and describes the range of effect sizes the data cannot rule out — which is what a reader needs to assess a claim. For six preparations, the CI is notably wider than the SEM. The rule from Session 1: use SD to describe how variable the preparations are; when reporting an effect, give the SEM or, better, the 95% CI — and always say which. The problem is not SEM itself but an unlabelled bar, or SEM used to describe variability, which makes the data look less variable than they are. Recall from Session 1: report the CI or SE with the effect estimate, not the SD alone, when your reader needs to know how precisely the effect is known.
 
 **Conceptual point:** Error bars describe fundamentally different quantities. Swapping them or leaving them unlabelled misleads the reader.
 
@@ -115,7 +134,7 @@
 <p class="takeaway">A good figure lets a careful reader re-examine the raw evidence.</p>
 
 ::: notes
-**Time: 02:39–02:42 (3 minutes).**
+**Time: 02:43–02:46 (3 minutes).**
 
 **Say:** Allow two minutes in pairs, then collect answers. With the right panel, a reader can: see each individual preparation; see which preparations responded consistently; check whether one preparation is driving the result; verify the direction; mentally reproduce the paired analysis. With the left panel, a reader sees only group means and one aggregate uncertainty measure. The jitter in the bar chart does not show which Vehicle and Compound Q dots came from the same preparation — the pairing is invisible. The honest figure is not more complicated: it displays the same six values each, but preserves the experimental structure. Invite a brief discussion of whether participants' most recent submitted figure would pass this test.
 

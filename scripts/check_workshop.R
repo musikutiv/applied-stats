@@ -1,8 +1,12 @@
-x<-read.csv('data/workshop/technical_readings.csv');a<-read.csv('data/workshop/vessel_means.csv');p<-read.csv('data/workshop/researcher_screen.csv')
-stopifnot(nrow(x)==270,nrow(a)==90,nrow(p)==60,sum(x$excluded)==1)
-s<-subset(x,line=='Line B'&day==2&protein=='P1');v<-s$value[s$dose=='Vehicle'];r<-s$value[s$dose=='High'];se<-sqrt(var(v)/3+var(r)/3);df<-(var(v)/3+var(r)/3)^2/((var(v)/3)^2/2+(var(r)/3)^2/2);direct<-2*pt(-abs((mean(r)-mean(v))/se),df)
-stopifnot(abs(direct-.032)<1e-12,abs(t.test(r,v)$p.value-.032)<1e-12,abs(mean(v)-100)<1e-12)
-agg<-aggregate(value~line+day+prep+dose+protein,x,mean);key<-function(d)with(d,paste(line,day,dose,protein));stopifnot(max(abs(agg$value-a$value[match(key(agg),key(a))]))<1e-10)
-for(i in 1:nrow(p)){z<-x[x$line==p$line[i]&x$day==p$day[i]&x$protein==p$protein[i]&x$dose%in%c('Vehicle',p$dose[i])&!x$excluded,];stopifnot(abs(t.test(value~dose,z)$p.value-p$p[i])<1e-12)}
-stopifnot(sum(a$excluded_in_vessel)==1,all(table(interaction(x$line,x$day,x$dose,x$protein,drop=TRUE))==3))
-cat('Workshop checks passed: all means, 60 reported screen calculations, exact .032 construction, hierarchy and exclusion.\n')
+# Validate the workshop data against the numbers used on the slides.
+w <- read.csv("data/workshop/elisa_wells.csv")
+f <- read.csv("data/workshop/day_fold_changes.csv")
+stopifnot(nrow(w) == 72, nrow(f) == 12, all(table(w$cytokine, w$day, w$condition) == 3))
+d1 <- subset(w, cytokine == "IL-6" & day == 1)
+stopifnot(t.test(value ~ condition, d1)$p.value < 0.001)
+x <- f$log2fc[f$cytokine == "IL-6"][order(f$day[f$cytokine == "IL-6"])]
+p3 <- t.test(x[1:3])$p.value; p4 <- t.test(x)$p.value
+stopifnot(round(p3, 2) == 0.03, round(p4, 2) == 0.14,
+          round(2^mean(x[1:3]), 2) == 0.65, round(2^mean(x), 2) == 0.74,
+          all(x[1:3] < 0), x[4] > 0)
+cat("Workshop checks passed: reported p < 0.001; per-experiment p = 0.03 (days 1-3) and 0.14 (all days).\n")

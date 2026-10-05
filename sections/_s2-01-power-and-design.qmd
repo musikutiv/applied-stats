@@ -154,11 +154,13 @@
 
 :::
 
-## p > α does not mean no effect {#no-effect-fallacy}
+## p > α does not mean no effect {#no-effect-fallacy .key-message}
+
+<p class="key-label">Key message</p>
 
 <p class="big">Our interval: −23 to +2 U/mg.</p>
 <p class="big">It includes zero — and a reduction<br>of almost a quarter of enzyme activity.</p>
-<p class="takeaway keyline">Absence of evidence is not evidence of absence.</p>
+<p class="key-statement compact keyline">Absence of evidence is not evidence of absence.</p>
 
 ::: notes
 **Time: 00:19–00:20 (1 minute).**

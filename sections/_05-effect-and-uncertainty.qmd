@@ -284,13 +284,15 @@
 
 :::
 
-## Report the estimate and its precision {#report-se-not-sd}
+## Report the estimate and its precision {#report-se-not-sd .key-message}
+
+<p class="key-label">Key message</p>
 
 <div class="research-paths">
 <div><h3>SD — spread of preparations</h3><p>How much do individual<br>preparations vary?</p><p class="small">Describes biological variability<br>across observations.</p></div>
 <div><h3>SE or CI — estimate precision</h3><p>How well does the mean<br>characterise the true average?</p><p class="small">Describes how precisely<br>we know the average effect.</p></div>
 </div>
-<p class="takeaway keyline">Report what your reader needs: the effect size and how precisely it is known.</p>
+<p class="key-statement compact keyline">Reporting an effect? Give the SEM or, better, the 95% CI — not the SD.</p>
 
 ::: notes
 **Time: 02:53–02:55 (2 minutes).**

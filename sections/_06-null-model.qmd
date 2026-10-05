@@ -243,6 +243,25 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 
 :::
 
+## A small p-value is not a large effect {#p-not-effect .key-message}
+
+<p class="key-label">Key message</p>
+<img class="data-plot short-plot" src="figures/generated/p-vs-effect.png" alt="Two hypothetical paired experiments with the same p-value of 0.01. Experiment A, 200 pairs: mean change minus 2 U/mg, narrow interval minus 3.5 to minus 0.5. Experiment B, 6 pairs: mean change minus 20 U/mg, wide interval minus 32.8 to minus 7.2." />
+<p class="key-statement compact">Same p-value. Ten-fold different effect.</p>
+<p class="key-support">p says how compatible the data are with zero — not how large or biologically relevant the change is. Judge relevance from the effect and its interval.</p>
+
+::: notes
+**Time: 03:25–03:26 (1 minute).**
+
+**Say:** Point at the two p-values first: identical. Then at the two effects: −2 versus −20 U/mg. Experiment A has 200 pairs, so even a tiny change is estimated precisely and lies far from zero in SE steps. Experiment B has only six pairs, so a large change gives the same p. Ask which result matters biologically. A loss of 2 U/mg against roughly 98 U/mg is about 2% of activity; −20 is about 20%. The p-value cannot tell you this; the effect and its interval can. Both experiments are constructed illustrations, not L1 data.
+
+**Conceptual point:** A p-value combines effect size, variability and sample size into one number. It does not measure magnitude or biological relevance.
+
+**Likely misconception:** A smaller p-value means a larger or more important effect.
+
+**Sources:** Constructed illustration; values derived exactly from p = 0.01 (scripts/generate_p_vs_effect.R). Wasserstein & Lazar (2016) *Am Stat* 70:129 — ASA statement on p-values, principle 5.
+:::
+
 ## What can we report about compound Q? {#report-q-with-p .interaction}
 
 <p class="prompt-tag">Report to a neighbour · 1 minute</p>
@@ -252,7 +271,7 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 <p class="fine">Six L1 preparation pairs · conditional on independent, approximately normal differences.</p>
 
 ::: notes
-**Time: 03:25–03:28 (3 minutes).**
+**Time: 03:26–03:29 (3 minutes).**
 
 **Say:** Give a minute for a spoken or written report and two for debrief. The observed mean is a reduction of 10.4 U/mg, with the displayed broad interval. The t statistic is 2.10 estimated SEs below zero. Assuming zero mean and the model, an absolute statistic this large or larger occurs about 9% of the time. At a prespecified 0.05 rule this would not reject H0; explain if using that phrase that it does not establish H0. The interval remains compatible with substantial reductions and some small increases. No validated biological relevance threshold is supplied. Do not conclude that Q works or does not work, infer a mechanism, or generalize beyond the specified L1 process. Dependence or bias would undermine the simple model rather than being repaired by a p-value.
 
@@ -271,7 +290,7 @@ On B specifically: it is the most seductive wrong answer and worth one extra min
 <p class="quote uncertainty-final">What if the experiment was simply too small to give a clear answer?</p>
 
 ::: notes
-**Time: 03:28–03:29 (1 minute).**
+**Time: 03:29–03:30 (1 minute).**
 
 **Say:** Read the question and stop. It is a possibility to investigate, not a conclusion that this experiment was necessarily too small. Leave the question unanswered. Do not introduce the next block’s concepts, formulas or planning advice.
 

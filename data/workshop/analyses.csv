@@ -1,0 +1,4 @@
+"analysis","p","fold","ci_lo","ci_hi"
+"Reported: day 1 IL-6, 3 vs 3 ELISA wells (Welch)",8.3227916976559e-05,NA,NA,NA
+"IL-6 paired log fold change, days 1-3",0.0329543737171754,0.647584644927916,0.457238863328855,0.917170227598958
+"IL-6 paired log fold change, all 4 days",0.135015317235637,0.741572368737712,0.464349432353891,1.18430117441416

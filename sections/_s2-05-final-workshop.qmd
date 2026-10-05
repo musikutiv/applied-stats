@@ -1,15 +1,18 @@
-## “Compound R significantly suppresses inflammation” {#r-lab-meeting .interaction}
+## “Compound R suppresses inflammation” {#r-lab-meeting .interaction}
 
-<p class="small">Stimulated cultured cells were treated with vehicle or compound R.<br>Protein signal was quantified in triplicate.</p><img class="data-plot workshop-plot" src="figures/generated/workshop-opening.png" alt="Lab-meeting plot: three measurements each for vehicle and R, with mean bars." /><p class="takeaway">p = 0.032 &nbsp; · &nbsp; n = 3</p><p class="prompt-tag">Would you believe this conclusion?</p>
+<p class="small">LPS-stimulated macrophages were treated with vehicle or compound R (10 µM, 24 h).<br>IL-6 in the supernatant was measured by ELISA.</p>
+<img class="data-plot workshop-plot" src="figures/generated/workshop-report.png" alt="Lab-meeting bar chart: IL-6 about 830 pg/mL with vehicle and 480 pg/mL with compound R, tiny SEM error bars, three stars." />
+<p class="takeaway">*** p &lt; 0.001 &nbsp;·&nbsp; n = 3 &nbsp;·&nbsp; representative of independent experiments</p>
+<p class="prompt-tag">Would you believe this conclusion?</p>
 
 ::: notes
-**Time: 02:42–02:43 (1 minute).**
+**Time: 02:46–02:48 (2 minutes).**
 
-**Say:** Give participants one minute to react without correcting them. Present this as a colleague asking for help, not a trap or evidence of incompetence. The illustrative report omits information that participants must request. Do not lead with which test was used. Instructor-only provenance: this is Line B, day 2, P1, high dose versus stimulated vehicle. Three assay wells per condition are aliquots of one treated culture-tube lysate, not three independently treated cultures. Mean signals are 100 and 86.8169. The displayed Welch calculation on technical wells is exactly .032, but does not justify biological treatment inference. Do not reveal this yet. The entire workshop is fictional teaching data.
+**Say:** Present this as a colleague's lab-meeting slide, not a trap. Give participants a minute to react without correcting them. Most will find it convincing: a clean 40% reduction, tiny error bars, three stars, and the reassuring legend "representative of independent experiments". Do not reveal anything yet. Instructor-only provenance: the figure shows day 1 of four experiments; n = 3 are the three ELISA wells of one supernatant per condition; the Welch t-test on those wells gives p = 0.00008. The entire scenario is fictional teaching data (scripts/generate_workshop.R).
 
-**Conceptual point:** A reported p-value and n do not define the evidence.
+**Conceptual point:** A p-value, an n and a tidy figure do not define the evidence.
 
-**Likely misconception:** The result must be either real or false based on the threshold.
+**Likely misconception:** Small error bars and many stars mean a reliable result.
 
 **Optional follow-up:** What is your first reaction, and what would change it?
 
@@ -21,15 +24,15 @@
 <p class="question">Ask the researcher.</p><p class="small">Collect questions before offering advice.</p>
 
 ::: notes
-**Time: 02:43–02:46 (3 minutes).**
+**Time: 02:48–02:51 (3 minutes).**
 
-**Say:** Let participants supply questions for roughly two minutes, then group them verbally for one minute. Do not display a checklist. If needed, ask one neutral follow-up. Listen for what n counts; independent repetition; culture/well generation; contemporaneous vehicle; allocation across days; line shown; proteins, doses and comparisons inspected; exclusion rationale; prospective hypothesis and analysis; population or experimental space. Answer that these details are available on the next slides. Reward requests for provenance without turning this into an exam. Avoid labelling exploratory work as misconduct.
+**Say:** Let participants supply questions for about two minutes, then group them for one minute. Do not show a checklist. Listen for: what does n = 3 count; how many independent experiments; what does "representative" mean and how was it chosen; were vehicle and R run on the same day; were other readouts measured; were any experiments or values left out; was the analysis planned in advance. Answer that the next slides reveal the details. Reward requests for provenance; avoid treating the researcher as dishonest — every step here is common practice.
 
-**Conceptual point:** Seek information before judging or prescribing an analysis.
+**Conceptual point:** Seek information before judging a result or prescribing an analysis.
 
 **Likely misconception:** The only missing detail is the name of the test.
 
-**Optional follow-up:** What in the laboratory notebook would help you interpret n?
+**Optional follow-up:** What in the lab notebook would answer most of these questions?
 
 **Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
 :::
@@ -38,165 +41,189 @@
 
 <p class="prompt-tag">Guess each layer before revealing</p>
 <div class="workshop-hierarchy">
-<p class="fragment">Two cell lines → one newly initiated preparation per line per day</p>
-<p class="fragment">Each preparation → available vehicle / low / medium / high dose tubes</p>
-<p class="fragment">One treated tube per available condition → one lysate</p>
-<p class="fragment">Each lysate → three assay wells → five protein measurements</p></div>
-<p class="takeaway">What is the experimental unit? What does n = 3 count?</p>
-
-::: notes
-**Time: 02:46–02:47 (1 minute).**
-
-**Say:** Reveal each layer after asking for a guess. There are two established cell lines, three experiment days, and one separately initiated preparation per line each day. Each available condition receives one culture tube; stimulation is common to all tubes, followed by vehicle or R for the same duration. Each lysate is assayed in three multiplex wells measuring five proteins. Thus the three wells are technical measurement repeats, not separately treated biological units. The tube receives treatment; independent biological replication for treatment comparisons comes from preparation/day repeats, with common preparation and day structure retained. Line is not an independent replicate of a universal cell population. No pooling of preparations occurred.
-
-**Conceptual point:** Assignment units, biological replication and technical measurements are different counts.
-
-**Likely misconception:** Three assay wells supply three biological treatment replications.
-
-**Optional follow-up:** At which step was compound R actually applied?
-
-**Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
-:::
-
-## What else changed when the dose changed? {#r-days .interaction}
-
-<p class="prompt-tag">Trace the day allocation · 1 minute</p>
-<img class="data-plot workshop-plot" src="figures/generated/workshop-days.png" alt="Day allocation: both lines have vehicle low medium on day 1, vehicle high on day 2, and all doses on day 3." /><p class="takeaway">How would you allocate the next experiment across days?</p>
-<p class="fine">One preparation per line per day; three assay wells per treated tube. Blank = not run.</p>
-
-::: notes
-**Time: 02:47–02:48 (1 minute).**
-
-**Say:** Explain that available plate capacity led to vehicle/low/medium on day 1, vehicle/high on day 2, and all conditions on day 3, identically for both lines. Allocation within each day was randomized, and every treated tube has a contemporaneous vehicle. This is an incomplete, imbalanced block design, not perfect treatment/day confounding. Comparing pooled dose means without day structure mixes different day compositions. Some within-day contrasts remain identifiable; only two preparations per line inform each nonzero dose. Day and preparation cannot be separately disentangled within a line here. Ask for balanced complete blocks next time if feasible, with randomized tube and assay positions. A model cannot replace the missing independent replication or create an unobserved condition.
-
-**Conceptual point:** Shared vehicle controls help, but day imbalance still affects what can be compared and how precisely.
-
-**Likely misconception:** Any batch imbalance makes every contrast impossible, or a day covariate cures all design limitations.
-
-**Optional follow-up:** Which comparisons are supported within the same day?
-
-**Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
-:::
-
-## “Suppresses inflammation”—in what experimental space? {#r-claim .interaction}
-
-<p class=”prompt-tag”>Choose the narrowest defensible claim</p>
-<div class=”workshop-claims”><p>These wells</p><p>Future preparations of this line, under these conditions</p><p>Both tested lines</p><p>Cultured cells generally</p><p>Patients</p></div>
-<p class="takeaway">Which claim could this design support?</p>
-
-::: notes
-**Time: 02:48–02:49 (1 minute).**
-
-**Say:** Ask for a scoped statement. A lower signal for one protein in one cell-line preparation is not proof of broad suppression of inflammation. Comparable future preparations of a stated line under the laboratory protocol are a plausible narrow target for a better replicated follow-up. Two available lines are not a random sample of all cells or patients. The same inflammatory stimulation and matched solvent were used throughout. Vehicle controls solvent and handling under stimulation; it does not establish absence of toxicity or assay interference. If the mechanistic claim requires those distinctions, request suitable viability/assay controls using concepts already taught. Do not add a separate new methods lesson.
-
-**Conceptual point:** Scope follows sampling, endpoints and controls rather than statistical significance.
-
-**Likely misconception:** A significant result determines external validity or mechanism.
-
-**Optional follow-up:** What would need to vary to support the next broader claim?
-
-**Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
-:::
-
-## How many chances did we give ourselves? {#r-opportunities .interaction}
-
-<p class="prompt-tag">Count before the reveal</p>
-<p class="question">2 lines × 3 doses × 5 proteins</p>
-<p class="small fragment">30 line–dose–protein comparisons of scientific interest.<br>60 day-specific comparisons were inspected.</p>
-<p class="takeaway">Which claims form the family—and what was the purpose?</p>
-
-::: notes
-**Time: 02:49–02:50 (1 minute).**
-
-**Say:** Allow a quick response before revealing the actual audit. The researcher compared each available dose with its same-day vehicle separately for every line/protein: two contrasts on day 1, one on day 2 and three on day 3, times two lines times five proteins, giving sixty technical-well Welch calculations. These tests share controls and protein measurements, so they are dependent; neither sixty nor thirty is an effective independent-test count. The .032 panel was selected as a promising example, not a prespecified primary endpoint and not necessarily the minimum p-value. The researcher had a broad exploratory goal and chose the analysis/reporting focus after seeing the screen. Define purpose and family before proposing a multiplicity strategy. Adjustment cannot repair invalid biological replication. Show all outcomes and uncertainty where defensible; do not mechanically calculate .032 times sixty.
-
-**Conceptual point:** Selection and dependence matter beyond a single reported p-value.
-
-**Likely misconception:** Counting tests and adjusting p alone repairs pseudoreplication and selection.
-
-**Optional follow-up:** What would be primary in a confirmatory repeat, and what would remain exploratory?
-
-**Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
-:::
-
-## “One value was excluded because it looked wrong.” {#r-exclusion .interaction}
-
-<p class="question">What would you need to know?</p>
-<p class="small fragment">Line A · day 3 · low dose · protein P3<br>One of three assay-well readings; no recorded failure or prior QC rule.</p>
-<p class="fine">The excluded value is not in the p = 0.032 panel.</p>
-
-::: notes
-**Time: 02:50–02:51 (1 minute).**
-
-**Say:** Ask for evidence before revealing the location. The value is 190 activity units; the other technical readings are retained. The record does not establish assay failure, recording error or biological cause. No prospective exclusion criterion was documented. The choice was made after viewing the screen, but we do not know whether the researcher checked its influence on a p-value. Do not invent intent. The exclusion is in another protein/line/dose, so it did not generate the selected .032 result. Valid exclusions are possible with a defensible measurement-based reason and audit trail. Retain it for transparent review and report sensitivity if unresolved; do not use a significance-improving rule.
-
-**Conceptual point:** Exclusion needs a reason grounded in measurement or data generation.
-
-**Likely misconception:** Either every extreme value must be deleted or none can ever be excluded.
-
-**Optional follow-up:** What record would turn an unexplained extreme reading into a documented QC failure?
-
-**Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
-:::
-
-## Describe the data before testing them. {#r-full-data .interaction}
-
-<p class="prompt-tag">Describe what you see · 2 minutes</p>
-<img class="data-plot workshop-plot workshop-full" src="figures/generated/workshop-full-data.png" alt="All ninety tube-level protein means, arranged by line and protein, with day traces and the mean containing the excluded reading circled." /><p class="small">Direction · magnitude · variability · consistency</p>
-<p class="fine">V/L/M/H = vehicle/low/medium/high. Each point = one tube mean, including all three assay wells.<br>Lines join conditions in the same preparation/day. Open ring: mean containing the excluded reading.</p>
+<p class="fragment">Four experiments, on four different days</p>
+<p class="fragment">Each day: fresh macrophages, LPS, one vehicle well and one R well</p>
+<p class="fragment">Each culture well → supernatant → three ELISA wells</p>
+<p class="fragment">The figure shows day 1 only. n = 3 counts its ELISA wells.</p></div>
+<p class="takeaway">What is the experimental unit — and how many are there?</p>
 
 ::: notes
 **Time: 02:51–02:53 (2 minutes).**
 
-**Say:** Give most of these two minutes to participants. All 90 tube/protein summaries are shown: two lines, nine available condition-tubes per line across days, five proteins. These are not 90 independent biological observations. Conditions on a trace share a preparation; proteins from a lysate and lines on a day share sources of variation. Means include the excluded reading; its marked tube mean is therefore different from the researcher’s retained-well mean. Day traces do not imply longitudinal follow-up or a fitted dose-response curve. Ask about decrease, size on the displayed arbitrary assay scale, variation across days and inconsistent proteins. Signal values across proteins are not directly comparable biological effect scales. P1 tends to decline with dose in this constructed screen, but effect estimates across independent preparations remain uncertain with so few repeats. Avoid significance stars and a new pooled p-value. The individual excluded reading can be checked in the CSV or facilitator figure; the full plot shows biological-unit summaries, not technical rows counted as N.
+**Say:** Reveal each layer after asking for a guess. Each day a fresh culture is stimulated and one well receives vehicle, one R: the culture well is the experimental unit, and the day is the independent replicate of the comparison. The three ELISA wells measure the same supernatant; they describe pipetting and plate precision, not biology. So the reported n = 3 and p < 0.001 describe how reproducible the ELISA is on day 1. The honest n for the treatment effect is the number of experiments — four, or three after the exclusion we will see next. "Representative" meant the clearest-looking day. Link back to Session 1: these are technical triplicates presented as replicates.
 
-**Conceptual point:** Raw unit-level views expose variation and selective reporting while preserving dependence.
+**Conceptual point:** Technical replicates measure the assay; independent experiments measure the biology.
 
-**Likely misconception:** Every plotted point is independent, or a visual trend proves the broad claim.
+**Likely misconception:** Three ELISA wells are three biological replicates, or a representative experiment stands for all of them.
 
-**Optional follow-up:** Which comparison appears worth a prospectively specified repeat?
+**Optional follow-up:** Which metadata would have shown this immediately?
 
 **Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
 :::
 
-## Repeat the study so it can answer your biological question. {#r-redesign .interaction}
+## “Day 4 was left out — the stimulation didn't work.” {#r-exclusion .interaction}
 
-<p class="prompt-tag">Pairs or small groups · 6 minutes · keywords or a sketch are enough</p><div class="workshop-canvas"><p><strong>Question / claim</strong><br>What do we want to learn, and for which experimental space?</p><p><strong>Unit / outcome</strong><br>What receives treatment independently? What will we measure?</p><p><strong>Primary comparison</strong><br>Which effect is the main scientific target?</p><p><strong>Replication</strong><br>Which biological variation must be sampled? Which technical uncertainty controlled?</p><p><strong>Design / allocation</strong><br>Where can pairing or blocking help? How will we randomize and balance days?</p><p><strong>Sample size</strong><br>What relevant effect, plausible variability and precision/power guide N?</p><p><strong>Multiplicity</strong><br>Which outcomes and comparisons are confirmatory or exploratory?</p><p><strong>QC / analysis</strong><br>What rules come first? Which effect, CI and model fit the design?</p></div>
+<p class="question">What would you need to know?</p>
+<p class="small fragment">Decided after the results were seen. No rule was set in advance,<br>and no unstimulated control was run to check the stimulation.</p>
+<p class="small fragment">Vehicle IL-6 on day 4: 501 pg/mL — the lowest, but days 1–3 ranged from 834 to 2444.<br>On day 4, R did not lower IL-6.</p>
 
 ::: notes
-**Time: 02:53–02:59 (6 minutes).**
+**Time: 02:53–02:55 (2 minutes).**
 
-**Say:** Distribute workshop-design-canvas.html as a one-page handout or keep this slide visible. Give six minutes, with a one-minute warning. Participants choose a defensible narrow question and sketch the allocation/replication. They need not fill every box in prose. Circulate and ask what independently repeats, which sources of biological variation matter, whether controls support the claim, how the primary effect is defined, and what sample-size inputs are still missing. Do not provide an invented numerical N without a scientifically relevant effect and plausible variability. Encourage different legitimate questions: one chosen line/protein/dose confirmation versus a broader exploratory screen with an explicit family. Keep participants talking; do not lecture through the canvas.
+**Say:** Ask what would make the exclusion legitimate before revealing the details. A valid exclusion needs a reason that is independent of the treatment result and, ideally, a rule written down before the data came in — for example, "an experiment counts only if LPS raises IL-6 at least ten-fold over an unstimulated well". Here there was no rule and no unstimulated well, so "the stimulation didn't work" cannot be checked. Vehicle IL-6 on day 4 was lower than on other days, but day 1 was not much higher. The decision was made after seeing that R had no effect that day. Do not accuse the researcher of misconduct: this is a very common, well-intended judgement. The next slides show how much it matters.
 
-**Conceptual point:** Prospective question, design and analysis decisions reinforce each other.
+**Conceptual point:** Exclusions need a reason independent of the outcome, ideally a rule fixed in advance.
 
-**Likely misconception:** There is one correct redesign or a magic independent sample size.
+**Likely misconception:** Any experiment that "looks wrong" may be dropped, or no experiment may ever be excluded.
 
-**Optional follow-up:** What would you change if the primary aim were discovery rather than confirmation?
+**Optional follow-up:** Which control would have made the day-4 decision checkable?
 
 **Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
 :::
 
-## One defensible repeat—not the only one. {#r-one-redesign}
+## Look at all four experiments {#r-all-days .interaction}
+
+<p class="prompt-tag">Which panel shows what R did? · 2 minutes</p>
+<img class="data-plot workshop-plot" src="figures/generated/workshop-all-days.png" alt="Left: IL-6 pooled over four days as bars with large SEM error bars; vehicle and R overlap. Right: the same data on a log scale, paired by day; R is lower than vehicle on days 1 to 3, slightly higher on day 4, which is dashed and marked as dropped." />
+<p class="takeaway fragment">IL-6 varies five-fold between days — but within days 1–3, R was always lower.</p>
+<p class="fine">Each point = one culture well (mean of its three ELISA wells). Dashed: day 4, dropped by the researcher.</p>
+
+::: notes
+**Time: 02:55–02:58 (3 minutes).**
+
+**Say:** Give pairs two minutes. On the left, the days are pooled on a linear scale with SEM: the day-to-day differences in IL-6 (about 500 to 2400 pg/mL) swamp the treatment effect and the bars overlap. On the right, the same eight values are paired by day and plotted on a log scale: within each of days 1–3, R lowered IL-6 by roughly 25–40%, while on day 4 it did not. Connect three key messages: pair or block by day, use a log scale for cytokines, and show the individual experiments. Ask what a reader would conclude from each panel.
+
+**Conceptual point:** Pairing by day removes day-to-day variation; the log scale shows proportional changes; individual experiments make the exclusion visible.
+
+**Likely misconception:** Pooled bars with SEM are an honest summary of an experiment run on several days.
+
+**Optional follow-up:** Which panel would you put in the paper — and what would you write about day 4?
+
+**Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
+:::
+
+## Analyse the experiment, not the ELISA wells {#r-reanalysis}
+
+<img class="data-plot workshop-plot" src="figures/generated/workshop-fold-changes.png" alt="IL-6 fold change R over vehicle, one point per experiment day. Days 1 to 3: mean fold 0.65, 95 percent CI 0.46 to 0.92, p 0.03. All four days: mean fold 0.74, 95 percent CI 0.46 to 1.18, p 0.14." />
+<p class="takeaway">Reported: p &lt; 0.001. Per experiment: p = 0.03 — or p = 0.14 if day 4 stays in.</p>
+<p class="small">One fold change per experiment, paired by day, on the log scale. The decision about day 4 matters more than the choice of test.</p>
+
+::: notes
+**Time: 02:58–03:01 (3 minutes).**
+
+**Say:** Walk through the three numbers. The reported p < 0.001 came from ELISA wells of one day. The appropriate analysis uses one value per experiment: the log fold change R/vehicle within each day, then a paired (one-sample) t-test on those values. With days 1–3: IL-6 fell to 0.65 of vehicle (95% CI 0.46 to 0.92), p = 0.03. With all four days: 0.74 (0.46 to 1.18), p = 0.14. The estimate barely moves; the interval and the p-value do. Point out that the after-the-fact exclusion is exactly what moves p across 0.05. Neither version supports a confident claim: three or four experiments give a wide interval. The data are compatible with anything from a 50% reduction to no effect.
+
+**Conceptual point:** The analysis must use the independent experiments as units; with few experiments, post-hoc decisions can decide the conclusion.
+
+**Likely misconception:** A more appropriate test would have rescued the result.
+
+**Optional follow-up:** Which of the two versions would you report, and how would you mention the other?
+
+**Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
+:::
+
+## IL-6, TNF and IL-1β were measured. Why report only IL-6? {#r-cytokines .interaction}
+
+<img class="data-plot workshop-plot" src="figures/generated/workshop-cytokines.png" alt="Fold change R over vehicle per experiment day for three cytokines. IL-6 lower on days 1 to 3; TNF and IL-1 beta scattered around 1." />
+<p class="takeaway fragment">Choosing the readout after seeing the data makes IL-6 an exploratory finding.</p>
+<p class="fine">One point per experiment day. Open circles: day 4.</p>
+
+::: notes
+**Time: 03:01–03:03 (2 minutes).**
+
+**Say:** Reveal that the ELISA panel also measured TNF and IL-1β, which showed no consistent change. IL-6 was reported because it "worked". That is not dishonest by intention, but it turns the experiment into a search: with three readouts the chance that at least one looks convincing by chance is higher than for one pre-chosen readout. The IL-6 signal is a reasonable hypothesis for a new experiment, with IL-6 named as the primary readout in advance. Also note the biology: an anti-inflammatory compound that lowers IL-6 but not TNF or IL-1β calls for a narrower claim than "suppresses inflammation".
+
+**Conceptual point:** Selecting one readout from several after seeing the data turns confirmation into exploration.
+
+**Likely misconception:** Unreported readouts are irrelevant to the one that is reported.
+
+**Optional follow-up:** How would you report all three cytokines honestly?
+
+**Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
+:::
+
+## “Suppresses inflammation” — what can these data support? {#r-claim .interaction}
+
+<p class="prompt-tag">Choose the strongest claim you could defend to a reviewer</p>
+<div class="workshop-claims"><p>R suppresses inflammation</p><p>R lowers IL-6, TNF and IL-1β</p><p>R lowered IL-6 in LPS-stimulated macrophages in 3 of 4 experiments — worth a planned repeat</p><p>R is anti-inflammatory in patients</p></div>
+
+::: notes
+**Time: 03:03–03:05 (2 minutes).**
+
+**Say:** Ask for votes and one reason each. Only the third option matches the evidence: one cell type, one stimulus, one dose, one readout, a consistent reduction in three of four experiments and an interval that still includes no effect. "Suppresses inflammation" generalises from one cytokine to a biological process; TNF and IL-1β contradict it. Patients are far outside the experimental space. Link back to the Session 1 population question: the claim follows what was sampled and measured, not the p-value.
+
+**Conceptual point:** The scope of a claim follows the design, the readouts and the uncertainty — not statistical significance.
+
+**Likely misconception:** A significant p-value licenses the broad mechanistic claim in the title.
+
+**Optional follow-up:** What would need to be added before "anti-inflammatory" is justified?
+
+**Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
+:::
+
+## Done correctly, the answer is usually less exciting {#less-exciting .key-message}
+
+<p class="key-label">Key message</p>
+<p class="key-statement">Done correctly, the answer is usually<br>less exciting than the first impression.</p>
+<p class="key-support">“R suppresses inflammation, p &lt; 0.001” became “R lowered IL-6 in 3 of 4 experiments — worth a planned repeat.” That is not a failure: it is the result that will still hold next year.</p>
+
+::: notes
+**Time: 03:05–03:06 (1 minute).**
+
+**Say:** Name what just happened. Every correction — counting experiments instead of ELISA wells, keeping day 4, reporting all three cytokines, narrowing the claim — made the result less spectacular. This is the normal experience of doing it properly, not bad luck. Reassure the audience: a modest, honest result is publishable, a solid basis for the next experiment, and far less likely to collapse when someone else repeats it. The exciting version is the one that tends not to replicate.
+
+**Conceptual point:** Correct analysis removes the illusory precision and selection that make results look strong; the remaining, smaller result is the reliable one.
+
+**Likely misconception:** A less exciting result after reanalysis means the analysis was too conservative or the experiment failed.
+
+**Sources:** Ioannidis (2005) *PLoS Med* 2:e124 — why most published research findings are false; Button et al. (2013) *Nat Rev Neurosci* 14:365 — small studies overestimate effects.
+:::
+
+## Repeat the study so it can answer the question {#r-redesign .interaction}
+
+<p class="prompt-tag">Pairs or small groups · 6 minutes · keywords or a sketch are enough</p>
+<div class="workshop-canvas">
+<p><strong>Question and primary readout</strong><br>What exactly do we want to learn? What is measured first?</p>
+<p><strong>Experimental unit and N</strong><br>What is independently repeated, and how often?</p>
+<p><strong>Pairing and allocation</strong><br>What should share a day or plate? How are wells assigned?</p>
+<p><strong>QC and exclusions</strong><br>Which rules are fixed before the results are seen?</p>
+<p><strong>Analysis and report</strong><br>Which effect, scale and interval? Which figure?</p>
+</div>
+
+::: notes
+**Time: 03:06–03:12 (6 minutes).**
+
+**Say:** Distribute workshop-design-canvas.html as a handout or keep this slide visible. Give six minutes with a one-minute warning. Circulate and ask: what is the experimental unit; how many independent experiments and why; do vehicle and R share a day and plate; what makes an experiment valid, decided in advance; what is the primary readout; which scale and figure. Accept different defensible designs. Do not supply a number for N without a relevant effect and an estimate of variability — but point out that the day-to-day variability seen here is useful planning information.
+
+**Conceptual point:** Question, design, QC and analysis are decided together and in advance.
+
+**Likely misconception:** There is one correct redesign, or N can be chosen without a relevant effect size.
+
+**Optional follow-up:** What would you change if the aim were to compare several doses?
+
+**Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
+:::
+
+## One defensible repeat — not the only one {#r-one-redesign}
 
 <div class="workshop-canvas">
-<p><strong>Focus</strong><br>Line B · P1 · high R versus vehicle<br>Mean change under the same stimulation protocol</p>
-<p><strong>Replicate</strong><br>New independent preparations; both conditions in each preparation</p>
-<p><strong>Allocate</strong><br>Balance within day; randomize tube and assay positions</p>
-<p><strong>Plan N</strong><br>Relevant effect + biological variability → target precision/power</p>
-<p><strong>Separate purposes</strong><br>Primary confirmation; remaining screen explicitly exploratory</p>
-<p><strong>Analyse and report</strong><br>Prespecified QC; paired effects and CIs; technical wells retained for precision</p></div>
+<p><strong>Question</strong><br>Does 10 µM R lower IL-6 in LPS-stimulated macrophages?<br>IL-6 primary; TNF and IL-1β exploratory</p>
+<p><strong>Unit and N</strong><br>One culture well per condition per independent experiment<br>About 7 experiments for a 30% reduction, from the variability seen here</p>
+<p><strong>Pairing</strong><br>Vehicle and R on the same day and plate; positions randomized</p>
+<p><strong>QC, fixed in advance</strong><br>Include an unstimulated well; keep an experiment only if LPS raises IL-6 ≥ 10-fold</p>
+<p><strong>Analysis and report</strong><br>Log fold change per experiment, paired; mean fold change with 95% CI; show every experiment</p>
+</div>
 
 ::: notes
-**Time: 02:59–03:02 (3 minutes).**
+**Time: 03:12–03:15 (3 minutes).**
 
-**Say:** Ask one group to describe its choice for a minute before revealing or discussing this example. Then spend two minutes comparing. This independent repeat confirms a hypothesis generated by the original screen; choosing the focus now does not make the old result confirmatory. Prepare multiple independently initiated Line B cultures; split each across vehicle and high R, with same-day matched handling and randomized positions. Retain three assay repeats for precision, average after prospectively defined QC, and analyse independent preparation differences if their assumptions are credible. If multiple preparations share day-dependent treatment effects, balance/block and reflect the dependence; sample days as required by the target. Choose independent N prospectively from a minimum relevant effect, plausible SD of paired differences, desired precision/power, alpha and attrition; no reliable N is determined by this tiny screen. Add controls needed to distinguish reduced protein response from assay interference or nonspecific cell loss before claiming a mechanism. Secondary lines/doses/proteins remain transparently exploratory or receive a prespecified family and suitable multiplicity plan. Report estimates, intervals, raw structure and any p-values.
+**Say:** Ask one group to present its design first, then compare with this example. The repeat confirms the hypothesis generated by the original data; choosing IL-6 now does not make the old result confirmatory. N: with a standard deviation of about 0.4 in log2 fold change between experiments (as in the four days here) and a relevant effect of a 30% reduction, about seven paired experiments give 80% power at α = 0.05 — this is an illustration of the planning logic, not a recommendation. The QC rule makes exclusions independent of the treatment result. ELISA triplicates are kept and averaged per culture well: they improve the measurement, not N. Add a viability readout if the claim is that R lowers IL-6 production rather than killing cells.
 
-**Conceptual point:** A defensible repeat depends on the question, not on one universally correct template.
+**Conceptual point:** A defensible repeat follows from the question; its decisions are written down before data collection.
 
-**Likely misconception:** Selecting a primary outcome now validates the earlier selected p-value.
+**Likely misconception:** Selecting the primary readout now validates the earlier result.
 
-**Optional follow-up:** How would your design change if both cell lines were central to the claim?
+**Optional follow-up:** Which control would you add to rule out that R simply kills the cells?
 
 **Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
 :::
@@ -204,36 +231,55 @@
 ## What improved before any test was run? {#r-what-changed .interaction}
 
 <p class="prompt-tag">Name your most consequential change · 1 minute</p>
-<div class="research-paths"><div><h3>Original report</h3><p>Broad claim; selected panel<br>n counted assay wells<br>Incomplete day blocks<br>Unrecorded exclusion rationale<br>Analysis chosen after the screen</p></div><div><h3>Prospective repeat</h3><p>Scoped question and primary effect<br>Defined biological replication<br>Balanced, randomized allocation<br>QC and reporting specified<br>N and model follow the design</p></div></div>
+<div class="research-paths"><div><h3>Original report</h3><p>One “representative” day shown<br>n counted ELISA wells<br>Day 4 dropped after seeing it<br>IL-6 picked from three readouts<br>Pooled bars, linear scale</p></div><div><h3>Planned repeat</h3><p>Every experiment shown<br>n = independent experiments<br>QC rule fixed in advance<br>One primary readout<br>Paired log fold changes with CI</p></div></div>
 <p class="takeaway">Most of the improvement happened before the statistical test.</p>
 
 ::: notes
-**Time: 03:02–03:04 (2 minutes).**
+**Time: 03:15–03:17 (2 minutes).**
 
-**Say:** Invite groups to identify their most consequential change and one remaining limitation. Preserve useful features of the original: contemporaneous controls, some day overlap, two lines and a legitimate exploratory screen. Some issues can be improved analytically now: show all data, clarify provenance, restore/review the unexplained exclusion, respect blocks, and label selection. Other limits cannot be repaired from these data: inadequate independent replication, unmeasured controls and restricted experimental space. Explain that a new experiment supplies information, not just a more favourable p-value. Avoid implying the original researcher was incompetent.
+**Say:** Ask groups for their single most consequential change and one remaining limitation. Some problems can be fixed by reanalysis now: show all four days, analyse per experiment, report both versions of the day-4 decision, report all three cytokines. Others need new data: more independent experiments, an unstimulated control, a fixed QC rule and a pre-chosen primary readout. A new experiment adds information; it is not a search for a better p-value.
 
-**Conceptual point:** Better inference starts with information and prospective design.
+**Conceptual point:** Better inference starts with design and transparent reporting, not with a different test.
 
-**Likely misconception:** Changing the named test is the main improvement.
+**Likely misconception:** Changing the test is the main improvement.
 
 **Optional follow-up:** Which improvement requires new data rather than a reanalysis?
 
 **Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
 :::
 
-## “My p-value is 0.032. Is my result real?” {#r-real .interaction}
+## Plan the experiment before you pipette {#plan-before-pipetting .key-message}
 
-<p class="question">How would you respond now?</p>
-<p class="small fragment">Tell me how the experiment was done, what was independently repeated,<br>what effect you wanted to estimate—and how this result was selected.</p>
+<p class="key-label">Key message</p>
+<p class="key-statement">Good experiments are designed before the first pipetting step — not rescued afterwards.</p>
+<p class="key-support">Question · experimental unit · N · pairing and blocking · QC rules · analysis: write them down first.</p>
+<p class="fine">Further reading: S.E. Lazic (2016) <em>Experimental Design for Laboratory Biologists: Maximising Information and Improving Reproducibility.</em> Cambridge University Press. · D.J. Glass (2014) <em>Experimental Design for Biologists</em>, 2nd ed. Cold Spring Harbor Laboratory Press.</p>
 
 ::: notes
-**Time: 03:04–03:05 (1 minute).**
+**Time: 03:17–03:18 (1 minute).**
 
-**Say:** Give participants about forty seconds to formulate a response before revealing the final prompt. Seek a useful conversation rather than yes/no. The laboratory observations exist, but their interpretation depends on design, uncertainty and selection; this technical-well p-value cannot support the biological claim as reported. A promising exploratory pattern can justify an independent repeat without being treated as established truth.
+**Say:** Connect the comparison on the previous slide to a habit: every improvement in the planned repeat was a decision made before data collection. Recommend writing a one-page plan — question, primary readout, experimental unit, number of independent experiments, pairing or blocking, QC and exclusion rules, planned analysis — and discussing it with a colleague or statistician before starting. Point to the two books: Lazic is written for laboratory biologists and covers experimental units, pseudoreplication, blocking and power with lab examples; Glass covers the logic of hypotheses, controls and experimental strategy. Both are readable without a statistics background.
 
-**Conceptual point:** A p-value invites an evidence conversation rather than a binary reality judgment.
+**Conceptual point:** Design decisions determine what an experiment can show; analysis can only extract what the design put in.
 
-**Likely misconception:** Scepticism requires dismissing the data or the researcher.
+**Likely misconception:** Statistics is something done to the data once the experiment is finished.
+
+**Sources:** Lazic SE (2016) *Experimental Design for Laboratory Biologists*. Cambridge University Press. Glass DJ (2014) *Experimental Design for Biologists*, 2nd ed. Cold Spring Harbor Laboratory Press. Fisher RA (1938): "To consult the statistician after an experiment is finished is often merely to ask him to conduct a post mortem examination."
+:::
+
+## “My p-value is below 0.001. Is my result real?” {#r-real .interaction}
+
+<p class="question">How would you respond now?</p>
+<p class="small fragment">Tell me how the experiment was done, what was independently repeated,<br>what effect you wanted to estimate — and how this result was selected.</p>
+
+::: notes
+**Time: 03:18–03:20 (2 minutes).**
+
+**Say:** Give participants about a minute to formulate a response, then reveal the prompt. Aim for a useful conversation rather than yes or no. The IL-6 reduction may well be real — three of four experiments point the same way — but the reported p-value describes ELISA precision on one day, and the honest evidence is weaker and depends on a post-hoc exclusion. The constructive answer is a planned repeat, not a verdict on the researcher.
+
+**Conceptual point:** A p-value opens a conversation about design, uncertainty and selection.
+
+**Likely misconception:** Scepticism means dismissing the data or the researcher.
 
 **Optional follow-up:** What practical next step would you recommend first?
 
@@ -245,7 +291,7 @@
 <div class="workshop-surround"><p>Design and analysis decisions surround the whole process</p><div class="workshop-flow">Question → experiment → experimental units → variation<br>→ data → effect estimate → uncertainty<br>→ model → inference → claim</div><p>Power: information needed for the intended effect<br>Multiplicity: opportunities created by the intended claims</p></div>
 
 ::: notes
-**Time: 03:05–03:06 (1 minute).**
+**Time: 03:20–03:21 (1 minute).**
 
 **Say:** Use the diagram as a reconstruction, not another list of definitions. Ask where the group made its most important decision. The path is iterative: a model informs estimation and uncertainty even though it is named later in this conceptual chain; planning revisits the question and design. Power follows the relevant effect and independent information, while multiplicity follows intended claims and selection opportunities. Neither is an isolated last-minute statistical repair. Do not introduce a new formula.
 
@@ -258,12 +304,40 @@
 **Facilitation:** Participant reasoning takes priority over instructor explanation. Use these notes selectively; do not read them aloud. This is a fictional teaching scenario, not a published biological finding.
 :::
 
+## Ten things to take home {#key-messages-recap .key-message}
+
+<p class="key-label">Key messages</p>
+<ol class="key-recap">
+<li>Report an effect with its SEM or, better, its 95% CI — not the SD.</li>
+<li>A small p-value is not a large effect. Judge biological relevance from the effect and its interval.</li>
+<li>p &gt; 0.05 does not mean no effect. Absence of evidence is not evidence of absence.</li>
+<li>Exploration generates hypotheses; its p-values mean little. Confirm in a new experiment.</li>
+<li>Record metadata — preparation, day, tube, well — for every value.</li>
+<li>Paired and blocked designs have higher power. Keep the pairing in the analysis.</li>
+<li>Simple designs need fewer replicates. Every extra group or factor costs power.</li>
+<li>Fluorescence, RNA, protein and cytokine levels, counts: analyse on a log scale.</li>
+<li>Done correctly, the answer is usually less exciting — and more likely to hold.</li>
+<li>Plan the experiment before you pipette (Lazic 2016; Glass 2014).</li>
+</ol>
+
+::: notes
+**Time: 03:21–03:22 (1 minute).**
+
+**Say:** Read the ten messages without elaborating; each one was already discussed. Ask participants which one would most change how they plan or report their next experiment. Then move to the final slide.
+
+**Conceptual point:** A compact summary of the practical rules that recur across both sessions.
+
+**Likely misconception:** These are rigid rules. Each is a default that holds for typical laboratory experiments; the reasons were discussed where each first appeared.
+
+**Sources:** Synthesis of key-message slides in Sessions 1 and 2.
+:::
+
 ## Statistics cannot rescue an experiment that could not answer the question. {#course-landing}
 
 <p class="question">Design the experiment and the analysis together.</p>
 
 ::: notes
-**Time: 03:06–03:07 (1 minute).**
+**Time: 03:22–03:23 (1 minute).**
 
 **Say:** Connect explicitly to the opening motivation: researchers often seek statistical help only after collecting data. This is an invitation to bring the biological question and protocol earlier, not a criticism of colleagues or a claim that imperfect data are worthless. Thoughtful reanalysis may recover supported comparisons; it cannot create missing independent units, identify completely confounded effects or supply absent population coverage. Ask each participant to choose one design conversation to have before the next collection. Thank them and stop here.
 

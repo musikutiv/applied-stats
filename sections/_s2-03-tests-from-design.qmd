@@ -83,6 +83,25 @@
 **Sources:** Rebuilt using CONTENT_MAP.md concepts: experimental units and pairing (A pp. 121–144), models and assumptions (A pp. 115–160), design and sampling (R pp. 45–62), and prospective planning (D pp. 45–46, 52). Numerical examples are newly generated or explicitly reuse the original L1 data. Method checks: official R t.test, lm and wilcox.test documentation; see SESSION2_TESTS_NOTES.md.
 :::
 
+## Metadata decide the analysis {#metadata-matters .key-message}
+
+<p class="key-label">Key message</p>
+<p class="key-statement">Record preparation, day, tube and well<br>for every value.</p>
+<p class="key-support">Without metadata nobody — including you in six months — can reconstruct the design, find N, or choose the right analysis.</p>
+
+::: notes
+**Time: 01:44–01:45 (1 minute).**
+
+**Say:** The previous slide could not be answered from the row count, only from metadata. For every measured value, record which preparation, culture or donor it came from, the day or batch, the treated tube or well, and the technical replicate number. Add plate positions, passage numbers, reagent lots and any exclusion with its reason. This costs minutes at the bench and is impossible to recover later. It is also what lets a statistician — or a reviewer — check pairing, blocking and pseudoreplication.
+
+**Conceptual point:** The correct analysis follows the data-generating structure, which only metadata preserve.
+
+**Likely misconception:** Metadata are administrative detail; the measured values alone are the data.
+
+**Sources:** Lazic (2010) *BMC Neurosci* 11:5 — pseudoreplication; Wilkinson et al. (2016) *Sci Data* 3:160018 — FAIR principles.
+:::
+
+
 ## Do independently treated cultures differ on average? {#independent-cultures}
 
 <img class="data-plot tests-plot" src="figures/generated/tests-independent.png" alt="Eight independent cultures per condition, raw activity measurements and mean bars." /><p class="takeaway">Q − control: <strong>−11.1 U/mg</strong> · 95% CI −24.9 to 2.7</p>
@@ -90,7 +109,7 @@
 <p class="fine">New simulated experiment: 8 independently generated cultures per group; randomized assignment.</p>
 
 ::: notes
-**Time: 01:44–01:47 (3 minutes).**
+**Time: 01:45–01:48 (3 minutes).**
 
 **Say:** Ask for the direction and precision of the mean difference before naming Welch. Each point represents one independent culture, not a technical read. Bars show group means; the reported interval is for Q minus control, not two separate group intervals. The simulated populations have SDs 10 and 17; no equal-variance assumption is imposed. Welch is the default independent-group t procedure here, with an approximate degrees-of-freedom calculation we will not derive. The interval includes zero and meaningful negative changes. The p-value is .105, secondary to the effect and interval.
 
@@ -113,7 +132,7 @@
 <p class="fine">Original L1 data: mean difference −10.4 U/mg; 95% CI −23.2 to +2.3.</p>
 
 ::: notes
-**Time: 01:47–01:50 (3 minutes).**
+**Time: 01:48–01:51 (3 minutes).**
 
 **Say:** Ask whether the two columns are independent, then trace a preparation line. Average the technical readings within each tube before constructing Q minus vehicle for each preparation. The six independent differences, rather than twelve independent tubes or thirty-six readings, supply replication for this paired analysis. The paired test is algebraically a one-sample t-test on the differences; exact small-sample inference assumes independent normally distributed differences. Shared day effects must cancel in differences under our simplified additive model; residual dependence would require more care.
 
@@ -132,7 +151,7 @@
 <p class="fine">Counterfactual comparison using the same values. The actual L1 experiment is B.</p>
 
 ::: notes
-**Time: 01:50–01:53 (3 minutes).**
+**Time: 01:51–01:54 (3 minutes).**
 
 **Say:** Have the audience predict whether the mean difference or its uncertainty changes. Both analyses give −10.4. Under unrelated-culture assumptions the Welch interval is −33.6 to 12.8; under the actual paired design it is −23.2 to 2.3. This is a counterfactual illustration, not permission to choose the narrower result. Positive within-pair association removes shared variation here. Pairing does not universally improve precision; covariance and the cost/design context matter. Choose the procedure from provenance before inspecting which gives a preferred answer.
 
@@ -145,6 +164,24 @@
 **Sources:** Rebuilt using CONTENT_MAP.md concepts: experimental units and pairing (A pp. 121–144), models and assumptions (A pp. 115–160), design and sampling (R pp. 45–62), and prospective planning (D pp. 45–46, 52). Numerical examples are newly generated or explicitly reuse the original L1 data. Method checks: official R t.test, lm and wilcox.test documentation; see SESSION2_TESTS_NOTES.md.
 :::
 
+## Pairing and blocking buy power {#paired-design-power .key-message}
+
+<p class="key-label">Key message</p>
+<p class="key-statement">Paired and blocked designs have higher power:<br>the same N gives a more precise answer.</p>
+<p class="key-support">Same L1 values: analysed as unrelated groups, 95% CI −33.6 to +12.8; as the paired design they came from, −23.2 to +2.3. Plan pairs or blocks when a shared source of variation exists — and analyse them as such.</p>
+
+::: notes
+**Time: 01:54–01:55 (1 minute).**
+
+**Say:** Generalise the previous slide. Splitting each preparation into a vehicle and a Q tube — or running both conditions on the same day, plate or animal — lets the shared variation cancel in the comparison. The same twelve tubes then give a narrower interval and a higher chance of detecting a real effect, so fewer independent units are needed for the same precision. This links back to the power block in this session. Two conditions: the shared source must be real (same preparation, day, donor or litter), and the analysis must keep the pairing; a paired design analysed as unrelated groups throws the advantage away. Pairing only helps when the paired units actually resemble each other.
+
+**Conceptual point:** Blocking removes shared, irrelevant variation from the treatment comparison, which increases precision and power for a given N.
+
+**Likely misconception:** Pairing always helps regardless of whether the units share variation, or the analysis can choose paired or unpaired after seeing which gives the smaller p.
+
+**Sources:** Lazic (2016) *Experimental Design for Laboratory Biologists*, ch. 3 (blocking); Festing & Altman (2002) *ILAR J* 43:244. Interval values from the counterfactual comparison on the previous slide.
+:::
+
 ## Four doses: should we run six separate tests? {#four-doses}
 
 <img class="data-plot tests-plot" src="figures/generated/tests-dose.png" alt="Raw observations and mean bars for control, low, medium and high dose." /><p class="takeaway fragment">Represent the group means together in one model.</p>
@@ -152,7 +189,7 @@
 <p class="fine">Simulated independent cultures · 8 per group · continuous activity.</p>
 
 ::: notes
-**Time: 01:53–01:55 (2 minutes).**
+**Time: 01:55–01:57 (2 minutes).**
 
 **Say:** Ask why four groups yield six pairs and reconnect to the multiplicity block. A group indicator linear model represents the four means together; classical one-way ANOVA tests a restriction on those means. A two-group equal-variance t-test is a special case of that classical framework. Do not quietly equate an ordinary homoscedastic linear-model fit with Welch: unequal variances can require Welch-type or other suitable inference. A common model does not by itself eliminate multiplicity.
 
@@ -173,7 +210,7 @@
 <p class="small">Planned contrasts answer specific questions. Several contrasts may require multiplicity control.</p>
 
 ::: notes
-**Time: 01:55–01:58 (3 minutes).**
+**Time: 01:57–02:00 (3 minutes).**
 
 **Say:** Let the audience choose a question and articulate its effect quantity. The omnibus null sets all four population means equal; rejecting it does not identify a particular contrast or prove every group differs. Dose versus control contrasts form a natural prespecified family when that is the aim; a trend additionally requires meaningful dose spacing and a justified functional form. A high-minus-low contrast is a different estimand. Planned contrasts need not wait for a significant omnibus test when the inferential plan already specifies them. Discuss uncertainty and the family, without teaching post-hoc menus.
 
@@ -193,7 +230,7 @@
 <p class="fine">Simulated independent cultures · genotype × treatment · 8 cultures per cell.</p>
 
 ::: notes
-**Time: 01:58–02:01 (3 minutes).**
+**Time: 02:00–02:03 (3 minutes).**
 
 **Say:** Ask participants to compare slopes before naming interaction. The fitted Q effect is −27.9 in wild type and −4.8 in knockout; knockout minus wild-type effect is +23.0 activity units (model-based 95% CI approximately 11.8 to 34.2). A factorial linear model estimates this difference of differences. These are independent cultures with normal equal-SD errors in the teaching generator. Genotype need not be randomized, and a genotype mechanism claim requires comparable genetic backgrounds and design. Significant in wild type but not in knockout does not itself establish different effects; assess the interaction directly, with its interval. No factorial table drill.
 
@@ -206,6 +243,25 @@
 **Sources:** Rebuilt using CONTENT_MAP.md concepts: experimental units and pairing (A pp. 121–144), models and assumptions (A pp. 115–160), design and sampling (R pp. 45–62), and prospective planning (D pp. 45–46, 52). Numerical examples are newly generated or explicitly reuse the original L1 data. Method checks: official R t.test, lm and wilcox.test documentation; see SESSION2_TESTS_NOTES.md.
 :::
 
+## Simple designs need fewer replicates {#simple-design-power .key-message}
+
+<p class="key-label">Key message</p>
+<p class="key-statement">Every extra group or factor costs replicates.<br>One clear comparison is the most powerful design.</p>
+<p class="key-support">Detecting an interaction of the same size as a single treatment effect needs about four times as many replicates.</p>
+
+::: notes
+**Time: 02:03–02:04 (1 minute).**
+
+**Say:** Look back at the last few slides: two groups, paired, four doses, genotype by treatment. Each step adds groups or factors, and each step spreads the same number of replicates thinner. A paired two-condition comparison concentrates all independent replication on one question; that is why it needs the smallest N. Comparisons among several doses or genotypes need more units per group, and an interaction — a difference between two effects — is estimated with roughly twice the SE of a main effect, so detecting one of the same size needs about four times the sample size. Before adding conditions, ask whether each one serves the primary question.
+
+**Conceptual point:** Statistical power is spent per question. Additional groups, factors and comparisons each consume independent replication.
+
+**Likely misconception:** Adding more conditions to one experiment is free, or a factorial design automatically answers every question with the same N.
+
+**Sources:** Gelman (2018) 'You need 16 times the sample size to estimate an interaction than to estimate a main effect' (statmodeling blog) — 4× for an interaction of equal magnitude; Lazic (2016) *Experimental Design for Laboratory Biologists*, ch. 3.
+:::
+
+
 ## Time-course experiments: showing the effect vs. testing it {#timecourse-problem .interaction}
 
 <p class="prompt-tag">Discuss with a neighbour · 2 minutes</p>
@@ -215,7 +271,7 @@
 <p class="small fragment">Two-way ANOVA on time × treatment treats them as if they were.</p>
 
 ::: notes
-**Time: 02:01–02:04 (3 minutes).**
+**Time: 02:04–02:07 (3 minutes).**
 
 **Say:** Two minutes in pairs, then collect two or three answers. Most will say six tests or one two-way ANOVA. The problem with six separate tests: every time point draws its tubes from the same preparations, so the comparisons are correlated and the false positive rate is inflated unless corrected. The problem with two-way ANOVA: it assumes all measurements are independent observations. A lysate assay cannot measure one tube twice, so each time point is a separate tube — but tubes harvested at 2 h and 24 h from the same preparation share its biology, handling, passage and any uncontrolled drift. They are related, not independent. A standard two-way ANOVA ignores that correlation entirely. Time-courses are almost always pioneering experiments — you are watching when and how an effect develops. That is exploration, not confirmation.
 
@@ -238,7 +294,7 @@
 <p class="takeaway">If testing, collapse the curve to one number per unit first.</p>
 
 ::: notes
-**Time: 02:04–02:06 (2 minutes).**
+**Time: 02:07–02:09 (2 minutes).**
 
 **Say:** Present these as three legitimate routes, not a hierarchy. Most time-course experiments in this audience's work are genuinely exploratory — the researcher wants to know whether the effect builds, peaks, or reverses. That is valuable science; it does not require a p-value. If the biological question really is about a specific time point — for example, the moment of peak inhibition as established by prior literature — pre-specify it before collecting data and test once. If multiple time points were pre-planned, apply FWER correction such as Holm. If the shape of the whole curve matters, reduce each experimental unit to one derived number first: AUC summarises total exposure; a rate constant or half-maximum time captures kinetics. Each unit then gives one observation and you can run an ordinary t-test or regression on those derived values. Do not test every time point and report only the significant ones.
 
@@ -257,7 +313,7 @@
 <p class="takeaway">Before choosing a test, identify what was truly independently repeated.</p>
 
 ::: notes
-**Time: 02:06–02:07 (1 minute).**
+**Time: 02:09–02:10 (1 minute).**
 
 **Say:** Every design we have seen — two groups, paired, doses, factorial — requires the same first step: identify what was independently initiated and assigned. The test follows from that answer, not from the number of rows in the spreadsheet. The next slide shows what happens when measurements are confused with independent observations.
 
@@ -275,7 +331,7 @@
 <div class="tests-grid"><p>Summarize at the experimental-unit level, when appropriate</p><p>Model clustering or repeated measurements explicitly</p></div>
 
 ::: notes
-**Time: 02:07–02:09 (2 minutes).**
+**Time: 02:10–02:12 (2 minutes).**
 
 **Say:** Retrieve pseudoreplication. Cells from a common culture can share biology and handling; repeated measurements of an animal share that animal. Appropriate unit summaries can answer a unit-level question, but discard some information and need scientifically sensible weighting. Hierarchical or mixed-effects models can represent shared variation and repeated structure when supported by enough independent units. A mixed model cannot manufacture independent biological replication from a single culture or resolve treatment perfectly confounded with culture. Distinguish repeated times from independent repeated experiments.
 
@@ -297,7 +353,7 @@
 <p class="small">Small N can hide important departures.<br>Large N can detect practically unimportant departures.</p>
 
 ::: notes
-**Time: 02:09–02:12 (3 minutes).**
+**Time: 02:12–02:15 (3 minutes).**
 
 **Say:** Collect a vote before revealing the answer. Failure to reject normality does not verify it. At small N there is little information about tails; at large N a tiny deviation can be detectable without invalidating mean inference. The relevant issue is adequacy of the model and sampling distribution for the intended estimate, not ritual use of a preliminary significance test. Robustness depends on sample size, skewness, outliers, allocation balance and variance patterns. Selecting an analysis through a preliminary test can also alter the operating properties of the whole procedure. Plots diagnose structure and problems; they cannot prove normality.
 
@@ -317,7 +373,7 @@
 <p class="fine">Welch allows unequal group variances. Normality is not an absolute requirement for every use of t inference.</p>
 
 ::: notes
-**Time: 02:12–02:14 (2 minutes).**
+**Time: 02:15–02:17 (2 minutes).**
 
 **Say:** Separate assumptions. Independence comes from design; it is not checked by a histogram. Normal independent observations give the exact classical one-sample t reference; the paired version concerns differences. Welch uses an approximate reference even under unequal-variance normal populations. With sufficient independent information, mean inference may be approximately reliable beyond normal populations, but no universal N threshold protects against heavy tails, severe skewness or influential observations. Finite variance, balance and the particular model matter. Assess group residual patterns rather than demanding a pooled mixture of different means be normal. Visual review cannot establish exact distributional assumptions.
 
@@ -338,7 +394,7 @@
 <p class="fine">Neither a universal test of medians nor an assumption-free replacement.</p>
 
 ::: notes
-**Time: 02:14–02:16 (2 minutes).**
+**Time: 02:17–02:19 (2 minutes).**
 
 **Say:** Mann–Whitney compares independent groups using ranks. Its usual exact null is identical distributions (with ties handled appropriately); the statistic relates to the probability one randomly chosen observation exceeds the other, counting ties by half. It is not an omnibus detector of every distributional difference. Under a common-shape location-shift model, location and median shift interpretations are justified. Without that structure, differing shapes or spreads complicate an interpretation as a median shift, and equal medians do not by themselves describe its null. It does not repair clustering, biased sampling or adaptive reporting. Choose the target first and a procedure valid for its null.
 
@@ -358,7 +414,7 @@
 <p class="small">Recording error? Prespecified QC failure? Biology? Model mismatch?</p>
 
 ::: notes
-**Time: 02:16–02:18 (2 minutes).**
+**Time: 02:19–02:21 (2 minutes).**
 
 **Say:** Ask what evidence participants would seek before changing the analysis. This is a constructed dataset, not another alteration of the original assay. Check the source record, assay calibration, sample identity and prespecified QC criteria. Correct a verified recording error with an audit trail; exclusions require a defensible reason. A genuine extreme biological observation may matter to the mean and target population. Transformation changes the scale and often the effect quantity; a rank method answers another question. Sensitivity analyses can show influence, but report data-dependent choices and all relevant results. Never delete solely because a p-value improves.
 
@@ -379,7 +435,7 @@
 <p class="fine">A reasoning checklist—not an automatic test-selection tree.</p>
 
 ::: notes
-**Time: 02:18–02:21 (3 minutes).**
+**Time: 02:21–02:24 (3 minutes).**
 
 **Say:** Give pairs a minute to apply this to the L1 assay: mean activity change, tube allocation within preparation, continuous outcome, six independent paired contrasts under the working model, Q versus vehicle, a planned contrast, model of differences, estimate and interval, then a paired test if useful. Multiplicity belongs in planning, even though it is listed last as a final check. Revisit population and experimental space in the quantity statement. If a model does not fit the design, return to the earlier questions rather than selecting a different software label. Preserve this retrieval time.
 
@@ -405,7 +461,7 @@
 <p class="fine">Orientation, not an exhaustive menu or a selection algorithm.</p>
 
 ::: notes
-**Time: 02:21–02:23 (2 minutes).**
+**Time: 02:24–02:26 (2 minutes).**
 
 **Say:** Do not read every cell aloud. Use the table to locate names people already know. Ordinary linear-model standard errors are not automatically Welch; choose the variance model/inference appropriately. Logistic coefficients concern log odds, although fitted probabilities can yield risks and risk differences. Fisher’s exact test addresses suitable small contingency-table questions with independent units and conditional assumptions; a small table does not remove clustering. Counts may need offsets and overdispersion handling rather than a default Poisson model. Time-to-event questions from earlier require survival methods respecting censoring, deliberately not taught here. None of these frameworks automatically solves bias or defines the scientific quantity.
 
@@ -426,7 +482,7 @@
 <p class="question fragment">Now design an experiment that statistics will not have to rescue.</p>
 
 ::: notes
-**Time: 02:23–02:26 (3 minutes).**
+**Time: 02:26–02:29 (3 minutes).**
 
 **Say:** Spend two minutes collecting requested information. Retrieve biological question, unit, target population/experimental space, endpoint, design, pairing/blocking/clustering, effect, variation, independent sample size, planned comparisons and multiplicity. Ask which decisions were prospective and which arose during exploration. The central response is: tell me exactly how you did the experiment and what you want to learn. Reveal the workshop bridge last and stop. The separately built workshop will have 20–25 minutes; do not run or improvise its content in this block.
 
